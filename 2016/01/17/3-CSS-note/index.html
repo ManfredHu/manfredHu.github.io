@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>CSS笔记 | ManfredHu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="CSS,笔记" />
+    
+    <meta name="description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    border">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS笔记">
+<meta property="og:url" content="http://yoursite.com/2016/01/17/3-CSS-note/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    border">
+<meta property="og:image" content="http://yoursite.com/images/css.png">
+<meta property="og:updated_time" content="2016-01-19T07:43:37.156Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS笔记">
+<meta name="twitter:description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    border">
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css" type="text/css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">胡文峰的技术博客</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
+    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
+</form>
+<script>
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:yoursite.com ' + keyword;
+        return false;
+    });
+})(jQuery);
+</script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/笔记/CSS/">CSS</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-3-CSS-note" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        CSS笔记
+        </h1>
+    
+
+            </header>
+        
+        <p class="article-byline">
+            <a href="/2016/01/17/3-CSS-note/" class="article-date">
+    <time datetime="2016-01-17T12:27:02.000Z" itemprop="datePublished">2016-01-17</time>
+</a>
+        </p>
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/css.png" alt=""></p>
+<h2 id="u6E05_u9664_u6D6E_u52A8"><a href="#u6E05_u9664_u6D6E_u52A8" class="headerlink" title="清除浮动"></a>清除浮动</h2><p>老生常谈的话题，面试经常问的问题<br>解决方法有很多种，这里讲几种</p>
+<h3 id="1-_u5B50_u5143_u7D20_u52A0clear"><a href="#1-_u5B50_u5143_u7D20_u52A0clear" class="headerlink" title="1.子元素加clear"></a>1.子元素加clear</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.news</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> gray</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> black</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.news</span> <span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.clear</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>这种方法可以扩展出很多种不同的方法，如JS动态添加，设置一个公共的类然后添加，或者直接就是一段内联style的html代码，但是原理都是用到了<code>clear</code>这个属性</p>
+<h3 id="2-_u7236_u5143_u7D20BFC_u5316"><a href="#2-_u7236_u5143_u7D20BFC_u5316" class="headerlink" title="2.父元素BFC化"></a>2.父元素BFC化</h3><p>HTML文档流是盒子模型的，BFC就是组织盒子模型的形式，当元素的类型如标签(p和span)不一样的时候，其表现出来的样子是不一样的。<br>所以BFC就是让这个元素看起来像盒子的一种代称，BFC全称 <em>Box Formatting Context</em>。CSS2.1还有IFC,即<em>Inline Formatting Context</em>。</p>
+<p><strong>BFC布局规则：</strong></p>
+<ul>
+<li>内部的Box会在垂直方向，一个接一个地放置</li>
+<li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠</li>
+<li>每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此</li>
+<li>BFC的区域不会与float box重叠</li>
+<li>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此</li>
+<li>计算BFC的高度时，浮动元素也参与计算</li>
+</ul>
+<p><strong>产生BFC的条件：</strong>当然普通的块级元素默认呈现块级的样子，但是通过CSS我们可以可以让某些元素呈现BFC的形态（块级形态）</p>
+<ol>
+<li>根元素(html元素)</li>
+<li>float不为none的元素(包括left,right,inherit三个，因为float只有四个值)</li>
+<li>position为absolute或fixed</li>
+<li>display为inline-block,table-cell,table-caption,flex,inline-flex</li>
+<li>overflow不为visible(包括hidden,scroll,auto,inherit四个值)</li>
+</ol>
+<p>如下面的为在父元素加<code>float</code>属性使其BFC化</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.news</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> gray</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> black</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.news</span> <span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.clear</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u900F_u660E_u5EA6"><a href="#u900F_u660E_u5EA6" class="headerlink" title="透明度"></a>透明度</h2><h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity"></a>opacity</h3><p>熟悉CSS3的应该很清楚，不就是opacity嘛。但是在那个没有支持opacity的年代又是怎么做的呢。</p>
+<blockquote>
+<p>opacity属性设置元素的不透明级别。不会被继承，值为0.0(完全透明)到1.0(完全不透明)。<br>不会继承父元素的属性，但是可以设置<code>inherit</code>来继承父元素的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">alpha</span>(opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*IE*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="RGBA"><a href="#RGBA" class="headerlink" title="RGBA"></a>RGBA</h3><p>RGB扩展透明度的一种格式，a代表alpha透明度。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.8</span>)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="PNG_u56FE_u7247_u7684_u95EE_u9898"><a href="#PNG_u56FE_u7247_u7684_u95EE_u9898" class="headerlink" title="PNG图片的问题"></a>PNG图片的问题</h3><p>png图片的最大优势是支持alpha透明度，但是IE6不直接支持PNG透明度，PNG透明度自IE7才支持。<br>好的是现在已经逐渐淘汰了IE6，</p>
+<h2 id="u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898"><a href="#u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898" class="headerlink" title="拥有布局的问题"></a>拥有布局的问题</h2><p><strong>默认拥有布局的元素：</strong></p>
+<ul>
+<li>body/html</li>
+<li>table/tr/td</li>
+<li>img</li>
+<li>hr</li>
+<li>input/select/textarea/button</li>
+<li>iframe/embed/object/applet/marquee</li>
+</ul>
+<p><strong>所以其实<code>div</code>和<code>span</code>是没有布局的。</strong></p>
+<p>设置以下CSS属性会让元素获得布局。</p>
+<ol>
+<li>float: left/right</li>
+<li>display: inline-block</li>
+<li>width/height</li>
+<li>zoom: 任何值（只有IE）</li>
+</ol>
+<p>IE7中以下属性也触发布局(下面三个属性只有IE7+才支持)</p>
+<ol>
+<li>overflow: hidden/scroll/auto</li>
+<li>min-width: 任何值</li>
+<li>max-width: 除none之外的任何值</li>
+</ol>
+<h2 id="u6761_u4EF6_u6CE8_u91CA"><a href="#u6761_u4EF6_u6CE8_u91CA" class="headerlink" title="条件注释"></a>条件注释</h2><ul>
+<li>lt  &lt;</li>
+<li>lte &lt;=</li>
+<li>gt  &gt;</li>
+<li>gte &gt;=</li>
+</ul>
+<p>条件注释写法如下，这里的是XHTML写法，所以后面会以<code>/&gt;</code>结尾，HTML5写法最好是没有反斜杠</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- [if IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if !IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if gte IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2016/01/17/3-CSS-note/" data-id="cijl4elb40003lkvu6y9tp47h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+        </footer>
+    </div>
+</article>
+
+<section id="comments">
+
+    <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script>
+var disqus_shortname = 'manfredhu';
+
+
+var disqus_url = 'http://yoursite.com/2016/01/17/3-CSS-note/';
+
+(function() {
+var dsq = document.createElement('script');
+dsq.type = 'text/javascript';
+dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ManfredHu" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/01/17/2-someAboutHTML5/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">到了HTML5时代写HTML代码要注意的东西</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/17/3-CSS-note/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/css.png)" alt="CSS笔记" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/CSS/">CSS</a></p>
+                            <p class="item-title"><a href="/2016/01/17/3-CSS-note/" class="title">CSS笔记</a></p>
+                            <p class="item-date"><time datetime="2016-01-17T12:27:02.000Z" itemprop="datePublished">2016-01-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/html.png)" alt="到了HTML5时代写HTML代码要注意的东西" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a></p>
+                            <p class="item-title"><a href="/2016/01/17/2-someAboutHTML5/" class="title">到了HTML5时代写HTML代码要注意的东西</a></p>
+                            <p class="item-date"><time datetime="2016-01-17T11:16:21.000Z" itemprop="datePublished">2016-01-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/manfred-logo.png)" alt="博客园博客已迁移到此" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/01/17/1-firstArchive/" class="title">博客园博客已迁移到此</a></p>
+                            <p class="item-date"><time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 ManfredHu</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+        <script src="/vendor/scrollLoading/main.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>

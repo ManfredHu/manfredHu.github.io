@@ -8,23 +8,23 @@
     
         <meta name="keywords" content="CSS,笔记" />
     
-    <meta name="description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
-1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
-12345678910.news&amp;#123;    background: gray;    border">
+    <meta name="description" content="1.清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.1 子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    bo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS笔记">
-<meta property="og:url" content="http://yoursite.com/2016/01/17/3-CSS-note/index.html">
+<meta property="og:url" content="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/index.html">
 <meta property="og:site_name" content="ManfredHu">
-<meta property="og:description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
-1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
-12345678910.news&amp;#123;    background: gray;    border">
-<meta property="og:image" content="http://yoursite.com/images/css.png">
-<meta property="og:updated_time" content="2016-01-19T07:43:37.156Z">
+<meta property="og:description" content="1.清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.1 子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    bo">
+<meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/css.png">
+<meta property="og:updated_time" content="2016-01-19T11:38:15.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS笔记">
-<meta name="twitter:description" content="清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
-1.子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
-12345678910.news&amp;#123;    background: gray;    border">
+<meta name="twitter:description" content="1.清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+1.1 子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
+12345678910.news&amp;#123;    background: gray;    bo">
 
     
 
@@ -91,7 +91,7 @@
 (function ($) {
     $('.search-form').on('submit', function (e) {
         var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:yoursite.com ' + keyword;
+        window.location = 'https://www.baidu.com/s?wd=site:manfredhu.github.io/ManfredHu-Blog ' + keyword;
         return false;
     });
 })(jQuery);
@@ -136,11 +136,11 @@
         </p>
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/css.png" alt=""></p>
-<h2 id="u6E05_u9664_u6D6E_u52A8"><a href="#u6E05_u9664_u6D6E_u52A8" class="headerlink" title="清除浮动"></a>清除浮动</h2><p>老生常谈的话题，面试经常问的问题<br>解决方法有很多种，这里讲几种</p>
-<h3 id="1-_u5B50_u5143_u7D20_u52A0clear"><a href="#1-_u5B50_u5143_u7D20_u52A0clear" class="headerlink" title="1.子元素加clear"></a>1.子元素加clear</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-_u6E05_u9664_u6D6E_u52A8"><a href="#1-_u6E05_u9664_u6D6E_u52A8" class="headerlink" title="1.清除浮动"></a>1.清除浮动</h2><p>老生常谈的话题，面试经常问的问题<br>解决方法有很多种，这里讲几种</p>
+<h3 id="1-1__u5B50_u5143_u7D20_u52A0clear"><a href="#1-1__u5B50_u5143_u7D20_u52A0clear" class="headerlink" title="1.1 子元素加clear"></a>1.1 子元素加clear</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.news</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> gray</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> black</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.news</span> <span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.clear</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>这种方法可以扩展出很多种不同的方法，如JS动态添加，设置一个公共的类然后添加，或者直接就是一段内联style的html代码，但是原理都是用到了<code>clear</code>这个属性</p>
-<h3 id="2-_u7236_u5143_u7D20BFC_u5316"><a href="#2-_u7236_u5143_u7D20BFC_u5316" class="headerlink" title="2.父元素BFC化"></a>2.父元素BFC化</h3><p>HTML文档流是盒子模型的，BFC就是组织盒子模型的形式，当元素的类型如标签(p和span)不一样的时候，其表现出来的样子是不一样的。<br>所以BFC就是让这个元素看起来像盒子的一种代称，BFC全称 <em>Box Formatting Context</em>。CSS2.1还有IFC,即<em>Inline Formatting Context</em>。</p>
+<h3 id="1-2__u7236_u5143_u7D20BFC_u5316"><a href="#1-2__u7236_u5143_u7D20BFC_u5316" class="headerlink" title="1.2 父元素BFC化"></a>1.2 父元素BFC化</h3><p>HTML文档流是盒子模型的，BFC就是组织盒子模型的形式，当元素的类型如标签(p和span)不一样的时候，其表现出来的样子是不一样的。<br>所以BFC就是让这个元素看起来像盒子的一种代称，BFC全称 <em>Box Formatting Context</em>。CSS2.1还有IFC,即<em>Inline Formatting Context</em>。</p>
 <p><strong>BFC布局规则：</strong></p>
 <ul>
 <li>内部的Box会在垂直方向，一个接一个地放置</li>
@@ -161,15 +161,15 @@
 <p>如下面的为在父元素加<code>float</code>属性使其BFC化</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.news</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> gray</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> black</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.news</span> <span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.clear</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u900F_u660E_u5EA6"><a href="#u900F_u660E_u5EA6" class="headerlink" title="透明度"></a>透明度</h2><h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity"></a>opacity</h3><p>熟悉CSS3的应该很清楚，不就是opacity嘛。但是在那个没有支持opacity的年代又是怎么做的呢。</p>
+<h2 id="2-_u900F_u660E_u5EA6"><a href="#2-_u900F_u660E_u5EA6" class="headerlink" title="2.透明度"></a>2.透明度</h2><h3 id="2-1_opacity"><a href="#2-1_opacity" class="headerlink" title="2.1 opacity"></a>2.1 opacity</h3><p>熟悉CSS3的应该很清楚，不就是opacity嘛。但是在那个没有支持opacity的年代又是怎么做的呢。</p>
 <blockquote>
 <p>opacity属性设置元素的不透明级别。不会被继承，值为0.0(完全透明)到1.0(完全不透明)。<br>不会继承父元素的属性，但是可以设置<code>inherit</code>来继承父元素的值</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">alpha</span>(opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*IE*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="RGBA"><a href="#RGBA" class="headerlink" title="RGBA"></a>RGBA</h3><p>RGB扩展透明度的一种格式，a代表alpha透明度。</p>
+<h3 id="2-2_RGBA"><a href="#2-2_RGBA" class="headerlink" title="2.2 RGBA"></a>2.2 RGBA</h3><p>RGB扩展透明度的一种格式，a代表alpha透明度。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.8</span>)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="PNG_u56FE_u7247_u7684_u95EE_u9898"><a href="#PNG_u56FE_u7247_u7684_u95EE_u9898" class="headerlink" title="PNG图片的问题"></a>PNG图片的问题</h3><p>png图片的最大优势是支持alpha透明度，但是IE6不直接支持PNG透明度，PNG透明度自IE7才支持。<br>好的是现在已经逐渐淘汰了IE6，</p>
-<h2 id="u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898"><a href="#u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898" class="headerlink" title="拥有布局的问题"></a>拥有布局的问题</h2><p><strong>默认拥有布局的元素：</strong></p>
+<h3 id="2-3_PNG_u56FE_u7247_u7684_u95EE_u9898"><a href="#2-3_PNG_u56FE_u7247_u7684_u95EE_u9898" class="headerlink" title="2.3 PNG图片的问题"></a>2.3 PNG图片的问题</h3><p>png图片的最大优势是支持alpha透明度，但是IE6不直接支持PNG透明度，PNG透明度自IE7才支持。<br>好的是现在已经逐渐淘汰了IE6，</p>
+<h2 id="3-_u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898"><a href="#3-_u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898" class="headerlink" title="3.拥有布局的问题"></a>3.拥有布局的问题</h2><p><strong>默认拥有布局的元素：</strong></p>
 <ul>
 <li>body/html</li>
 <li>table/tr/td</li>
@@ -192,7 +192,7 @@
 <li>min-width: 任何值</li>
 <li>max-width: 除none之外的任何值</li>
 </ol>
-<h2 id="u6761_u4EF6_u6CE8_u91CA"><a href="#u6761_u4EF6_u6CE8_u91CA" class="headerlink" title="条件注释"></a>条件注释</h2><ul>
+<h2 id="4-_u6761_u4EF6_u6CE8_u91CA"><a href="#4-_u6761_u4EF6_u6CE8_u91CA" class="headerlink" title="4.条件注释"></a>4.条件注释</h2><ul>
 <li>lt  &lt;</li>
 <li>lte &lt;=</li>
 <li>gt  &gt;</li>
@@ -200,6 +200,28 @@
 </ul>
 <p>条件注释写法如下，这里的是XHTML写法，所以后面会以<code>/&gt;</code>结尾，HTML5写法最好是没有反斜杠</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- [if IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if !IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if gte IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5"><a href="#5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5" class="headerlink" title="5.IE常见的BUG及其解决方法"></a>5.IE常见的BUG及其解决方法</h2><h3 id="5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG"><a href="#5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG" class="headerlink" title="5.1 双外边距浮动BUG"></a>5.1 双外边距浮动BUG</h3><p>在元素有外边距且浮动的时候</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.someone</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>解决方法</strong><br>对<code>float</code>的元素设置<code>display:inline</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.someone</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-2_3_u50CF_u7D20_u6587_u672C_u504F_u79FBbug"><a href="#5-2_3_u50CF_u7D20_u6587_u672C_u504F_u79FBbug" class="headerlink" title="5.2 3像素文本偏移bug"></a>5.2 3像素文本偏移bug</h3><p>当文本与一个浮动元素相邻时这个bug有可能出现</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.myFloat</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"><span class="number">200px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>解决方法(IE6以上)</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">1%</span></span></span>; <span class="comment">/*拥有布局*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.myFloat</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">3px</span></span></span>; <span class="comment">/*重要的一句，等于左边的浮动元素的宽度缩小了3px*/</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-3_IE6_u7684_u91CD_u590D_u5B57_u7B26bug"><a href="#5-3_IE6_u7684_u91CD_u590D_u5B57_u7B26bug" class="headerlink" title="5.3 IE6的重复字符bug"></a>5.3 IE6的重复字符bug</h3><p>当一系列浮动元素排列在一排，如果最后的元素重复出现则是这个bug。<br>ps：通常是代码有添加注释的情况</p>
+<p><strong>解决方法</strong></p>
+<ol>
+<li>运用负外边距</li>
+<li>清除注释</li>
+</ol>
+<h3 id="5-4_IE6_u7684_u201C_u8EB2_u732B_u732B_u201Dbug"><a href="#5-4_IE6_u7684_u201C_u8EB2_u732B_u732B_u201Dbug" class="headerlink" title="5.4 IE6的“躲猫猫”bug"></a>5.4 IE6的“躲猫猫”bug</h3><p>当一个浮动元素后面跟着一些非浮动元素，然后是一个清理元素，所有这些元素包含在一个设置了背景颜色或图像的父元素中。如果清理元素碰到了浮动元素，那么中间的非浮动元素看起来像消失了，只有在刷新页面的时候才出现。</p>
+<p><strong>解决方法</strong></p>
+<ol>
+<li>去掉父元素上的背景颜色或图像</li>
+<li>避免清理元素与浮动元素接触</li>
+<li>容器指定行高</li>
+<li>将浮动元素和容器元素的position属性设置为relative</li>
+</ol>
 
         </div>
         <footer class="article-footer">
@@ -207,7 +229,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2016/01/17/3-CSS-note/" data-id="cijl4elb40003lkvu6y9tp47h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/" data-id="cijlc7n5800033ovu2m0hxyu7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -284,7 +306,7 @@
 var disqus_shortname = 'manfredhu';
 
 
-var disqus_url = 'http://yoursite.com/2016/01/17/3-CSS-note/';
+var disqus_url = 'http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/';
 
 (function() {
 var dsq = document.createElement('script');

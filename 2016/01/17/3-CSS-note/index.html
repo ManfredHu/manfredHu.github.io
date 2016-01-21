@@ -19,7 +19,7 @@
 1.1 子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
 12345678910.news&amp;#123;    background: gray;    bo">
 <meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/css.png">
-<meta property="og:updated_time" content="2016-01-19T11:55:56.677Z">
+<meta property="og:updated_time" content="2016-01-20T06:11:16.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS笔记">
 <meta name="twitter:description" content="1.清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
@@ -28,6 +28,8 @@
 
     
 
+    
+        <link rel="icon" href="http://7xnkur.dl1.z0.glb.clouddn.com/bear.ico?e=1453211861&token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:Y0oB3IO_x0332znEl5Q4X0dn2pg" />
     
 
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
@@ -74,7 +76,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/文章/">文章</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -200,7 +202,8 @@
 </ul>
 <p>条件注释写法如下，这里的是XHTML写法，所以后面会以<code>/&gt;</code>结尾，HTML5写法最好是没有反斜杠</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- [if IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if !IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- [if gte IE 6]&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="/css/ie6.css" /&gt;</span><br><span class="line">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5"><a href="#5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5" class="headerlink" title="5.IE常见的BUG及其解决方法"></a>5.IE常见的BUG及其解决方法</h2><h3 id="5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG"><a href="#5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG" class="headerlink" title="5.1 双外边距浮动BUG"></a>5.1 双外边距浮动BUG</h3><p>在元素有外边距且浮动的时候</p>
+<h2 id="5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5"><a href="#5-IE_u5E38_u89C1_u7684BUG_u53CA_u5176_u89E3_u51B3_u65B9_u6CD5" class="headerlink" title="5.IE常见的BUG及其解决方法"></a>5.IE常见的BUG及其解决方法</h2><p>下面这些BUG都是很有代表性的，在我做的项目中下面的bug基本都遇到了。-_-!!这运气真不是一般好。<br>当然现在说起IE6兼容很多人可能会嗤之以鼻，但是我觉得在天朝大国这个连学校都在用着XP的地方，身为一名合格的前端，IE6兼容必须要过关。</p>
+<h3 id="5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG"><a href="#5-1__u53CC_u5916_u8FB9_u8DDD_u6D6E_u52A8BUG" class="headerlink" title="5.1 双外边距浮动BUG"></a>5.1 双外边距浮动BUG</h3><p>在元素有外边距且浮动的时候</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.someone</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p><strong>解决方法</strong><br>对<code>float</code>的元素设置<code>display:inline</code></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.someone</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -229,7 +232,7 @@
 
 
 
-    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/" data-id="cijld9jad0003d4vutqx3wgm2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/" data-id="cijnw7g5k000dvcvu29jxixv3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -381,6 +384,16 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
 <nav id="article-nav">
     
+        <a href="/2016/01/20/4-angular-note/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            AngularJS笔记
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2016/01/17/2-someAboutHTML5/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -399,6 +412,42 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xnkur.dl1.z0.glb.clouddn.com/mean-stack.png?e=1453369438&amp;token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:PzlbiNhkPN5eddPEg5SVsoBNt7o)" alt="Object.defineProperties的实际作用（MEAN开发Model层的写法）" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/文章/">文章</a></p>
+                            <p class="item-title"><a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="title">Object.defineProperties的实际作用（MEAN开发Model层的写法）</a></p>
+                            <p class="item-date"><time datetime="2016-01-21T06:43:50.000Z" itemprop="datePublished">2016-01-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/20/4-angular-note/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="AngularJS笔记" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/AngularJS/">AngularJS</a></p>
+                            <p class="item-title"><a href="/2016/01/20/4-angular-note/" class="title">AngularJS笔记</a></p>
+                            <p class="item-date"><time datetime="2016-01-20T05:00:38.000Z" itemprop="datePublished">2016-01-20</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -463,7 +512,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/文章/">文章</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -473,7 +522,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -483,7 +532,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -493,7 +542,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/文章/" style="font-size: 10px;">文章</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
         </div>
     </div>
 
@@ -506,7 +555,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io">Hexo</a>
+                        <a href="http://www.cnblogs.com/manfredHu/">原博客</a>
                     </li>
                 
             </ul>

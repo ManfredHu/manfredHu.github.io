@@ -1,3 +1,101 @@
+(function() {
+    function snow() {
+        var parCount = 50, //雪花的数量
+            parMax = 150, //雪花的最大数量
+            sky = document.querySelector('#header'),
+            canvas = document.createElement('canvas'),
+            ctx = canvas.getContext('2d'),
+            width = sky.clientWidth,
+            height = sky.clientHeight,
+            i = 0,
+            active = false, //当屏幕小于300则默认关闭雪花
+            snowflakes = [],
+            snowflake = null;
+
+        canvas.style.position = 'absolute';
+        canvas.style.top = '0';
+
+        var Snowflake = function() {
+            this.x = 0;
+            this.y = 0;
+            this.vy = 0;
+            this.vx = 0;
+            this.r = 0;
+            this.reset();
+        };
+
+        Snowflake.prototype.reset = function() {
+            this.x = Math.random() * width; //雪花的位置
+            this.y = Math.random() * -height;
+            this.vy = 1 + Math.random() * 3; //位置偏移
+            this.vx = 0.5 - Math.random();
+            this.r = 1 + Math.random() * 2; //半径
+            this.o = 0.5 + Math.random() * 0.5; //透明度
+        }
+
+        function genetateSnowFalkes() {
+            for (i = 0; i < parMax; i++) {
+                snowflake = new Snowflake();
+                snowflake.reset();
+                snowflakes.push(snowflake);
+            };
+        }
+        genetateSnowFalkes();
+
+        function update() {
+            ctx.clearRect(0, 0, width, height);
+            if (!active) {
+                return;
+            }
+            for (i = 0; i < parCount; i++) {
+                snowflake = snowflakes[i];
+                snowflake.y += snowflake.vy;
+                snowflake.x += snowflake.vx;
+                ctx.globalAlpha = snowflake.o;
+                ctx.beginPath();
+                ctx.arc(snowflake.x, snowflake.y, snowflake.r, 0, Math.PI * 2, false);
+                ctx.closePath();
+                ctx.fill();
+                if (snowflake.y > height) {
+                    snowflake.reset();
+                };
+            };
+            requestAnimFrame(update);
+        }
+
+        function onResize() {
+            width = sky.clientWidth;
+            height = sky.clientHeight;
+            canvas.width = width;
+            canvas.height = height;
+            ctx.fillStyle = '#fff';
+
+            var wasActive = active;
+            active = width > 300;
+            if (!wasActive && active) {
+                requestAnimFrame(update);
+            }
+
+        }
+
+        window.requestAnimFrame = (function() { //浏览器兼容的requestAnimFrame方法
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function(callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+        onResize();
+        window.addEventListener('resize', onResize, false);
+        sky.appendChild(canvas);
+    }
+    snow();
+})();
+
+//-----------------------------------------------------
+//页面事件
+//-----------------------------------------------------
 (function ($) {
     // To top button
     $("#back-to-top").on('click', function () {

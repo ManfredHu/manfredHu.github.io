@@ -19,7 +19,7 @@
 1.1 子元素加clear1234&amp;lt;div class=&quot;news&quot;&amp;gt;    &amp;lt;p&amp;gt;Some Text&amp;lt;/p&amp;gt;    &amp;lt;br class=&quot;clear&quot;&amp;gt;&amp;lt;/div&amp;gt;
 12345678910.news&amp;#123;    background: gray;    bo">
 <meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/css.png">
-<meta property="og:updated_time" content="2016-01-20T06:11:16.677Z">
+<meta property="og:updated_time" content="2016-01-28T14:10:07.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS笔记">
 <meta name="twitter:description" content="1.清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
@@ -76,7 +76,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/文章/">文章</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/文章/">文章</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/JS/">JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/数据结构/">数据结构</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -163,13 +163,13 @@
 <p>如下面的为在父元素加<code>float</code>属性使其BFC化</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"news"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Some Text<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.news</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> gray</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> black</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.news</span> <span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.clear</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-_u900F_u660E_u5EA6"><a href="#2-_u900F_u660E_u5EA6" class="headerlink" title="2.透明度"></a>2.透明度</h2><h3 id="2-1_opacity"><a href="#2-1_opacity" class="headerlink" title="2.1 opacity"></a>2.1 opacity</h3><p>熟悉CSS3的应该很清楚，不就是opacity嘛。但是在那个没有支持opacity的年代又是怎么做的呢。</p>
-<blockquote>
-<p>opacity属性设置元素的不透明级别。不会被继承，值为0.0(完全透明)到1.0(完全不透明)。<br>不会继承父元素的属性，但是可以设置<code>inherit</code>来继承父元素的值</p>
+<h2 id="2-_u900F_u660E_u5EA6"><a href="#2-_u900F_u660E_u5EA6" class="headerlink" title="2.透明度"></a>2.透明度</h2><h3 id="2-1_opacity"><a href="#2-1_opacity" class="headerlink" title="2.1 opacity"></a>2.1 opacity</h3><blockquote>
+<p><code>opacity</code>属性是CSS3新增的属性，取值为0.0(完全透明)到1.0(完全不透明)，后代元素也会一起被影响</p>
 </blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">alpha</span>(opacity=<span class="number">50</span>)</span></span>; <span class="comment">/*IE*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-2_RGBA"><a href="#2-2_RGBA" class="headerlink" title="2.2 RGBA"></a>2.2 RGBA</h3><p>RGB扩展透明度的一种格式，a代表alpha透明度。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.8</span>)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">alpha</span>(opacity=<span class="number">80</span>)</span></span>; <span class="comment">/*IE5-7，注意这里取值80*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0.8</span></span></span>; <span class="comment">/*IE8+*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2_RGBA"><a href="#2-2_RGBA" class="headerlink" title="2.2 RGBA"></a>2.2 RGBA</h3><p>RGBA是扩展透明度的一种格式，a代表alpha透明度。IE9+支持RGBA写法。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.8</span>)</span></span>; <span class="comment">/*取值0-1*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>RGBA与opacity的区别是</strong>：opacity会影响整个元素，而RGBA影响单一的属性。</p>
 <h3 id="2-3_PNG_u56FE_u7247_u7684_u95EE_u9898"><a href="#2-3_PNG_u56FE_u7247_u7684_u95EE_u9898" class="headerlink" title="2.3 PNG图片的问题"></a>2.3 PNG图片的问题</h3><p>png图片的最大优势是支持alpha透明度，但是IE6不直接支持PNG透明度，PNG透明度自IE7才支持。<br>好的是现在已经逐渐淘汰了IE6，</p>
 <h2 id="3-_u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898"><a href="#3-_u62E5_u6709_u5E03_u5C40_u7684_u95EE_u9898" class="headerlink" title="3.拥有布局的问题"></a>3.拥有布局的问题</h2><p><strong>默认拥有布局的元素：</strong></p>
 <ul>
@@ -232,7 +232,7 @@
 
 
 
-    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/" data-id="cijnw7g5k000dvcvu29jxixv3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/3-CSS-note/" data-id="cildw2pic000xl8vukenghmsw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -416,10 +416,46 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/03/04/7-dataStructure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/dataStructures.jpg)" alt="常见数据结构算法" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/数据结构/">数据结构</a></p>
+                            <p class="item-title"><a href="/2016/03/04/7-dataStructure/" class="title">常见数据结构算法</a></p>
+                            <p class="item-date"><time datetime="2016-03-04T14:57:08.000Z" itemprop="datePublished">2016-03-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/22/6-javascript-closure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/closure.jpg)" alt="javascript-closure" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/JS/">JS</a></p>
+                            <p class="item-title"><a href="/2016/01/22/6-javascript-closure/" class="title">javascript-closure</a></p>
+                            <p class="item-date"><time datetime="2016-01-22T15:56:19.000Z" itemprop="datePublished">2016-01-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="thumbnail">
     
     
-        <span style="background-image:url(http://7xnkur.dl1.z0.glb.clouddn.com/mean-stack.png?e=1453369438&amp;token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:PzlbiNhkPN5eddPEg5SVsoBNt7o)" alt="Object.defineProperties的实际作用（MEAN开发Model层的写法）" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/mean-stack.png)" alt="Object.defineProperties的实际作用（MEAN开发Model层的写法）" class="thumbnail-image"></span>
     
 </a>
                         </div>
@@ -467,42 +503,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/html.png)" alt="到了HTML5时代写HTML代码要注意的东西" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a></p>
-                            <p class="item-title"><a href="/2016/01/17/2-someAboutHTML5/" class="title">到了HTML5时代写HTML代码要注意的东西</a></p>
-                            <p class="item-date"><time datetime="2016-01-17T11:16:21.000Z" itemprop="datePublished">2016-01-17</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/manfred-logo.png)" alt="博客园博客已迁移到此" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/01/17/1-firstArchive/" class="title">博客园博客已迁移到此</a></p>
-                            <p class="item-date"><time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -512,7 +512,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/文章/">文章</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/文章/">文章</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/JS/">JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/数据结构/">数据结构</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -522,7 +522,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -532,7 +532,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">3</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -542,7 +542,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/文章/" style="font-size: 10px;">文章</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/文章/" style="font-size: 10px;">文章</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
         </div>
     </div>
 

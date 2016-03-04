@@ -16,8 +16,8 @@
 <meta property="og:site_name" content="ManfredHu">
 <meta property="og:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
 12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125;">
-<meta property="og:image" content="http://7xnkur.dl1.z0.glb.clouddn.com/mean-stack.png?e=1453369438&amp;token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:PzlbiNhkPN5eddPEg5SVsoBNt7o">
-<meta property="og:updated_time" content="2016-01-21T08:45:14.689Z">
+<meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/mean-stack.png">
+<meta property="og:updated_time" content="2016-03-04T15:05:57.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object.defineProperties的实际作用（MEAN开发Model层的写法）">
 <meta name="twitter:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
@@ -73,7 +73,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/文章/">文章</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/文章/">文章</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/JS/">JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/数据结构/">数据结构</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -134,7 +134,7 @@
 </a>
         </p>
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://7xnkur.dl1.z0.glb.clouddn.com/mean-stack.png?e=1453369438&amp;token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:PzlbiNhkPN5eddPEg5SVsoBNt7o" alt="MEAN层次开发表示"></p>
+            <p><img src="/images/mean-stack.png" alt="MEAN层次开发表示"></p>
 <h2 id="Object-defineProperties_u662F_u4EC0_u4E48_uFF1F_u6709_u4EC0_u4E48_u7528_uFF1F"><a href="#Object-defineProperties_u662F_u4EC0_u4E48_uFF1F_u6709_u4EC0_u4E48_u7528_uFF1F" class="headerlink" title="Object.defineProperties是什么？有什么用？"></a>Object.defineProperties是什么？有什么用？</h2><p>这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。<br>大概第几章忘了，看下下面的代码估计能想起来是什么。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> User = &#123;&#125;; <span class="comment">//声明一个空对象</span></span><br><span class="line"><span class="built_in">Object</span>.defineProperties(User, &#123; <span class="comment">//填充对象属性</span></span><br><span class="line">    _id: &#123;</span><br><span class="line">        writable:       <span class="literal">true</span>,   <span class="comment">//设置属性是否可写，默认为true</span></span><br><span class="line">        configurable:   <span class="literal">false</span>,  <span class="comment">//设置属性是否可以配置，默认为true。当设置为false时不能用delete删除</span></span><br><span class="line">        enumerable:     <span class="literal">false</span>,  <span class="comment">//设置属性是否可以枚举，默认为true.即for-in循环对象的时候可以输出属性</span></span><br><span class="line">        value:          <span class="number">0</span>       <span class="comment">//默认值</span></span><br><span class="line">    &#125;,</span><br><span class="line">    id: &#123;</span><br><span class="line">        set: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(value &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">this</span>._id = value; <span class="comment">//数据库设置的为主键从0开始递增</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._id;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> privateId = <span class="built_in">Object</span>.getOwnPropertyDescriptor(User, <span class="string">'_id'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(privateId.value);  <span class="comment">//0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> userId = <span class="built_in">Object</span>.getOwnPropertyDescriptor(User, <span class="string">'id'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//还没设置呢，输出undefined</span></span><br><span class="line"></span><br><span class="line">userId.set(<span class="number">10</span>); <span class="comment">//设置id为10</span></span><br><span class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//输出10，设置有效</span></span><br><span class="line"></span><br><span class="line">userId.set(-<span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//输出10，设置无效</span></span><br></pre></td></tr></table></figure>
 <p>大概就是<code>Object.defineProperties</code>这个东西吧，可以定义属性。定义一个属性用的是<code>Object.defineProperty</code>。不过通常对象都是多个属性的啦，所以基本用的都是<code>Object.defineProperties</code>。</p>
@@ -161,7 +161,7 @@
 
 
 
-    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/21/5-MEANdevelop-ModelProblem/" data-id="cijnw7g4o0003vcvucdhgsrus" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/21/5-MEANdevelop-ModelProblem/" data-id="cildw2pi2000jl8vue5nyi8x5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -313,6 +313,16 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
 <nav id="article-nav">
     
+        <a href="/2016/01/22/6-javascript-closure/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            javascript-closure
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2016/01/20/4-angular-note/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -335,10 +345,46 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/03/04/7-dataStructure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/dataStructures.jpg)" alt="常见数据结构算法" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/数据结构/">数据结构</a></p>
+                            <p class="item-title"><a href="/2016/03/04/7-dataStructure/" class="title">常见数据结构算法</a></p>
+                            <p class="item-date"><time datetime="2016-03-04T14:57:08.000Z" itemprop="datePublished">2016-03-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/01/22/6-javascript-closure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/closure.jpg)" alt="javascript-closure" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/JS/">JS</a></p>
+                            <p class="item-title"><a href="/2016/01/22/6-javascript-closure/" class="title">javascript-closure</a></p>
+                            <p class="item-date"><time datetime="2016-01-22T15:56:19.000Z" itemprop="datePublished">2016-01-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="thumbnail">
     
     
-        <span style="background-image:url(http://7xnkur.dl1.z0.glb.clouddn.com/mean-stack.png?e=1453369438&amp;token=jTIp0CbeWdTdQCyxpZkzDuzwmVpl8s3sZKeBDHX0:PzlbiNhkPN5eddPEg5SVsoBNt7o)" alt="Object.defineProperties的实际作用（MEAN开发Model层的写法）" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/mean-stack.png)" alt="Object.defineProperties的实际作用（MEAN开发Model层的写法）" class="thumbnail-image"></span>
     
 </a>
                         </div>
@@ -386,42 +432,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/html.png)" alt="到了HTML5时代写HTML代码要注意的东西" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a></p>
-                            <p class="item-title"><a href="/2016/01/17/2-someAboutHTML5/" class="title">到了HTML5时代写HTML代码要注意的东西</a></p>
-                            <p class="item-date"><time datetime="2016-01-17T11:16:21.000Z" itemprop="datePublished">2016-01-17</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/manfred-logo.png)" alt="博客园博客已迁移到此" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/01/17/1-firstArchive/" class="title">博客园博客已迁移到此</a></p>
-                            <p class="item-date"><time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -431,7 +441,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/文章/">文章</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/文章/">文章</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/JS/">JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/数据结构/">数据结构</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -441,7 +451,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -451,7 +461,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">3</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -461,7 +471,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/文章/" style="font-size: 10px;">文章</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/文章/" style="font-size: 10px;">文章</a> <a href="/tags/杂文/" style="font-size: 10px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
         </div>
     </div>
 

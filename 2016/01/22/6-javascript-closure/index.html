@@ -3,22 +3,40 @@
 <head>
     <meta charset="utf-8">
     
-    <title>博客园博客已迁移到此 | ManfredHu</title>
+    <title>javascript-closure | ManfredHu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="杂文" />
+        <meta name="keywords" content="JS,笔记" />
     
-    <meta name="description" content="欢迎您来到我的新博客，我是ManfredHu.原博客园的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^">
+    <meta name="description" content="词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）说到变量，我们会关注变量的两个东西。
+
+作用域-空间来理解变量的存在
+生命周期-时间来理解变量的存在
+
+变量的词法作用域是指在程序源代码定义的这个变量的区域。通常分为函数和全局两部分。
+12345var scope = &quot;global&quot;; //全局作用域function func()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客园博客已迁移到此">
-<meta property="og:url" content="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/1-firstArchive/index.html">
+<meta property="og:title" content="javascript-closure">
+<meta property="og:url" content="http://manfredhu.github.io/ManfredHu-Blog/2016/01/22/6-javascript-closure/index.html">
 <meta property="og:site_name" content="ManfredHu">
-<meta property="og:description" content="欢迎您来到我的新博客，我是ManfredHu.原博客园的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^">
-<meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/manfred-logo.png">
-<meta property="og:updated_time" content="2016-01-19T11:55:56.675Z">
+<meta property="og:description" content="词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）说到变量，我们会关注变量的两个东西。
+
+作用域-空间来理解变量的存在
+生命周期-时间来理解变量的存在
+
+变量的词法作用域是指在程序源代码定义的这个变量的区域。通常分为函数和全局两部分。
+12345var scope = &quot;global&quot;; //全局作用域function func()">
+<meta property="og:image" content="http://manfredhu.github.io/ManfredHu-Blog/images/closure.jpg">
+<meta property="og:updated_time" content="2016-03-04T15:08:47.106Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客园博客已迁移到此">
-<meta name="twitter:description" content="欢迎您来到我的新博客，我是ManfredHu.原博客园的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^">
+<meta name="twitter:title" content="javascript-closure">
+<meta name="twitter:description" content="词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）说到变量，我们会关注变量的两个东西。
+
+作用域-空间来理解变量的存在
+生命周期-时间来理解变量的存在
+
+变量的词法作用域是指在程序源代码定义的这个变量的区域。通常分为函数和全局两部分。
+12345var scope = &quot;global&quot;; //全局作用域function func()">
 
     
 
@@ -108,31 +126,74 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    未分类
+    <a class="page-title-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/笔记/JS/">JS</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-1-firstArchive" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-6-javascript-closure" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        博客园博客已迁移到此
+        javascript-closure
         </h1>
     
 
             </header>
         
         <p class="article-byline">
-            <a href="/2016/01/17/1-firstArchive/" class="article-date">
-    <time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time>
+            <a href="/2016/01/22/6-javascript-closure/" class="article-date">
+    <time datetime="2016-01-22T15:56:19.000Z" itemprop="datePublished">2016-01-22</time>
 </a>
         </p>
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/manfred-logo.png" alt="认准这只熊"></p>
-<p>欢迎您来到我的新博客，我是ManfredHu.<a href="http://www.cnblogs.com/manfredHu/" target="_blank" rel="external">原博客园</a>的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^</p>
+            <p><img src="/images/closure.jpg" alt="闭包"></p>
+<h2 id="u8BCD_u6CD5_u4F5C_u7528_u57DF_uFF08Lexical_scoping_uFF09_u3001_u58F0_u660E_u4E0A_u4E0B_u6587_u5BF9_u8C61_uFF08Declaration_context_object_uFF09"><a href="#u8BCD_u6CD5_u4F5C_u7528_u57DF_uFF08Lexical_scoping_uFF09_u3001_u58F0_u660E_u4E0A_u4E0B_u6587_u5BF9_u8C61_uFF08Declaration_context_object_uFF09" class="headerlink" title="词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）"></a>词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）</h2><p>说到变量，我们会关注变量的两个东西。</p>
+<ul>
+<li>作用域-空间来理解变量的存在</li>
+<li>生命周期-时间来理解变量的存在</li>
+</ul>
+<p>变量的词法作用域是指在程序源代码定义的这个变量的区域。通常分为<strong>函数</strong>和<strong>全局</strong>两部分。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>; <span class="comment">//全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> scope = <span class="string">"local"</span>; <span class="comment">//函数作用域，只在这个函数内存活</span></span><br><span class="line">    <span class="keyword">return</span> scope;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那如果换成下面这样的呢？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>; <span class="comment">//全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkscope</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> scope = <span class="string">'local'</span>; <span class="comment">//外层函数的作用域</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">nested</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> scope = <span class="string">'nested'</span>; <span class="comment">//内层函数的作用域</span></span><br><span class="line">        <span class="keyword">return</span> scope;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nested();</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(checkscope()); <span class="comment">//nested</span></span><br></pre></td></tr></table></figure>
+<p>结论：<strong>当代码被编译器读取，词法作用域就已经确定了</strong><br>而这跟下面的变量作用域和闭包又会有关联,<strong>词法作用域到函数执行时依然是有效的</strong>。浏览器提前做好了大部分的工作，所以JS很快，so fast!!</p>
+<h2 id="u7F16_u8BD1_u8FC7_u7A0B_u5E72_u4E86_u4EC0_u4E48_uFF1F"><a href="#u7F16_u8BD1_u8FC7_u7A0B_u5E72_u4E86_u4EC0_u4E48_uFF1F" class="headerlink" title="编译过程干了什么？"></a>编译过程干了什么？</h2><p>传统的编译器会干这些东西</p>
+<ol>
+<li>词法分析过程，将代码读取并且扫描代码，分解成一个一个的词</li>
+<li>语法分析过程，分解语法短语构造语法树</li>
+<li>语义分析过程，审查代码是否有错，收集各个阶段类型的信息</li>
+<li>代码优化过程，对中间代码进行优化，使其更加高效</li>
+<li>生成目标代码，即二进制的本地代码</li>
+</ol>
+<p>具体到浏览器的引擎，也不外乎是这几个过程。<br>我们能明显感受到的就是下面几个过程。</p>
+<ol>
+<li>声明函数、变量——声明提升</li>
+<li>检查代码，优化——代码执行效率大大提高，有<code>ERROR</code></li>
+</ol>
+<p>上面两个过程，很明显可以体会到上面1-4步的过程。而最后一步，学过计算机的都懂的。<br>我们来看下面的代码体会下编译过程干的事情——<strong>声明提升</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(scope); <span class="comment">//undefined</span></span><br><span class="line">    <span class="keyword">var</span> scope = <span class="string">"local"</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(scope); <span class="comment">//local</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码跟下面是等价的，只是下面的看起来更清晰,编译器干的事情也更少。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> scope;</span><br><span class="line">    <span class="built_in">console</span>.log(scope); <span class="comment">//undefined</span></span><br><span class="line">    scope = <span class="string">"local"</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(scope); <span class="comment">//local</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u53D8_u91CF_u7684_u4F5C_u7528_u57DF_u548C_u751F_u547D_u5468_u671F"><a href="#u53D8_u91CF_u7684_u4F5C_u7528_u57DF_u548C_u751F_u547D_u5468_u671F" class="headerlink" title="变量的作用域和生命周期"></a>变量的作用域和生命周期</h2><p>JS中变量的生命周期跟函数有关，函数内定义的变量在函数执行结束后会释放。<br>JS中变量的作用域也跟函数有关，内层函数可以随作用域链访问外层函数的变量。具体原因就是作用域链的存在。</p>
+<p>所以你不难看出，为什么JS里面函数非常非常重要，也许你应该听过了：</p>
+<blockquote>
+<p>JavaScript的世界里函数是一等公民</p>
+</blockquote>
+<p>正正因为你用的变量的生命周期和作用域都跟函数有关。你平常是否想到了呢？<br>但是闭包是个bug，它为你提供了破坏这种已定规则的限制。为你的代码提供无限可能，这也许就是JavaScript真正的魅力所在，它让一切变得可能。</p>
+<p>函数如果嵌套的话，随作用域链来定，如果作用域链上没有则访问不到。会出现<code>ReferenceError</code></p>
+<h2 id="u6267_u884C_u73AF_u5883_uFF08execution_context_uFF09_u3001_u4F5C_u7528_u57DF_u94FE_uFF08scope_chain_uFF09_u7684_u521B_u5EFA"><a href="#u6267_u884C_u73AF_u5883_uFF08execution_context_uFF09_u3001_u4F5C_u7528_u57DF_u94FE_uFF08scope_chain_uFF09_u7684_u521B_u5EFA" class="headerlink" title="执行环境（execution context）、作用域链（scope chain）的创建"></a>执行环境（execution context）、作用域链（scope chain）的创建</h2><p>上面都是程序还没运行的时候干的事情，下面来说下程序运行起来会发生什么。</p>
+<p>当JavaScript在运行的时候，也就是某个函数被<strong>调用</strong>时，会创建一个<strong>执行环境</strong>（execution context），以及相应的<strong>作用域链</strong>。然后<strong>使用arguments和其他命名参数的值来初始化函数的活动对象</strong>(activation object)，也有称为作用域对象（scope object）的。这东西你摸不到看不见，但是它却真正存在着——就像真理</p>
+<h2 id="u6D3B_u52A8_u5BF9_u8C61_uFF08activation_object_uFF09_u3001_u4F5C_u7528_u57DF_u5BF9_u8C61_uFF08scope_object_uFF09"><a href="#u6D3B_u52A8_u5BF9_u8C61_uFF08activation_object_uFF09_u3001_u4F5C_u7528_u57DF_u5BF9_u8C61_uFF08scope_object_uFF09" class="headerlink" title="活动对象（activation object）、作用域对象（scope object）"></a>活动对象（activation object）、作用域对象（scope object）</h2><p>当我们的代码有多个函数嵌套的时候，一个个作用域对象就被串联起来形成<strong>作用域链</strong>（Scope chain）</p>
+<h2 id="u95ED_u5305"><a href="#u95ED_u5305" class="headerlink" title="闭包"></a>闭包</h2><p>我至少见过N种定义闭包概念的版本，让我们来欣赏一下：</p>
+<h4 id="1-_u51FD_u6570_u5BF9_u8C61_u53EF_u4EE5_u901A_u8FC7_u4F5C_u7528_u57DF_u76F8_u4E92_u5173_u8054_uFF0C_u51FD_u6570_u4F53_u5185_u90E8_u7684_u53D8_u91CF_u53EF_u4EE5_u4FDD_u5B58_u5728_u51FD_u6570_u4F5C_u7528_u57DF_u5185"><a href="#1-_u51FD_u6570_u5BF9_u8C61_u53EF_u4EE5_u901A_u8FC7_u4F5C_u7528_u57DF_u76F8_u4E92_u5173_u8054_uFF0C_u51FD_u6570_u4F53_u5185_u90E8_u7684_u53D8_u91CF_u53EF_u4EE5_u4FDD_u5B58_u5728_u51FD_u6570_u4F5C_u7528_u57DF_u5185" class="headerlink" title="1.函数对象可以通过作用域相互关联，函数体内部的变量可以保存在函数作用域内"></a>1.函数对象可以通过作用域相互关联，函数体内部的变量可以保存在函数作用域内</h4><p>这种观点引申出来的就是，<strong>所有JavaScript函数都是闭包</strong>。因为它们都是对象，都关联到作用域链。</p>
+<h4 id="2-_u51FD_u6570_u53D8_u91CF_u53EF_u4EE5_u88AB_u9690_u85CF_u4E8E_u4F5C_u7528_u57DF_u94FE_u4E4B_u5185_uFF0C_u56E0_u6B64_u770B_u8D77_u6765_u662F_u51FD_u6570_u5C06_u53D8_u91CF_u5305_u88F9_u8D77_u6765_u4E86"><a href="#2-_u51FD_u6570_u53D8_u91CF_u53EF_u4EE5_u88AB_u9690_u85CF_u4E8E_u4F5C_u7528_u57DF_u94FE_u4E4B_u5185_uFF0C_u56E0_u6B64_u770B_u8D77_u6765_u662F_u51FD_u6570_u5C06_u53D8_u91CF_u5305_u88F9_u8D77_u6765_u4E86" class="headerlink" title="2.函数变量可以被隐藏于作用域链之内，因此看起来是函数将变量包裹起来了"></a>2.函数变量可以被隐藏于作用域链之内，因此看起来是函数将变量包裹起来了</h4><p>这是从计算机科学文献中引申出来的闭包的解释。</p>
+<h4 id="3-_u95ED_u5305_u662F_u6307_u6709_u6743_u8BBF_u95EE_u53E6_u4E00_u4E2A_u51FD_u6570_u4F5C_u7528_u57DF_u4E2D_u7684_u53D8_u91CF_u7684_u51FD_u6570"><a href="#3-_u95ED_u5305_u662F_u6307_u6709_u6743_u8BBF_u95EE_u53E6_u4E00_u4E2A_u51FD_u6570_u4F5C_u7528_u57DF_u4E2D_u7684_u53D8_u91CF_u7684_u51FD_u6570" class="headerlink" title="3.闭包是指有权访问另一个函数作用域中的变量的函数"></a>3.闭包是指有权访问另一个函数作用域中的变量的函数</h4><p>这是《JavaScript高级程序设计第三版》的定义。也就是说至少需要2个函数才能构成闭包</p>
+<h4 id="4-_u95ED_u5305_u662F_u6307_u51FD_u6570_u6709_u81EA_u7531_u72EC_u7ACB_u7684_u53D8_u91CF_u3002_u6362_u53E5_u8BDD_u8BF4_uFF0C_u5B9A_u4E49_u5728_u95ED_u5305_u4E2D_u7684_u51FD_u6570_u53EF_u4EE5_u201C_u8BB0_u5FC6_u201D_u5B83_u521B_u5EFA_u65F6_u5019_u7684_u73AF_u5883_u3002"><a href="#4-_u95ED_u5305_u662F_u6307_u51FD_u6570_u6709_u81EA_u7531_u72EC_u7ACB_u7684_u53D8_u91CF_u3002_u6362_u53E5_u8BDD_u8BF4_uFF0C_u5B9A_u4E49_u5728_u95ED_u5305_u4E2D_u7684_u51FD_u6570_u53EF_u4EE5_u201C_u8BB0_u5FC6_u201D_u5B83_u521B_u5EFA_u65F6_u5019_u7684_u73AF_u5883_u3002" class="headerlink" title="4.闭包是指函数有自由独立的变量。换句话说，定义在闭包中的函数可以“记忆”它创建时候的环境。"></a>4.闭包是指函数有自由独立的变量。换句话说，定义在闭包中的函数可以“记忆”它创建时候的环境。</h4><p>这是MDN的解释。<strong>闭包由两部分构成：函数以及创建改函数的环境</strong><br>环境由闭包创建时在作用域中的任何局部变量组成。</p>
+<p>现在觉得，上面说的其实都有道理。特别是第二个和第三个解释,所以我觉得最最准确描述就是下面两句了。</p>
+<p><strong>闭包是指有权访问另一个函数作用域中的变量的函数</strong></p>
 
         </div>
         <footer class="article-footer">
@@ -140,7 +201,7 @@
 
 
 
-    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/1-firstArchive/" data-id="cildw2pgp0000l8vuudtiaqwa" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://manfredhu.github.io/ManfredHu-Blog/2016/01/22/6-javascript-closure/" data-id="cildw2phw000cl8vux2hybujp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -202,7 +263,7 @@
 
             
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文/">杂文</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 
         </footer>
     </div>
@@ -217,7 +278,7 @@
 var disqus_shortname = 'manfredhu';
 
 
-var disqus_url = 'http://manfredhu.github.io/ManfredHu-Blog/2016/01/17/1-firstArchive/';
+var disqus_url = 'http://manfredhu.github.io/ManfredHu-Blog/2016/01/22/6-javascript-closure/';
 
 (function() {
 var dsq = document.createElement('script');
@@ -292,16 +353,22 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
 <nav id="article-nav">
     
-        <a href="/2016/01/17/2-someAboutHTML5/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/03/04/7-dataStructure/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            到了HTML5时代写HTML代码要注意的东西
+            常见数据结构算法
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/2016/01/21/5-MEANdevelop-ModelProblem/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Object.defineProperties的实际作用（MEAN开发Model层的写法）</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 

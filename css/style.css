@@ -265,6 +265,22 @@ body {
   -webkit-background-size: 165px 60px;
   -moz-background-size: 165px 60px;
   background-size: 165px 60px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.logo:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 .main-body {
   margin-top: -60px;
@@ -330,6 +346,26 @@ body {
 #main .main-body-content:after {
   clear: both;
 }
+::-webkit-scrollbar {
+  width: 16px;
+  height: 8px;
+  background-color: #565656;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1fb2f0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+::selection {
+  color: #fff;
+  background-color: #08c;
+}
 #header {
   background: #26272b;
   padding-bottom: 60px;
@@ -362,6 +398,8 @@ body {
 #header-title .subtitle-wrap {
   padding: 10px 0px 0px;
   margin-left: 20px;
+  position: relative;
+  z-index: 1;
 }
 #header-title .subtitle {
   font-size: 18px;

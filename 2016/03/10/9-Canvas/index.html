@@ -3,18 +3,31 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类：: 数据结构 | ManfredHu</title>
+    <title>Canvas一般用法 | ManfredHu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Manfred Hu的技术博客，胡文峰的博客，前端博客，Font-End">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ManfredHu">
-<meta property="og:url" content="manfredhu.com/categories/笔记/数据结构/index.html">
+        <meta name="keywords" content="Canvas,HTML,笔记" />
+    
+    <meta name="description" content="what is CanvasCanvas是HTML5的绘图接口，可以提供用JavaScript绘制位图的功能。
+APICanvas的API众多，这里举几个常用的。(好久没看都快忘了。。。)
+
+1.beginPath() 让canvas根据需要计算图形的内部和外部范围，通常在绘图开始会有2.moveTo(),lineTo() 移动和画线函数，但是不会马上绘制(paint)3.stroke(绘制)和f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas一般用法">
+<meta property="og:url" content="manfredhu.com/2016/03/10/9-Canvas/index.html">
 <meta property="og:site_name" content="ManfredHu">
-<meta property="og:description" content="Manfred Hu的技术博客，胡文峰的博客，前端博客，Font-End">
+<meta property="og:description" content="what is CanvasCanvas是HTML5的绘图接口，可以提供用JavaScript绘制位图的功能。
+APICanvas的API众多，这里举几个常用的。(好久没看都快忘了。。。)
+
+1.beginPath() 让canvas根据需要计算图形的内部和外部范围，通常在绘图开始会有2.moveTo(),lineTo() 移动和画线函数，但是不会马上绘制(paint)3.stroke(绘制)和f">
+<meta property="og:image" content="manfredhu.com/images/snow.jpg">
+<meta property="og:updated_time" content="2016-03-10T15:01:26.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ManfredHu">
-<meta name="twitter:description" content="Manfred Hu的技术博客，胡文峰的博客，前端博客，Font-End">
+<meta name="twitter:title" content="Canvas一般用法">
+<meta name="twitter:description" content="what is CanvasCanvas是HTML5的绘图接口，可以提供用JavaScript绘制位图的功能。
+APICanvas的API众多，这里举几个常用的。(好久没看都快忘了。。。)
+
+1.beginPath() 让canvas根据需要计算图形的内部和外部范围，通常在绘图开始会有2.moveTo(),lineTo() 移动和画线函数，但是不会马上绘制(paint)3.stroke(绘制)和f">
 
     
 
@@ -102,65 +115,133 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">数据结构</em>
+    <a class="page-title-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/笔记/HTML/">HTML</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-9-Canvas" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/03/04/7-dataStructure/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/dataStructures.jpg)" alt="常见数据结构算法" class="thumbnail-image"></span>
-    
-</a>
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/数据结构/">数据结构</a>
-            </p>
-            <p class="date"><time datetime="2016-03-04T14:57:08.000Z" itemprop="datePublished">2016-03-04</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/03/04/7-dataStructure/">常见数据结构算法</a>
+        Canvas一般用法
         </h1>
     
 
-        <p class="article-excerpt">
-            
-前言数据结构的重要性就不多说了，一名合格的程序猿/媛，必修的科目。这里列举常见的前端开发面试会遇到的数据结构面试题，好像基本都是要手写代码的。这里的代码不限制于javascript语言，默认升序排列，有特别的地方会指出来。
-冒泡排序[稳定 平均O(n^2)，最好O(n)，最坏O(n^2)]12345678910function bubbleSort(arr) &#123;    var len 
+            </header>
+        
+        <p class="article-byline">
+            <a href="/2016/03/10/9-Canvas/" class="article-date">
+    <time datetime="2016-03-10T12:54:38.000Z" itemprop="datePublished">2016-03-10</time>
+</a>
         </p>
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/snow.jpg" alt=""></p>
+<h2 id="what_is_Canvas"><a href="#what_is_Canvas" class="headerlink" title="what is Canvas"></a>what is Canvas</h2><p>Canvas是HTML5的绘图接口，可以提供用JavaScript绘制位图的功能。</p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>Canvas的API众多，这里举几个常用的。(好久没看都快忘了。。。)</p>
+<blockquote>
+<p>1.beginPath() 让canvas根据需要计算图形的内部和外部范围，通常在绘图开始会有<br>2.moveTo(),lineTo() 移动和画线函数，但是不会马上绘制(paint)<br>3.stroke(绘制)和fill(填充)会马上绘制图形显示出来<br>4.lineWidth可以改变线条宽度<br>5.strokeStyle可以改变绘制颜色</p>
+</blockquote>
+<h2 id="u7F13_u5B58Canvas_u6210_u6570_u636E"><a href="#u7F13_u5B58Canvas_u6210_u6570_u636E" class="headerlink" title="缓存Canvas成数据"></a>缓存Canvas成数据</h2><p>用<code>canvas.toDataURL(type)</code>可以获取data URL格式的Canvas数据</p>
+<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCanopyPath</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//绘制树</span></span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.moveTo(-<span class="number">25</span>, -<span class="number">50</span>);</span><br><span class="line">    context.lineTo(-<span class="number">10</span>, -<span class="number">80</span>);</span><br><span class="line">    context.lineTo(-<span class="number">20</span>, -<span class="number">80</span>);</span><br><span class="line">    context.lineTo(-<span class="number">5</span>, -<span class="number">110</span>);</span><br><span class="line">    context.lineTo(-<span class="number">15</span>, -<span class="number">110</span>);</span><br><span class="line"></span><br><span class="line">    context.lineTo(<span class="number">0</span>, -<span class="number">140</span>);</span><br><span class="line"></span><br><span class="line">    context.lineTo(<span class="number">15</span>, -<span class="number">110</span>);</span><br><span class="line">    context.lineTo(<span class="number">5</span>, -<span class="number">110</span>);</span><br><span class="line">    context.lineTo(<span class="number">20</span>, -<span class="number">80</span>);</span><br><span class="line">    context.lineTo(<span class="number">10</span>, -<span class="number">80</span>);</span><br><span class="line">    context.lineTo(<span class="number">25</span>, -<span class="number">50</span>);</span><br><span class="line">    context.closePath();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawTrails</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'trails'</span>);</span><br><span class="line">    <span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">    context.save();</span><br><span class="line">    <span class="comment">//移动画布</span></span><br><span class="line">    context.translate(<span class="number">130</span>, <span class="number">250</span>);</span><br><span class="line">    <span class="comment">//绘制树的上半部分</span></span><br><span class="line">    createCanopyPath(context);</span><br><span class="line">    <span class="comment">//线条宽度</span></span><br><span class="line">    context.lineWidth = <span class="number">4</span>;</span><br><span class="line">    <span class="comment">//拐角显得平滑</span></span><br><span class="line">    context.lineJoin = <span class="string">'round'</span>; </span><br><span class="line">    <span class="comment">//设置颜色并且绘制</span></span><br><span class="line">    context.strokeStyle = <span class="string">'#663300'</span>;</span><br><span class="line">    context.stroke();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//填充颜色</span></span><br><span class="line">    context.fillStyle = <span class="string">'#339900'</span>;</span><br><span class="line">    context.fill();</span><br><span class="line"></span><br><span class="line">    context.fillStyle = <span class="string">'#663300'</span>;</span><br><span class="line">    context.fillRect(-<span class="number">5</span>, -<span class="number">50</span>, <span class="number">10</span>, <span class="number">50</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//恢复初始状态</span></span><br><span class="line">    context.restore();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Save the canvas state and draw the path</span></span><br><span class="line">    context.save();</span><br><span class="line"></span><br><span class="line">    context.translate(-<span class="number">10</span>, <span class="number">350</span>);</span><br><span class="line">    context.beginPath();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The first curve bends up and right</span></span><br><span class="line">    context.moveTo(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//绘制曲线</span></span><br><span class="line">    context.quadraticCurveTo(<span class="number">170</span>, -<span class="number">50</span>, <span class="number">260</span>, -<span class="number">190</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The second curve continues down and right</span></span><br><span class="line">    context.quadraticCurveTo(<span class="number">310</span>, -<span class="number">250</span>, <span class="number">410</span>,-<span class="number">250</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Draw the path in a wide brown stroke</span></span><br><span class="line">    context.strokeStyle = <span class="string">'#663300'</span>;</span><br><span class="line">    context.lineWidth = <span class="number">20</span>;</span><br><span class="line">    context.stroke();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Restore the previous canvas state</span></span><br><span class="line">    context.restore();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"load"</span>, drawTrails, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="manfredhu.com/2016/03/10/9-Canvas/" data-id="cilrpp5q500030cvu8tic563s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canvas/">Canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
+
+<section id="comments">
+
+    <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script>
+var disqus_shortname = 'manfredhu';
 
 
-    </div></section>
+var disqus_url = 'manfredhu.com/2016/03/10/9-Canvas/';
 
+(function() {
+var dsq = document.createElement('script');
+dsq.type = 'text/javascript';
+dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
 
-
+</section>
 
                         </div>
                     </section>
@@ -220,6 +301,29 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/03/14/10-newLife/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            成长
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/03/06/8-stringReplace/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">string.Replace用法</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         

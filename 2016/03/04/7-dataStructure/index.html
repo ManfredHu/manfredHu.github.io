@@ -26,6 +26,8 @@
     
 
     
+        <link rel="icon" href="/manfredhu.ico" />
+    
 
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/vendor/titillium-web/styles.css" type="text/css">
@@ -71,7 +73,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/数据结构/">数据结构</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/随笔/">随笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/随笔/JavaScript/">JavaScript</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/">笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/AngularJS/">AngularJS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/HTML/">HTML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/笔记/数据结构/">数据结构</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/随笔/">随笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/随笔/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/随笔/其他/">其他</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -143,67 +145,42 @@
         <footer class="article-footer">
             
 
-
-
-    <a data-url="manfredhu.com/2016/03/04/7-dataStructure/" data-id="cim9a06de000irsvupzlu2u53" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
 <script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 </script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
 
             
             
@@ -215,23 +192,8 @@
 
 <section id="comments">
 
-    <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-<script>
-var disqus_shortname = 'manfredhu';
-
-
-var disqus_url = 'manfredhu.com/2016/03/04/7-dataStructure/';
-
-(function() {
-var dsq = document.createElement('script');
-dsq.type = 'text/javascript';
-dsq.async = true;
-dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
+    <div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2091310"></script>
 
 </section>
 
@@ -329,6 +291,78 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/03/27/11-SublimeText3Plug/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/sublimetext3.jpg)" alt="SublimeText3常用快捷键和优秀插件（亲测）" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/随笔/其他/">其他</a></p>
+                            <p class="item-title"><a href="/2016/03/27/11-SublimeText3Plug/" class="title">SublimeText3常用快捷键和优秀插件（亲测）</a></p>
+                            <p class="item-date"><time datetime="2016-03-26T19:26:48.000Z" itemprop="datePublished">2016-03-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/03/27/12-EvalCallApplyBind/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpg)" alt="JavaScript的动态特性(通过eval,call,apply和bind来体现)" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2016/03/27/12-EvalCallApplyBind/" class="title">JavaScript的动态特性(通过eval,call,apply和bind来体现)</a></p>
+                            <p class="item-date"><time datetime="2016-03-26T16:45:01.000Z" itemprop="datePublished">2016-03-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/03/27/14-thisKeyWords/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/this.jpg)" alt="JavaScript中this关键字的使用比较" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2016/03/27/14-thisKeyWords/" class="title">JavaScript中this关键字的使用比较</a></p>
+                            <p class="item-date"><time datetime="2016-03-26T16:24:33.000Z" itemprop="datePublished">2016-03-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/03/27/13-proto-prototype-constructor/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/prototypeAndConstructor.png)" alt="15条规则解析JavaScript对象布局（__proto__、prototype、constructor）" class="thumbnail-image"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2016/03/27/13-proto-prototype-constructor/" class="title">15条规则解析JavaScript对象布局（__proto__、prototype、constructor）</a></p>
+                            <p class="item-date"><time datetime="2016-03-26T16:05:41.000Z" itemprop="datePublished">2016-03-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/03/24/10-AlibabaExamination/" class="thumbnail">
     
     
@@ -338,81 +372,9 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a></p>
                             <p class="item-title"><a href="/2016/03/24/10-AlibabaExamination/" class="title">2015年阿里巴巴校招题目</a></p>
                             <p class="item-date"><time datetime="2016-03-24T12:17:37.000Z" itemprop="datePublished">2016-03-24</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/10/9-Canvas/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/snow.jpg)" alt="Canvas一般用法" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a></p>
-                            <p class="item-title"><a href="/2016/03/10/9-Canvas/" class="title">Canvas一般用法</a></p>
-                            <p class="item-date"><time datetime="2016-03-10T12:54:38.000Z" itemprop="datePublished">2016-03-10</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/06/8-stringReplace/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/replace.png)" alt="string.Replace用法" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2016/03/06/8-stringReplace/" class="title">string.Replace用法</a></p>
-                            <p class="item-date"><time datetime="2016-03-06T02:45:26.000Z" itemprop="datePublished">2016-03-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/04/7-dataStructure/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/dataStructures.jpg)" alt="常见数据结构算法" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/数据结构/">数据结构</a></p>
-                            <p class="item-title"><a href="/2016/03/04/7-dataStructure/" class="title">常见数据结构算法</a></p>
-                            <p class="item-date"><time datetime="2016-03-04T14:57:08.000Z" itemprop="datePublished">2016-03-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/01/22/6-javascript-closure/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/closure.jpg)" alt="javascript-closure" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2016/01/22/6-javascript-closure/" class="title">javascript-closure</a></p>
-                            <p class="item-date"><time datetime="2016-01-22T15:56:19.000Z" itemprop="datePublished">2016-01-22</time></p>
                         </div>
                     </li>
                 
@@ -425,7 +387,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/数据结构/">数据结构</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/数据结构/">数据结构</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/JavaScript/">JavaScript</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/其他/">其他</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -435,7 +397,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -445,7 +407,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -455,7 +417,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/HTML/" style="font-size: 13.33px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 16.67px;">JavaScript</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/杂文/" style="font-size: 13.33px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+            <a href="/tags/AnuglarJS/" style="font-size: 10px;">AnuglarJS</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/杂文/" style="font-size: 14px;">杂文</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/随笔/" style="font-size: 16px;">随笔</a>
         </div>
     </div>
 

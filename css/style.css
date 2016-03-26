@@ -368,6 +368,43 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #aeaeae;
 }
+.article-entry table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-left: 0;
+  border-top: 0;
+}
+.article-entry td {
+  vertical-align: top;
+}
+.article-entry th,
+.article-entry td {
+  border: 0px;
+  border-left: 1px solid #ddd;
+  border-collapse: separate;
+  border-top: 1px solid #ddd;
+}
+.article-entry table thead {
+  background-color: #eae9f7;
+}
+.article-entry table tbody>tr:nth-child(2n) {
+  background-color: #f4f4fa;
+}
+.article-entry table thead th {
+  text-align: center;
+  padding: 6px;
+}
+.article-entry table tbody>tr:nth-child(2n) {
+  background-color: #f4f4fa;
+}
+.article-entry table thead th {
+  text-align: center;
+  padding: 6px;
+}
 #header {
   background: #26272b;
   padding-bottom: 60px;
@@ -750,6 +787,17 @@ body {
 .widget-wrap {
   padding: 30px 30px 20px;
 }
+.widget-wrap h3:before {
+  color: #1169bf;
+  content: "\f135";
+  font-size: 14px;
+  margin-right: 8px;
+  font-family: FontAwesome;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
 .widget-title {
   font-size: 15px;
   font-weight: 400;
@@ -818,19 +866,23 @@ body {
 }
 .widget-list ul li a:before,
 .widget-list ol li a:before {
-  color: #ccc;
-  content: "\f0da";
+  color: #608fbf;
+  content: "\f02c";
   font-size: 12px;
   margin-right: 6px;
   font-family: FontAwesome;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  -ms-transition: 0.2s ease;
-  transition: 0.2s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .widget-list ul li a:hover:before,
 .widget-list ol li a:hover:before {
-  color: #444;
+  color: #0060bf;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .widget-list ul ul,
 .widget-list ol ul,
@@ -1658,51 +1710,63 @@ i.icon:before {
 .article-entry .highlight {
   margin: 1.6em 0;
 }
-.highlight {
+figure.highlight {
   color: #d3d0c8;
+  border: 1px solid #ffea00;
   background: #2d2d2d;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-.highlight .code .comment,
-.highlight .code .quote {
+figure.highlight .code .comment,
+figure.highlight .code .quote {
   color: #999;
 }
-.highlight .code .value {
+figure.highlight .code .value {
   color: #9c9;
 }
-.highlight .code .number,
-.highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .literal,
-.highlight .code .type,
-.highlight .code .params,
-.highlight .code .meta,
-.highlight .code .link {
+figure.highlight .code .number,
+figure.highlight .code .built_in,
+figure.highlight .code .builtin-name,
+figure.highlight .code .literal,
+figure.highlight .code .type,
+figure.highlight .code .params,
+figure.highlight .code .meta,
+figure.highlight .code .link {
   color: #d3d0c8;
 }
-.highlight .code .attribute {
+figure.highlight .code .attribute {
   color: #f99157;
 }
-.highlight .code .string,
-.highlight .code .symbol,
-.highlight .code .bullet,
-.highlight .code .addition {
+figure.highlight .code .string,
+figure.highlight .code .symbol,
+figure.highlight .code .bullet,
+figure.highlight .code .addition {
   color: #9c9;
 }
-.highlight .code .title,
-.highlight .code .section {
+figure.highlight .code .title,
+figure.highlight .code .section {
   color: #f2777a;
 }
-.highlight .code .keyword,
-.highlight .code .selector-tag {
+figure.highlight .code .keyword,
+figure.highlight .code .selector-tag {
   color: #c9c;
 }
-.highlight .code .emphasis {
+figure.highlight .code .emphasis {
   font-style: italic;
 }
-.highlight .code .strong {
+figure.highlight .code .strong {
   font-weight: bold;
+}
+figure.highlight:hover {
+  -webkit-box-shadow: 0 0 8px rgba(255,234,0,0.7);
+  box-shadow: 0 0 8px rgba(255,234,0,0.7);
+  -webkit-transition: box-shadow 0.5s linear;
+  -moz-transition: box-shadow 0.5s linear;
+  -ms-transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+.article-entry figure.highlight table {
+  border: 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .article-entry .img-wrap:before {

@@ -3,37 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>15条规则解析JavaScript对象布局（__proto__、prototype、constructor） | ManfredHu</title>
+    <title>ManfredHu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="JavaScript,随笔" />
-    
-    <meta name="description" content="这篇是自己在之前的博客写的，各种转载就不说了。
-
-大家都说JavaScript的属性多，记不过来，各种结构复杂不易了解。确实JS是一门入门快提高难的语言，但是也有其他办法可以辅助记忆。下面就来讨论一下JS的一大难点-对象布局，究竟设计JS这门语言的人当时是怎么做的？设计完之后又变成了什么？
-我们来看一张图：
-
-相信大家对这张图都不陌生了，构造函数有一个prototype属性指向其原型。相反原型也有">
-<meta property="og:type" content="article">
-<meta property="og:title" content="15条规则解析JavaScript对象布局（__proto__、prototype、constructor）">
-<meta property="og:url" content="manfredhu.com/2016/03/27/13-proto-prototype-constructor/index.html">
+    <meta name="description" content="404">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ManfredHu">
+<meta property="og:url" content="manfredhu.com/404.html">
 <meta property="og:site_name" content="ManfredHu">
-<meta property="og:description" content="这篇是自己在之前的博客写的，各种转载就不说了。
-
-大家都说JavaScript的属性多，记不过来，各种结构复杂不易了解。确实JS是一门入门快提高难的语言，但是也有其他办法可以辅助记忆。下面就来讨论一下JS的一大难点-对象布局，究竟设计JS这门语言的人当时是怎么做的？设计完之后又变成了什么？
-我们来看一张图：
-
-相信大家对这张图都不陌生了，构造函数有一个prototype属性指向其原型。相反原型也有">
-<meta property="og:image" content="manfredhu.com/images/prototypeAndConstructor.png">
-<meta property="og:updated_time" content="2016-03-26T16:23:00.254Z">
+<meta property="og:description" content="404">
+<meta property="og:updated_time" content="2016-03-26T19:16:39.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="15条规则解析JavaScript对象布局（__proto__、prototype、constructor）">
-<meta name="twitter:description" content="这篇是自己在之前的博客写的，各种转载就不说了。
-
-大家都说JavaScript的属性多，记不过来，各种结构复杂不易了解。确实JS是一门入门快提高难的语言，但是也有其他办法可以辅助记忆。下面就来讨论一下JS的一大难点-对象布局，究竟设计JS这门语言的人当时是怎么做的？设计完之后又变成了什么？
-我们来看一张图：
-
-相信大家对这张图都不陌生了，构造函数有一个prototype属性指向其原型。相反原型也有">
+<meta name="twitter:title" content="ManfredHu">
+<meta name="twitter:description" content="404">
 
     
 
@@ -145,45 +127,31 @@ var _hmt = _hmt || [];
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/随笔/">随笔</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+    ManfredHu
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-13-proto-prototype-constructor" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-        15条规则解析JavaScript对象布局（__proto__、prototype、constructor）
-        </h1>
-    
-
-            </header>
-        
         <p class="article-byline">
-            <a href="/2016/03/27/13-proto-prototype-constructor/" class="article-date">
-    <time datetime="2016-03-26T16:05:41.000Z" itemprop="datePublished">2016-03-27</time>
+            <a href="/404.html" class="article-date">
+    <time datetime="2016-03-26T19:16:39.478Z" itemprop="datePublished">2016-03-27</time>
 </a>
         </p>
         <div class="article-entry" itemprop="articleBody">
-            <blockquote>
-<p><strong>这篇是自己在之前的<a href="http://www.cnblogs.com/manfredHu/p/4418594.html" target="_blank" rel="external">博客</a>写的，各种转载就不说了。</strong></p>
-</blockquote>
-<p>大家都说JavaScript的属性多，记不过来，各种结构复杂不易了解。确实JS是一门入门快提高难的语言，但是也有其他办法可以辅助记忆。下面就来讨论一下JS的一大难点-对象布局，究竟设计JS这门语言的人当时是怎么做的？设计完之后又变成了什么？</p>
-<p>我们来看一张图：</p>
-<p><img src="/images/prototypeAndConstructor.png" alt="原型-构造函数-实例三者的关系图"></p>
-<p>相信大家对这张图都不陌生了，构造函数有一个prototype属性指向其原型。相反原型也有一个constructor指向构造函数。与此同时实例也有一个constructor指向构造函数，这简直就是互相捆绑生怕找不到啊不是吗？</p>
-<p>还有一个我们称之为秘密链接的<strong>proto</strong>属性，原谅我第一眼见到这个属性就觉得特别的怪，_下划线都用上了，驼峰命名规则呢？好吧，这是部分浏览器暴露出来的一个指针而已，可能当时设计的时候随便写出来，突然发现这货有点用就留下了（纯属个人猜测）。</p>
-<p>附上上图的检测代码不信的童鞋可以自己玩玩：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>JS函数原型，函数，实例的关系证明<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">//构造函数</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="keyword">new</span> Foo(); <span class="comment">//实例</span></span><br><span class="line">    <span class="built_in">console</span>.log(Foo===Foo.prototype.constructor); <span class="comment">//true</span></span><br><span class="line">    <span class="built_in">console</span>.log(a.constructor===Foo); <span class="comment">//true</span></span><br><span class="line">    <span class="built_in">console</span>.log(Foo.prototype===Foo.prototype); <span class="comment">//true</span></span><br><span class="line">    <span class="built_in">console</span>.log(a.__proto__===Foo.prototype); <span class="comment">//true</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>上面只是基础而已，下面才是真正的重点，为了修改这张图我可是煞费苦心，绞尽脑汁，不知道死了多少脑细胞。</p>
-<p><img src="/images/JavaScriptObjectLayout.jpg" alt="JS对象布局图"></p>
-<p>可能大家已经看晕了，没事冲杯咖啡慢慢看。下面是相应的证明代码，友情提示sublimeText看更爽：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>JavaScript对象布局<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">        <span class="comment">//以下代码全部为true</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"1:"</span>+(<span class="built_in">Object</span>.prototype.__proto__ === <span class="literal">null</span>));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"2:"</span>+(<span class="built_in">Function</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.1:"</span>+(<span class="built_in">Number</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.2:"</span>+(<span class="built_in">Boolean</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.3:"</span>+(<span class="built_in">String</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.4:"</span>+(<span class="built_in">Object</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.5:"</span>+(<span class="built_in">Function</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.6:"</span>+(<span class="built_in">Date</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.7:"</span>+(<span class="built_in">Error</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.8:"</span>+(<span class="built_in">Array</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"3.9:"</span>+(<span class="built_in">RegExp</span>.__proto__ === <span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"4.1:"</span>+(<span class="built_in">Math</span>.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"4.2"</span>+(<span class="built_in">JSON</span>.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">//构造函数</span></span><br><span class="line">        <span class="keyword">var</span> f1 = <span class="keyword">new</span> Foo(); <span class="comment">//实例</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"5:"</span>+(Foo===Foo.prototype.constructor)); </span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"6.1:"</span>+(f1.__proto__===Foo.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"7:"</span>+(f1.constructor===Foo)); </span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.1:"</span>+(<span class="built_in">Number</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.2:"</span>+(<span class="built_in">Boolean</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.3:"</span>+(<span class="built_in">String</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.5:"</span>+(<span class="built_in">Function</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.6:"</span>+(<span class="built_in">Date</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.7:"</span>+(<span class="built_in">Error</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.8:"</span>+(<span class="built_in">Array</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"8.9:"</span>+(<span class="built_in">RegExp</span>.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"9:"</span>+(Foo.__proto__===<span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="keyword">var</span> manfred = <span class="keyword">new</span> <span class="built_in">Object</span>();<span class="comment">//实例对象</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"10:"</span>+(manfred.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"11:"</span>+(Foo.prototype.__proto__===<span class="built_in">Object</span>.prototype));</span><br><span class="line">        <span class="comment">//manfred为object构造函数产生，manfred.constructor指向function Object()构造函数</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"12:"</span>+(manfred.constructor.__proto__===<span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"13:"</span>+(manfred.constructor===<span class="built_in">Object</span>.prototype.constructor));</span><br><span class="line">        <span class="keyword">var</span> hu = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"14:"</span>+(hu.constructor.__proto__===<span class="built_in">Function</span>.prototype));</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"15:"</span>+(hu.constructor===<span class="built_in">Function</span>.prototype.constructor));</span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>相信看完这些代码和原图比较之后大家对JS对象之间的关系已经了如指掌了，确实一开始我也让这货搞得头晕晕的，但是画出这张图之后已经觉得没什么了。大家可以自己动手画一下。</p>
+            <html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
+</body>
+
+</html>
 
         </div>
         <footer class="article-footer">
@@ -228,8 +196,6 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 
             
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
         </footer>
     </div>
 </article>
@@ -299,29 +265,6 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/03/27/14-thisKeyWords/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            JavaScript中this关键字的使用比较
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2016/03/24/10-AlibabaExamination/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">2015年阿里巴巴校招题目</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         

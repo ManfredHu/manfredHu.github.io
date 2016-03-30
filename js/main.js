@@ -1,3 +1,6 @@
+//-----------------------------------------------------
+//顶部雪花
+//-----------------------------------------------------
 (function() {
     function snow() {
         var parCount = 50, //雪花的数量
@@ -124,10 +127,10 @@
         $(this).find('.fancybox').each(function(){
             $(this).attr('rel', 'article' + i);
         });
-        if ($.fancybox) {
-            $('.fancybox').fancybox();
-        }
     });
+    if ($.fancybox) {
+        $('.fancybox').fancybox();
+    }
 
     // Sidebar expend
     $('#sidebar .sidebar-toggle').click(function () {
@@ -220,5 +223,28 @@
             $(this).addClass('top-level-menu');
         }
     });
+
+    // The sidebarTop's offset Top
+    function fixSideBar() {
+        //缓存变量
+        var sidebarTop = $('.sidebar-top'),
+            top = sidebarTop.offset().top,
+            sidebar = $('#sidebar'),
+            win = $(window)
+            ;
+
+        function scroll() {
+            var scrollTopPosition = win.scrollTop();
+            if (scrollTopPosition > top && !sidebar.hasClass('expend')) {
+                sidebarTop.addClass('fixSidebar');
+            } else {
+                sidebarTop.removeClass('fixSidebar');
+
+            }
+        }
+        win.scroll(scroll);
+    }
+
+    fixSideBar();
 
 })(jQuery);

@@ -405,6 +405,13 @@ body {
   text-align: center;
   padding: 6px;
 }
+/*左侧图标滚动固定*/
+.fixSidebar {
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  _position: absolute;
+}
 #header {
   background: #26272b;
   padding-bottom: 60px;
@@ -633,6 +640,11 @@ body {
   zoom: 1;
   background: #3b8dbd;
   padding: 15px 30px;
+  width: 280px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 }
 #sidebar .sidebar-top:before,
 #sidebar .sidebar-top:after {

@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://ManfredHu.com/2016/04/02/15-veryGoodForUsing/</loc>
+    <lastmod>2016-04-05T02:07:50.225Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript编程题</title>
+        <pubTime>2016-04-02T06:42:57.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+             
+              <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ManfredHu.com/2016/01/20/4-angular-note/</loc>
     <lastmod>2016-04-04T15:36:31.261Z</lastmod>
     <data>
@@ -22,31 +47,6 @@
           
              
               <breadCrumb title="AngularJS" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/AngularJS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ManfredHu.com/2016/04/02/15-veryGoodForUsing/</loc>
-    <lastmod>2016-04-04T13:18:31.212Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript编程题</title>
-        <pubTime>2016-04-02T06:42:57.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-             
-              <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
           
         </display>
     </data>

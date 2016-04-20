@@ -4,6 +4,77 @@
 
     
   <url>
+    <loc>http://ManfredHu.com/2016/04/20/book-topOfWave/</loc>
+    <lastmod>2016-04-20T07:47:54.682Z</lastmod>
+    <data>
+        <display>
+        <title>浪潮之巅个人感想</title>
+        <pubTime>2016-04-20T05:31:46.000Z</pubTime>
+        
+        <tag>book</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="读书笔记" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ManfredHu.com/2016/01/20/4-angular-note/</loc>
+    <lastmod>2016-04-10T07:36:38.353Z</lastmod>
+    <data>
+        <display>
+        <title>AngularJS笔记</title>
+        <pubTime>2016-01-20T05:00:38.000Z</pubTime>
+        
+        <tag>AnuglarJS</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="AngularJS" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/AngularJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ManfredHu.com/2016/03/24/10-AlibabaExamination/</loc>
+    <lastmod>2016-04-07T07:16:34.324Z</lastmod>
+    <data>
+        <display>
+        <title>2015年阿里巴巴校招题目</title>
+        <pubTime>2016-03-24T12:17:37.000Z</pubTime>
+        
+        <tag>杂文</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+             
+              <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ManfredHu.com/2016/04/02/15-veryGoodForUsing/</loc>
     <lastmod>2016-04-05T06:21:16.719Z</lastmod>
     <data>
@@ -22,31 +93,6 @@
           
              
               <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ManfredHu.com/2016/01/20/4-angular-note/</loc>
-    <lastmod>2016-04-04T15:36:31.261Z</lastmod>
-    <data>
-        <display>
-        <title>AngularJS笔记</title>
-        <pubTime>2016-01-20T05:00:38.000Z</pubTime>
-        
-        <tag>AnuglarJS</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="AngularJS" url="http://ManfredHu.com/categories/%E7%AC%94%E8%AE%B0/AngularJS/"/>
           
         </display>
     </data>
@@ -165,29 +211,6 @@
         <tag>JavaScript</tag>
          
         <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-             
-              <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ManfredHu.com/2016/03/24/10-AlibabaExamination/</loc>
-    <lastmod>2016-03-26T15:25:47.400Z</lastmod>
-    <data>
-        <display>
-        <title>2015年阿里巴巴校招题目</title>
-        <pubTime>2016-03-24T12:17:37.000Z</pubTime>
-        
-        <tag>杂文</tag>
          
          
            

@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ManfredHu.com/2016/05/30/17-eventCurrentTarget/</loc>
+    
+    <lastmod>2016-05-30T01:36:51.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ManfredHu.com/about/index.html</loc>
+    
+    <lastmod>2016-05-29T07:57:51.682Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ManfredHu.com/2016/03/27/11-SublimeText3Plug/</loc>
+    
+    <lastmod>2016-05-29T07:34:42.364Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ManfredHu.com/2016/05/20/16-learn-ES6/</loc>
     
-    <lastmod>2016-05-20T14:35:55.433Z</lastmod>
+    <lastmod>2016-05-29T06:29:41.146Z</lastmod>
     
   </url>
   
@@ -51,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://ManfredHu.com/about/index.html</loc>
-    
-    <lastmod>2016-03-27T05:05:49.778Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ManfredHu.com/404.html</loc>
     
     <lastmod>2016-03-26T19:16:39.465Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>http://ManfredHu.com/2016/03/27/12-EvalCallApplyBind/</loc>
     
     <lastmod>2016-03-26T17:06:21.079Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ManfredHu.com/2016/03/27/11-SublimeText3Plug/</loc>
-    
-    <lastmod>2016-03-26T16:34:50.486Z</lastmod>
     
   </url>
   

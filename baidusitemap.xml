@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://ManfredHu.com/2016/06/14/19-extendMethod/</loc>
+    <lastmod>2016-06-14T15:49:36.502Z</lastmod>
+    <data>
+        <display>
+        <title>对象深复制</title>
+        <pubTime>2016-06-14T14:59:03.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Zepto</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+             
+              <breadCrumb title="JavaScript" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ManfredHu.com/2016/06/14/18-internship/</loc>
+    <lastmod>2016-06-14T15:18:03.914Z</lastmod>
+    <data>
+        <display>
+        <title>关于实习的一些看法</title>
+        <pubTime>2016-06-14T14:41:30.000Z</pubTime>
+        
+        <tag>扯蛋</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+             
+              <breadCrumb title="其他" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ManfredHu.com/2016/05/30/17-eventCurrentTarget/</loc>
     <lastmod>2016-05-30T01:36:51.177Z</lastmod>
     <data>

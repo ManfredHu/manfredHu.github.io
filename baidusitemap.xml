@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>http://ManfredHu.com/2016/11/08/23-reactRenderingPrinciple/</loc>
+    <lastmod>2016-11-08T15:10:53.046Z</lastmod>
+    <data>
+        <display>
+        <title>React + Reflux 渲染性能优化原理</title>
+        <pubTime>2016-11-08T15:00:41.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>React</tag>
+         
+        <tag>分享</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+             
+              <breadCrumb title="分享" url="http://ManfredHu.com/categories/%E9%9A%8F%E7%AC%94/%E5%88%86%E4%BA%AB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ManfredHu.com/2016/08/16/22-url/</loc>
     <lastmod>2016-08-16T16:28:51.871Z</lastmod>
     <data>

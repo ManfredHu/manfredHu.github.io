@@ -3,4 +3,4 @@
 - QQ:279331641
 - E-mail:ManfredHuFe@Gmail.com
 
-![WeChat](/images/myWeChatID.png)
+<img src="/images/myWeChatID.png" width = "300" height = "300" alt="MyWeChatCode" align=center />

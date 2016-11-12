@@ -1597,7 +1597,7 @@ $(document).on('pjax:end', function() { NProgress.done(); });
 
 
     $('.fa-wechat').on('click', function(e) {
-        $.fancybox( '<div><img alt="MyWeChatCode" height="300" width="300" src="/images/myWeChatID.png"></div>', {
+        $.fancybox( '<div><img alt="MyWeChatCode" height="300" width="300" src="/images/myWeChatID.png" /></div>', {
             title : '请扫描二维码添加我的微信'
         });
         e.preventDefault();

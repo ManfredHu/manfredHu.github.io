@@ -1,0 +1,83 @@
+# Menus
+menu:
+    Home: /
+    # Delete this row if you don't want categories in your header nav bar
+    Categories:
+    About: /about/index.html
+
+# Customize
+customize:
+    logo:
+        width: 165
+        height: 60
+        url: images/logo-header.png
+    theme_color: '#4d99cc'
+    # highlight: tomorrow-night-eighties
+    highlight: manfredHu
+    sidebar: left # sidebar position, options: left, right
+    thumbnail: true # enable posts thumbnail, options: true, false
+    favicon: manfredhu.ico
+    social_links: # for more icons, please see http://fontawesome.io/icons/#brand
+        github-alt: https://github.com/ManfredHu
+        twitter: https://twitter.com/manfred_hu
+        facebook: https://www.facebook.com/profile.php?id=100011609101404
+        qq: tencent://message/?uin=279331641&Site=lvehe&Menu=yes
+        wechat: /about/index.html
+        google-plus: https://plus.google.com/118256752859048436253/posts
+
+# Widgets
+widgets:
+    - recent_posts
+    - category
+    - archive
+    - tag
+    - tagcloud
+    - links
+
+# Search
+search:
+    swiftype: QtCsFW2-9bAz-svt3uzy # enter swiftype install key here
+    baidu: # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus:  # enter disqus shortname here #manfredhu
+    duoshuo: # 6266424121433785000
+    youyan: 2091310 # enter youyan uid here
+
+# Comment
+share: bdshare # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    fancybox: true # options: true, false
+    scrollLoading: true # options: true, false
+    google_analytics: UA-75636457-1 # enter the tracking ID for your Google Analytics
+    baidu_analytics: 6fa0c15bf0ba9ab179b3e619142e10cc # enter Baidu Analytics hash key
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        博客园博客:    http://www.cnblogs.com/manfredHu/
+        前端De早读课:  http://www.zaoduke.net/
+        HTML5梦工场​:   http:​/​/​www.html5dw.com/​
+        前端观察​:      http:​/​/​www.qianduan.net/​
+        python4cn​:     http:​/​/​simple-is-better.com/​
+        ThinkSAAS​:     http:​/​/​www.thinksaas.cn/​
+        腾讯Alloy团队​: http:​/​/​www.AlloyTeam.com/​
+        HTML5基地​:     http:​/​/​html5.360.cn/​
+        Cocos引擎官网​: http:​/​/​cn.cocos2d-x.org/​
+        W3Cplus​:       http:​/​/​www.w3cplus.com
+        火舞游戏​:      http:​/​/​www.51h5.com/​
+        ionichina社区​: http:​/​/​ionichina.com
+        Linux Story​:   http:​/​/​www.linuxstory.org
+        imweb​:         http:​/​/​imweb.io
+        腾讯设计导航​:  http:​/​/​idesign.qq.com/​
+        设计自动标注工具​: http:​/​/​www.biaonimeia.com/​
+        w3school中文:  http:​/​/​www.w3school.com.cn
+        前端翻译平台:  http:​/​/​www.zcfy.cc/​

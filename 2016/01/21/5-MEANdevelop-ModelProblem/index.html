@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>object.defineproperties的实际作用（mean开发model层的写法） | ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
+12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object.defineProperties的实际作用（MEAN开发Model层的写法）">
+<meta property="og:url" content="http://yoursite.com/2016/01/21/5-MEANdevelop-ModelProblem/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
+12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
+<meta property="og:image" content="http://yoursite.com/images/mean-stack.png">
+<meta property="og:updated_time" content="2016-03-10T15:04:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Object.defineProperties的实际作用（MEAN开发Model层的写法）">
+<meta name="twitter:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
+12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
+<meta name="twitter:image" content="http://yoursite.com/images/mean-stack.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-5-MEANdevelop-ModelProblem" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Object.defineProperties的实际作用（MEAN开发Model层的写法）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="article-date">
+	  <time datetime="2016-01-21T06:43:50.000Z" itemprop="datePublished">2016-01-21</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/mean-stack.png" alt="MEAN层次开发表示"></p>
+<h2 id="Object-defineProperties是什么？有什么用？"><a href="#Object-defineProperties是什么？有什么用？" class="headerlink" title="Object.defineProperties是什么？有什么用？"></a>Object.defineProperties是什么？有什么用？</h2><p>这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。<br>大概第几章忘了，看下下面的代码估计能想起来是什么。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> User = &#123;&#125;; <span class="comment">//声明一个空对象</span></div><div class="line"><span class="built_in">Object</span>.defineProperties(User, &#123; <span class="comment">//填充对象属性</span></div><div class="line">    _id: &#123;</div><div class="line">        <span class="attr">writable</span>:       <span class="literal">true</span>,   <span class="comment">//设置属性是否可写，默认为true</span></div><div class="line">        configurable:   <span class="literal">false</span>,  <span class="comment">//设置属性是否可以配置，默认为true。当设置为false时不能用delete删除</span></div><div class="line">        enumerable:     <span class="literal">false</span>,  <span class="comment">//设置属性是否可以枚举，默认为true.即for-in循环对象的时候可以输出属性</span></div><div class="line">        value:          <span class="number">0</span>       <span class="comment">//默认值</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">id</span>: &#123;</div><div class="line">        <span class="attr">set</span>: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span>(value &gt; <span class="number">0</span>) &#123;</div><div class="line">                <span class="keyword">this</span>._id = value; <span class="comment">//数据库设置的为主键从0开始递增</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">get</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._id;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> privateId = <span class="built_in">Object</span>.getOwnPropertyDescriptor(User, <span class="string">'_id'</span>);</div><div class="line"><span class="built_in">console</span>.log(privateId.value);  <span class="comment">//0</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> userId = <span class="built_in">Object</span>.getOwnPropertyDescriptor(User, <span class="string">'id'</span>);</div><div class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//还没设置呢，输出undefined</span></div><div class="line"></div><div class="line">userId.set(<span class="number">10</span>); <span class="comment">//设置id为10</span></div><div class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//输出10，设置有效</span></div><div class="line"></div><div class="line">userId.set(<span class="number">-10</span>);</div><div class="line"><span class="built_in">console</span>.log(userId.get()); <span class="comment">//输出10，设置无效</span></div></pre></td></tr></table></figure>
+<p>大概就是<code>Object.defineProperties</code>这个东西吧，可以定义属性。定义一个属性用的是<code>Object.defineProperty</code>。不过通常对象都是多个属性的啦，所以基本用的都是<code>Object.defineProperties</code>。</p>
+<p>其实刚开始我看到这个属性觉得——嗯，有这个东西。但是具体哪里会用到，有什么作用，还真的没去思考太多。只是知道有这个东西，但是普通的前端开发，貌似也没怎么用到这个东西，直到——做项目的时候遇到了-_-!!</p>
+<h2 id="MEAN开发Model层的写法"><a href="#MEAN开发Model层的写法" class="headerlink" title="MEAN开发Model层的写法"></a>MEAN开发Model层的写法</h2><p>副标题扯到MEAN开发了，之前做的项目里面，前端用的是AngularJS，后台用的是ExpressJS+node.js<br>数据交互不用想都知道是Ajax啦。</p>
+<p>所以从第一天开始就开开心心撸代码啦，嗯，差不多就这样。^_^</p>
+<p>写后台的时候遇到了几个坑爹的问题吧，首先是登陆模块。<br>AngularJS用<code>$http</code>post到<code>/loginData</code>一个表单到后台</p>
+<p>比如是下面这样的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = &#123;</div><div class="line">    <span class="attr">username</span>: <span class="string">"ManfredHu"</span>,</div><div class="line">    <span class="attr">password</span>: <span class="string">"123456"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>后台用ExpressJS的路由监听这个URI<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.post(<span class="string">'/loginData'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"接受到login页面的登陆信息"</span>);</div><div class="line">    <span class="comment">//调用login控制器传入req,res</span></div><div class="line">    UserCtrl.login(req, res);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>这个ExpressJS的路由其实类似JavaWeb里面的<code>web.xml</code>那个配置servlet的东西。就是一个请求过来，你到底要调用哪个Controller到处理。<br>这里专门为User写了个Controller取名UserCtrl，通过CMD的形式组织，exports暴露了一个login的方法专门处理request/response。</p>
+<p>然后问题就坑爹了，前端数据的验证怎么做？如果直接将JSON传入<code>Dao</code>层执行数据库的查找等等的匹配操作。那么其实问题其实还挺大的，你要考虑如果有人专门来POST数据测试你的服务器呢？当然我相信大家都是好人不会去干这种事，不过从安全性来讲，应该是要有一层验证的，而且后面的<code>Dao</code>层也会接受一个对象去执行增删查改等等操作</p>
+<p><strong>这里讲的是后台的数据验证</strong></p>
+<p>所以上面的<strong>Object.defineProperties</strong>就派上用场了，应该要将这个<code>json</code>组装成一个Model，且这个Model应该有类似C#、Java一样的私有属性private、公有方法public等等。</p>
+<p>C#的属性的概念其实相比字段就是多了一层过滤层，因为属性都是合法的字段。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> Student </div><div class="line">&#123; </div><div class="line">    <span class="keyword">private</span> <span class="built_in">string</span> name;  <span class="comment">//字段</span></div><div class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Name    <span class="comment">//属性</span></div><div class="line">    &#123; </div><div class="line">        <span class="built_in">set</span></div><div class="line">        &#123;</div><div class="line">            name=value; <span class="comment">//这里是给私有属性name赋值 </span></div><div class="line">        &#125;</div><div class="line">        get</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span> name; <span class="comment">//这里取出私有属性name的值 </span></div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Java的类似，不过没有C#属性的概念，所有的都称为方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>所以其实JavaScript要模仿这些传统的后台，也要有一个类似类的概念的东西——<strong>Object.defineProperties</strong></p>
+<p>上面的代码类似声明了一个类，定义了私有的属性<code>_id</code>,公有的方法id,里面有<code>set</code>和<code>get</code>方法。<br>那其实思路就变得很简单了，将POST的JSON数据包装成Model（这个过程会检验属性的正确性），然后对Model进行<code>DAO</code>操作。<br>JavaScript模拟传统后台的东西就完全出来了。</p>
+<p>当然其实这部分包装成Model的过程完全可以不考虑，但是验证的过程你要写在Controller或者其他地方，既然都要写的，那还不如像传统后台一样多一层Model层。<br>而且运行node.js的Chrome的V8解析器完全可以忽略<strong>Object.defineProperties</strong>的兼容性问题。</p>
+<p><strong>综上所述</strong>,<strong>Object.defineProperties</strong>在开发后台的时候，用处非常大。可以用来创建实体类。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2016/01/21/5-MEANdevelop-ModelProblem/" data-title="Object.defineProperties的实际作用（MEAN开发Model层的写法）" data-url="http://yoursite.com/2016/01/21/5-MEANdevelop-ModelProblem/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"manfredhu"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/22/6-javascript-closure/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          javascript-closure
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/20/4-angular-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AngularJS笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    <a class="sidebarBtn__hide">隐藏</a>
+    
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-defineProperties是什么？有什么用？"><span class="toc-number">1.</span> <span class="toc-text">Object.defineProperties是什么？有什么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MEAN开发Model层的写法"><span class="toc-number">2.</span> <span class="toc-text">MEAN开发Model层的写法</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

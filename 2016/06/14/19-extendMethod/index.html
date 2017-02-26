@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>对象深复制 | ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="作者：ManfredHu链接：http://www.manfredhu.com/2016/06/14/19-extendMethod声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+对象引用这里主要举例jQuery的$.extend方法，首先是对象的深复制的背景：对象和数组是引用的，所以如果你用
+12345var arr = [1,2,3,4,5];var arr2 = arr;arr2.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对象深复制">
+<meta property="og:url" content="http://yoursite.com/2016/06/14/19-extendMethod/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="作者：ManfredHu链接：http://www.manfredhu.com/2016/06/14/19-extendMethod声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+对象引用这里主要举例jQuery的$.extend方法，首先是对象的深复制的背景：对象和数组是引用的，所以如果你用
+12345var arr = [1,2,3,4,5];var arr2 = arr;arr2.">
+<meta property="og:image" content="http://yoursite.com/images/extend.png">
+<meta property="og:updated_time" content="2017-02-10T16:40:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="对象深复制">
+<meta name="twitter:description" content="作者：ManfredHu链接：http://www.manfredhu.com/2016/06/14/19-extendMethod声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+对象引用这里主要举例jQuery的$.extend方法，首先是对象的深复制的背景：对象和数组是引用的，所以如果你用
+12345var arr = [1,2,3,4,5];var arr2 = arr;arr2.">
+<meta name="twitter:image" content="http://yoursite.com/images/extend.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-19-extendMethod" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      对象深复制
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/06/14/19-extendMethod/" class="article-date">
+	  <time datetime="2016-06-14T14:59:03.000Z" itemprop="datePublished">2016-06-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>作者：ManfredHu<br>链接：<a href="http://www.manfredhu.com/2016/06/14/19-extendMethod" target="_blank" rel="external">http://www.manfredhu.com/2016/06/14/19-extendMethod</a><br>声明：版权所有，转载请保留本段信息，否则请不要转载</p>
+</blockquote>
+<p><img src="/images/extend.png" alt="extend"></p>
+<h1 id="对象引用"><a href="#对象引用" class="headerlink" title="对象引用"></a>对象引用</h1><p>这里主要举例jQuery的<code>$.extend</code>方法，首先是对象的深复制的背景：对象和数组是引用的，所以如果你用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> arr2 = arr;</div><div class="line">arr2.push(<span class="number">6</span>);</div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></div><div class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></div></pre></td></tr></table></figure>
+<p>但是有时候这不是我们要的结果，我们要将arr缓存起来，在某个时候重新还原arr为原来的值。这个时候就坑爹了，要复制整个对象或者数组。这个时候深复制就来了。</p>
+<p>如果你不用jQuery的，你要自己写的话，还真的挺麻烦的。<br>jQuery的<code>$.extend</code>方法的几种调用方法</p>
+<ol>
+<li>$.extend(object1)直接扩展jQuery</li>
+<li>$.extend(target [,object1] [,object2])复制不递归</li>
+<li>$.extend([deep], target, object1 [,objectN])递归复制</li>
+</ol>
+<p>这里的<code>deep</code>是一个<code>Boolean</code>的值</p>
+<h1 id="extend-object1-function-直接扩展jQuery"><a href="#extend-object1-function-直接扩展jQuery" class="headerlink" title="$.extend(object1/function)直接扩展jQuery"></a>$.extend(object1/function)直接扩展jQuery</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> object1 = &#123;</div><div class="line">  <span class="attr">apple</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">banana</span>: &#123; <span class="attr">weight</span>: <span class="number">52</span>, <span class="attr">price</span>: <span class="number">100</span> &#125;,</div><div class="line">  <span class="attr">cherry</span>: <span class="number">97</span></div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="comment">// Merge object2 into object1</span></div><div class="line">$.extend( object1);</div><div class="line"> </div><div class="line"><span class="comment">// Assuming JSON.stringify - not available in IE&lt;8</span></div><div class="line"><span class="built_in">console</span>.log($.apple) <span class="comment">//0</span></div><div class="line"><span class="built_in">console</span>.log($.banana) <span class="comment">//Object &#123;weight: 52, price: 100&#125;</span></div><div class="line"><span class="built_in">console</span>.log($.fn.cherry) <span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.log($.banana === object1.banana); <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<p>把对象的属性copy到$下了，这里的$可能是<code>Zepto</code>或者<code>jQuery</code>，一样的。<br>默认不会递归复制，这里可以看到<code>banana</code>还是复制的引用。<br><code>$.extend</code>这种写法jquery自己也用的很多，可以看到其实代码的后面一堆的<code>$.extend</code>或者是<code>$.fn.extend</code>这种写法，包括插件也用的很多。</p>
+<h1 id="extend-target-object1-object2-复制不递归"><a href="#extend-target-object1-object2-复制不递归" class="headerlink" title="$.extend(target [,object1] [,object2])复制不递归"></a>$.extend(target [,object1] [,object2])复制不递归</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> object1 = &#123;</div><div class="line">  <span class="attr">apple</span>: [<span class="number">0</span>],</div><div class="line">  <span class="attr">banana</span>: &#123; <span class="attr">weight</span>: <span class="number">52</span>, <span class="attr">price</span>: <span class="number">100</span> &#125;,</div><div class="line">  <span class="attr">cherry</span>: <span class="number">97</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> object2 = &#123;</div><div class="line">  <span class="attr">banana</span>: &#123; <span class="attr">price</span>: <span class="number">200</span> &#125;,</div><div class="line">  <span class="attr">durian</span>: <span class="number">100</span>,</div><div class="line">  <span class="attr">egg</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// Merge object2 into object1</span></div><div class="line">$.extend( object1, object2 );</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify( object1 )); </div><div class="line"><span class="comment">//&#123;"apple":[0],"banana":&#123;"price":200&#125;,"cherry":97,"durian":100,"egg":[1,2,3,4]&#125;</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(object1.egg === object2.egg); </div><div class="line"><span class="comment">//true</span></div></pre></td></tr></table></figure>
+<p>这里将<code>object2</code>的属性合并到了<code>object1</code>中，<code>object2</code>和<code>object1</code>共有的属性会直接覆盖<code>object1</code>的属性，没有的会合并到<code>object1</code>里面。没有递归深层的属性，就是简单的复制属性而已。</p>
+<h1 id="extend-deep-target-object1-objectN-递归复制"><a href="#extend-deep-target-object1-objectN-递归复制" class="headerlink" title="$.extend([deep], target, object1 [,objectN])递归复制"></a>$.extend([deep], target, object1 [,objectN])递归复制</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> object1 = &#123;</div><div class="line">  <span class="attr">apple</span>: [<span class="number">0</span>],</div><div class="line">  <span class="attr">banana</span>: &#123; <span class="attr">weight</span>: <span class="number">52</span>, <span class="attr">price</span>: <span class="number">100</span> &#125;,</div><div class="line">  <span class="attr">cherry</span>: <span class="number">97</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> object2 = &#123;</div><div class="line">  <span class="attr">banana</span>: &#123; <span class="attr">price</span>: <span class="number">200</span> &#125;,</div><div class="line">  <span class="attr">durian</span>: <span class="number">100</span>,</div><div class="line">  <span class="attr">egg</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// Merge object2 into object1</span></div><div class="line">$.extend(<span class="literal">true</span>, object1, object2 );</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify( object1 )); </div><div class="line"><span class="comment">//&#123;"apple":[0],"banana":&#123;"weight":52,"price":200&#125;,"cherry":97,"durian":100,"egg":[1,2,3,4]&#125;</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(object1.egg === object2.egg); </div><div class="line"><span class="comment">//false</span></div></pre></td></tr></table></figure>
+<p>这里传入了一个<code>true</code>的参数开启递归深复制，<code>object1</code>和<code>object2</code>的属性不会直接拿个引用过去，而是检查不同的地方，将相同的地方覆盖，没有的地方复制，引用的对象数组也被拷贝了一份过去，而不是拷贝引用而已。</p>
+<h1 id="没有源码你说啥呢？"><a href="#没有源码你说啥呢？" class="headerlink" title="没有源码你说啥呢？"></a>没有源码你说啥呢？</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 对$.fn.extend添加方法，之后将引用赋给$.extend</span></div><div class="line">jQuery.extend = jQuery.fn.extend = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> options, name, src, copy, copyIsArray, clone,</div><div class="line">        target = <span class="built_in">arguments</span>[<span class="number">0</span>] || &#123;&#125;, <span class="comment">//target是最后返回的对象，如果没有就创建一个对象</span></div><div class="line">        i = <span class="number">1</span>,</div><div class="line">        length = <span class="built_in">arguments</span>.length,</div><div class="line">        deep = <span class="literal">false</span>;</div><div class="line"></div><div class="line">    <span class="comment">// Handle a deep copy situation</span></div><div class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> target === <span class="string">"boolean"</span> ) &#123;</div><div class="line">        deep = target;</div><div class="line"></div><div class="line">        <span class="comment">// skip the boolean and the target</span></div><div class="line">        target = <span class="built_in">arguments</span>[ i ] || &#123;&#125;;</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Handle case when target is a string or something (possible in deep copy)</span></div><div class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> target !== <span class="string">"object"</span> &amp;&amp; !jQuery.isFunction(target) ) &#123;</div><div class="line">        target = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// extend jQuery itself if only one argument is passed</span></div><div class="line">    <span class="keyword">if</span> ( i === length ) &#123;</div><div class="line">        target = <span class="keyword">this</span>;</div><div class="line">        i--;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> ( ; i &lt; length; i++ ) &#123;</div><div class="line">        <span class="comment">// Only deal with non-null/undefined values</span></div><div class="line">        <span class="keyword">if</span> ( (options = <span class="built_in">arguments</span>[ i ]) != <span class="literal">null</span> ) &#123;</div><div class="line">            <span class="comment">// Extend the base object</span></div><div class="line">            <span class="keyword">for</span> ( name <span class="keyword">in</span> options ) &#123;</div><div class="line">                src = target[ name ];</div><div class="line">                copy = options[ name ];</div><div class="line"></div><div class="line">                <span class="comment">// Prevent never-ending loop</span></div><div class="line">                <span class="keyword">if</span> ( target === copy ) &#123;</div><div class="line">                    <span class="keyword">continue</span>;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="comment">// Recurse if we're merging plain objects or arrays</span></div><div class="line">                <span class="keyword">if</span> ( deep &amp;&amp; copy &amp;&amp; ( jQuery.isPlainObject(copy) || (copyIsArray = jQuery.isArray(copy)) ) ) &#123;</div><div class="line">                    <span class="keyword">if</span> ( copyIsArray ) &#123;</div><div class="line">                        copyIsArray = <span class="literal">false</span>;</div><div class="line">                        clone = src &amp;&amp; jQuery.isArray(src) ? src : [];</div><div class="line"></div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        clone = src &amp;&amp; jQuery.isPlainObject(src) ? src : &#123;&#125;;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    <span class="comment">// Never move original objects, clone them</span></div><div class="line">                    target[ name ] = jQuery.extend( deep, clone, copy );</div><div class="line"></div><div class="line">                <span class="comment">// Don't bring in undefined values</span></div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> ( copy !== <span class="literal">undefined</span> ) &#123;</div><div class="line">                    target[ name ] = copy;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Return the modified object</span></div><div class="line">    <span class="keyword">return</span> target;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>对象的属性复制是分开的，boolean,number,string这三个和object,array处理是不一样的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2016/06/14/19-extendMethod/" data-title="对象深复制" data-url="http://yoursite.com/2016/06/14/19-extendMethod/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"manfredhu"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/07/20-interestingJavascript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Interesting JavaScript
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/14/18-internship/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于实习的一些看法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    <a class="sidebarBtn__hide">隐藏</a>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#对象引用"><span class="toc-number">1.</span> <span class="toc-text">对象引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#extend-object1-function-直接扩展jQuery"><span class="toc-number">2.</span> <span class="toc-text">$.extend(object1/function)直接扩展jQuery</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#extend-target-object1-object2-复制不递归"><span class="toc-number">3.</span> <span class="toc-text">$.extend(target [,object1] [,object2])复制不递归</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#extend-deep-target-object1-objectN-递归复制"><span class="toc-number">4.</span> <span class="toc-text">$.extend([deep], target, object1 [,objectN])递归复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#没有源码你说啥呢？"><span class="toc-number">5.</span> <span class="toc-text">没有源码你说啥呢？</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

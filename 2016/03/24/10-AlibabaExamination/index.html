@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2015年阿里巴巴校招题目 | ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="以下题目是阿里巴巴2015校招的题目，纯粹个人恶趣味发作写着玩的。有错的地方欢迎联系交流^_^
+第一题1234567//第一题var array1 = [1,2];var array2 = array1;array1[0] = array2[1];array2.push(3);console.log(array1) //[2 2 3]console.log(array2) //[2 2 3]
+第">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2015年阿里巴巴校招题目">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/10-AlibabaExamination/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="以下题目是阿里巴巴2015校招的题目，纯粹个人恶趣味发作写着玩的。有错的地方欢迎联系交流^_^
+第一题1234567//第一题var array1 = [1,2];var array2 = array1;array1[0] = array2[1];array2.push(3);console.log(array1) //[2 2 3]console.log(array2) //[2 2 3]
+第">
+<meta property="og:image" content="http://yoursite.com/images/alibaba.jpg">
+<meta property="og:updated_time" content="2017-02-10T17:26:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2015年阿里巴巴校招题目">
+<meta name="twitter:description" content="以下题目是阿里巴巴2015校招的题目，纯粹个人恶趣味发作写着玩的。有错的地方欢迎联系交流^_^
+第一题1234567//第一题var array1 = [1,2];var array2 = array1;array1[0] = array2[1];array2.push(3);console.log(array1) //[2 2 3]console.log(array2) //[2 2 3]
+第">
+<meta name="twitter:image" content="http://yoursite.com/images/alibaba.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-10-AlibabaExamination" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      2015年阿里巴巴校招题目
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/03/24/10-AlibabaExamination/" class="article-date">
+	  <time datetime="2016-03-24T12:17:37.000Z" itemprop="datePublished">2016-03-24</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/alibaba.jpg" alt="Alibaba"></p>
+<p>以下题目是阿里巴巴2015校招的题目，纯粹个人恶趣味发作写着玩的。<br>有错的地方欢迎联系交流^_^</p>
+<h1 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一题</span></div><div class="line"><span class="keyword">var</span> array1 = [<span class="number">1</span>,<span class="number">2</span>];</div><div class="line"><span class="keyword">var</span> array2 = array1;</div><div class="line">array1[<span class="number">0</span>] = array2[<span class="number">1</span>];</div><div class="line">array2.push(<span class="number">3</span>);</div><div class="line"><span class="built_in">console</span>.log(array1) <span class="comment">//[2 2 3]</span></div><div class="line"><span class="built_in">console</span>.log(array2) <span class="comment">//[2 2 3]</span></div></pre></td></tr></table></figure>
+<h1 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第二题</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        y = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            x = <span class="number">2</span>;</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">var</span> x = <span class="number">3</span>;</div><div class="line">        y();</div><div class="line">        <span class="built_in">console</span>.log(x); <span class="comment">//2</span></div><div class="line">    &#125;.apply(<span class="keyword">this</span>.arguments);</div><div class="line">&#125;</div><div class="line"></div><div class="line">a();</div></pre></td></tr></table></figure>
+<h1 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第三题</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">'World!'</span>;</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> name === <span class="string">'undefined'</span>) &#123;</div><div class="line">        <span class="keyword">var</span> name = <span class="string">'Jack'</span>;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Goodbye'</span> + name); <span class="comment">//Goodbye Jack</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Hello'</span> + name);</div><div class="line">    &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<h1 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第四题</span></div><div class="line">下面那些语句的结果是<span class="literal">true</span></div><div class="line"></div><div class="line"><span class="built_in">Function</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">//true</span></div><div class="line"><span class="built_in">Object</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span> <span class="comment">//true</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">Object</span>.prototype === <span class="string">'object'</span> <span class="comment">//true</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">Function</span>.prototype === <span class="string">'object'</span> <span class="comment">//false</span></div></pre></td></tr></table></figure>
+<h1 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第五题</span></div><div class="line">一个页面存在A元素和B元素;B元素浮在A元素之上;在B元素上绑定了touchstart事件，在touchstart事件处理函数中的哪些操作会导致A元素触发click事件？（这里是HTML5的点击穿透BUG，click事件会在touchstart和touchend后面发生，所以如果在touchstart将B元素移除则A元素会受到click触发）</div><div class="line"></div><div class="line">A.设置B元素CSS属性display为none <span class="comment">//Yes</span></div><div class="line">B.设置B元素CSS颜色</div><div class="line">C.将B元素从DOM树上删除 <span class="comment">//Yes</span></div><div class="line">D.设置B元素CSS属性visibility为hidden</div></pre></td></tr></table></figure>
+<h1 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第六题</span></div><div class="line">编写一个javascript函数，可以在页面上异步加载js,在加载结束后执行callback，并在IE和Chrome下都能执行</div><div class="line"></div><div class="line"><span class="comment">//方法一</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadScript</span>(<span class="params">url,callback</span>) </span>&#123; </div><div class="line">    <span class="comment">//兼容IE和Chrome获取XMLHttpRequest对象</span></div><div class="line">    <span class="keyword">var</span> xhr = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.ActiveXObject) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"loadScript():XMLHttpRequest Init Error"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;)();</div><div class="line">    </div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(xhr.readyState === <span class="number">4</span>) &#123;</div><div class="line">            <span class="keyword">if</span>((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span> ) || xhr.status == <span class="number">304</span>)&#123;</div><div class="line">                callback();    </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//用GET方式异步加载JavaScript代码</span></div><div class="line">    xhr.open(<span class="string">'GET'</span>,url,<span class="literal">true</span>);</div><div class="line"></div><div class="line">    xhr.send(<span class="literal">null</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//方法二</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadScript</span>(<span class="params">url, callback</span>) </span>&#123; <span class="comment">//同步</span></div><div class="line"></div><div class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">    script.type = <span class="string">"text/javascript"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (script.readyState) &#123; <span class="comment">//IE</span></div><div class="line">        script.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (script.readyState == <span class="string">"loaded"</span> || script.readyState == <span class="string">"complete"</span>) &#123;</div><div class="line">                script.onreadystatechange = <span class="literal">null</span>;</div><div class="line">                callback();</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">//Others</span></div><div class="line">        script.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            callback();</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    script.src = url;</div><div class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(script);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="第七题"><a href="#第七题" class="headerlink" title="第七题"></a>第七题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第七题</span></div><div class="line"><span class="comment">//为字符串实现一个render方法，实现下面的变量替换功能</span></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">String</span>.prototype.render = renderFunc;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">renderFunc</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> obj !== <span class="string">'object'</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'The arguments must be obj'</span>);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/\$\&#123;([^&#125;]+)\&#125;/gi</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">            <span class="comment">//这里的a是 $&#123;name&#125;</span></div><div class="line">            <span class="comment">//b是name</span></div><div class="line">            <span class="keyword">return</span> obj[b] ? obj[b] : <span class="string">''</span>;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> greeting = <span class="string">'my name is $&#123;name&#125;,age $&#123;age&#125;'</span>;</div><div class="line">    <span class="keyword">var</span> result = greeting.render(&#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'XiaoMing'</span>,</div><div class="line">        <span class="attr">age</span>: <span class="number">11</span></div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">console</span>.log(result); <span class="comment">//my name is XiaoMing,age 11</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<h1 id="第八题"><a href="#第八题" class="headerlink" title="第八题"></a>第八题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第八题</span></div><div class="line"><span class="comment">//用JS实现随机选取10-100之间的不同的10个数字，存入一个数组并降序排序</span></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">creatNumber</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> num !== <span class="string">'number'</span>) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> arr = [];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</div><div class="line">            arr.push(<span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random() * <span class="number">90</span> + <span class="number">10</span>));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//降序排列</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">sortOrder</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> b-a;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getIsArray</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">Array</span>.isArray ? <span class="built_in">Array</span>.isArray : <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(arr).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Array'</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> arr = creatNumber(<span class="number">10</span>);</div><div class="line">    <span class="keyword">var</span> isArray = getIsArray();</div><div class="line">    <span class="keyword">if</span>(!isArray(arr)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"init Array Error"</span>);</div><div class="line">    <span class="built_in">console</span>.log(arr.sort(sortOrder));</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2016/03/24/10-AlibabaExamination/" data-title="2015年阿里巴巴校招题目" data-url="http://yoursite.com/2016/03/24/10-AlibabaExamination/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"manfredhu"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/27/13-proto-prototype-constructor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          15条规则解析JavaScript对象布局（__proto__、prototype、constructor）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/10/9-Canvas/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Canvas一般用法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    <a class="sidebarBtn__hide">隐藏</a>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一题"><span class="toc-number">1.</span> <span class="toc-text">第一题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二题"><span class="toc-number">2.</span> <span class="toc-text">第二题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三题"><span class="toc-number">3.</span> <span class="toc-text">第三题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四题"><span class="toc-number">4.</span> <span class="toc-text">第四题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五题"><span class="toc-number">5.</span> <span class="toc-text">第五题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第六题"><span class="toc-number">6.</span> <span class="toc-text">第六题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第七题"><span class="toc-number">7.</span> <span class="toc-text">第七题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第八题"><span class="toc-number">8.</span> <span class="toc-text">第八题</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

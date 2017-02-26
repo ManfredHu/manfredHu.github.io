@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript中this关键字的使用比较 | ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="这篇是自己在之前的博客写的，各种转载就不说了。
+
+
+this关键字在JavaScript中，用的不能说比较多，而是非常多。那么熟悉this关键字的各种用法则显得非常关键。
+
+this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。
+
+this指向宿主对象123456function myWindow() &amp;#123;    this">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript中this关键字的使用比较">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/14-thisKeyWords/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="这篇是自己在之前的博客写的，各种转载就不说了。
+
+
+this关键字在JavaScript中，用的不能说比较多，而是非常多。那么熟悉this关键字的各种用法则显得非常关键。
+
+this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。
+
+this指向宿主对象123456function myWindow() &amp;#123;    this">
+<meta property="og:image" content="http://yoursite.com/images/this.jpg">
+<meta property="og:updated_time" content="2017-01-18T07:08:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript中this关键字的使用比较">
+<meta name="twitter:description" content="这篇是自己在之前的博客写的，各种转载就不说了。
+
+
+this关键字在JavaScript中，用的不能说比较多，而是非常多。那么熟悉this关键字的各种用法则显得非常关键。
+
+this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。
+
+this指向宿主对象123456function myWindow() &amp;#123;    this">
+<meta name="twitter:image" content="http://yoursite.com/images/this.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-14-thisKeyWords" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      JavaScript中this关键字的使用比较
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/03/27/14-thisKeyWords/" class="article-date">
+	  <time datetime="2016-03-26T16:24:33.000Z" itemprop="datePublished">2016-03-27</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>这篇是自己在之前的<a href="http://www.cnblogs.com/manfredHu/p/4803993.html" target="_blank" rel="external">博客</a>写的，各种转载就不说了。</strong></p>
+</blockquote>
+<p><img src="/images/this.jpg" alt="This One,That One"></p>
+<p>this关键字在JavaScript中，用的不能说比较多，而是非常多。那么熟悉this关键字的各种用法则显得非常关键。</p>
+<blockquote>
+<p>this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。</p>
+</blockquote>
+<h2 id="this指向宿主对象"><a href="#this指向宿主对象" class="headerlink" title="this指向宿主对象"></a>this指向宿主对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myWindow</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.id = <span class="number">1</span>; <span class="comment">// 等价于window.id = 1</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// 这里的this就是window了</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.id); <span class="comment">// 1</span></div><div class="line">&#125;</div><div class="line">myWindow();</div></pre></td></tr></table></figure>
+<p>这种情况比较普遍，也就是指向宿主对象的情况，在客户端是 <code>window对象</code> 在node里是 <code>Global对象</code> 第一个说，下面看第二种。</p>
+<h2 id="this指向调用函数的对象的时候"><a href="#this指向调用函数的对象的时候" class="headerlink" title="this指向调用函数的对象的时候"></a>this指向调用函数的对象的时候</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myObj</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.x); <span class="comment">// 在这个例子里面是obj对象</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">obj.x = <span class="string">"xx"</span>;</div><div class="line">obj.myObj = myObj;</div><div class="line">obj.myObj(); <span class="comment">// xx</span></div></pre></td></tr></table></figure>
+<p>这里的myObj()函数里面的 <code>this</code> 指向的就是obj这个外部传递来的对象了。注意看 <code>obj.myObj()</code> 这里前面的 <code>obj.</code> 这里，因为myObj是obj这个对象的方法，下面obj作为对象调用了myObj这个函数，所以这里的this就是指向调用函数的对象了。</p>
+<h2 id="this指向构造函数生成的新对象的时候"><a href="#this指向构造函数生成的新对象的时候" class="headerlink" title="this指向构造函数生成的新对象的时候"></a>this指向构造函数生成的新对象的时候</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 作为构造函数的函数记得首字母要大写</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">gender</span>) </span>&#123; </div><div class="line">    <span class="keyword">this</span>.gender = gender;</div><div class="line">    <span class="keyword">this</span>.sayGender = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.gender);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 输出man,函数this是新的People&#123;&#125;对象</span></div><div class="line"><span class="keyword">var</span> girl = <span class="keyword">new</span> People(<span class="string">"women"</span>); </div><div class="line"></div><div class="line"><span class="comment">// 输出women,函数this是指向girl&#123;gender:"women"&#125;对象</span></div><div class="line">girl.sayGender();</div></pre></td></tr></table></figure>
+<p>这里的执行过程理一下，首先 <code>new People(&quot;man&quot;)</code> 这句做了几件事情：</p>
+<blockquote>
+<ol>
+<li>根据构造函数创建一个空的对象People{}</li>
+<li>然后传递到People里面（这里才叫开始构造的过程，添砖加瓦的意思）</li>
+<li>然后这里开始的函数里面的this就是指向传进来新的People{}对象了</li>
+</ol>
+</blockquote>
+<p>这里就是构造函数生成对象的一个简单的过程了，可以自己模拟着执行以下。</p>
+<h2 id="this指向需要继承属性的对象的时候（apply和call）"><a href="#this指向需要继承属性的对象的时候（apply和call）" class="headerlink" title="this指向需要继承属性的对象的时候（apply和call）"></a>this指向需要继承属性的对象的时候（apply和call）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">gender</span>) </span>&#123; </div><div class="line">    <span class="keyword">this</span>.gender = gender;</div><div class="line">    <span class="keyword">this</span>.sayGender = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.gender);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sally = <span class="keyword">new</span> People(<span class="string">"women"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> bob = &#123; <span class="comment">// bob是直接量创建的,但是没有sayGender方法可以用</span></div><div class="line">    gender: <span class="string">"man"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所以这里如果bob要用 <code>sayGender()</code> 方法的话要怎么破呢？这个时候就要用到 <code>apply()</code> 或者 <code>call()</code> 了，这两个方法差不多。</p>
+<blockquote>
+<ul>
+<li>apply(obj, arguments) 这里的arguments是一个参数数组</li>
+<li>call(obj,argument) 这里没有复数</li>
+</ul>
+</blockquote>
+<p>所以bob要调用 <code>sayGender()</code> 的话，就要用到 <code>call()</code> 方法或者 <code>apply()</code> 方法了。</p>
+<blockquote>
+<p>这个其实可以理解为继承的一种，Java里面继承分为实现继承跟接口继承两种，JavaScript的继承是只有实现继承的，但是实现继承JavaScript里面又有很多种，比如原型链继承，还有这里的 <code>apply()</code> 和 <code>call()</code> 也算是继承的一种。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">gender</span>) </span>&#123; </div><div class="line">    <span class="keyword">this</span>.gender = gender;</div><div class="line">    <span class="keyword">this</span>.sayGender = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.gender);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sally = <span class="keyword">new</span> People(<span class="string">"women"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> bob = &#123; <span class="comment">// bob是直接量创建的,但是没有sayGender方法可以用</span></div><div class="line">    gender: <span class="string">"man"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">sally.sayGender(<span class="string">"这是什么性别的？"</span>); <span class="comment">// 这是什么性别的？women</span></div><div class="line">sally.sayGender.call(bob,<span class="string">"这是什么性别的？"</span>); <span class="comment">// 这是什么性别的？man</span></div></pre></td></tr></table></figure>
+<p>这里最后一句代码的执行过程分析下：</p>
+<blockquote>
+<ol>
+<li>将bob{gender: “man”}这个对象传递到People里面</li>
+<li>更改函数里面this指向</li>
+<li>继续执行函数里面其他代码</li>
+</ol>
+</blockquote>
+<p>这里可以看出，bob这个对象继承要继承另外一个对象的某个方法的时候可以用上面这种写法 <code>function.call(obj, argument)</code></p>
+<p><strong>同时也可以知道，this在函数里面的指向其实是可以有很多种的，要根据不同的环境来判断。</strong></p>
+<p>下面开始apply的例子，在开始 <code>apply()</code> 的例子之前先普及一下基本知识：</p>
+<blockquote>
+<p>首先普及下一个概念 <strong>类数组（array-like）</strong> ，类数组其实我们平时接触的很多的。比如函数里面的 <code>arguments对象</code> ，注意这里说的是 <code>arguments对象</code> 而不是 <code>arguments数组</code> 。因为arguments不是一个数组而是一个对象，只是我们平时用的时候喜欢用 <code>arguments[0]</code> 这样的写法所以看起来像数组而已。类数组通常的定义就是 <strong>有维护一个length属性</strong> 和 <strong>可以根据数字下标来获取元素</strong> 比如 <code>arguments[0]</code> 这样的一个对象。</p>
+</blockquote>
+<p>不信的话我们可以测试下的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">arrayLike</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span> instaceof <span class="built_in">Array</span>); <span class="comment">// false</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span> instaceof <span class="built_in">Object</span>); <span class="comment">// true</span></div><div class="line">&#125;</div><div class="line">arrayLike();</div></pre></td></tr></table></figure>
+<p>其实JavaScript里面的数组对象叫 <strong>关联数组</strong> ，也就是我们数据库表那样的 <strong>键-值对</strong> 组成的形式。所以你如果以为JavaScript可以像其他语言那样优化循环比如 <code>for(var i=0; i&lt;100; i++)</code> 这样的过程的话你就想多了。 </p>
+<blockquote>
+<p>甚至，JavaScript的对象内部实现也是<strong>关联数组</strong> ，比如你可以定义键为0而值为其他的对象。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="number">0</span>: <span class="string">"12345"</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = [<span class="string">"12345"</span>];</div><div class="line"><span class="built_in">console</span>.log(obj[<span class="number">0</span>]); <span class="comment">// 12345</span></div><div class="line"><span class="built_in">console</span>.log(arr[<span class="number">0</span>]); <span class="comment">// 12345</span></div></pre></td></tr></table></figure>
+<p>有没有觉得JavaScript内部的实现其实很简单？或者可以说原理基本上就一个，但是通过简单的加点属性减点属性让对象跟数组看起来完全不一样。其实内部的实现原理是一模一样的。</p>
+<p>废话扯得有点多，下面看 <code>apply()</code> 方法的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">gender</span>) </span>&#123; </div><div class="line">    <span class="keyword">this</span>.gender = gender;</div><div class="line">    <span class="keyword">this</span>.sayGender = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> str = <span class="built_in">Array</span>.prototype.join.call(<span class="built_in">arguments</span>,<span class="string">""</span>); <span class="comment">// arguments为类数组</span></div><div class="line">        <span class="built_in">console</span>.log(str + <span class="keyword">this</span>.gender); <span class="comment">// </span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sally = <span class="keyword">new</span> People(<span class="string">"women"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> bob = &#123;</div><div class="line">    <span class="attr">gender</span>: <span class="string">"man"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> textArr = <span class="string">"这是什么性别的？"</span>.split(<span class="string">""</span>); <span class="comment">// 这里将字符串分割为数组</span></div><div class="line"></div><div class="line">sally.sayGender.apply(bob, textArr); <span class="comment">// 这是什么性别的？man</span></div></pre></td></tr></table></figure>
+<p>大概就到这里吧，有兴趣的可以留言讨论下。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2016/03/27/14-thisKeyWords/" data-title="JavaScript中this关键字的使用比较" data-url="http://yoursite.com/2016/03/27/14-thisKeyWords/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"manfredhu"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/27/12-EvalCallApplyBind/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JavaScript的动态特性(通过eval,call,apply和bind来体现)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/27/13-proto-prototype-constructor/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">15条规则解析JavaScript对象布局（__proto__、prototype、constructor）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    <a class="sidebarBtn__hide">隐藏</a>
+    
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向宿主对象"><span class="toc-number">1.</span> <span class="toc-text">this指向宿主对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向调用函数的对象的时候"><span class="toc-number">2.</span> <span class="toc-text">this指向调用函数的对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向构造函数生成的新对象的时候"><span class="toc-number">3.</span> <span class="toc-text">this指向构造函数生成的新对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向需要继承属性的对象的时候（apply和call）"><span class="toc-number">4.</span> <span class="toc-text">this指向需要继承属性的对象的时候（apply和call）</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

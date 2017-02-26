@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ManfredHu">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ManfredHu">
+<meta name="twitter:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+
+  
+
+</head>
+
+<body>
+  
+    <header id="header">
+  
+    <div id="intrologo" class="intro-logo" style="background-position:center center; background-repeat:no-repeat; background-image: url(/css/images/5.jpg);">
+  
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo">
+    
+
+        
+          
+            <img id="homelogoimg" src="/css/images/manfredhu.jpeg" style="border-style: solid; border-color: rgba(24,24,21,0.1); border-width: 8px;">
+          
+        
+    
+    </div>
+  </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+    <script>
+        var img = new Image();
+        var intrologodiv = document.getElementById("intrologo");
+        img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        img.onload=function(){
+          if (img.width / img.height <= document.body.clientWidth / document.body.clientHeight) {
+            //intrologodiv.style.backgroundSize = "100% auto";
+            intrologodiv.style.backgroundSize = "cover";
+          } else {
+            //intrologodiv.style.backgroundSize = "auto 100%";
+            intrologodiv.style.backgroundSize = "cover";
+          }
+        };
+    </script>
+ 
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var img = new Image();
+        var homelogodiv = document.getElementById("homelogo");
+        img.src = document.getElementById("homelogoimg").src;
+        img.onload=function(){
+          var navBarObj = document.getElementById("navigater-list");
+          if (img.width > document.body.clientWidth) {
+            document.getElementById("homelogoimg").style.width = document.body.clientWidth + "px";
+            homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+            homelogodiv.style.marginTop = document.body.clientHeight * -0.5 + "px";
+          } else {
+            homelogodiv.style.marginLeft = img.width * -0.5 + "px";
+            homelogodiv.style.marginTop = img.height * -0.5 - navBarObj.offsetHeight + "px";
+          }
+        };
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list" id="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">About</a>
+        
+      </p>
+  </div>
+
+  <!-- fork me on GitHub -->
+  <a href="https://github.com/manfredHu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+</header>
+  
+  <div id="container">
+    <div id="wrap">
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><!--首页-->
+
+  
+    <article id="post-4-angular-note"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/01/20/4-angular-note/">AngularJS笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/20/4-angular-note/" class="article-date">
+	  <time datetime="2016-01-20T05:00:38.000Z" itemprop="datePublished">2016-01-20</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/AngularJS/">AngularJS</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/20/4-angular-note/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="AngularJS笔记" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+AngularJS兼容性
+1.3.0版本放弃了IE8（官网有兼容的方法）
+引入了单向数据绑定
+
+AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者aspx之类的。M也不一样，这里是ViewModel。AngularJS通过Binder/Data-binding engine(通常称为Binder)将模板Template与ViewModel关联起来且通过dirty-
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/20/4-angular-note/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AnuglarJS/">AnuglarJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-3-CSS-note"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/01/17/3-CSS-note/">CSS笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/17/3-CSS-note/" class="article-date">
+	  <time datetime="2016-01-17T12:27:02.000Z" itemprop="datePublished">2016-01-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/CSS/">CSS</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/17/3-CSS-note/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/css.png)" alt="CSS笔记" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+清除浮动老生常谈的话题，面试经常问的问题解决方法有很多种，这里讲几种
+子元素加clear1234&lt;div class="news"&gt;    &lt;p&gt;Some Text&lt;/p&gt;    &lt;br class="clear"&gt;&lt;/div&gt;
+12345678910.news&#123;    background: gray;    border:
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/17/3-CSS-note/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-2-someAboutHTML5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/01/17/2-someAboutHTML5/">到了HTML5时代写HTML代码要注意的东西</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/17/2-someAboutHTML5/" class="article-date">
+	  <time datetime="2016-01-17T11:16:21.000Z" itemprop="datePublished">2016-01-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/html.png)" alt="到了HTML5时代写HTML代码要注意的东西" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYPE来识别不同的模式，后面的渲染和优化也会不一样，作为一个前端我们会严格要求自己。所以通常会copy一下的是不是^_^。但是在Eclipse中默认的不是HTML5的DOCTYPE,切记切记改过来噢亲。
+常见的DOCTYPE有
+1.HTML 4.01 Strict
+
+1&lt;!DOCTYPE HTML PUBLIC "-/
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/17/2-someAboutHTML5/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-1-firstArchive"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/01/17/1-firstArchive/">博客园博客已迁移到此</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/17/1-firstArchive/" class="article-date">
+	  <time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time>
+	</a>
+
+      
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/manfred-logo.png)" alt="博客园博客已迁移到此" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+欢迎您来到我的新博客，我是ManfredHu.原博客园的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^
+
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/17/1-firstArchive/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文/">杂文</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+
+<!--底部分页栏-->
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

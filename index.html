@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ManfredHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+  
+  
+  
+  
+  <meta name="description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ManfredHu">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="ManfredHu">
+<meta property="og:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ManfredHu">
+<meta name="twitter:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+  
+    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/manfredhu.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+
+  
+
+</head>
+
+<body>
+  
+    <header id="header">
+  
+    <div id="intrologo" class="intro-logo" style="background-position:center center; background-repeat:no-repeat; background-image: url(/css/images/5.jpg);">
+  
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo">
+    
+
+        
+          
+            <img id="homelogoimg" src="/css/images/manfredhu.jpeg" style="border-style: solid; border-color: rgba(24,24,21,0.1); border-width: 8px;">
+          
+        
+    
+    </div>
+  </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+    <script>
+        var img = new Image();
+        var intrologodiv = document.getElementById("intrologo");
+        img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        img.onload=function(){
+          if (img.width / img.height <= document.body.clientWidth / document.body.clientHeight) {
+            //intrologodiv.style.backgroundSize = "100% auto";
+            intrologodiv.style.backgroundSize = "cover";
+          } else {
+            //intrologodiv.style.backgroundSize = "auto 100%";
+            intrologodiv.style.backgroundSize = "cover";
+          }
+        };
+    </script>
+ 
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var img = new Image();
+        var homelogodiv = document.getElementById("homelogo");
+        img.src = document.getElementById("homelogoimg").src;
+        img.onload=function(){
+          var navBarObj = document.getElementById("navigater-list");
+          if (img.width > document.body.clientWidth) {
+            document.getElementById("homelogoimg").style.width = document.body.clientWidth + "px";
+            homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+            homelogodiv.style.marginTop = document.body.clientHeight * -0.5 + "px";
+          } else {
+            homelogodiv.style.marginLeft = img.width * -0.5 + "px";
+            homelogodiv.style.marginTop = img.height * -0.5 - navBarObj.offsetHeight + "px";
+          }
+        };
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list" id="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">About</a>
+        
+      </p>
+  </div>
+
+  <!-- fork me on GitHub -->
+  <a href="https://github.com/manfredHu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+</header>
+  
+  <div id="container">
+    <div id="wrap">
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><!--首页-->
+
+  
+    <article id="post-23-reactRenderingPrinciple"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/11/08/23-reactRenderingPrinciple/">React + Reflux 渲染性能优化原理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/11/08/23-reactRenderingPrinciple/" class="article-date">
+	  <time datetime="2016-11-08T15:00:41.000Z" itemprop="datePublished">2016-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/11/08/23-reactRenderingPrinciple/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/react.png)" alt="React + Reflux 渲染性能优化原理" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/11/08/23-reactRenderingPrinciple声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+ReactReact的优点有很多，现在很多应用都接入React这个框架。在我看来，有下列优点：
+
+Facebook团队研发并维护——有团队维护更新且有质量保证
+在MVVM结构下只起View
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/11/08/23-reactRenderingPrinciple/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-22-url"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/08/16/22-url/">谈谈url这东西</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/08/16/22-url/" class="article-date">
+	  <time datetime="2016-08-16T14:58:40.000Z" itemprop="datePublished">2016-08-16</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/基础/">基础</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/08/16/22-url/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/urlPic/main.jpg)" alt="谈谈url这东西" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/08/16/22-url声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+URL
+统一资源定位符（或称统一资源定位器/定位地址、URL地址等，英语：Uniform / Universal Resource Locator，常缩写为URL），有时也被俗称为网页地址（网址）。如同在网络上的门牌，是因特网上
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/08/16/22-url/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-21-classNames"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/07/12/21-classNames/">classNames模块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/07/12/21-classNames/" class="article-date">
+	  <time datetime="2016-07-12T15:18:35.000Z" itemprop="datePublished">2016-07-12</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/07/12/21-classNames/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/classNames.png)" alt="classNames模块" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/07/12/21-classNames声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+classNames今天分享一个好玩的东西，它叫 classNames ,这个是一个翻译的版本，原版链接在这里它是一个小工具。我是在React项目里面用到它的。一用就停不下来了
+它是什么？它是一个简单的对类名进行条
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/07/12/21-classNames/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-20-interestingJavascript"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/07/07/20-interestingJavascript/">Interesting JavaScript</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/07/07/20-interestingJavascript/" class="article-date">
+	  <time datetime="2016-07-07T14:43:02.000Z" itemprop="datePublished">2016-07-07</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/07/07/20-interestingJavascript/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/laughing/interesting.jpg)" alt="Interesting JavaScript" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/07/07/20-interestingJavascript声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+声明提升写出下面代码的运行结果
+12345678910var a,b;(function()&#123;    console.log(a);    console.log(b);    va
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/07/07/20-interestingJavascript/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-19-extendMethod"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/06/14/19-extendMethod/">对象深复制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/06/14/19-extendMethod/" class="article-date">
+	  <time datetime="2016-06-14T14:59:03.000Z" itemprop="datePublished">2016-06-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/06/14/19-extendMethod/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/extend.png)" alt="对象深复制" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/06/14/19-extendMethod声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+对象引用这里主要举例jQuery的$.extend方法，首先是对象的深复制的背景：对象和数组是引用的，所以如果你用
+12345var arr = [1,2,3,4,5];var arr2 = arr;arr2.
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/06/14/19-extendMethod/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-18-internship"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/06/14/18-internship/">关于实习的一些看法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/06/14/18-internship/" class="article-date">
+	  <time datetime="2016-06-14T14:41:30.000Z" itemprop="datePublished">2016-06-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/06/14/18-internship/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/shixi.jpg)" alt="关于实习的一些看法" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/06/14/18-internship声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+
+这是一篇自己在腾讯实习一个半月的总结，仅供参考，非喜勿喷。
+
+实习是干嘛的？实习就是公司让你适应从学校到职业生涯的转换的一个试练，你能转变过来才有资格留下来继续走下去。
+实习累不累？说实话，新人都会觉得比较累，因
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/06/14/18-internship/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文/">杂文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="posts-17-eventCurrentTarget"  class="article article-type-posts" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/05/30/17-eventCurrentTarget/">event.target的亲兄弟event.currentTarget</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/05/30/17-eventCurrentTarget/" class="article-date">
+	  <time datetime="2016-05-30T01:32:06.000Z" itemprop="datePublished">2016-05-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/05/30/17-eventCurrentTarget/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/target.jpg)" alt="event.target的亲兄弟event.currentTarget" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/05/30/17-eventCurrentTarget声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+做项目的时候遇到的一个挺好玩的属性，就是event.currentTarget这个东西，可能我们以前用的比较多的是event.target。
+场景我们在列表下&lt;li&gt;标签绑定了事件，然后
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/05/30/17-eventCurrentTarget/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-16-learn-ES6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/05/20/16-learn-ES6/">ES6快速学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/05/20/16-learn-ES6/" class="article-date">
+	  <time datetime="2016-05-20T11:19:36.000Z" itemprop="datePublished">2016-05-20</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/05/20/16-learn-ES6/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/es6.jpeg)" alt="ES6快速学习" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/05/20/16-learn-ES6声明：版权所有，转载请保留本段信息，否则请不要转载
+
+
+ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火的是一个叫babel的编译器，可以将ES6的语法代码转化为ES5，即现在主流浏览器能支持运行的语言。而React这个火到不行的框架在0.13
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/05/20/16-learn-ES6/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-book-topOfWave"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/04/20/book-topOfWave/">浪潮之巅个人感想</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/04/20/book-topOfWave/" class="article-date">
+	  <time datetime="2016-04-20T05:31:46.000Z" itemprop="datePublished">2016-04-20</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/读书笔记/">读书笔记</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/04/20/book-topOfWave/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/topOfWave/att.jpg)" alt="浪潮之巅个人感想" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+作者：ManfredHu链接：http://www.manfredhu.com/2016/04/20/book-topOfWave/声明：版权所有，转载请保留本段信息，否则请不要转载
+
+AT&amp;T
+跟随长途通信兴起的企业，后来被美国反垄断法强制分成四个子公司。鼎鼎大名的贝尔实验室，C语言和Unix操作系统诞生的地方，后面被拆分也就没了。
+
+再好的技术也要有好的企业发展方向来主导
+
+IBMI
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/04/20/book-topOfWave/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-15-veryGoodForUsing"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/04/02/15-veryGoodForUsing/">JavaScript编程题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/04/02/15-veryGoodForUsing/" class="article-date">
+	  <time datetime="2016-04-02T06:42:57.000Z" itemprop="datePublished">2016-04-02</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/04/02/15-veryGoodForUsing/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/coding.gif)" alt="JavaScript编程题" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+
+作者：ManfredHu链接：http://www.manfredhu.com/2016/04/02/15-veryGoodForUsing/声明：版权所有，转载请保留本段信息，否则请不要转载
+
+几道觉得挺有意思的编程题，感觉做下来，自己对一些新方法的看法有了新的变化。比如indexOf,reduce,Array.isArray,forEach这些方法，以前一看到兼容性是IE9+就有点害怕，项
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/04/02/15-veryGoodForUsing/#more">Read More</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+
+<!--底部分页栏-->
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+    
+    /* 文章详细页导航全屏 */
+    var clientHeight = document.body.clientHeight;
+    var toc = document.getElementById("toc");
+    if(toc){
+        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

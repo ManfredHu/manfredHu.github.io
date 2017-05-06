@@ -2,9 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>javascript中this关键字的使用比较 | ManfredHu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <title>javascript中this关键字的使用比较 | ManfredHu胡文峰的个人博客</title>
+
   
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
   
@@ -21,8 +23,8 @@ this有时候就是我们经常说的上下文，这个东西的指代对象。�
 this指向宿主对象123456function myWindow() &amp;#123;    thi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript中this关键字的使用比较">
-<meta property="og:url" content="http://yoursite.com/2016/03/27/14-thisKeyWords/index.html">
-<meta property="og:site_name" content="ManfredHu">
+<meta property="og:url" content="http://www.manfredhu.com/2016/03/27/14-thisKeyWords/index.html">
+<meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
 <meta property="og:description" content="这篇是自己在之前的博客写的，各种转载就不说了。
 
 
@@ -31,8 +33,8 @@ this关键字在JavaScript中，用的不能说比较多，而是非常多。那
 this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。
 
 this指向宿主对象123456function myWindow() &amp;#123;    thi">
-<meta property="og:image" content="http://yoursite.com/images/thisKeyWord.jpg">
-<meta property="og:image" content="http://yoursite.com/images/this.jpg">
+<meta property="og:image" content="http://www.manfredhu.com/images/thisKeyWord.jpg">
+<meta property="og:image" content="http://www.manfredhu.com/images/this.jpg">
 <meta property="og:updated_time" content="2017-03-13T15:41:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中this关键字的使用比较">
@@ -44,9 +46,9 @@ this关键字在JavaScript中，用的不能说比较多，而是非常多。那
 this有时候就是我们经常说的上下文，这个东西的指代对象。它灵活多变，有时候你看它是对象，有时候是window宿主对象。
 
 this指向宿主对象123456function myWindow() &amp;#123;    thi">
-<meta name="twitter:image" content="http://yoursite.com/images/thisKeyWord.jpg">
+<meta name="twitter:image" content="http://www.manfredhu.com/images/thisKeyWord.jpg">
   
-    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/manfredhu.jpeg">
   
@@ -101,22 +103,22 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
               <a class="brand" style="
                  margin-top: 0px;"  
                 href="#" data-toggle="modal" data-target="#myModal" >
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+                  <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
               </a>
             
             
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 
-                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/">首页</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/archives">归档</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/categories">Kategorien</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/categories">分类</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/tags">标签</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/about">关于</a> </li>
                 
                   <li><div id="search-form-wrap">
 
@@ -128,7 +130,7 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -140,11 +142,11 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -169,7 +171,7 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-14-thisKeyWords" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-14-thisKeyWords" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -193,7 +195,18 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
     <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
 
     </div>
+
     <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote class="post-source">
+          <p>
+          作者：ManfredHu<br>
+          链接：<a href=http://www.manfredhu.com/2016/03/27/14-thisKeyWords/index.html target="_blank" rel="external">http://www.manfredhu.com/2016/03/27/14-thisKeyWords/index.html</a><br>
+          声明：版权所有，转载请保留本段信息，谢谢大家
+          </p>
+        </blockquote>
+      
+
       
         <p><img src="/images/thisKeyWord.jpg" alt="this"></p>
 <blockquote>
@@ -262,27 +275,21 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
     <footer class="article-footer">
       
         
-	<div id="comment">
-	
-	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2016/03/27/14-thisKeyWords/" data-title="JavaScript中this关键字的使用比较" data-url="http://yoursite.com/2016/03/27/14-thisKeyWords/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"manfredhu"};
-	  (function() {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] 
-	     || document.getElementsByTagName('body')[0]).appendChild(ds);
-	  })();
-	  </script>
-	<!-- 多说公共JS代码 end -->
-	
-	</div>
+	<div id="uyan_frame"></div>
 
+
+      
+      
+        <div id="baidu-share" class="bdsharebuttonbox" data-tag="share_1" style="margin-bottom:15px">
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_weixin" data-cmd="weixin"></a>
+    <a class="bds_sqq" data-cmd="sqq"></a>
+    <a class="bds_tsina" data-cmd="tsina"></a>
+    <a class="bds_qzone" data-cmd="qzone"></a>
+    <a class="bds_evernotecn" data-cmd="evernotecn"></a>
+    <a class="bds_youdao" data-cmd="youdao"></a>
+    <a class="bds_copy" data-cmd="copy"></a>
+</div>
 
       
       
@@ -294,53 +301,96 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
     
 <nav id="article-nav">
   
-    <a href="/2016/03/27/12-EvalCallApplyBind/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          JavaScript的动态特性(通过eval,call,apply和bind来体现)
-        
-      </div>
-    </a>
+    <div class="article-nav-left">
+      <a href="/2016/03/27/12-EvalCallApplyBind/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpg)" alt="JavaScript的动态特性(通过eval,call,apply和bind来体现)" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2016/03/27/12-EvalCallApplyBind/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            JavaScript的动态特性(通过eval,call,apply和bind来体现)
+          
+        </div>
+      </a>
+    </div>
   
   
-    <a href="/2016/03/27/13-proto-prototype-constructor/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">15条规则解析JavaScript对象布局（__proto__、prototype、constructor）</div>
-    </a>
+    <div class="article-nav-rigth">
+      <a href="/2016/03/27/13-proto-prototype-constructor/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/prototypeAndConstructor.png)" alt="15条规则解析JavaScript对象布局（__proto__、prototype、constructor）" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2016/03/27/13-proto-prototype-constructor/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">15条规则解析JavaScript对象布局（__proto__、prototype、constructor）</div>
+      </a>
+    </div>
   
 </nav>
 
   
 </article>
 
-<!-- Table of Contents -->
+<!-- Titile Menu of Contents -->
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    <a class="sidebarBtn__hide">隐藏</a>
-    
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向宿主对象"><span class="toc-number">1.</span> <span class="toc-text">this指向宿主对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向调用函数的对象的时候"><span class="toc-number">2.</span> <span class="toc-text">this指向调用函数的对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向构造函数生成的新对象的时候"><span class="toc-number">3.</span> <span class="toc-text">this指向构造函数生成的新对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向需要继承属性的对象的时候（apply和call）"><span class="toc-number">4.</span> <span class="toc-text">this指向需要继承属性的对象的时候（apply和call）</span></a></li></ol>
-    
+  <div class="big-sidebar">
+    <div class="fix-sidebar">
+        <div class="fix-sidebar-nav">
+            <span>展开目录</span>
+        </div>
+        <div class="fix-sidebar-comment">
+            <span>评论</span>
+        </div>
+        <!--
+        <div class="fix-sidebar-search">
+            <span>查找</span>
+        </div>
+        -->
+        <div class="fix-sidebar-share">
+            <span>分享</span>
+        </div>
+        <div class="fix-sidebar-music">
+            <span>音乐</span>
+        </div>
+        
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
+        
+        <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
     </div>
-  </aside>
+    <aside id="sidebar">
+      <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向宿主对象"><span class="toc-number">1.</span> <span class="toc-text">this指向宿主对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向调用函数的对象的时候"><span class="toc-number">2.</span> <span class="toc-text">this指向调用函数的对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向构造函数生成的新对象的时候"><span class="toc-number">3.</span> <span class="toc-text">this指向构造函数生成的新对象的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向需要继承属性的对象的时候（apply和call）"><span class="toc-number">4.</span> <span class="toc-text">this指向需要继承属性的对象的时候（apply和call）</span></a></li></ol>
+        
+      </div>
+    </aside>
+    <div id="musicComponent"></div>
+</div>
+
 
 </section>
         
       </div>
-      
+      <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       <footer id="footer">
   
 
   <div class="container">
       <div class="row">
-        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu胡文峰的个人博客</p>
 	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
 	</div>
   </div>
 </footer>
-
 
 <script>
     /* min height */
@@ -352,27 +402,18 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
     contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
     
     /* 文章详细页导航全屏 */
-    var clientHeight = document.body.clientHeight;
-    var toc = document.getElementById("toc");
-    if(toc){
-        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
-    }
+    // var clientHeight = document.body.clientHeight;
+    // var toc = document.getElementById("toc");
+    // if(toc){
+    //     toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    // }
 </script>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
     
+
+
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2091310"></script>
+
 
 <!-- mathjax config similar to math.stackexchange -->
 
@@ -423,6 +464,34 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
 
 
 
+
+<script>
+  window._bd_share_config = {
+  //此处添加分享具体设置
+    common : {
+      //此处放置通用设置
+      bdText: "", //分享的内容
+      bdDesc: "", //分享的摘要
+      bdUrl: "", //分享的Url地址
+      bdPic: "", //分享的图片
+      bdMini: 2 //下拉浮层中分享按钮的列数
+      // bdMiniList: //['qzone','tsina',...] 自定义下拉浮层中的分享按钮类型和排列顺序。详见分享媒体id对应表
+      // onBeforeClick function(cmd,config){}  在用户点击分享按钮时执行代码，更改配置。
+      // cmd为分享目标id，config为当前设置，返回值为更新后的设置。
+      // onAfterClick  function(cmd){} 在用户点击分享按钮后执行代码，cmd为分享目标id。可用于统计等。
+      // bdPopupOffsetLeft int 正｜负数  下拉浮层的y偏移量
+      // bdPopupOffsetTop  int 正｜负数  下拉浮层的x偏移量
+
+    },
+    share : [{
+      //此处放置分享按钮设置
+      "tag": "share_1", //与data-tag一致
+      "bdSize": 32 //分享按钮的尺寸
+    }]
+  }
+  //以下为js加载部分
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
   </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -465,7 +534,7 @@ this指向宿主对象123456function myWindow() &amp;#123;    thi">
         </div>
          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
-            ManfredHu
+            ManfredHu胡文峰的个人博客
           </div>
           <div class="panel-body">
             Copyright © 2017 ManfredHu All Rights Reserved.

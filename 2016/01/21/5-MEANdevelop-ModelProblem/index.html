@@ -2,9 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>object.defineproperties的实际作用（mean开发model层的写法） | ManfredHu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <title>object.defineproperties的实际作用（mean开发model层的写法） | ManfredHu胡文峰的个人博客</title>
+
   
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
   
@@ -15,19 +17,19 @@
 12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Object.defineProperties的实际作用（MEAN开发Model层的写法）">
-<meta property="og:url" content="http://yoursite.com/2016/01/21/5-MEANdevelop-ModelProblem/index.html">
-<meta property="og:site_name" content="ManfredHu">
+<meta property="og:url" content="http://www.manfredhu.com/2016/01/21/5-MEANdevelop-ModelProblem/index.html">
+<meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
 <meta property="og:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
 12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
-<meta property="og:image" content="http://yoursite.com/images/mean-stack.png">
+<meta property="og:image" content="http://www.manfredhu.com/images/mean-stack.png">
 <meta property="og:updated_time" content="2016-03-10T15:04:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object.defineProperties的实际作用（MEAN开发Model层的写法）">
 <meta name="twitter:description" content="Object.defineProperties是什么？有什么用？这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。大概第几章忘了，看下下面的代码估计能想起来是什么。
 12345678910111213141516171819202122232425262728293031var User = &amp;#123;&amp;#125">
-<meta name="twitter:image" content="http://yoursite.com/images/mean-stack.png">
+<meta name="twitter:image" content="http://www.manfredhu.com/images/mean-stack.png">
   
-    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/manfredhu.jpeg">
   
@@ -82,22 +84,22 @@
               <a class="brand" style="
                  margin-top: 0px;"  
                 href="#" data-toggle="modal" data-target="#myModal" >
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/manfredhu.jpeg">
+                  <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
               </a>
             
             
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 
-                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/">首页</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/archives">归档</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/categories">Kategorien</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/categories">分类</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/tags">标签</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                  <li> <a class="main-nav-link beautifont" href="/about">关于</a> </li>
                 
                   <li><div id="search-form-wrap">
 
@@ -109,7 +111,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -121,11 +123,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -150,7 +152,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-5-MEANdevelop-ModelProblem" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-5-MEANdevelop-ModelProblem" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -174,7 +176,18 @@
     <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
 
     </div>
+
     <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote class="post-source">
+          <p>
+          作者：ManfredHu<br>
+          链接：<a href=http://www.manfredhu.com/2016/01/21/5-MEANdevelop-ModelProblem/index.html target="_blank" rel="external">http://www.manfredhu.com/2016/01/21/5-MEANdevelop-ModelProblem/index.html</a><br>
+          声明：版权所有，转载请保留本段信息，谢谢大家
+          </p>
+        </blockquote>
+      
+
       
         <p><img src="/images/mean-stack.png" alt="MEAN层次开发表示"></p>
 <h2 id="Object-defineProperties是什么？有什么用？"><a href="#Object-defineProperties是什么？有什么用？" class="headerlink" title="Object.defineProperties是什么？有什么用？"></a>Object.defineProperties是什么？有什么用？</h2><p>这个问题比较听起来可能比较难以理解，确实我也是在项目中遇到的才会去想。以前看到《高级程序设计》的时候，有这么一种东西，定义一个对象。<br>大概第几章忘了，看下下面的代码估计能想起来是什么。</p>
@@ -202,27 +215,21 @@
     <footer class="article-footer">
       
         
-	<div id="comment">
-	
-	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2016/01/21/5-MEANdevelop-ModelProblem/" data-title="Object.defineProperties的实际作用（MEAN开发Model层的写法）" data-url="http://yoursite.com/2016/01/21/5-MEANdevelop-ModelProblem/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"manfredhu"};
-	  (function() {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] 
-	     || document.getElementsByTagName('body')[0]).appendChild(ds);
-	  })();
-	  </script>
-	<!-- 多说公共JS代码 end -->
-	
-	</div>
+	<div id="uyan_frame"></div>
 
+
+      
+      
+        <div id="baidu-share" class="bdsharebuttonbox" data-tag="share_1" style="margin-bottom:15px">
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_weixin" data-cmd="weixin"></a>
+    <a class="bds_sqq" data-cmd="sqq"></a>
+    <a class="bds_tsina" data-cmd="tsina"></a>
+    <a class="bds_qzone" data-cmd="qzone"></a>
+    <a class="bds_evernotecn" data-cmd="evernotecn"></a>
+    <a class="bds_youdao" data-cmd="youdao"></a>
+    <a class="bds_copy" data-cmd="copy"></a>
+</div>
 
       
       
@@ -234,53 +241,96 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/22/6-javascript-closure/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          javascript-closure
-        
-      </div>
-    </a>
+    <div class="article-nav-left">
+      <a href="/2016/01/22/6-javascript-closure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/closure.jpg)" alt="javascript-closure" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2016/01/22/6-javascript-closure/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            javascript-closure
+          
+        </div>
+      </a>
+    </div>
   
   
-    <a href="/2016/01/20/4-angular-note/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">AngularJS笔记</div>
-    </a>
+    <div class="article-nav-rigth">
+      <a href="/2016/01/20/4-angular-note/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="AngularJS笔记" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2016/01/20/4-angular-note/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">AngularJS笔记</div>
+      </a>
+    </div>
   
 </nav>
 
   
 </article>
 
-<!-- Table of Contents -->
+<!-- Titile Menu of Contents -->
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    <a class="sidebarBtn__hide">隐藏</a>
-    
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-defineProperties是什么？有什么用？"><span class="toc-number">1.</span> <span class="toc-text">Object.defineProperties是什么？有什么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MEAN开发Model层的写法"><span class="toc-number">2.</span> <span class="toc-text">MEAN开发Model层的写法</span></a></li></ol>
-    
+  <div class="big-sidebar">
+    <div class="fix-sidebar">
+        <div class="fix-sidebar-nav">
+            <span>展开目录</span>
+        </div>
+        <div class="fix-sidebar-comment">
+            <span>评论</span>
+        </div>
+        <!--
+        <div class="fix-sidebar-search">
+            <span>查找</span>
+        </div>
+        -->
+        <div class="fix-sidebar-share">
+            <span>分享</span>
+        </div>
+        <div class="fix-sidebar-music">
+            <span>音乐</span>
+        </div>
+        
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
+        
+        <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
     </div>
-  </aside>
+    <aside id="sidebar">
+      <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-defineProperties是什么？有什么用？"><span class="toc-number">1.</span> <span class="toc-text">Object.defineProperties是什么？有什么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MEAN开发Model层的写法"><span class="toc-number">2.</span> <span class="toc-text">MEAN开发Model层的写法</span></a></li></ol>
+        
+      </div>
+    </aside>
+    <div id="musicComponent"></div>
+</div>
+
 
 </section>
         
       </div>
-      
+      <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       <footer id="footer">
   
 
   <div class="container">
       <div class="row">
-        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu胡文峰的个人博客</p>
 	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
 	</div>
   </div>
 </footer>
-
 
 <script>
     /* min height */
@@ -292,27 +342,18 @@
     contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
     
     /* 文章详细页导航全屏 */
-    var clientHeight = document.body.clientHeight;
-    var toc = document.getElementById("toc");
-    if(toc){
-        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
-    }
+    // var clientHeight = document.body.clientHeight;
+    // var toc = document.getElementById("toc");
+    // if(toc){
+    //     toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    // }
 </script>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
     
+
+
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2091310"></script>
+
 
 <!-- mathjax config similar to math.stackexchange -->
 
@@ -363,6 +404,34 @@
 
 
 
+
+<script>
+  window._bd_share_config = {
+  //此处添加分享具体设置
+    common : {
+      //此处放置通用设置
+      bdText: "", //分享的内容
+      bdDesc: "", //分享的摘要
+      bdUrl: "", //分享的Url地址
+      bdPic: "", //分享的图片
+      bdMini: 2 //下拉浮层中分享按钮的列数
+      // bdMiniList: //['qzone','tsina',...] 自定义下拉浮层中的分享按钮类型和排列顺序。详见分享媒体id对应表
+      // onBeforeClick function(cmd,config){}  在用户点击分享按钮时执行代码，更改配置。
+      // cmd为分享目标id，config为当前设置，返回值为更新后的设置。
+      // onAfterClick  function(cmd){} 在用户点击分享按钮后执行代码，cmd为分享目标id。可用于统计等。
+      // bdPopupOffsetLeft int 正｜负数  下拉浮层的y偏移量
+      // bdPopupOffsetTop  int 正｜负数  下拉浮层的x偏移量
+
+    },
+    share : [{
+      //此处放置分享按钮设置
+      "tag": "share_1", //与data-tag一致
+      "bdSize": 32 //分享按钮的尺寸
+    }]
+  }
+  //以下为js加载部分
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
   </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -405,7 +474,7 @@
         </div>
          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
-            ManfredHu
+            ManfredHu胡文峰的个人博客
           </div>
           <div class="panel-body">
             Copyright © 2017 ManfredHu All Rights Reserved.

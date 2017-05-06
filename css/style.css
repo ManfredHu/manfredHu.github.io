@@ -129,7 +129,7 @@ body {
   text-rendering: optimizelegibility;
 }
 ::selection {
-  background: #00aced;
+  background: #ff7e79;
   color: #fff;
 }
 .article-entry h2,
@@ -137,7 +137,7 @@ body {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  color: #00aced;
+  color: #ff7e79;
 }
 #rocket {
   position: fixed;
@@ -397,24 +397,27 @@ body {
 .widget dt {
   font-weight: bold;
 }
-.navigater-list>a:hover {
-  color: #00aced;
-  border-bottom: 5px solid #00aced;
+.navigater-list>a:hover,
+.main-nav-link__active {
+  color: #ff7e79;
+  border-bottom: 5px solid #ff7e79;
   text-decoration: none;
 }
+.curpoint-normal {
+  cursor: default;
+}
 .hr {
-  background: #00aced;
+  background: #ff7e79;
 }
 .navbar-nav>li>a:hover,
 .navbar-nav>li>a:focus {
-  border-bottom: 5px solid #00aced;
-  color: #00aced !important;
+  border-bottom: 5px solid #ff7e79;
 }
 .navbar-inner {
   min-height: 90px;
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  border-top: 2px solid #00aced;
+  border-top: 2px solid #ff7e79;
 }
 .brand {
   float: left;
@@ -490,7 +493,7 @@ body {
 }
 #search-form-wrap .search-form .search-form-submit:hover,
 #search-form-wrap .search-form .search-form-submit:focus {
-  color: #00aced;
+  color: #ff7e79;
 }
 .search-form-input,
 .search-form-input.ins-search-input,
@@ -593,7 +596,7 @@ body {
   content: "\f073";
 }
 .article-date:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .article-category {
   text-align: center;
@@ -614,7 +617,7 @@ body {
   padding-right: 0.3em;
 }
 .article-category-link:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .article-header {
   text-align: center;
@@ -638,7 +641,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #00aced;
+  color: #ff7e79;
   text-decoration: none;
 }
 .article-entry {
@@ -680,7 +683,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-entry a:hover {
-  color: #00aced;
+  color: #ff7e79;
   text-decoration: none;
 }
 .article-entry ul,
@@ -718,7 +721,7 @@ a.article-title:hover {
   font-family: "open sans", "Helvetica Neue", Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft Yahei, sans-serif;
   font-size: 1.1em;
   margin: 1.4em 0px;
-  border-left: 5px solid #00aced;
+  border-left: 5px solid #ff7e79;
   background: rgba(208,211,248,0.15);
 }
 .article-entry blockquote p {
@@ -794,22 +797,23 @@ a.article-title:hover {
 }
 .article-more-link a {
   display: inline-block;
+  width: 100%;
+  text-align: center;
   font-size: 0.9em;
-  line-height: 1em;
+  line-height: 1.1em;
   padding: 8px 15px;
-  border-radius: 15px;
+  border-radius: 4px;
   background: #f9fbfd;
   border: 1px solid #eef1f8;
-  color: #00aced;
+  color: #ff7e79;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .article-more-link a:hover {
-  background: #00aced;
+  background: #ff7e79;
   color: #fff;
   text-decoration: none;
 }
@@ -1110,7 +1114,7 @@ li
   color: #0e83cd;
 }
 .toc-link:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .toc-child {
   margin-left: 1em;
@@ -1143,10 +1147,10 @@ li
   font-size: 1.3em;
 }
 .archive-year {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-year:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-year:before {
   font-family: "FontAwesome";
@@ -1163,7 +1167,7 @@ li
   font-weight: bold;
   color: #33363b;
   text-align: center;
-  border-left: 0px solid #00aced;
+  border-left: 0px solid #ff7e79;
   background: rgba(208,211,248,0.15);
 }
 .archives-tags-wrap blockquote a {
@@ -1171,14 +1175,14 @@ li
   margin: 0.2em;
 }
 .archives-tags-wrap blockquote a:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-tag {
   text-transform: none;
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-tag:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-tag:before {
   font-family: "FontAwesome";
@@ -1193,9 +1197,9 @@ li
   font-size: 1.1em;
   font-weight: bold;
   line-height: 1.7em;
-  color: #00aced;
+  color: #ff7e79;
   text-align: left;
-  border-left: 0px solid #00aced;
+  border-left: 0px solid #ff7e79;
   background: rgba(208,211,248,0.15);
 }
 .archives-category-wrap blockquote a {
@@ -1203,7 +1207,7 @@ li
   margin: 0.2em;
 }
 .archives-category-wrap blockquote a:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archives-category-wrap blockquote a:before {
   font-family: "FontAwesome";
@@ -1212,7 +1216,7 @@ li
 }
 .archive-category {
   text-transform: none;
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-category:before {
   font-family: "FontAwesome";
@@ -1256,11 +1260,11 @@ li
   -ms-transition: color 0.2s;
   transition: color 0.2s;
   line-height: 1.6em;
-  border-left: 1px solid #00aced;
+  border-left: 1px solid #ff7e79;
   padding-left: 15px;
 }
 .archive-article-title:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1277,7 +1281,7 @@ li
   font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 }
 .archive-article-date:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 #page-nav {
   margin: 50px auto;
@@ -1306,7 +1310,7 @@ li
   background: rgba(0,0,0,0.05);
 }
 #page-nav a:hover {
-  background: #00aced;
+  background: #ff7e79;
   color: #fff;
 }
 #page-nav .prev {
@@ -1346,7 +1350,7 @@ li
   text-decoration: none;
 }
 #footer a:hover {
-  color: #00aced;
+  color: #ff7e79;
   text-decoration: none;
 }
 #footer-info {
@@ -1603,7 +1607,7 @@ pre .javascript .function {
   display: inline-block;
 }
 .ins-close:hover {
-  color: #00aced;
+  color: #ff7e79;
 }
 .ins-search-container {
   left: 50%;
@@ -1678,7 +1682,7 @@ pre .javascript .function {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #00aced;
+  background: #ff7e79;
 }
 .ins-section .ins-search-item:hover .ins-slug,
 .ins-section .ins-search-item.active .ins-slug,
@@ -1714,7 +1718,7 @@ pre .javascript .function {
   text-decoration: none;
 }
 .widget a:hover {
-  color: #00aced;
+  color: #ff7e79;
   text-decoration: none;
 }
 .widget ul ul,
@@ -1773,4 +1777,9 @@ pre .javascript .function {
 .tagcloud a {
   margin-right: 5px;
   display: inline-block;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+}
+.beautifont {
+  font-family: "Microsoft YaHei", Microsoft JhengHei, Roboto, Helvetica, Arial, sans-serif;
 }

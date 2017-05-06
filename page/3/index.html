@@ -2,9 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>ManfredHu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <title>ManfredHu胡文峰的个人博客</title>
+
   
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
   
@@ -13,15 +15,15 @@
   
   <meta name="description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ManfredHu">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="ManfredHu">
+<meta property="og:title" content="ManfredHu胡文峰的个人博客">
+<meta property="og:url" content="http://www.manfredhu.com/page/3/index.html">
+<meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
 <meta property="og:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ManfredHu">
+<meta name="twitter:title" content="ManfredHu胡文峰的个人博客">
 <meta name="twitter:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
   
-    <link rel="alternate" href="/atom.xml" title="ManfredHu" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/manfredhu.jpeg">
   
@@ -55,35 +57,12 @@
 <body>
   
     <header id="header">
-  
-    <div id="intrologo" class="intro-logo" style="background-position:center center; background-repeat:no-repeat; background-image: url(/css/images/6.jpg);">
-  
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      
-    </script>
+    
+    <div id="intrologo" class="intro-logo" style="background-position:center center; background-repeat:no-repeat; background-image: url(/css/images/1.jpg);">
     
 
     
-      <div id="homelogo" class="homelogo">
+        <div id="homelogo" class="homelogo" style="display: none">
     
 
         
@@ -91,66 +70,68 @@
             <img id="homelogoimg" src="/css/images/manfredhu.jpeg" style="border-style: solid; border-color: rgba(24,24,21,0.1); border-width: 8px;">
           
         
-    
     </div>
   </div>
 
-  <!-- 自适应主页背景大图 -->
-  
-    <script>
-        var img = new Image();
-        var intrologodiv = document.getElementById("intrologo");
-        img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-        img.onload=function(){
-          if (img.width / img.height <= document.body.clientWidth / document.body.clientHeight) {
-            //intrologodiv.style.backgroundSize = "100% auto";
-            intrologodiv.style.backgroundSize = "cover";
-          } else {
-            //intrologodiv.style.backgroundSize = "auto 100%";
-            intrologodiv.style.backgroundSize = "cover";
-          }
-        };
-    </script>
- 
+    <div class="intro-navigate">
+        <p class="navigater-list" id="navigater-list">
+        
+            <a class="main-nav-link beautifont" href="/">首页</a>
+        
+            <a class="main-nav-link beautifont" href="/archives">归档</a>
+        
+            <a class="main-nav-link beautifont" href="/categories">分类</a>
+        
+            <a class="main-nav-link beautifont" href="/tags">标签</a>
+        
+            <a class="main-nav-link beautifont" href="/about">关于</a>
+        
+        </p>
+    </div>
 
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var img = new Image();
-        var homelogodiv = document.getElementById("homelogo");
-        img.src = document.getElementById("homelogoimg").src;
-        img.onload=function(){
-          var navBarObj = document.getElementById("navigater-list");
-          if (img.width > document.body.clientWidth) {
-            document.getElementById("homelogoimg").style.width = document.body.clientWidth + "px";
-            homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-            homelogodiv.style.marginTop = document.body.clientHeight * -0.5 + "px";
-          } else {
-            homelogodiv.style.marginLeft = img.width * -0.5 + "px";
-            homelogodiv.style.marginTop = img.height * -0.5 - navBarObj.offsetHeight + "px";
-          }
-        };
-    </script>
-  
+    <!-- fork me on GitHub -->
+    
+    <a href="https://github.com/manfredHu"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    
 
-  <div class="intro-navigate">
-      <p class="navigater-list" id="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">Home</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/categories">Kategorien</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">About</a>
-        
-      </p>
-  </div>
+    <!-- home_logo_image居中 -->
+    
+        <script>
+            (function(){
+                var img = new Image();
+                var homelogodiv = document.getElementById("homelogo");
+                // homelogodiv.style.display = 'none'; //先隐藏等加载完再显示
+                img.src = document.getElementById("homelogoimg").src;
+                img.onload=function(){
+                    var navBarObj = document.getElementById("navigater-list"); //导航栏
+                    if (img.width > document.body.clientWidth) {
+                        document.getElementById("homelogoimg").style.width = document.body.clientWidth + "px";
+                        homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+                        homelogodiv.style.marginTop = document.body.clientHeight * -0.5 + "px";
+                        homelogodiv.style.display = 'block';
+                    } else {
+                        homelogodiv.style.marginLeft = img.width * -0.5 + "px";
+                        homelogodiv.style.marginTop = img.height * -0.5 - navBarObj.offsetHeight + "px";
+                        homelogodiv.style.display = 'block';
+                    }
+                };
+            })();
+        </script>
+    
 
-  <!-- fork me on GitHub -->
-  <a href="https://github.com/manfredHu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+     <!-- 自适应主页背景大图 -->
+     
+       <script>
+            (function(){
+                var img = new Image();
+                var intrologodiv = document.getElementById("intrologo");
+                img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+                img.onload=function(){
+                   intrologodiv.style.backgroundSize = "cover";
+                };
+            })();
+       </script>
+    
 </header>
   
   <div id="container">
@@ -159,7 +140,10 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><!--首页-->
+          <section id="main" style="float:none;"><!--
+首页
+参数： pagination: 2, index: true
+-->
 
   
     <article id="post-6-javascript-closure"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -186,7 +170,7 @@
     <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a>
 
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/22/6-javascript-closure/" class="thumbnail">
@@ -207,7 +191,7 @@
 12345var scope = "global"; //全局作用域function func(
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/22/6-javascript-closure/#more">Read More</a>
+          <a href="/2016/01/22/6-javascript-closure/#more">阅读全文</a>
         </p>
     </div>
 
@@ -245,7 +229,7 @@
     <a class="article-category-link" href="/categories/随笔/">随笔</a><a class="article-category-link" href="/categories/随笔/JavaScript/">JavaScript</a>
 
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/21/5-MEANdevelop-ModelProblem/" class="thumbnail">
@@ -261,7 +245,7 @@ Object.defineProperties是什么？有什么用？这个问题比较听起来可
 12345678910111213141516171819202122232425262728293031var User = &#123;&#125
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/21/5-MEANdevelop-ModelProblem/#more">Read More</a>
+          <a href="/2016/01/21/5-MEANdevelop-ModelProblem/#more">阅读全文</a>
         </p>
     </div>
 
@@ -299,7 +283,7 @@ Object.defineProperties是什么？有什么用？这个问题比较听起来可
     <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/AngularJS/">AngularJS</a>
 
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/20/4-angular-note/" class="thumbnail">
@@ -318,7 +302,7 @@ AngularJS兼容性
 AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者aspx之类的。M也不一样，这里是ViewModel。AngularJS通过Binder/Data-binding engine(通常称为Binder)将模板Template与ViewModel关联起来且通过dirty-
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/20/4-angular-note/#more">Read More</a>
+          <a href="/2016/01/20/4-angular-note/#more">阅读全文</a>
         </p>
     </div>
 
@@ -356,7 +340,7 @@ AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者asp
     <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/CSS/">CSS</a>
 
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/17/3-CSS-note/" class="thumbnail">
@@ -373,7 +357,7 @@ AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者asp
 12345678910.news&#123;    background: gray;    border:
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/17/3-CSS-note/#more">Read More</a>
+          <a href="/2016/01/17/3-CSS-note/#more">阅读全文</a>
         </p>
     </div>
 
@@ -411,7 +395,7 @@ AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者asp
     <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a>
 
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
@@ -430,7 +414,7 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
 1&lt;!DOCTYPE HTML PUBLIC "-/
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/17/2-someAboutHTML5/#more">Read More</a>
+          <a href="/2016/01/17/2-someAboutHTML5/#more">阅读全文</a>
         </p>
     </div>
 
@@ -466,7 +450,7 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
 
       
     </div>
-
+    
     <div class="article-entry" itemprop="articleBody">
         <div class="article-summary">
           <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
@@ -482,7 +466,7 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
 
         </p>
         <p class="article-more-link">
-          <a href="/2016/01/17/1-firstArchive/#more">Read More</a>
+          <a href="/2016/01/17/1-firstArchive/#more">阅读全文</a>
         </p>
     </div>
 
@@ -497,30 +481,28 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
 </article>
   
 
+
 <!--底部分页栏-->
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; zurück</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 </section>
         
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
-      
+      <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       <footer id="footer">
   
 
   <div class="container">
       <div class="row">
-        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu</p>
+        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu胡文峰的个人博客</p>
 	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
 	</div>
   </div>
 </footer>
-
 
 <script>
     /* min height */
@@ -532,27 +514,18 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
     contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
     
     /* 文章详细页导航全屏 */
-    var clientHeight = document.body.clientHeight;
-    var toc = document.getElementById("toc");
-    if(toc){
-        toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
-    }
+    // var clientHeight = document.body.clientHeight;
+    // var toc = document.getElementById("toc");
+    // if(toc){
+    //     toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
+    // }
 </script>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
     
+
+
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2091310"></script>
+
 
 <!-- mathjax config similar to math.stackexchange -->
 
@@ -603,6 +576,34 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
 
 
 
+
+<script>
+  window._bd_share_config = {
+  //此处添加分享具体设置
+    common : {
+      //此处放置通用设置
+      bdText: "", //分享的内容
+      bdDesc: "", //分享的摘要
+      bdUrl: "", //分享的Url地址
+      bdPic: "", //分享的图片
+      bdMini: 2 //下拉浮层中分享按钮的列数
+      // bdMiniList: //['qzone','tsina',...] 自定义下拉浮层中的分享按钮类型和排列顺序。详见分享媒体id对应表
+      // onBeforeClick function(cmd,config){}  在用户点击分享按钮时执行代码，更改配置。
+      // cmd为分享目标id，config为当前设置，返回值为更新后的设置。
+      // onAfterClick  function(cmd){} 在用户点击分享按钮后执行代码，cmd为分享目标id。可用于统计等。
+      // bdPopupOffsetLeft int 正｜负数  下拉浮层的y偏移量
+      // bdPopupOffsetTop  int 正｜负数  下拉浮层的x偏移量
+
+    },
+    share : [{
+      //此处放置分享按钮设置
+      "tag": "share_1", //与data-tag一致
+      "bdSize": 32 //分享按钮的尺寸
+    }]
+  }
+  //以下为js加载部分
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
   </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -645,7 +646,7 @@ DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYP
         </div>
          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
-            ManfredHu
+            ManfredHu胡文峰的个人博客
           </div>
           <div class="panel-body">
             Copyright © 2017 ManfredHu All Rights Reserved.

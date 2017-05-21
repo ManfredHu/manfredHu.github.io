@@ -137,7 +137,7 @@
   <div id="container">
     <div id="wrap">
       
-            
+
       <div id="content" class="outer">
         
           <section id="main" style="float:none;"><!--
@@ -145,6 +145,62 @@
 参数： pagination: 2, index: true
 -->
 
+  
+    <article id="post-26-rem"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/06/26-rem/">CSS的rem单位</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/06/26-rem/" class="article-date">
+	  <time datetime="2017-05-06T13:43:19.000Z" itemprop="datePublished">2017-05-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+
+    </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2017/05/06/26-rem/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/niu.jpg)" alt="CSS的rem单位" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+改变font-size来进行自适应rem 这个属性，通过在 html 元素设置一个初始大小，然后全部单位用 rem 来计算，则页面自适应。
+兼容性现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 font-size是16px 即：
+123html &#123;font-size:16px;&#125;
+则设置了 &lt
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/05/06/26-rem/#more">阅读全文</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
   
     <article id="post-25-js-regexp"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
@@ -656,60 +712,6 @@ A. undefined,un
   
 </article>
   
-    <article id="post-16-learn-ES6"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2016/05/20/16-learn-ES6/">ES6快速学习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2016/05/20/16-learn-ES6/" class="article-date">
-	  <time datetime="2016-05-20T11:19:36.000Z" itemprop="datePublished">2016-05-20</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/JavaScript/">JavaScript</a>
-
-    </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-        <div class="article-summary">
-          <a href="/2016/05/20/16-learn-ES6/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/es6.jpeg)" alt="ES6快速学习" class="thumbnail-image"></span>
-    
-</a>
-        </div>
-        <p class="article-excerpt">
-          
-ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火的是一个叫babel的编译器，可以将ES6的语法代码转化为ES5，即现在主流浏览器能支持运行的语言。而React这个火到不行的框架在0.13版本之后将JSX的编译器由JSTransform和react-tools转换到Babel，也顺手将Babel这个支持ES6的编译器带火了，现在React编写已支持ES6语法了。
-转化
-        </p>
-        <p class="article-more-link">
-          <a href="/2016/05/20/16-learn-ES6/#more">阅读全文</a>
-        </p>
-    </div>
-
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-  
 
 
 <!--底部分页栏-->
@@ -742,14 +744,8 @@ ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火
     var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
     wrapdiv.style.minHeight = document.body.offsetHeight + "px";
     contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
-    
-    /* 文章详细页导航全屏 */
-    // var clientHeight = document.body.clientHeight;
-    // var toc = document.getElementById("toc");
-    // if(toc){
-    //     toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
-    // }
 </script>
+
     </div>
     
 
@@ -894,12 +890,11 @@ ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火
   </div>
 </div>
   <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async=""></script>
   
-
 	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
+	    <script src="https://s11.cnzz.com/z_stat.php?id=1260924312&web_id=1260924312" language="JavaScript"></script>
+  	</div>
 
 
 </body>

@@ -124,9 +124,9 @@
     var INSIGHT_CONFIG = {
         TRANSLATION: {
             POSTS: '文章',
-            PAGES: '页面',
             CATEGORIES: '分类',
             TAGS: '标签',
+            PAGES: '页面',
             UNTITLED: '(无标题)',
         },
         ROOT_URL: '/',
@@ -136,6 +136,7 @@
 })(window);
 </script>
 <script src="/js/insight.js"></script>
+
 
 </div></li>
             </div>
@@ -149,7 +150,7 @@
 
 
       
-            
+
       <div id="content" class="outer">
         
           <section id="main" style="float:none;"><article id="post-7-dataStructure" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
@@ -269,29 +270,38 @@
 
   <div class="big-sidebar">
     <div class="fix-sidebar">
-        <div class="fix-sidebar-nav">
-            <span>展开目录</span>
-        </div>
-        <div class="fix-sidebar-comment">
-            <span>评论</span>
-        </div>
-        <!--
-        <div class="fix-sidebar-search">
-            <span>查找</span>
-        </div>
-        -->
-        <div class="fix-sidebar-share">
-            <span>分享</span>
-        </div>
-        <div class="fix-sidebar-music">
-            <span>音乐</span>
-        </div>
+        
+            <div class="fix-sidebar-nav">
+                <span>展开目录</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-comment">
+                <span>评论</span>
+            </div>
+        
+        
+        
+            <div class="fix-sidebar-share">
+                <span>分享</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-music">
+                <span>音乐</span>
+            </div>
+        
+
         
             <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
         
-        <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
+
+        
+            <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
+        
+
     </div>
-    <aside id="sidebar">
+    <aside id="markdown-sidebar">
       <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
@@ -301,7 +311,6 @@
     </aside>
     <div id="musicComponent"></div>
 </div>
-
 
 </section>
         
@@ -326,14 +335,8 @@
     var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
     wrapdiv.style.minHeight = document.body.offsetHeight + "px";
     contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
-    
-    /* 文章详细页导航全屏 */
-    // var clientHeight = document.body.clientHeight;
-    // var toc = document.getElementById("toc");
-    // if(toc){
-    //     toc.style.maxHeight = (clientHeight - 30 - 16*2)+ "px";
-    // }
 </script>
+
     </div>
     
 
@@ -478,12 +481,11 @@
   </div>
 </div>
   <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async=""></script>
   
-
 	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
+	    <script src="https://s11.cnzz.com/z_stat.php?id=1260924312&web_id=1260924312" language="JavaScript"></script>
+  	</div>
 
 
 </body>

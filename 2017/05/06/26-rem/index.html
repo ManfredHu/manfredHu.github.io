@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <title>categorys: canvas | ManfredHu胡文峰的个人博客</title>
+  <title>css的rem单位 | ManfredHu胡文峰的个人博客</title>
 
   
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
@@ -13,15 +13,27 @@
   
   
   
-  <meta name="description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ManfredHu胡文峰的个人博客">
-<meta property="og:url" content="http://www.manfredhu.com/categories/笔记/Canvas/index.html">
+  <meta name="description" content="改变font-size来进行自适应rem 这个属性，通过在 html 元素设置一个初始大小，然后全部单位用 rem 来计算，则页面自适应。
+兼容性现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 font-size是16px 即：
+123html &amp;#123;font-size:16px;&amp;#125;
+则设置了 &amp;lt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS的rem单位">
+<meta property="og:url" content="http://www.manfredhu.com/2017/05/06/26-rem/index.html">
 <meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
-<meta property="og:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta property="og:description" content="改变font-size来进行自适应rem 这个属性，通过在 html 元素设置一个初始大小，然后全部单位用 rem 来计算，则页面自适应。
+兼容性现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 font-size是16px 即：
+123html &amp;#123;font-size:16px;&amp;#125;
+则设置了 &amp;lt">
+<meta property="og:image" content="http://www.manfredhu.com/images/niu.jpg">
+<meta property="og:updated_time" content="2017-05-09T15:16:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ManfredHu胡文峰的个人博客">
-<meta name="twitter:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
+<meta name="twitter:title" content="CSS的rem单位">
+<meta name="twitter:description" content="改变font-size来进行自适应rem 这个属性，通过在 html 元素设置一个初始大小，然后全部单位用 rem 来计算，则页面自适应。
+兼容性现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 font-size是16px 即：
+123html &amp;#123;font-size:16px;&amp;#125;
+则设置了 &amp;lt">
+<meta name="twitter:image" content="http://www.manfredhu.com/images/niu.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
   
@@ -53,8 +65,6 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
 
 </head>
 
@@ -79,7 +89,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
               </a>
             
@@ -149,49 +159,146 @@
 
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><!--
-首页
-参数： pagination: 2, index: true
--->
-
-  
-  
-  
+          <section id="main" style="float:none;"><article id="post-26-rem" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2016/03/10/9-Canvas/" class="archive-article-date">
-	  <time datetime="2016-03-10T12:54:38.000Z" itemprop="datePublished">2016-03-10</time>
-	</a>
-
-      
+      <header class="article-header">
+        
   
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2016/03/10/9-Canvas/">Canvas一般用法</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      CSS的rem单位
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/06/26-rem/" class="article-date">
+	  <time datetime="2017-05-06T13:43:19.000Z" itemprop="datePublished">2017-05-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote class="post-source">
+          <p>
+          作者：ManfredHu<br>
+          链接：<a href=http://www.manfredhu.com/2017/05/06/26-rem/index.html target="_blank" rel="external">http://www.manfredhu.com/2017/05/06/26-rem/index.html</a><br>
+          声明：版权所有，转载请保留本段信息，谢谢大家
+          </p>
+        </blockquote>
+      
+
+      
+        <p><img src="/images/niu.jpg" alt=""></p>
+<h1 id="改变font-size来进行自适应"><a href="#改变font-size来进行自适应" class="headerlink" title="改变font-size来进行自适应"></a>改变font-size来进行自适应</h1><p><code>rem</code> 这个属性，通过在 <code>html</code> 元素设置一个初始大小，然后全部单位用 <code>rem</code> 来计算，则页面自适应。</p>
+<h1 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h1><p>现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 <strong>font-size是16px</strong> 即：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line"><span class="attribute">font-size</span>:<span class="number">16px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>则设置了 <code>&lt;html&gt;</code> 之后，后面的大小样式会这样写，如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">font-size: 0.75rem; //12÷16=0.75（rem）</div><div class="line">&#125;</div><div class="line"></div><div class="line">所以你很容易想到，根据屏幕宽度和高度来动态改变 `&lt;html&gt;` 的 `font-size` 的大小，那么页面的大小也随之变化了。</div><div class="line"></div><div class="line"># 结合JS做自适应布局</div><div class="line">下面是一段做自适应布局的JS脚本</div><div class="line">```js</div><div class="line">/**</div><div class="line">* 判断用户client width</div><div class="line">* 然后给html设置一个font-size</div><div class="line">* 目的是为了方便rem做自适应布局</div><div class="line">*/</div><div class="line"></div><div class="line">(function (doc, win) &#123;</div><div class="line">    var docEl = doc.documentElement,</div><div class="line">        //判断是横竖屏</div><div class="line">        resizeEvt = 'orientationchange' in window ? 'orientationchange':'resize',</div><div class="line">        func = function () &#123;</div><div class="line">            var clientWidth = docEl.clientWidth;</div><div class="line">            if (!clientWidth) return;</div><div class="line">            //按照比例缩放</div><div class="line">            var docElWidth = 100 * (clientWidth / 320);</div><div class="line">            //最大值</div><div class="line">            if (docElWidth &gt; 200) docElWidth = 200;</div><div class="line">            // console.log(docElWidth);</div><div class="line">            docEl.style.fontSize = docElWidth + 'px';</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    if (!doc.addEventListener) return;</div><div class="line">    win.addEventListener(resizeEvt, func, false);</div><div class="line">    doc.addEventListener('DOMContentLoaded', func, false);</div><div class="line">&#125;)(document, window);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="uyan_frame"></div>
+
+
+      
+      
+        <div id="baidu-share" class="bdsharebuttonbox" data-tag="share_1" style="margin-bottom:15px">
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_weixin" data-cmd="weixin"></a>
+    <a class="bds_sqq" data-cmd="sqq"></a>
+    <a class="bds_tsina" data-cmd="tsina"></a>
+    <a class="bds_qzone" data-cmd="qzone"></a>
+    <a class="bds_evernotecn" data-cmd="evernotecn"></a>
+    <a class="bds_youdao" data-cmd="youdao"></a>
+    <a class="bds_copy" data-cmd="copy"></a>
+</div>
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <div class="article-nav-rigth">
+      <a href="/2017/03/21/25-js-regexp/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/zhengzeshi.jpg)" alt="JS正则终极篇" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2017/03/21/25-js-regexp/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JS正则终极篇</div>
+      </a>
+    </div>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
+<!-- Titile Menu of Contents -->
 
-<!--底部分页栏-->
+  <div class="big-sidebar">
+    <div class="fix-sidebar">
+        
+            <div class="fix-sidebar-nav">
+                <span>展开目录</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-comment">
+                <span>评论</span>
+            </div>
+        
+        
+        
+            <div class="fix-sidebar-share">
+                <span>分享</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-music">
+                <span>音乐</span>
+            </div>
+        
+
+        
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
+        
+
+        
+            <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
+        
+
+    </div>
+    <aside id="markdown-sidebar">
+      <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#改变font-size来进行自适应"><span class="toc-number">1.</span> <span class="toc-text">改变font-size来进行自适应</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a></li></ol>
+        
+      </div>
+    </aside>
+    <div id="musicComponent"></div>
+</div>
 
 </section>
         
@@ -266,6 +373,8 @@
 
 
 
+
+  <script src="/js/dialog.js"></script>
 
 
 

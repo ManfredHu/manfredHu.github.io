@@ -196,7 +196,9 @@ h3 {
     margin-bottom: 30px;
     left: 3px;
 }
-
+.beautifont{
+	font-family: "Microsoft YaHei",Microsoft JhengHei,Roboto,Helvetica,Arial,sans-serif;
+}
 canvas {
     top: 0;
     left: 0;

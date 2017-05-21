@@ -26,7 +26,7 @@
 123html &amp;#123;font-size:16px;&amp;#125;
 则设置了 &amp;lt">
 <meta property="og:image" content="http://www.manfredhu.com/images/niu.jpg">
-<meta property="og:updated_time" content="2017-05-09T15:16:36.000Z">
+<meta property="og:updated_time" content="2017-05-21T11:27:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS的rem单位">
 <meta name="twitter:description" content="改变font-size来进行自适应rem 这个属性，通过在 html 元素设置一个初始大小，然后全部单位用 rem 来计算，则页面自适应。
@@ -201,14 +201,39 @@
 <h1 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h1><p>现在大部分浏览器IE9+，Firefox、Chrome、Safari、Opera ，如果我们不修改相关的字体配置，都是默认显示 <strong>font-size是16px</strong> 即：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line"><span class="attribute">font-size</span>:<span class="number">16px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>则设置了 <code>&lt;html&gt;</code> 之后，后面的大小样式会这样写，如</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">font-size: 0.75rem; //12÷16=0.75（rem）</div><div class="line">&#125;</div><div class="line"></div><div class="line">所以你很容易想到，根据屏幕宽度和高度来动态改变 `&lt;html&gt;` 的 `font-size` 的大小，那么页面的大小也随之变化了。</div><div class="line"></div><div class="line"># 结合JS做自适应布局</div><div class="line">下面是一段做自适应布局的JS脚本</div><div class="line">```js</div><div class="line">/**</div><div class="line">* 判断用户client width</div><div class="line">* 然后给html设置一个font-size</div><div class="line">* 目的是为了方便rem做自适应布局</div><div class="line">*/</div><div class="line"></div><div class="line">(function (doc, win) &#123;</div><div class="line">    var docEl = doc.documentElement,</div><div class="line">        //判断是横竖屏</div><div class="line">        resizeEvt = 'orientationchange' in window ? 'orientationchange':'resize',</div><div class="line">        func = function () &#123;</div><div class="line">            var clientWidth = docEl.clientWidth;</div><div class="line">            if (!clientWidth) return;</div><div class="line">            //按照比例缩放</div><div class="line">            var docElWidth = 100 * (clientWidth / 320);</div><div class="line">            //最大值</div><div class="line">            if (docElWidth &gt; 200) docElWidth = 200;</div><div class="line">            // console.log(docElWidth);</div><div class="line">            docEl.style.fontSize = docElWidth + 'px';</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    if (!doc.addEventListener) return;</div><div class="line">    win.addEventListener(resizeEvt, func, false);</div><div class="line">    doc.addEventListener('DOMContentLoaded', func, false);</div><div class="line">&#125;)(document, window);</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">font-size: 0.75rem; //12÷16=0.75（rem）</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所以你很容易想到，根据屏幕宽度和高度来动态改变 <code>&lt;html&gt;</code> 的 <code>font-size</code> 的大小，那么页面的大小也随之变化了。</p>
+<h1 id="结合JS做自适应布局"><a href="#结合JS做自适应布局" class="headerlink" title="结合JS做自适应布局"></a>结合JS做自适应布局</h1><p>下面是一段做自适应布局的JS脚本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* 判断用户client width</div><div class="line">* 然后给html设置一个font-size</div><div class="line">* 目的是为了方便rem做自适应布局</div><div class="line">*/</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">        <span class="comment">//判断是横竖屏</span></div><div class="line">        resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span>:<span class="string">'resize'</span>,</div><div class="line">        func = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> clientWidth = docEl.clientWidth;</div><div class="line">            <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</div><div class="line">            <span class="comment">//按照比例缩放</span></div><div class="line">            <span class="keyword">var</span> docElWidth = <span class="number">100</span> * (clientWidth / <span class="number">320</span>);</div><div class="line">            <span class="comment">//最大值</span></div><div class="line">            <span class="keyword">if</span> (docElWidth &gt; <span class="number">200</span>) docElWidth = <span class="number">200</span>;</div><div class="line">            <span class="comment">// console.log(docElWidth);</span></div><div class="line">            docEl.style.fontSize = docElWidth + <span class="string">'px'</span>;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">    win.addEventListener(resizeEvt, func, <span class="literal">false</span>);</div><div class="line">    doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, func, <span class="literal">false</span>);</div><div class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
       
         
-	<div id="uyan_frame"></div>
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'manfredhu';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
 
 
       
@@ -293,7 +318,7 @@
       <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#改变font-size来进行自适应"><span class="toc-number">1.</span> <span class="toc-text">改变font-size来进行自适应</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#改变font-size来进行自适应"><span class="toc-number">1.</span> <span class="toc-text">改变font-size来进行自适应</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结合JS做自适应布局"><span class="toc-number">3.</span> <span class="toc-text">结合JS做自适应布局</span></a></li></ol>
         
       </div>
     </aside>
@@ -327,9 +352,18 @@
 
     </div>
     
+  <script>
+    var disqus_shortname = 'manfredhu';
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
 
 
-  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2091310"></script>
 
 
 <!-- mathjax config similar to math.stackexchange -->

@@ -129,7 +129,7 @@ body {
   text-rendering: optimizelegibility;
 }
 ::selection {
-  background: #677cf9;
+  background: #4caf50;
   color: #fff;
 }
 .article-entry h2,
@@ -137,7 +137,7 @@ body {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  color: #677cf9;
+  color: #4caf50;
 }
 #rocket {
   position: fixed;
@@ -399,25 +399,25 @@ body {
 }
 .navigater-list>a:hover,
 .main-nav-link__active {
-  color: #677cf9;
-  border-bottom: 5px solid #677cf9;
+  color: #4caf50;
+  border-bottom: 5px solid #4caf50;
   text-decoration: none;
 }
 .curpoint-normal {
   cursor: default;
 }
 .hr {
-  background: #677cf9;
+  background: #4caf50;
 }
 .navbar-nav>li>a:hover,
 .navbar-nav>li>a:focus {
-  border-bottom: 5px solid #677cf9;
+  border-bottom: 5px solid #4caf50;
 }
 .navbar-inner {
   min-height: 90px;
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  border-top: 2px solid #677cf9;
+  border-top: 2px solid #4caf50;
 }
 .brand {
   float: left;
@@ -493,7 +493,7 @@ body {
 }
 #search-form-wrap .search-form .search-form-submit:hover,
 #search-form-wrap .search-form .search-form-submit:focus {
-  color: #677cf9;
+  color: #4caf50;
 }
 .search-form-input,
 .search-form-input.ins-search-input,
@@ -596,7 +596,7 @@ body {
   content: "\f073";
 }
 .article-date:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .article-category {
   text-align: center;
@@ -617,7 +617,7 @@ body {
   padding-right: 0.3em;
 }
 .article-category-link:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .article-header {
   text-align: center;
@@ -641,7 +641,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #677cf9;
+  color: #4caf50;
   text-decoration: none;
 }
 .article-entry {
@@ -683,7 +683,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-entry a:hover {
-  color: #677cf9;
+  color: #4caf50;
   text-decoration: none;
 }
 .article-entry ul,
@@ -721,7 +721,7 @@ a.article-title:hover {
   font-family: "open sans", "Helvetica Neue", Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft Yahei, sans-serif;
   font-size: 1.1em;
   margin: 1.4em 0px;
-  border-left: 5px solid #677cf9;
+  border-left: 5px solid #4caf50;
   background: rgba(208,211,248,0.15);
 }
 .article-entry blockquote p {
@@ -805,7 +805,7 @@ a.article-title:hover {
   border-radius: 4px;
   background: #f9fbfd;
   border: 1px solid #eef1f8;
-  color: #677cf9;
+  color: #4caf50;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -813,7 +813,7 @@ a.article-title:hover {
   transition: all 0.2s ease-in-out;
 }
 .article-more-link a:hover {
-  background: #677cf9;
+  background: #4caf50;
   color: #fff;
   text-decoration: none;
 }
@@ -983,12 +983,12 @@ a.article-title:hover {
   }
 }
 .hover-color:hover .article-nav-title {
-  color: #677cf9;
+  color: #4caf50;
 }
 .hover-color:hover .article-nav-caption {
   color: #fff;
-  border-color: #677cf9;
-  background: #677cf9;
+  border-color: #4caf50;
+  background: #4caf50;
 }
 .hover-color:hover .dark-dialog {
   opacity: 0.8;
@@ -1141,10 +1141,10 @@ a.article-title:hover {
   font-size: 1.3em;
 }
 .archive-year {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-year:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-year:before {
   font-family: "FontAwesome";
@@ -1161,7 +1161,7 @@ a.article-title:hover {
   font-weight: bold;
   color: #33363b;
   text-align: center;
-  border-left: 0px solid #677cf9;
+  border-left: 0px solid #4caf50;
   background: rgba(208,211,248,0.15);
 }
 .archives-tags-wrap blockquote a {
@@ -1169,14 +1169,14 @@ a.article-title:hover {
   margin: 0.2em;
 }
 .archives-tags-wrap blockquote a:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-tag {
   text-transform: none;
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-tag:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-tag:before {
   font-family: "FontAwesome";
@@ -1191,9 +1191,9 @@ a.article-title:hover {
   font-size: 1.1em;
   font-weight: bold;
   line-height: 1.7em;
-  color: #677cf9;
+  color: #4caf50;
   text-align: left;
-  border-left: 0px solid #677cf9;
+  border-left: 0px solid #4caf50;
   background: rgba(208,211,248,0.15);
 }
 .archives-category-wrap blockquote a {
@@ -1201,7 +1201,7 @@ a.article-title:hover {
   margin: 0.2em;
 }
 .archives-category-wrap blockquote a:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archives-category-wrap blockquote a:before {
   font-family: "FontAwesome";
@@ -1210,7 +1210,7 @@ a.article-title:hover {
 }
 .archive-category {
   text-transform: none;
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-category:before {
   font-family: "FontAwesome";
@@ -1254,11 +1254,11 @@ a.article-title:hover {
   -ms-transition: color 0.2s;
   transition: color 0.2s;
   line-height: 1.6em;
-  border-left: 1px solid #677cf9;
+  border-left: 1px solid #4caf50;
   padding-left: 15px;
 }
 .archive-article-title:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1275,7 +1275,7 @@ a.article-title:hover {
   font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 }
 .archive-article-date:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 #page-nav {
   margin: 50px auto;
@@ -1304,7 +1304,7 @@ a.article-title:hover {
   background: rgba(0,0,0,0.05);
 }
 #page-nav a:hover {
-  background: #677cf9;
+  background: #4caf50;
   color: #fff;
 }
 #page-nav .prev {
@@ -1342,7 +1342,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 #footer a:hover {
-  color: #677cf9;
+  color: #4caf50;
   text-decoration: none;
 }
 #footer-info {
@@ -1576,7 +1576,7 @@ pre .javascript .function {
   display: inline-block;
 }
 .ins-close:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .ins-search-container {
   left: 50%;
@@ -1651,7 +1651,7 @@ pre .javascript .function {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #677cf9;
+  background: #4caf50;
 }
 .ins-section .ins-search-item:hover .ins-slug,
 .ins-section .ins-search-item.active .ins-slug,
@@ -1690,7 +1690,7 @@ pre .javascript .function {
 }
 .fix-sidebar {
   float: left;
-  border-top: 2px solid #677cf9;
+  border-top: 2px solid #4caf50;
   width: 48px;
   background: #33363b;
   background: rgba(0,0,0,0.7);
@@ -1723,22 +1723,22 @@ pre .javascript .function {
 }
 .fix-sidebar-nav:hover,
 .fix-sidebar-nav__active {
-  border: 1px solid #677cf9;
+  border: 1px solid #4caf50;
   border-width: 1px 0 1px 0;
 }
 .fix-sidebar-nav:hover span,
 .fix-sidebar-nav__active span {
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-nav:hover:before,
 .fix-sidebar-nav__active:before {
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-nav__active:before {
   content: "\f054";
 }
 .fix-sidebar-music__active:before {
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-music__active span {
   display: none;
@@ -1818,7 +1818,7 @@ pre .javascript .function {
 .fix-sidebar-music:focus,
 .fix-sidebar-github:hover,
 .fix-sidebar-github:focus {
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-comment:hover span,
 .fix-sidebar-comment:focus span,
@@ -1843,7 +1843,7 @@ pre .javascript .function {
 .fix-sidebar-github:hover:before,
 .fix-sidebar-github:focus:before {
   display: none;
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-totop {
   display: none;
@@ -1865,10 +1865,10 @@ pre .javascript .function {
   padding-bottom: 5px;
 }
 .fix-sidebar-totop:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .fix-sidebar-totop:hover:before {
-  color: #677cf9;
+  color: #4caf50;
 }
 #markdown-sidebar {
   float: right;
@@ -1887,13 +1887,13 @@ pre .javascript .function {
   padding-bottom: 0.5em;
 }
 #toc {
-  border-top: 2px solid #677cf9;
+  border-top: 2px solid #4caf50;
   line-height: 1em;
   font-size: 0.9em;
   overflow-y: auto;
   background: rgba(0,0,0,0.7);
   color: #fff;
-  border-left: 2px solid #677cf9;
+  border-left: 2px solid #4caf50;
   z-index: 3;
   width: 300px;
 }
@@ -1909,13 +1909,13 @@ pre .javascript .function {
   color: #fff;
 }
 .toc-link:hover {
-  color: #677cf9;
+  color: #4caf50;
 }
 .toc-child {
   margin-left: 1em;
 }
 .color-text__active {
-  color: #677cf9;
+  color: #4caf50;
   cursor: default;
 }
 #baidu-share a {
@@ -2030,7 +2030,7 @@ pre .javascript .function {
   text-decoration: none;
 }
 .widget a:hover {
-  color: #677cf9;
+  color: #4caf50;
   text-decoration: none;
 }
 .widget ul ul,

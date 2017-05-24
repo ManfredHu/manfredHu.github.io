@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
 
-  
-  <title>es6快速学习 | ManfredHu胡文峰的个人博客</title>
+    
+    <title>es6快速学习 | ManfredHu胡文峰的个人博客</title>
 
-  
+    
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
-  
-  
-  
-  
-  <meta name="description" content="ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火的是一个叫babel的编译器，可以将ES6的语法代码转化为ES5，即现在主流浏览器能支持运行的语言。而React这个火到不行的框架在0.13版本之后将JSX的编译器由JSTransform和react-tools转换到Babel，也顺手将Babel这个支持ES6的编译器带火了，现在React编写已支持ES6语法了。
+    
+    
+    
+    
+    <meta name="description" content="ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火的是一个叫babel的编译器，可以将ES6的语法代码转化为ES5，即现在主流浏览器能支持运行的语言。而React这个火到不行的框架在0.13版本之后将JSX的编译器由JSTransform和react-tools转换到Babel，也顺手将Babel这个支持ES6的编译器带火了，现在React编写已支持ES6语法了。
 转化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6快速学习">
@@ -28,37 +38,37 @@
 <meta name="twitter:description" content="ECMAScript6，由ECMA组织发布的一个新的JS语言标准。现在比较火的是一个叫babel的编译器，可以将ES6的语法代码转化为ES5，即现在主流浏览器能支持运行的语言。而React这个火到不行的框架在0.13版本之后将JSX的编译器由JSTransform和react-tools转换到Babel，也顺手将Babel这个支持ES6的编译器带火了，现在React编写已支持ES6语法了。
 转化">
 <meta name="twitter:image" content="http://www.manfredhu.com/images/es6.jpeg">
-  
+    
     <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
-  
-  <link rel="icon" href="/css/images/manfredhu.jpeg">
-  
+    
+    <link rel="icon" href="/css/images/manfredhu.jpeg">
+    
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
     @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
     @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
     @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
     @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
-  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-  <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/jquery-3.1.1.min.js"></script>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css" >
 
-  
+    
     <link rel="stylesheet" href="/css/dialog.css">
-  
+    
 
-  
+    
     <link rel="stylesheet" href="/css/header-post.css" >
-  
+    
 
-  
+    
 
 </head>
 
@@ -398,6 +408,10 @@
 	</div>
   </div>
 </footer>
+
+<!--[if lt IE 9]>
+<p class="chromeframe">您使用的IE浏览器版本过低，为获得更佳浏览体验，<a href="http://windows.microsoft.com/">建议升级您的IE浏览器</a>，或使用<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome</a>、<a href="http://www.firefox.com.cn/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
 
 <script>
     /* min height */

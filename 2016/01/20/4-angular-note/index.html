@@ -38,7 +38,7 @@ AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者asp
 
 AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者aspx之类的。M也不一样，这里是ViewModel。AngularJS通过Binder/Data-binding engine(通常称为Binder)将模板Template与ViewModel关联起来且通过dirty-">
 <meta property="og:image" content="http://www.manfredhu.com/images/angular.png">
-<meta property="og:updated_time" content="2017-02-10T18:05:42.000Z">
+<meta property="og:updated_time" content="2017-05-24T13:20:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS笔记">
 <meta name="twitter:description" content="AngularJS兼容性
@@ -235,7 +235,7 @@ AngularJS的MVVM的原理与传统的MVC不同，这里的view不是jsp或者asp
 <h2 id="Angular转换请求和响应"><a href="#Angular转换请求和响应" class="headerlink" title="Angular转换请求和响应"></a>Angular转换请求和响应</h2><h3 id="转换请求"><a href="#转换请求" class="headerlink" title="转换请求"></a>转换请求</h3><p>如果请求的配置对象属性中包含JS对象，那么就把这个对象序列化成JSON格式</p>
 <h3 id="转换响应"><a href="#转换响应" class="headerlink" title="转换响应"></a>转换响应</h3><p>如果检测到了XSRF（Cross Site Request Forgery）跨站请求伪造，则直接丢弃，如果检测到了JSON响应，则使用JSON解析器对其进行反序列化</p>
 <p>如果想自定义转换规则则设置<code>transformRequest</code>和<code>transformResponse</code>作为key来配置转换函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var module = angular.module(&apos;myApp&apos;);</div><div class="line">module.config(function($httpProvider)&#123;</div><div class="line">    $httpProvider.defaults.transformRequest = function(data) &#123;</div><div class="line">        //使用jQuery的param方法</div><div class="line">        //把JSON数据转化成字符串形式</div><div class="line">        return $.param(data);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="built_in">module</span> = angular.module(<span class="string">'myApp'</span>);</div><div class="line"><span class="built_in">module</span>.config(<span class="function"><span class="keyword">function</span>(<span class="params">$httpProvider</span>)</span>&#123;</div><div class="line">    $httpProvider.defaults.transformRequest = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">        <span class="comment">//使用jQuery的param方法</span></div><div class="line">        <span class="comment">//把JSON数据转化成字符串形式</span></div><div class="line">        <span class="keyword">return</span> $.param(data);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>

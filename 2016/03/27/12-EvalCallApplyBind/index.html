@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <!-- 启用360浏览器的极速模式(webkit) -->
     <meta name="renderer" content="webkit">
     <!-- 避免IE使用兼容模式 -->
@@ -18,7 +18,7 @@
     <title>javascript的动态特性(通过eval,call,apply和bind来体现) | ManfredHu胡文峰的个人博客</title>
 
     
-    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs">
     
     
     
@@ -73,20 +73,20 @@
     <script src="/js/jquery-3.1.1.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css" >
+    <link rel="stylesheet" href="/css/bootstrap.css">
 
     
     <link rel="stylesheet" href="/css/dialog.css">
     
 
     
-    <link rel="stylesheet" href="/css/header-post.css" >
+    <link rel="stylesheet" href="/css/header-post.css">
     
 
     
 
 </head>
-
+</html>
 <body>
   
   <div id="container">
@@ -107,8 +107,7 @@
 
             
               <a class="brand" style="
-                 margin-top: 0px;"  
-                href="#" data-toggle="modal" data-target="#myModal" >
+                 margin-top: 0px;" href="#" data-toggle="modal" data-target="#myModal">
                   <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
               </a>
             
@@ -129,14 +128,14 @@
                   <li><div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -164,7 +163,7 @@
 
 
 </div></li>
-            </div>
+            </ul></div>
           </div>
                 
       </div>
@@ -178,14 +177,14 @@
 
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-12-EvalCallApplyBind" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-12-EvalCallApplyBind" style="width: 100%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" class="article-title" itemprop="name">
+    <h1 class="thumb" itemprop="name">
       JavaScript的动态特性(通过eval,call,apply和bind来体现)
     </h1>
   
@@ -208,7 +207,7 @@
         <blockquote class="post-source">
           <p>
           作者：ManfredHu<br>
-          链接：<a href=http://www.manfredhu.com/2016/03/27/12-EvalCallApplyBind/index.html target="_blank" rel="external">http://www.manfredhu.com/2016/03/27/12-EvalCallApplyBind/index.html</a><br>
+          链接：<a href="http://www.manfredhu.com/2016/03/27/12-EvalCallApplyBind/index.html" target="_blank" rel="external">http://www.manfredhu.com/2016/03/27/12-EvalCallApplyBind/index.html</a><br>
           声明：版权所有，转载请保留本段信息，谢谢大家
           </p>
         </blockquote>
@@ -329,16 +328,16 @@
 <p>逻辑非常简单粗暴，就是下面的兼容的方法要仔细看下，原理就是数组调用<code>Object.prototype.toString()</code>的时候会返回<code>&quot;[object Array]&quot;</code>字符串。当然这里可以扩展下，类型检测大体来说<strong>基本类型检测用<code>typeof</code>是够的，像<code>number</code>, <code>string</code>,<code>boolean</code>,<code>undefined</code>都可以用<code>typof</code>检测。对于自定义引用类型的话用<code>instanceof</code>和<code>Object.prototype.hasOwnProperty</code>或者<code>constructor</code>属性也是够的</strong>。 </p>
 <p>比较容易出错的地方在<strong>检测数组</strong>和<strong>检测函数</strong>这两个地方，特别是有<code>iframe</code>的地方，原来的检测方法失效，所以要特别注意。 </p>
 <p>检测数组如上所述，是比较公认的方法。检测函数的话用<strong><code>typeof foo === &quot;function&quot;</code></strong>(假定foo是一个函数)来检测。</p>
-<h4 id="类数组用数组的方法"><a href="#类数组用数组的方法" class="headerlink" title="类数组用数组的方法"></a>类数组用数组的方法</h4><p>类数组是什么就不说了，有兴趣的可以翻一下之前的<a href="http://www.cnblogs.com/manfredHu/p/4803993.html" target="_blank" rel="external">文章</a>，搜一下<strong>类数组</strong>或者<strong>array-like</strong>就有了。 </p>
-<p>其实这里用的最多的，估计就是jQuery了，抽象一下jQuery源码的用法。或者你可以去Look下有加了点<a href="http://github.com/manfredHu/read-jQuery-SC" target="_blank" rel="external">中文注释版的jQuery源码</a>，下面代码不能运行，只是加深下理解而已。</p>
+<h4 id="类数组用数组的方法"><a href="#类数组用数组的方法" class="headerlink" title="类数组用数组的方法"></a>类数组用数组的方法</h4><p>类数组是什么就不说了，有兴趣的可以翻一下之前的<a href="http://www.cnblogs.com/manfredHu/p/4803993.html" rel="external nofollow noopener noreferrer" target="_blank">文章</a>，搜一下<strong>类数组</strong>或者<strong>array-like</strong>就有了。 </p>
+<p>其实这里用的最多的，估计就是jQuery了，抽象一下jQuery源码的用法。或者你可以去Look下有加了点<a href="http://github.com/manfredHu/read-jQuery-SC" rel="external nofollow noopener noreferrer" target="_blank">中文注释版的jQuery源码</a>，下面代码不能运行，只是加深下理解而已。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [];</div><div class="line"><span class="keyword">var</span> slice = arr.slice; <span class="comment">//数组的slice方法</span></div><div class="line">toArray: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> slice.call( <span class="keyword">this</span> ); <span class="comment">//这里就是可以将类数组转化为可以用原生数组的一个方法</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>类数组转化为数组的方法不外乎两种：一种是<code>slice</code>，一种是<code>concat</code></strong>。</p>
-<h2 id="bind函数"><a href="#bind函数" class="headerlink" title="bind函数"></a>bind函数</h2><h3 id="jQuery中的bind方法"><a href="#jQuery中的bind方法" class="headerlink" title="jQuery中的bind方法"></a>jQuery中的bind方法</h3><p>说到bind这里本篇的正题就到了，什么是bind？如果你用老版本的<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>用的比较多你可能经常会这样写（jQuery1.7+之后是推荐用<code>on</code>来绑定事件的）：</p>
+<h2 id="bind函数"><a href="#bind函数" class="headerlink" title="bind函数"></a>bind函数</h2><h3 id="jQuery中的bind方法"><a href="#jQuery中的bind方法" class="headerlink" title="jQuery中的bind方法"></a>jQuery中的bind方法</h3><p>说到bind这里本篇的正题就到了，什么是bind？如果你用老版本的<a href="http://jquery.com/" rel="external nofollow noopener noreferrer" target="_blank">jQuery</a>用的比较多你可能经常会这样写（jQuery1.7+之后是推荐用<code>on</code>来绑定事件的）：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$( <span class="string">"#foo"</span> ).bind( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert( <span class="string">"User clicked on 'foo.'"</span> );</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>意思非常明确了，就是给<code>id</code>为<code>foo</code>的元素绑定<code>click</code>事件和一个匿名的回调函数。 </p>
 <p>当然你也可以绑定多种类型的事件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$( <span class="string">"#foo"</span> ).bind( <span class="string">"mouseenter mouseleave"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $( <span class="keyword">this</span> ).toggleClass( <span class="string">"entered"</span> );</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>更详细的用法请参考<a href="http://api.jquery.com/bind/" target="_blank" rel="external">jQuery官网的<code>.bind()</code>的API</a></p>
+<p>更详细的用法请参考<a href="http://api.jquery.com/bind/" rel="external nofollow noopener noreferrer" target="_blank">jQuery官网的<code>.bind()</code>的API</a></p>
 <hr>
 <h3 id="原生JavaScript中的bind方法"><a href="#原生JavaScript中的bind方法" class="headerlink" title="原生JavaScript中的bind方法"></a>原生JavaScript中的bind方法</h3><p>还有一种是原生的bind函数，在ECMAScript5为<code>Function.prototype</code>添加了一些原生的扩展方法，其中就包括<code>Function.prototype.bind</code>。 </p>
 <p>不信的话你可以在谷歌或者火狐下运行下下面的代码看看，IE就比较傻逼了，<strong>IE9+才支持<code>bind</code>方法</strong>。</p>
@@ -352,7 +351,7 @@
 <p>这里尝试用<code>window</code>和<code>obj2</code>来改变函数运行的上下文，都没有成功。</p>
 <hr>
 <p>下面就是终结部分了，比较高能。 </p>
-<p>某天闲逛时候看到了<a href="http://www.html-js.com/article/JavaScript-functional-programming-in-Javascript-Bind-Call-and-Apply" target="_blank" rel="external">一篇很有趣的译文</a>，起初看了下，有的地方没看的太懂，而且也赶着去做别的事，就先搁一边了，后面有空去看的时候发现这篇译文，或者说是代码。灰常犀利，不管是作用还是写法处处都将JS的动态特性体现得淋漓尽致。</p>
+<p>某天闲逛时候看到了<a href="http://www.html-js.com/article/JavaScript-functional-programming-in-Javascript-Bind-Call-and-Apply" rel="external nofollow noopener noreferrer" target="_blank">一篇很有趣的译文</a>，起初看了下，有的地方没看的太懂，而且也赶着去做别的事，就先搁一边了，后面有空去看的时候发现这篇译文，或者说是代码。灰常犀利，不管是作用还是写法处处都将JS的动态特性体现得淋漓尽致。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> context = &#123; <span class="attr">foo</span>: <span class="string">"bar"</span> &#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnFoo</span> (<span class="params"></span>) </span>&#123; <span class="comment">//返回this.foo的简单函数</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.foo;</div><div class="line">&#125;</div><div class="line"></div><div class="line">returnFoo(); <span class="comment">//--&gt;undefined（因为window.foo不存在）</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> bound = returnFoo.bind(context); <span class="comment">//用bind绑定函数上下文</span></div><div class="line"></div><div class="line">bound(); <span class="comment">//--&gt;"bar"（因为上面被绑定了上下文了，这里输出context.foo）</span></div><div class="line"></div><div class="line">returnFoo.call(context);  <span class="comment">//--&gt; bar（call的基本用法）</span></div><div class="line"></div><div class="line">returnFoo.apply(context); <span class="comment">//--&gt; bar</span></div><div class="line"></div><div class="line">context.returnFoo = returnFoo; <span class="comment">//将函数引用赋给context对象</span></div><div class="line"></div><div class="line">context.returnFoo(); <span class="comment">//--&gt; bar（returnFoo函数里面的this是context）</span></div><div class="line"></div><div class="line"><span class="comment">//-----------------------------------------------------------------------   </span></div><div class="line"><span class="comment">// 上面的应该都不会很难，下面是比较实用的部分，每一句都要看得懂之后才往下看</span></div><div class="line"><span class="comment">//-----------------------------------------------------------------------</span></div><div class="line"></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].slice(<span class="number">0</span>,<span class="number">1</span>);  <span class="comment">//--&gt;[1]（简单的分割数组，比较麻烦是不是）</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> slice = <span class="built_in">Array</span>.prototype.slice; <span class="comment">//更简单的做法，将原型上的slice方法缓存到本地，方便快捷调用</span></div><div class="line"></div><div class="line"><span class="comment">//因为没有绑定上下文，slice也不知道去截取哪个数组</span></div><div class="line">slice(<span class="number">0</span>, <span class="number">1</span>); <span class="comment">//--&gt; TypeError: can't convert undefined to object</span></div><div class="line"></div><div class="line"><span class="comment">//同上，还是因为没有绑定上下文，slice也不知道去截取哪个数组</span></div><div class="line">slice([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="number">0</span>, <span class="number">1</span>); <span class="comment">//--&gt; TypeError: ...</span></div><div class="line"></div><div class="line"><span class="comment">//绑定了上下文，跟上面的[1,2,3].slice(0,1);一样，但是slice方法被封装起来了</span></div><div class="line">slice.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="number">0</span>, <span class="number">1</span>); <span class="comment">//--&gt; [1]</span></div><div class="line"></div><div class="line"><span class="comment">//跟上面差不多，只是换成了apply方法的调用，参数变成了数组的形式</span></div><div class="line">slice.apply([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">0</span>,<span class="number">1</span>]); <span class="comment">//--&gt; [1]</span></div><div class="line"></div><div class="line"><span class="comment">//精髓的一句，上面的演进只是为了解释这一句而已，整个的思想就是“封装”，方便调用</span></div><div class="line"><span class="comment">//就是将slice.call这句简写成slice一句就完成了</span></div><div class="line"><span class="comment">//我们上面其实用的很多都是函数绑定对象，但是却忘记了其实JS函数也是对象，也可以被绑定</span></div><div class="line"><span class="comment">//这里将slice当作对象，用call去绑定它，返回一个绑定了的函数，方便后面复用，也就是缓存的作用</span></div><div class="line">slice = <span class="built_in">Function</span>.prototype.call.bind(<span class="built_in">Array</span>.prototype.slice);</div><div class="line"></div><div class="line"><span class="comment">//跟上面的slice.call([1,2,3], 0, 1);对比一下发现原来把call封装到slice里面去了</span></div><div class="line">slice([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="number">0</span>, <span class="number">1</span>); <span class="comment">//--&gt; [1]</span></div><div class="line"></div><div class="line"><span class="comment">//上面一句看懂了这句就很好懂了，bind.call省略为bind的意思</span></div><div class="line"><span class="keyword">var</span> bind = <span class="built_in">Function</span>.prototype.call.bind(<span class="built_in">Function</span>.prototype.bind);</div><div class="line"></div><div class="line"><span class="comment">//OK，经过我们的处理，slice和bind的功能都很厉害了</span></div><div class="line"></div><div class="line"><span class="comment">//回到最初的例子</span></div><div class="line"><span class="keyword">var</span> context = &#123; <span class="attr">foo</span>: <span class="string">"bar"</span> &#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnFoo</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.foo;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//现在来使用神奇的"bind"函数</span></div><div class="line"><span class="comment">//bind(function,context)</span></div><div class="line"><span class="comment">//@function 待绑定上下文的函数</span></div><div class="line"><span class="comment">//@context  绑定的上下文</span></div><div class="line"><span class="comment">//@return   返回一个绑定了上下文的函数</span></div><div class="line"><span class="comment">//按照以前的书写顺序是这样的:returnFoo.bind(context,[args1,args2……])</span></div><div class="line"><span class="comment">//书写顺序完全改变了有木有？封装起来了有木有？</span></div><div class="line"><span class="keyword">var</span> amazing = bind(returnFoo, context);</div><div class="line">amazing(); <span class="comment">// --&gt; bar</span></div></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
 <ol>
@@ -361,7 +360,7 @@
 <li>多试着用这些东西，可以更好地理解JS这门语言，而且，代码会变得优雅，代码量复用的几率也会增大</li>
 </ol>
 </blockquote>
-<h2 id="引用参考："><a href="#引用参考：" class="headerlink" title="引用参考："></a>引用参考：</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="external">MDN官方文档——Function.prototype.bind()</a><br><a href="http://www.html-js.com/article/JavaScript-functional-programming-in-Javascript-Bind-Call-and-Apply" target="_blank" rel="external">张小俊128——Javascript中的Bind，Call和Apply</a></p>
+<h2 id="引用参考："><a href="#引用参考：" class="headerlink" title="引用参考："></a>引用参考：</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" rel="external nofollow noopener noreferrer" target="_blank">MDN官方文档——Function.prototype.bind()</a><br><a href="http://www.html-js.com/article/JavaScript-functional-programming-in-Javascript-Bind-Call-and-Apply" rel="external nofollow noopener noreferrer" target="_blank">张小俊128——Javascript中的Bind，Call和Apply</a></p>
 
       
     </div>
@@ -481,7 +480,7 @@
         
 
         
-            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub" rel="external nofollow noopener noreferrer">Github</a>
         
 
         
@@ -682,7 +681,7 @@
   </div>
 </div>
   <!-- <a id="rocket" href="#top" class=""></a> -->
-  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async=""></script>
+  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async></script>
   
 	<div style="display: none;">
 	    <script src="https://s11.cnzz.com/z_stat.php?id=1260924312&web_id=1260924312" language="JavaScript"></script>
@@ -690,4 +689,4 @@
 
 
 </body>
-</html>
+

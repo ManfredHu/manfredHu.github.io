@@ -165,31 +165,40 @@
     if ($('#toc').length > 0) {
         $('#toc').height($(window).height());
     }
+    //显示右边隐藏目录按钮
     $('.fix-sidebar-nav').on('click', function() {
-            if ($('.big-sidebar').hasClass('big-sidebar__show')) {
-                $('.big-sidebar').removeClass('big-sidebar__show');
-                $('.fix-sidebar-nav').removeClass('fix-sidebar-nav__active');
-            } else {
-                $('.big-sidebar').addClass('big-sidebar__show');
-                $('.fix-sidebar-nav').addClass('fix-sidebar-nav__active');
-            }
-        })
-        //markdown nav
-        // function hideMarkDownNav(){
-        //     $('#sidebar').hide();
-        //     $('#main').find('article').css('width','100%');
-        // }
-        // function showMarkDownNav(){
-        //     $('#main').find('article').css('width','75%');
-        // }
-        //当没有目录的时候隐藏掉
-        // if($('.toc').text() == 'None'){
-        //     hideMarkDownNav();
-        // }
-        //按钮切换
-        // $('.sidebarBtn__hide').on('click',function(){
-        //     hideMarkDownNav();
-        // });
+        //已经展开了目录
+        if ($('.big-sidebar').hasClass('big-sidebar__show')) {
+            $('.big-sidebar').removeClass('big-sidebar__show');
+            $('.fix-sidebar-nav').removeClass('fix-sidebar-nav__active');
+        } else { //还没有展开目录
+            $('.big-sidebar').addClass('big-sidebar__show');
+            $('.fix-sidebar-nav').addClass('fix-sidebar-nav__active');
+            updateMenuPosition();
+        }
+    });
+    //点击目录的某一项
+    $('.toc-item').on('click',function(){
+
+    });
+
+
+    //markdown nav
+    // function hideMarkDownNav(){
+    //     $('#sidebar').hide();
+    //     $('#main').find('article').css('width','100%');
+    // }
+    // function showMarkDownNav(){
+    //     $('#main').find('article').css('width','75%');
+    // }
+    //当没有目录的时候隐藏掉
+    // if($('.toc').text() == 'None'){
+    //     hideMarkDownNav();
+    // }
+    //按钮切换
+    // $('.sidebarBtn__hide').on('click',function(){
+    //     hideMarkDownNav();
+    // });
 
     //评论按钮点击
     $('.fix-sidebar-comment').on('click', function() {
@@ -241,6 +250,7 @@
         frame.marginheight = "0"
         frame.width = 330
         frame.height = 450
+        //应换成自己的歌单
         frame.src = "//music.163.com/outchain/player?type=0&id=700296152&auto=1&height=430"
         document.getElementById('musicComponent').appendChild(frame);
         frame.onload = function() {
@@ -262,6 +272,7 @@
         //@todo 点击会刷新页面
     });
 
+    //记忆每个标题的位置
     var menuPosition = [];
     var sidebarLinks = [];
     function initMenuPosition() {
@@ -270,8 +281,8 @@
         var tagArr = $('.article-entry').find(selectTag.join(','));
         for (var i = 0, len = tagArr.length; i < len; i++) {
             menuPosition.push({
-                target: tagArr[i],
-                y: $(tagArr[i]).offset().top
+                target: tagArr[i],//目标
+                y: $(tagArr[i]).offset().top - 20 //距离顶部的位置
             });
         }
         updateMenuPosition();
@@ -279,7 +290,6 @@
     initMenuPosition();
 
     function updateMenuPosition(){
-        // var menuPosition
         var scrollTop = $(document).scrollTop();
         var item = getItemFromMenuPosition(menuPosition,scrollTop);
         sidebarLinks = $('.toc').find('a');
@@ -322,9 +332,11 @@
     }
     var bigSidebar = $('.big-sidebar');
     var scrollHandler = function(event) {
+        //有显示目录才更新
         if(bigSidebar.hasClass('big-sidebar__show')){
             updateMenuPosition();
         }
     }
+    //页面滚动，更新目录
     $(document).scroll(throttle(scrollHandler, 100, 500));
 })(jQuery);

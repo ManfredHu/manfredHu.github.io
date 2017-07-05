@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <!-- 启用360浏览器的极速模式(webkit) -->
     <meta name="renderer" content="webkit">
     <!-- 避免IE使用兼容模式 -->
@@ -18,7 +18,7 @@
     <title>react + reflux 渲染性能优化原理 | ManfredHu胡文峰的个人博客</title>
 
     
-    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs" />
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs">
     
     
     
@@ -80,20 +80,20 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
     <script src="/js/jquery-3.1.1.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css" >
+    <link rel="stylesheet" href="/css/bootstrap.css">
 
     
     <link rel="stylesheet" href="/css/dialog.css">
     
 
     
-    <link rel="stylesheet" href="/css/header-post.css" >
+    <link rel="stylesheet" href="/css/header-post.css">
     
 
     
 
 </head>
-
+</html>
 <body>
   
   <div id="container">
@@ -114,8 +114,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 
             
               <a class="brand" style="
-                 margin-top: 0px;"  
-                href="#" data-toggle="modal" data-target="#myModal" >
+                 margin-top: 0px;" href="#" data-toggle="modal" data-target="#myModal">
                   <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
               </a>
             
@@ -136,14 +135,14 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
                   <li><div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -171,7 +170,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 
 
 </div></li>
-            </div>
+            </ul></div>
           </div>
                 
       </div>
@@ -185,14 +184,14 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-23-reactRenderingPrinciple" style="width: 100%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-23-reactRenderingPrinciple" style="width: 100%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" class="article-title" itemprop="name">
+    <h1 class="thumb" itemprop="name">
       React + Reflux 渲染性能优化原理
     </h1>
   
@@ -215,7 +214,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
         <blockquote class="post-source">
           <p>
           作者：ManfredHu<br>
-          链接：<a href=http://www.manfredhu.com/2016/11/08/23-reactRenderingPrinciple/index.html target="_blank" rel="external">http://www.manfredhu.com/2016/11/08/23-reactRenderingPrinciple/index.html</a><br>
+          链接：<a href="http://www.manfredhu.com/2016/11/08/23-reactRenderingPrinciple/index.html" target="_blank" rel="external">http://www.manfredhu.com/2016/11/08/23-reactRenderingPrinciple/index.html</a><br>
           声明：版权所有，转载请保留本段信息，谢谢大家
           </p>
         </blockquote>
@@ -299,10 +298,10 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 <li>4updateDemo 使用了addons插件update优化页面性能的例子</li>
 <li>5immutableDemo 使用了<code>Immutable.js</code>优化页面性能的例子</li>
 </ul>
-<p><a href="https://github.com/ManfredHu/reflux-demo" target="_blank" rel="external">源码传送门</a></p>
+<p><a href="https://github.com/ManfredHu/reflux-demo" rel="external nofollow noopener noreferrer" target="_blank">源码传送门</a></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>gulpfile.js为gulp构建代码，会将<code>tpl.js</code>的JSX代码翻译为js代码，需要的可以自己修改，每次转化模板需要<code>gulp</code>运行一下</li>
-<li>modulejs模块加载器和myView单页SPA框架为腾讯通讯与彩票业务部前端团队这边的基本框架，具体的请戳<a href="https://github.com/TC-FE" target="_blank" rel="external">这里</a>查看</li>
+<li>modulejs模块加载器和myView单页SPA框架为腾讯通讯与彩票业务部前端团队这边的基本框架，具体的请戳<a href="https://github.com/TC-FE" rel="external nofollow noopener noreferrer" target="_blank">这里</a>查看</li>
 <li>需要关注的文件<ul>
 <li>index.html 页面入口，规定了执行的模块</li>
 <li>app.js 应用程序入口</li>
@@ -327,9 +326,9 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 <p><img src="http://www.manfredhu.com/images/github/1basicDemo.png" alt="50ms渲染一次，重复渲染200次的截图"></p>
 <h2 id="Perl"><a href="#Perl" class="headerlink" title="Perl"></a>Perl</h2><p>Perl是react-addons带来的性能分析工具，这里的perfDemo是结合Chrome插件的例子。<br>要向全局暴露一个<code>window.Perl</code>变量，然后就可以愉快的配合Chrome插件使用了</p>
 <ul>
-<li>React-addons插件版本的<a href="https://facebook.github.io/react/docs/perf.html" target="_blank" rel="external">Perf插件</a>提供原生的API——用在首次渲染部分</li>
-<li><a href="https://github.com/crysislinux/chrome-react-perf" target="_blank" rel="external">Chrome插件</a>——用在有交互的部分</li>
-<li><a href="https://github.com/garbles/why-did-you-update" target="_blank" rel="external">console tool</a>——需要查看对比新旧值的情况下</li>
+<li>React-addons插件版本的<a href="https://facebook.github.io/react/docs/perf.html" rel="external nofollow noopener noreferrer" target="_blank">Perf插件</a>提供原生的API——用在首次渲染部分</li>
+<li><a href="https://github.com/crysislinux/chrome-react-perf" rel="external nofollow noopener noreferrer" target="_blank">Chrome插件</a>——用在有交互的部分</li>
+<li><a href="https://github.com/garbles/why-did-you-update" rel="external nofollow noopener noreferrer" target="_blank">console tool</a>——需要查看对比新旧值的情况下</li>
 </ul>
 <p>这里的wasted time就是在做属性没变化的重复渲染的过程，可以优化。<br><strong>用法与Chrome开发工具的TimeLine用法类似，点击start开始记录，后点击stop结束</strong></p>
 <p><img src="http://www.manfredhu.com/images/github/2perfDemo.png" alt="50ms渲染一次，重复渲染200次的截图"></p>
@@ -347,12 +346,12 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shallowEqual</span>(<span class="params">objA, objB</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (objA === objB) &#123; <span class="comment">//store嵌套层级太深这里就会返回true，引用类型内存指向同一空间</span></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> objA !== <span class="string">'object'</span> || objA === <span class="literal">null</span> || <span class="keyword">typeof</span> objB !== <span class="string">'object'</span> || objB === <span class="literal">null</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> keysA = <span class="built_in">Object</span>.keys(objA);</div><div class="line">  <span class="keyword">var</span> keysB = <span class="built_in">Object</span>.keys(objB);</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (keysA.length !== keysB.length) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// Test for A's keys different from B.</span></div><div class="line">  <span class="keyword">var</span> bHasOwnProperty = hasOwnProperty.bind(objB);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; keysA.length; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (!bHasOwnProperty(keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>所以PureRenderMixin这个插件，只能比较state和props为基本类型的部分。<br>如果有更加深层次的store数据嵌套，就要借助于update插件或者Immutablejs来深拷贝store的数据另存一份了。</p>
 <p><img src="http://www.manfredhu.com/images/github/3pureRenderMixinDemo.png" alt="50ms渲染一次，重复渲染200次的截图，引入pureRenderMixin"></p>
-<h2 id="用update优化（也称Immutable-Helper）"><a href="#用update优化（也称Immutable-Helper）" class="headerlink" title="用update优化（也称Immutable Helper）"></a>用update优化（也称Immutable Helper）</h2><p>update是addons里面的一个方法，旨在对拷贝对象复杂的过程来做一些语法上的优化，具体可以看<a href="https://facebook.github.io/react/docs/update.html" target="_blank" rel="external">react官方文档</a></p>
+<h2 id="用update优化（也称Immutable-Helper）"><a href="#用update优化（也称Immutable-Helper）" class="headerlink" title="用update优化（也称Immutable Helper）"></a>用update优化（也称Immutable Helper）</h2><p>update是addons里面的一个方法，旨在对拷贝对象复杂的过程来做一些语法上的优化，具体可以看<a href="https://facebook.github.io/react/docs/update.html" rel="external nofollow noopener noreferrer" target="_blank">react官方文档</a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//extend复制对象属性的时候</span></div><div class="line"><span class="keyword">var</span> newData = extend(myData, &#123;</div><div class="line">  <span class="attr">x</span>: extend(myData.x, &#123;</div><div class="line">    <span class="attr">y</span>: extend(myData.x.y, &#123;<span class="attr">z</span>: <span class="number">7</span>&#125;),</div><div class="line">  &#125;),</div><div class="line">  <span class="attr">a</span>: extend(myData.a, &#123;<span class="attr">b</span>: myData.a.b.concat(<span class="number">9</span>)&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//用update的时候，提供了一些语法糖让你不用写那么多</span></div><div class="line"><span class="keyword">var</span> update = <span class="built_in">require</span>(<span class="string">'react-addons-update'</span>);</div><div class="line"><span class="keyword">var</span> newData = update(myData, &#123;</div><div class="line">  <span class="attr">x</span>: &#123;<span class="attr">y</span>: &#123;<span class="attr">z</span>: &#123;<span class="attr">$set</span>: <span class="number">7</span>&#125;&#125;&#125;,</div><div class="line">  <span class="attr">a</span>: &#123;<span class="attr">b</span>: &#123;<span class="attr">$push</span>: [<span class="number">9</span>]&#125;&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p><code>cd ./updateDemo</code> 打开这个用addons.update优化过的例子的目录<br><code>http-server -p xxxx</code> 这里端口随意，不冲突就好</p>
 <p>这个例子与上面一个例子唯一的不同是这里用了<strong>addons.update来进行store数据的复制</strong>，具体的可以看todoStore和tpl这两个模块的代码，其他基本无修改</p>
-<p>这里update是参考了MongoDB’s query的部分语法，具体的可以看<a href="http://docs.mongodb.org/manual/core/crud-introduction/#query" target="_blank" rel="external">这里</a>,类比数组方法，返回一个新的实例。</p>
+<p>这里update是参考了MongoDB’s query的部分语法，具体的可以看<a href="http://docs.mongodb.org/manual/core/crud-introduction/#query" rel="external nofollow noopener noreferrer" target="_blank">这里</a>,类比数组方法，返回一个新的实例。</p>
 <ul>
 <li>{$push: array} 类似数组的push方法</li>
 <li>{$unshift: array} 类似数组的unshift方法</li>
@@ -372,7 +371,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 <p>50ms渲染一次，重复渲染200次的截图，引入了immutable用了其set方法：<br><img src="http://www.manfredhu.com/images/github/5immutable_set.png" alt="50ms渲染一次，重复渲染200次的截图，引入了immutable用了其set方法"></p>
 <p>50ms渲染一次，重复渲染200次的截图，引入了immutable用了其update方法：<br><img src="http://www.manfredhu.com/images/github/5immutableDemo_update.png" alt="50ms渲染一次，重复渲染200次的截图，引入了immutable用了其update方法"></p>
 <h2 id="seamless-immutable-amp-amp-Observejs"><a href="#seamless-immutable-amp-amp-Observejs" class="headerlink" title="seamless-immutable &amp;&amp; Observejs"></a>seamless-immutable &amp;&amp; Observejs</h2><p>一个是immutable的阉割版，一个是AlloyTeam推的。<br>两者都是通过Object.defineProperty(IE9+)对set和get操作进行处理，优点是文件比较小。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>自己设想，组件化运用到极致，应该是像<a href="http://weui.github.io/weui/#/" target="_blank" rel="external">微信weui</a>那样</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>自己设想，组件化运用到极致，应该是像<a href="http://weui.github.io/weui/#/" rel="external nofollow noopener noreferrer" target="_blank">微信weui</a>那样</p>
 <ul>
 <li>有一套非常适合接入，复用性非常强的组件库。拿来就用，不需要再次开发</li>
 <li>应该兼顾起上面说的减少重复渲染的部分</li>
@@ -383,7 +382,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 <li>将一个组件的action/store/JSX/样式代码Style 写在<strong>一个文件</strong>里，这样方便修改和调用，封闭组件内部实现细节，对外只暴露action操作和store的一些get方法，这样可以修改或者是获取到组件的某些现在时刻的属性（也有同学是直接封装为一个对象，通过对象暴露其store,action）</li>
 <li>组件共享或依赖的数据，应在公共父级的store或独立成一个单独的部分，然后采用props传递的形式或从独立的store里面取数据</li>
 </ul>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p><a href="https://github.com/ManfredHu/reflux-demo" target="_blank" rel="external">源码传送门</a><br><a href="LICENSE">MIT</a>. Copyright (c) 2016 ManfredHu.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p><a href="https://github.com/ManfredHu/reflux-demo" rel="external nofollow noopener noreferrer" target="_blank">源码传送门</a><br><a href="LICENSE">MIT</a>. Copyright (c) 2016 ManfredHu.</p>
 
       
     </div>
@@ -503,7 +502,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
         
 
         
-            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub">Github</a>
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub" rel="external nofollow noopener noreferrer">Github</a>
         
 
         
@@ -704,7 +703,7 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
   </div>
 </div>
   <!-- <a id="rocket" href="#top" class=""></a> -->
-  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async=""></script>
+  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async></script>
   
 	<div style="display: none;">
 	    <script src="https://s11.cnzz.com/z_stat.php?id=1260924312&web_id=1260924312" language="JavaScript"></script>
@@ -712,4 +711,4 @@ Facebook团队研发并维护——有团队维护更新且有质量保证
 
 
 </body>
-</html>
+

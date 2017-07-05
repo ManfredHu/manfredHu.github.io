@@ -1,20 +1,20 @@
-var toc = document.getElementById('toc')
-
-if (toc != null) {
-	window.addEventListener("scroll", scrollcatelogHandler);
-	var tocPosition = toc.offsetTop;
-
-	function scrollcatelogHandler(e) {
-		 var event = e || window.event,
-		     target = event.target || event.srcElement;
-		 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-		 if (scrollTop > tocPosition-30) {
-		     toc.classList.add("toc-fixed");
-		 } else {
-		     toc.classList.remove("toc-fixed");
-		 }
-	}
-}
+// var toc = document.getElementById('toc')
+//
+// if (toc != null) {
+// 	window.addEventListener("scroll", scrollcatelogHandler);
+// 	var tocPosition = toc.offsetTop;
+//
+// 	function scrollcatelogHandler(e) {
+// 		 var event = e || window.event,
+// 		     target = event.target || event.srcElement;
+// 		 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+// 		 if (scrollTop > tocPosition-30) {
+// 		     toc.classList.add("toc-fixed");
+// 		 } else {
+// 		     toc.classList.remove("toc-fixed");
+// 		 }
+// 	}
+// }
 
 
 var night_model=false;		//夜间阅读模式
@@ -73,27 +73,27 @@ function setBackground(){
     	wrap.style.background = body_bg_d;
     	articleInner.setAttribute('class','article-inner');
 
-		for (i=0;i<h1title.length;i++){ 
+		for (i=0;i<h1title.length;i++){
 		  	h1title[i].style.color = article_title_d;
 		}
-		for (i=0;i<h2title.length;i++){ 
+		for (i=0;i<h2title.length;i++){
 		  	h2title[i].style.color = article_title_d;
 		}
-		for (i=0;i<h3title.length;i++){ 
+		for (i=0;i<h3title.length;i++){
 		  	h3title[i].style.color = article_title_d;
 		}
-		for (i=0;i<figure.length;i++){ 
+		for (i=0;i<figure.length;i++){
 		  	figure[i].style.background = code_bg_d;
 		  	figure[i].style.borderColor = code_border_d;
 		}
-		for (i=0;i<code.length;i++){ 
+		for (i=0;i<code.length;i++){
 		  	code[i].style.color = code_color_d;
 		}
-		for (i=0;i<pre.length;i++){ 
+		for (i=0;i<pre.length;i++){
 		  	pre[i].style.background = code_bg_d;
 		  	pre[i].style.color = '#525252';
 		}
-		for (i=0;i<all_p.length;i++){ 
+		for (i=0;i<all_p.length;i++){
 		  	all_p[i].style.color = article_p_d;
 		}
 	}else{
@@ -103,42 +103,42 @@ function setBackground(){
     	wrap.style.background = body_bg_n;
     	articleInner.setAttribute('class','article-inner-night');
 
-		for (i=0;i<h1title.length;i++){ 
+		for (i=0;i<h1title.length;i++){
 		  	h1title[i].style.color = article_title_n;
 		}
-		for (i=0;i<h2title.length;i++){ 
+		for (i=0;i<h2title.length;i++){
 		  	h2title[i].style.color = article_title_n;
 		}
-		for (i=0;i<h3title.length;i++){ 
+		for (i=0;i<h3title.length;i++){
 		  	h3title[i].style.color = article_title_n;
 		}
-		for (i=0;i<figure.length;i++){ 
+		for (i=0;i<figure.length;i++){
 		  	figure[i].style.background = code_bg_n;
 		  	figure[i].style.borderColor = code_border_n;
 		}
-		for (i=0;i<code.length;i++){ 
+		for (i=0;i<code.length;i++){
 		  	code[i].style.color = code_color_n;
 		}
-		for (i=0;i<pre.length;i++){ 
+		for (i=0;i<pre.length;i++){
 		  	pre[i].style.background = code_bg_n;
 		  	pre[i].style.color = article_p_n;
 		}
-		for (i=0;i<all_p.length;i++){ 
+		for (i=0;i<all_p.length;i++){
 		  	all_p[i].style.color = article_p_n;
 		}
 	}
-	
+
 }
 
 function setFontSize() {		//正文字号大小
 
 	content_fontsize_big = !content_fontsize_big;
 	if(content_fontsize_big == true){
-		for (var i=0;i<all_p.length;i++){ 
+		for (var i=0;i<all_p.length;i++){
 		  	all_p[i].style.fontSize='1.2em';
 		}
 	} else {
-		for (var i=0;i<all_p.length;i++){ 
+		for (var i=0;i<all_p.length;i++){
 		  	all_p[i].style.fontSize='1em';
 		}
 	}

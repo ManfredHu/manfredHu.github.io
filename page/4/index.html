@@ -15,7 +15,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     
-    <title>标签: es6 | ManfredHu胡文峰的个人博客</title>
+    <title>ManfredHu胡文峰的个人博客</title>
 
     
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs">
@@ -26,7 +26,7 @@
     <meta name="description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ManfredHu胡文峰的个人博客">
-<meta property="og:url" content="http://www.manfredhu.com/tags/ES6/index.html">
+<meta property="og:url" content="http://www.manfredhu.com/page/4/index.html">
 <meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
 <meta property="og:description" content="Stay hungry, stay foolish. Keep looking, don&apos;t settle.">
 <meta name="twitter:card" content="summary">
@@ -55,105 +55,97 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
 
     
-    <link rel="stylesheet" href="/css/dialog.css">
+    <link rel="stylesheet" href="/css/home.css">
     
 
     
-    <link rel="stylesheet" href="/css/header-post.css">
-    
 
-    
-    <link rel="stylesheet" href="/css/archive.css">
     
 
 </head>
 </html>
 <body>
   
+    <header id="header">
+    
+    <div id="intrologo" class="intro-logo" style="background-position:center center; background-repeat:no-repeat; background-image: url(/css/images/5.jpg);">
+    
+
+    
+        <div id="homelogo" class="homelogo" style="display: none">
+    
+
+        
+          
+            <img id="homelogoimg" src="/css/images/manfredhu.jpeg" style="border-style: solid; border-color: rgba(24,24,21,0.1); border-width: 8px;">
+          
+        
+    </div>
+  </div>
+
+    <div class="intro-navigate">
+        <p class="navigater-list" id="navigater-list">
+        
+            <a class="main-nav-link beautifont" href="/">首页</a>
+        
+            <a class="main-nav-link beautifont" href="/archives">归档</a>
+        
+            <a class="main-nav-link beautifont" href="/categories">分类</a>
+        
+            <a class="main-nav-link beautifont" href="/tags">标签</a>
+        
+            <a class="main-nav-link beautifont" href="/about">关于</a>
+        
+        </p>
+    </div>
+
+    <!-- fork me on GitHub -->
+    
+    <a href="https://github.com/manfredHu" rel="external nofollow noopener noreferrer" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    
+
+    <!-- home_logo_image居中 -->
+    
+        <script>
+            (function(){
+                var img = new Image();
+                var homelogodiv = document.getElementById("homelogo");
+                // homelogodiv.style.display = 'none'; //先隐藏等加载完再显示
+                img.src = document.getElementById("homelogoimg").src;
+                img.onload=function(){
+                    var navBarObj = document.getElementById("navigater-list"); //导航栏
+                    if (img.width > document.body.clientWidth) {
+                        document.getElementById("homelogoimg").style.width = document.body.clientWidth + "px";
+                        homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+                        homelogodiv.style.marginTop = document.body.clientHeight * -0.5 + "px";
+                        homelogodiv.style.display = 'block';
+                    } else {
+                        homelogodiv.style.marginLeft = img.width * -0.5 + "px";
+                        homelogodiv.style.marginTop = img.height * -0.5 - navBarObj.offsetHeight + "px";
+                        homelogodiv.style.display = 'block';
+                    }
+                };
+            })();
+        </script>
+    
+
+     <!-- 自适应主页背景大图 -->
+     
+       <script>
+            (function(){
+                var img = new Image();
+                var intrologodiv = document.getElementById("intrologo");
+                img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+                img.onload=function(){
+                   intrologodiv.style.backgroundSize = "cover";
+                };
+            })();
+       </script>
+    
+</header>
+  
   <div id="container">
     <div id="wrap">
-      
-        <header>
-
-    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="navbar-inner">
-          
-          <div class="container"> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            
-              <a class="brand" style="
-                 margin-top: 0px;">
-                  <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
-              </a>
-            
-            
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                
-                  <li> <a class="main-nav-link beautifont" href="/">首页</a> </li>
-                
-                  <li> <a class="main-nav-link beautifont" href="/archives">归档</a> </li>
-                
-                  <li> <a class="main-nav-link beautifont" href="/categories">分类</a> </li>
-                
-                  <li> <a class="main-nav-link beautifont" href="/tags">标签</a> </li>
-                
-                  <li> <a class="main-nav-link beautifont" href="/about">关于</a> </li>
-                
-                  <li><div id="search-form-wrap">
-
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            PAGES: '页面',
-            UNTITLED: '(无标题)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
-
-
-</div></li>
-            </ul></div>
-          </div>
-                
-      </div>
-    </div>
-
-</header>
-
-
-
       
 
       <div id="content" class="outer">
@@ -164,74 +156,124 @@
 -->
 
   
-  
-  
+    <article id="post-2-someAboutHTML5" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2017/11/07/30-es6-normal-error/" class="archive-article-date">
-	  <time datetime="2017-11-06T16:15:37.000Z" itemprop="datePublished">2017-11-07</time>
-	</a>
-
-      
+      <header class="article-header">
+        
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/11/07/30-es6-normal-error/">种常见的ES6改进写法</a>
+      <a class="article-title" href="/2016/01/17/2-someAboutHTML5/">到了HTML5时代写HTML代码要注意的东西</a>
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
+    <div class="article-meta">
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2016/05/20/16-learn-ES6/" class="archive-article-date">
-	  <time datetime="2016-05-20T11:19:36.000Z" itemprop="datePublished">2016-05-20</time>
+	<a href="/2016/01/17/2-someAboutHTML5/" class="article-date">
+	  <time datetime="2016-01-17T11:16:21.000Z" itemprop="datePublished">2016-01-17</time>
 	</a>
 
       
+    <a class="article-category-link" href="/categories/笔记/">笔记</a><a class="article-category-link" href="/categories/笔记/HTML/">HTML</a>
+
+    </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/17/2-someAboutHTML5/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/html.png)" alt="到了HTML5时代写HTML代码要注意的东西" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+DOCTYPE这是一个写在HTML头部的东西，浏览器会根据不同的DOCTYPE来识别不同的模式，后面的渲染和优化也会不一样，作为一个前端我们会严格要求自己。所以通常会copy一下的是不是^_^。但是在Eclipse中默认的不是HTML5的DOCTYPE,切记切记改过来噢亲。
+常见的DOCTYPE有
+1.HTML 4.01 Strict
+
+1&lt;!DOCTYPE HTML PUBLIC "-/
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/17/2-someAboutHTML5/#more">阅读全文</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
+    <article id="post-1-firstArchive" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2016/05/20/16-learn-ES6/">ES6快速学习</a>
+      <a class="article-title" href="/2016/01/17/1-firstArchive/">博客园博客已迁移到此</a>
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2016/01/17/1-firstArchive/" class="article-date">
+	  <time datetime="2016-01-17T11:16:10.000Z" itemprop="datePublished">2016-01-17</time>
+	</a>
+
+      
+    </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+        <div class="article-summary">
+          <a href="/2016/01/17/1-firstArchive/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/manfred-logo.png)" alt="博客园博客已迁移到此" class="thumbnail-image"></span>
+    
+</a>
+        </div>
+        <p class="article-excerpt">
+          
+欢迎您来到我的新博客，我是ManfredHu.原博客园的博主，博客园博客已停止使用以后全部文章更新会转移到这个博客。谢谢大家观看！！^_^
+哈哈哈
+
+        </p>
+        <p class="article-more-link">
+          <a href="/2016/01/17/1-firstArchive/#more">阅读全文</a>
+        </p>
+    </div>
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文/">杂文</a></li></ul>
+
+    </footer>
   </div>
+  
 </article>
-  
-  
-    </div></section>
   
 
 
 <!--底部分页栏-->
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
 </section>
         
@@ -317,6 +359,8 @@
 <script src="/js/script.js"></script>
 <script src="/js/bootstrap.js"></script>
 
+
+  <script src="/js/home.js"></script>
 
 
 

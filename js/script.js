@@ -303,6 +303,7 @@
     }
 
     function getItemFromMenuPosition(items,value){
+        if(items.length <= 0 && value ==0) return;
         if(value <= items[0].y) return items[0];
         if(value >= items[items.length-1].y) return items[items.length-1];
         for(var i=0,len=items.length;i<len;i++){

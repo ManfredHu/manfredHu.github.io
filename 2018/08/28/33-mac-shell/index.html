@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    
+    <title>前端常用shell(mac os) | ManfredHu胡文峰的个人博客</title>
+
+    
+    <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs">
+    
+    
+    
+    
+    <meta name="description" content="常常有写shell平时用不到，参数记忆比较模糊。但是用到的时候又想找个地方查一下。这个时候就很蛋疼了，故作笔记记录下，方便翻阅。
+端口占用不知道大家有没有遇到过端口占用的情况。解决方法分两步
+
+找到是哪个进程占用了这个端口
+kill掉这个进程
+
+对应的命令
+
+lsof -i:4000 查找占用4000端口的进程
+kill 13219
+
+如下为lsof -i:4000输出的结果，我们第二步根据PI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端常用shell(Mac OS)">
+<meta property="og:url" content="http://www.manfredhu.com/2018/08/28/33-mac-shell/index.html">
+<meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
+<meta property="og:description" content="常常有写shell平时用不到，参数记忆比较模糊。但是用到的时候又想找个地方查一下。这个时候就很蛋疼了，故作笔记记录下，方便翻阅。
+端口占用不知道大家有没有遇到过端口占用的情况。解决方法分两步
+
+找到是哪个进程占用了这个端口
+kill掉这个进程
+
+对应的命令
+
+lsof -i:4000 查找占用4000端口的进程
+kill 13219
+
+如下为lsof -i:4000输出的结果，我们第二步根据PI">
+<meta property="og:image" content="http://www.manfredhu.com/images/mac-shell.jpeg">
+<meta property="og:updated_time" content="2018-09-04T05:30:15.805Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端常用shell(Mac OS)">
+<meta name="twitter:description" content="常常有写shell平时用不到，参数记忆比较模糊。但是用到的时候又想找个地方查一下。这个时候就很蛋疼了，故作笔记记录下，方便翻阅。
+端口占用不知道大家有没有遇到过端口占用的情况。解决方法分两步
+
+找到是哪个进程占用了这个端口
+kill掉这个进程
+
+对应的命令
+
+lsof -i:4000 查找占用4000端口的进程
+kill 13219
+
+如下为lsof -i:4000输出的结果，我们第二步根据PI">
+<meta name="twitter:image" content="http://www.manfredhu.com/images/mac-shell.jpeg">
+    
+    <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
+    
+    <link rel="icon" href="/css/images/manfredhu.jpeg">
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    
+    <link rel="stylesheet" href="/css/dialog.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/header-post.css">
+    
+
+    
+
+</head>
+</html>
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;" href="#" data-toggle="modal" data-target="#myModal">
+                  <img width="124px" height="124px" src="/css/images/manfredhu.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link beautifont" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link beautifont" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link beautifont" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link beautifont" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link beautifont" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            PAGES: '页面',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+</div></li>
+            </ul></div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-33-mac-shell" style="width: 100%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      前端常用shell(Mac OS)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/28/33-mac-shell/" class="article-date">
+	  <time datetime="2018-08-28T13:20:37.000Z" itemprop="datePublished">2018-08-28</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+
+    </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote class="post-source">
+          <p>
+          作者：ManfredHu<br>
+          链接：<a href="http://www.manfredhu.com/2018/08/28/33-mac-shell/index.html" target="_blank" rel="external">http://www.manfredhu.com/2018/08/28/33-mac-shell/index.html</a><br>
+          声明：版权所有，转载请保留本段信息，谢谢大家
+          </p>
+        </blockquote>
+      
+
+      
+        <p><img src="/images/mac-shell.jpeg" alt="shell"></p>
+<p>常常有写shell平时用不到，参数记忆比较模糊。但是用到的时候又想找个地方查一下。这个时候就很蛋疼了，故作笔记记录下，方便翻阅。</p>
+<h1 id="端口占用"><a href="#端口占用" class="headerlink" title="端口占用"></a>端口占用</h1><p>不知道大家有没有遇到过端口占用的情况。<br>解决方法分两步</p>
+<ol>
+<li>找到是哪个进程占用了这个端口</li>
+<li>kill掉这个进程</li>
+</ol>
+<p>对应的命令</p>
+<ol>
+<li><code>lsof -i:4000</code> 查找占用4000端口的进程</li>
+<li><code>kill 13219</code></li>
+</ol>
+<p>如下为<code>lsof -i:4000</code>输出的结果，我们第二步根据PID(进程id)来kill掉进程.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line">node    13219 pphu   28u  IPv4 0xbca6de3c7141352d      0t0  TCP *:terabase (LISTEN)</div></pre></td></tr></table></figure></p>
+<h1 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h1><p>这个是常用的提高效率的方法，一般跟两个文件有关</p>
+<ul>
+<li><code>~/.bash_profile</code> 每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该<br>文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件.</li>
+<li><code>~/.bashrc</code> 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该<br>该文件被读取.</li>
+</ul>
+<p>如果没有这两个文件可以自己新建一个</p>
+<ul>
+<li><code>cd ~</code></li>
+<li><code>touch .bashrc</code></li>
+<li><code>touch .bash_profile</code></li>
+</ul>
+<p>所以可以在两个文件随便一个设置alias</p>
+<ol>
+<li><code>cd ~</code></li>
+<li><code>ll -a</code></li>
+<li><code>vi .bashrc</code></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">alias i=&quot;install&quot;</div><div class="line">alias wb=&quot;wbuild server&quot;</div><div class="line">alias st=&quot;status&quot;</div><div class="line">alias co=&quot;checkout&quot;</div><div class="line">alias ci=&quot;commit&quot;</div><div class="line">alias br=&quot;branch&quot;</div><div class="line">alias gst=&quot;git status&quot;</div><div class="line">alias gco=&quot;git checkout&quot;</div><div class="line">alias gbr=&quot;git branch&quot;</div><div class="line">alias gci=&quot;git commit&quot;</div></pre></td></tr></table></figure>
+<p>ps: 有遇到过重启启不生效的情况，所以最好将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure></p>
+<p>这句加在<code>~/.bash_profile</code>最后，这样每次都会执行<code>.bashrc</code>文件的alias<br>最后，如果你用的是zsh，比如mac标配iterm2+zsh。那么iterm2生效的配置就不是<code>.bash_profile</code>而是<code>~/.zshrc</code>了。<br>所以要把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.bash_profile</div></pre></td></tr></table></figure></p>
+<p>这句加在<code>~/.zshrc</code>最后。</p>
+<h1 id="ls-alh"><a href="#ls-alh" class="headerlink" title="ls -alh"></a>ls -alh</h1><p><code>ls</code>查看文件大家都知道了就不多说了；<br><code>ls -a</code>可以查看隐藏的一些以<code>.</code>开头的文件；<br><code>ls -al</code>可以以列表形式显示文件信息；<br>但是很蛋疼，这里显示的是字节，我们更直观的是显示多少K，多少M。<br>这个时候<code>ls -alh</code>就可以满足你的诉求了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'manfredhu';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+      
+      
+        <div id="baidu-share" class="bdsharebuttonbox" data-tag="share_1" style="margin-bottom:15px">
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_weixin" data-cmd="weixin"></a>
+    <a class="bds_sqq" data-cmd="sqq"></a>
+    <a class="bds_tsina" data-cmd="tsina"></a>
+    <a class="bds_qzone" data-cmd="qzone"></a>
+    <a class="bds_evernotecn" data-cmd="evernotecn"></a>
+    <a class="bds_youdao" data-cmd="youdao"></a>
+    <a class="bds_copy" data-cmd="copy"></a>
+</div>
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <div class="article-nav-rigth">
+      <a href="/2018/08/24/32-vue-notes/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/vue.jpeg)" alt="Vue备忘笔记" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2018/08/24/32-vue-notes/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Vue备忘笔记</div>
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- Titile Menu of Contents -->
+
+  <div class="big-sidebar">
+    <div class="fix-sidebar">
+        
+            <div class="fix-sidebar-nav">
+                <span>展开目录</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-comment">
+                <span>评论</span>
+            </div>
+        
+        
+        
+            <div class="fix-sidebar-share">
+                <span>分享</span>
+            </div>
+        
+        
+            <div class="fix-sidebar-music">
+                <span>音乐</span>
+            </div>
+        
+
+        
+            <a class="fix-sidebar-github" href="https://github.com/manfredHu" target="_blank" alt="Fork me on GitHub" rel="external nofollow noopener noreferrer">Github</a>
+        
+
+        
+            <a class="fix-sidebar-totop" href="#top" alt="返回顶部">TOP</a>
+        
+
+    </div>
+    <aside id="markdown-sidebar">
+      <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#端口占用"><span class="toc-number">1.</span> <span class="toc-text">端口占用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#alias"><span class="toc-number">2.</span> <span class="toc-text">alias</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls-alh"><span class="toc-number">3.</span> <span class="toc-text">ls -alh</span></a></li></ol>
+        
+      </div>
+    </aside>
+    <div id="musicComponent"></div>
+</div>
+
+</section>
+        
+      </div>
+      <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+        <p id="copyRightEn">Copyright &copy; 2015 - 2018 ManfredHu胡文峰的个人博客</p>
+	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
+	</div>
+  </div>
+</footer>
+
+<!--[if lt IE 9]>
+<p class="chromeframe">您使用的IE浏览器版本过低，为获得更佳浏览体验，<a href="http://windows.microsoft.com/">建议升级您的IE浏览器</a>，或使用<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome</a>、<a href="http://www.firefox.com.cn/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
+
+<script>
+    /* min height */
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheaderHeight = document.getElementById("allheader") ? document.getElementById("allheader").offsetHeight : 0;
+    var footerHeight = document.getElementById("footer") ? document.getElementById("footer").offsetHeight :0;
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - allheaderHeight - footerHeight + "px";
+</script>
+
+    </div>
+    
+  <script>
+    var disqus_shortname = 'manfredhu';
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+<script>
+  window._bd_share_config = {
+  //此处添加分享具体设置
+    common : {
+      //此处放置通用设置
+      bdText: "", //分享的内容
+      bdDesc: "", //分享的摘要
+      bdUrl: "", //分享的Url地址
+      bdPic: "", //分享的图片
+      bdMini: 2 //下拉浮层中分享按钮的列数
+      // bdMiniList: //['qzone','tsina',...] 自定义下拉浮层中的分享按钮类型和排列顺序。详见分享媒体id对应表
+      // onBeforeClick function(cmd,config){}  在用户点击分享按钮时执行代码，更改配置。
+      // cmd为分享目标id，config为当前设置，返回值为更新后的设置。
+      // onAfterClick  function(cmd){} 在用户点击分享按钮后执行代码，cmd为分享目标id。可用于统计等。
+      // bdPopupOffsetLeft int 正｜负数  下拉浮层的y偏移量
+      // bdPopupOffsetTop  int 正｜负数  下拉浮层的x偏移量
+
+    },
+    share : [{
+      //此处放置分享按钮设置
+      "tag": "share_1", //与data-tag一致
+      "bdSize": 32 //分享按钮的尺寸
+    }]
+  }
+  //以下为js加载部分
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ManfredHu胡文峰的个人博客
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 ManfredHu All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <a id="rocket" href="#top" class=""></a> -->
+  <script type="text/javascript" src="/js/totop.js?v=2.0.0" async></script>
+  
+	<div style="display: none;">
+	    <script src="https://s11.cnzz.com/z_stat.php?id=1260924312&web_id=1260924312" language="JavaScript"></script>
+  	</div>
+
+
+</body>
+

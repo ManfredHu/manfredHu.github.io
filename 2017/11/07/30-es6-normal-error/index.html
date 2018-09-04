@@ -15,7 +15,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     
-    <title>种常见的es6改进写法 | ManfredHu胡文峰的个人博客</title>
+    <title>几种常见的es6改进写法 | ManfredHu胡文峰的个人博客</title>
 
     
     <meta name="keywords" content="ManfredHu, pphu, 胡文峰, Tencent, Front-end development engineer, Reactjs, Reflux, Nodejs">
@@ -26,16 +26,18 @@
     <meta name="description" content="下面是自己总结的ES6对ES5提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.
 用解构写法替换object写法12345678910111213141516171819//---bad---// options 上的属性表示附加参数function setCookie(name, value, options) &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="种常见的ES6改进写法">
+<meta property="og:title" content="几种常见的ES6改进写法">
 <meta property="og:url" content="http://www.manfredhu.com/2017/11/07/30-es6-normal-error/index.html">
 <meta property="og:site_name" content="ManfredHu胡文峰的个人博客">
 <meta property="og:description" content="下面是自己总结的ES6对ES5提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.
 用解构写法替换object写法12345678910111213141516171819//---bad---// options 上的属性表示附加参数function setCookie(name, value, options) &amp;#123;">
-<meta property="og:updated_time" content="2017-11-06T18:30:11.000Z">
+<meta property="og:image" content="http://www.manfredhu.com/images/es6-2.jpeg">
+<meta property="og:updated_time" content="2018-09-04T05:39:05.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="种常见的ES6改进写法">
+<meta name="twitter:title" content="几种常见的ES6改进写法">
 <meta name="twitter:description" content="下面是自己总结的ES6对ES5提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.
 用解构写法替换object写法12345678910111213141516171819//---bad---// options 上的属性表示附加参数function setCookie(name, value, options) &amp;#123;">
+<meta name="twitter:image" content="http://www.manfredhu.com/images/es6-2.jpeg">
     
     <link rel="alternate" href="/atom.xml" title="ManfredHu胡文峰的个人博客" type="application/atom+xml">
     
@@ -168,7 +170,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      种常见的ES6改进写法
+      几种常见的ES6改进写法
     </h1>
   
 
@@ -197,7 +199,8 @@
       
 
       
-        <p>下面是自己总结的ES6对ES5提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.</p>
+        <p><img src="/images/es6-2.jpeg" alt="ES6改进的写法"></p>
+<p>下面是自己总结的ES6对ES5提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.</p>
 <h1 id="用解构写法替换object写法"><a href="#用解构写法替换object写法" class="headerlink" title="用解构写法替换object写法"></a>用解构写法替换object写法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//---bad---</span></div><div class="line"><span class="comment">// options 上的属性表示附加参数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">name, value, options</span>) </span>&#123;</div><div class="line"></div><div class="line">    options = options || &#123;&#125;;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> secure = options.secure,</div><div class="line">        path = options.path,</div><div class="line">        domain = options.domain,</div><div class="line">        expires = options.expires;</div><div class="line"></div><div class="line">    <span class="comment">// 设置 cookie 的代码</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 第三个参数映射到 options</span></div><div class="line">setCookie(<span class="string">"type"</span>, <span class="string">"js"</span>, &#123;</div><div class="line">    <span class="attr">secure</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">expires</span>: <span class="number">60000</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>很多 JS 库都包含了与此例 setCookie() 类似的函数。在此函数内， name 与 value 参数是必需的，而 secure 、 path 、 domain 与 expires 则可选。并且由于此处对其余数据并没有顺序要求，将它们作为 options 对象的特定属性会更有效，避免列出一堆额外的具名参数。虽然这种方法有用，但无法仅通过查看函数定义就判断出函数所期望的输入，你必须阅读函数体的代码。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//---bad---</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">name, value, &#123; secure, path, domain, expires=<span class="number">24</span>*<span class="number">3600</span>*<span class="number">1000</span> &#125; = &#123;&#125;</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 设置 cookie 的代码</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">setCookie(<span class="string">"type"</span>, <span class="string">"js"</span>, &#123;</div><div class="line">    <span class="attr">secure</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">expires</span>: <span class="number">60000</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
@@ -209,6 +212,14 @@
 <h1 id="警惕错误null对解构的影响"><a href="#警惕错误null对解构的影响" class="headerlink" title="警惕错误null对解构的影响"></a>警惕错误null对解构的影响</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">name, value,</span></span></div><div class="line">    &#123;</div><div class="line">        secure = false,</div><div class="line">        path = <span class="string">"/"</span>,</div><div class="line">        domain = <span class="string">"example.com"</span>,</div><div class="line">        expires = new Date(Date.now() + 360000000)</div><div class="line">    &#125; = &#123;&#125;</div><div class="line">) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</div><div class="line">    <span class="built_in">console</span>.log(secure);</div><div class="line">&#125;</div><div class="line">setCookie(<span class="string">'xixi'</span>,<span class="number">123</span>,<span class="literal">null</span>); <span class="comment">//报错,null.secure找不到</span></div><div class="line">setCookie(<span class="string">'xixi'</span>,<span class="number">123</span>,<span class="literal">undefined</span>); <span class="comment">//可以运行,secure等四个可选参数全部为默认值</span></div></pre></td></tr></table></figure>
 <h1 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h1><p>以前写多行字符串用的是\做转意连接符,或者是用<code>\n</code>来做换行等.现在不需要了,写模版会更加方便.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//---bad---</span></div><div class="line"><span class="keyword">var</span> message = <span class="string">"Multiline \</span></div><div class="line">string";</div><div class="line"><span class="built_in">console</span>.log(message);       <span class="comment">// "Multiline string"</span></div><div class="line"></div><div class="line"><span class="comment">//better</span></div><div class="line"><span class="keyword">let</span> message = <span class="string">`Multiline</span></div><div class="line">string`;</div><div class="line"><span class="built_in">console</span>.log(message);           <span class="comment">// "Multiline</span></div><div class="line">                                <span class="comment">//  string"</span></div><div class="line"><span class="built_in">console</span>.log(message.length);    <span class="comment">// 16</span></div></pre></td></tr></table></figure></p>
 <h1 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h1><p>获取一个数组最大值的方法,有人是取数组第一项为最大,之后迭代数组,更加优雅的是用<code>Math.max</code>来做,但是ES6让优雅更近一步.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//---bad---</span></div><div class="line"><span class="keyword">let</span> values = [<span class="number">25</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">100</span>]</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values));  <span class="comment">// 100</span></div><div class="line"></div><div class="line"><span class="comment">//better</span></div><div class="line"><span class="keyword">let</span> values = [<span class="number">25</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">100</span>]</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(...values));           <span class="comment">// 100</span></div></pre></td></tr></table></figure></p>
+<h1 id="异步文件"><a href="#异步文件" class="headerlink" title="异步文件"></a>异步文件</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span>( <span class="comment">/* webpackChunkName: "xxxx" */</span> <span class="string">'xxxx.js'</span>);</div></pre></td></tr></table></figure>
+<p>一个promise的异步文件的用法，可以对文件起别名（chrome network 可以看到）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//example</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">let</span> config = &#123;</div><div class="line">    <span class="attr">resolve</span>: <span class="function">(<span class="params">props</span>) =&gt;</span> <span class="keyword">import</span>(<span class="string">`templates/<span class="subst">$&#123;props.templateId&#125;</span>`</span>),</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>当然这里依赖了一些模块和配置，如下<br>webpack配置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    publicPath: &apos;/&apos;,</div><div class="line">    filename: &apos;scripts/[name].[chunkhash].js&apos;,</div><div class="line">    chunkFilename: &apos;scripts/[id].[name].[chunkhash].js&apos;,</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>webpack 2.6.0以后，支持使用注释的方式给动态导入的模块添加chunk name</p>
+</blockquote>
+<p>标准语法如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span>(</div><div class="line">    <span class="comment">/* webpackChunkName: "my-chunk-name" */</span></div><div class="line">    <span class="comment">/* webpackMode: "lazy" */</span></div><div class="line">    <span class="string">'module'</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -263,18 +274,36 @@
     
 <nav id="article-nav">
   
-  
-    <div class="article-nav-rigth">
-      <a href="/2017/11/05/29-how-to-learn-font-end/" class="thumbnail">
+    <div class="article-nav-left">
+      <a href="/2018/08/23/31-git-flow/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/git-flow.jpeg)" alt="Git Flow在大型多人合作总的使用" class="thumbnail-image"></span>
     
 </a>
-      <a href="/2017/11/05/29-how-to-learn-font-end/" class="hover-color">
+      <a href="/2018/08/23/31-git-flow/" class="hover-color">
+        <div class="dark-dialog"></div>
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Git Flow在大型多人合作总的使用
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="article-nav-rigth">
+      <a href="/2017/11/05/28-font-end-development/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://p1.pstatp.com/large/4028000308921b4c4c67)" alt="前端行业发展现状分析" class="thumbnail-image"></span>
+    
+</a>
+      <a href="/2017/11/05/28-font-end-development/" class="hover-color">
         <div class="dark-dialog"></div>
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">IT行业这么火，怎么入坑前端？</div>
+        <div class="article-nav-title">前端行业发展现状分析</div>
       </a>
     </div>
   
@@ -322,7 +351,7 @@
       <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用解构写法替换object写法"><span class="toc-number">1.</span> <span class="toc-text">用解构写法替换object写法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解构函数更加方便"><span class="toc-number">2.</span> <span class="toc-text">解构函数更加方便</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#警惕错误null对解构的影响"><span class="toc-number">3.</span> <span class="toc-text">警惕错误null对解构的影响</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多行字符串"><span class="toc-number">4.</span> <span class="toc-text">多行字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#扩展运算符"><span class="toc-number">5.</span> <span class="toc-text">扩展运算符</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用解构写法替换object写法"><span class="toc-number">1.</span> <span class="toc-text">用解构写法替换object写法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解构函数更加方便"><span class="toc-number">2.</span> <span class="toc-text">解构函数更加方便</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#警惕错误null对解构的影响"><span class="toc-number">3.</span> <span class="toc-text">警惕错误null对解构的影响</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多行字符串"><span class="toc-number">4.</span> <span class="toc-text">多行字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#扩展运算符"><span class="toc-number">5.</span> <span class="toc-text">扩展运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异步文件"><span class="toc-number">6.</span> <span class="toc-text">异步文件</span></a></li></ol>
         
       </div>
     </aside>
@@ -338,7 +367,7 @@
 
   <div class="container">
       <div class="row">
-        <p id="copyRightEn">Copyright &copy; 2015 - 2017 ManfredHu胡文峰的个人博客</p>
+        <p id="copyRightEn">Copyright &copy; 2015 - 2018 ManfredHu胡文峰的个人博客</p>
 	      <p>All rights reserved. Designed and powered by ManfredHu.</p>
 	</div>
   </div>
@@ -496,7 +525,7 @@
             ManfredHu胡文峰的个人博客
           </div>
           <div class="panel-body">
-            Copyright © 2017 ManfredHu All Rights Reserved.
+            Copyright © 2018 ManfredHu All Rights Reserved.
           </div>
         </div>
       </div>

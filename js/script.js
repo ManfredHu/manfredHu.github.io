@@ -304,6 +304,7 @@
 
     function getItemFromMenuPosition(items,value){
         if(items.length <= 0 && value ==0) return;
+        if(items.length <= 0) return;
         if(value <= items[0].y) return items[0];
         if(value >= items[items.length-1].y) return items[items.length-1];
         for(var i=0,len=items.length;i<len;i++){
@@ -341,3 +342,51 @@
     //页面滚动，更新目录
     $(document).scroll(throttle(scrollHandler, 100, 500));
 })(jQuery);
+
+
+//home.js
+var navbar = document.getElementsByClassName("intro-navigate")[0],
+	h = window.innerHeight;
+
+//window.addEventListener("scroll", scrollHandler);
+
+function getStyle(obj, attri) {
+ 	return obj.currentStyle ? obj.currentStyle[attri] : window.getComputedStyle(obj, null)[attri];
+}
+
+function scrollHandler(e) {
+	 var event = e || window.event,
+	     target = event.target || event.srcElement;
+	 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	 if (scrollTop > h - navbar.offsetHeight) {
+	     navbar.classList.add("fixed");
+	 } else {
+	     navbar.classList.remove("fixed");
+	 }
+}
+
+//totop.js
+$(window).scroll(function() {
+    //滚动超过视口的一半
+    // $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+    $(window).scrollTop() > $(window).height()*0.5 ? $(".fix-sidebar-totop").addClass("show") : $(".fix-sidebar-totop").removeClass("show");
+});
+
+$(".fix-sidebar-totop").click(function() {
+    // $("#rocket").addClass("launch");
+    $("html, body").animate({
+        scrollTop: 0
+    }, 500, function() {
+        // $("#rocket").removeClass("show launch");
+        $(".fix-sidebar-totop").removeClass("show");
+    });
+    return false;
+});
+
+$("#homelogo").click(function() {
+    $("html, body").animate({
+        scrollTop: $(window).height()
+    }, 500, null);
+    return false;
+});
+

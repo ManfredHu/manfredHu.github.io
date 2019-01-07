@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.manfredhu.com/2019/01/07/43-websocket/</loc>
+    
+    <lastmod>2019-01-07T07:54:32.602Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.manfredhu.com/2016/03/27/11-SublimeText3Plug/</loc>
+    
+    <lastmod>2019-01-07T07:51:38.185Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.manfredhu.com/2018/11/05/37-gitalk-comment-system/</loc>
+    
+    <lastmod>2019-01-07T07:50:38.550Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.manfredhu.com/2018/12/30/41-utf7-xss/</loc>
     
-    <lastmod>2019-01-04T16:39:40.514Z</lastmod>
+    <lastmod>2019-01-05T03:34:45.781Z</lastmod>
     
   </url>
   
@@ -23,23 +44,9 @@
   </url>
   
   <url>
-    <loc>http://www.manfredhu.com/2018/11/05/37-gitalk-comment-system/</loc>
-    
-    <lastmod>2018-11-05T14:29:15.591Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.manfredhu.com/2016/01/17/2-someAboutHTML5/</loc>
     
     <lastmod>2018-11-02T11:11:08.366Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.manfredhu.com/2016/03/27/11-SublimeText3Plug/</loc>
-    
-    <lastmod>2018-11-02T11:08:06.226Z</lastmod>
     
   </url>
   

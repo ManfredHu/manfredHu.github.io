@@ -1,3 +1,4 @@
+http://www.manfredhu.com/2019/01/15/42-cross-origin/
 http://www.manfredhu.com/2019/01/07/43-websocket/
 http://www.manfredhu.com/2018/12/30/41-utf7-xss/
 http://www.manfredhu.com/2018/12/26/40-git-commitizen/

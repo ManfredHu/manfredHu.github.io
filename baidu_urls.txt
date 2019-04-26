@@ -1,3 +1,4 @@
+http://www.manfredhu.com/2019/04/25/47-npm-dependencies/
 http://www.manfredhu.com/2019/03/30/46-npm-version/
 http://www.manfredhu.com/2019/01/18/45-x-forwarded-for/
 http://www.manfredhu.com/2019/01/15/42-cross-origin/

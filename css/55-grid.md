@@ -1,0 +1,158 @@
+# grid布局
+这是一个非常强大的功能，flex布局可能很多行代码，用grid的话最少代码减半。但是更要去了解的是grid的思路和思想
+与以前的table布局类似，grid更像是flex+table的方式
+
+## display: inline-grid vs display: grid
+跟块级元素和内联元素类似
+
+![](https://www.wangbase.com/blogimg/asset/201903/bg2019032504.png)
+
+![](https://www.wangbase.com/blogimg/asset/201903/bg2019032505.png)
+
+## grid-template-columns 和 grid-template-rows
+以grid-template-columns举例，有下面N种写法
+
+- `grid-template-columns: 100px 100px 100px;`
+- `grid-template-columns: 33.33% 33.33% 33.33%;`
+- `grid-template-columns: repeat(3, 33.33%);`
+- `grid-template-columns: repeat(auto-fill, 100px);`
+- `grid-template-columns: 1fr 1fr;`
+- `grid-template-columns: 1fr 1fr minmax(100px, 1fr);`
+- `grid-template-columns: 100px auto 100px;`
+
+其中既有固定宽度的、也有百分比、等比分配fr，自动计算等等。可谓是非常灵活多变，常见的三列等分，可以用下面的布局方式，其中column-gap还可以支持按照间距分配。
+
+### 多等分布局
+```css
+/* 三等分,且间距为20px */
+.box{
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+```
+其中repeat的3可以换成n，就是多等分布局了
+
+### 圣杯布局
+类似左右边栏为200px,中间部分满屏，间距为10px，代码如下
+
+```css
+.box{
+  grid-template-columns: 200px auto 200px;
+  column-gap: 10px;
+}
+```
+
+### 实战
+一个表格的例子，这里需求是三分表格，之后最后一列文字右对齐。还有row对应的`border-bottom`。本来想用flex或者是table，转念一想还是上`grid`,毕竟多用才能熟，遇到了不少问题。
+
+```html
+<template>
+  <div class="score-detail">
+    <div class="score-detail__title">
+      当前周期数据
+    </div>
+    <div class="score-detail__main">
+      <div class="bold">
+        指标名称
+      </div>
+      <div class="bold">
+        得分
+      </div>
+      <div class="bold">
+        较上一周期
+      </div>
+      <div>1</div>
+      <div>3</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </div>
+</template>
+
+<style lang="less" scoped>
+.score-detail{
+  padding: 32px 48px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.01);
+  &:last-child{
+    margin-top: 16px;
+  }
+}
+.score-detail__title{
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.bold{
+  font-weight: bold;
+}
+.score-detail__main{
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  div {
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 1px solid pink;
+    &:nth-child(3n+3) {
+      text-align: right;
+    }
+  }
+}
+</style>
+```
+
+运行结果如下
+<!-- <Grid></Grid> -->
+
+### 三等分并不能完全满足我的需求
+
+```less
+grid-template-columns: 1fr 1fr 1fr;
+```
+
+中间得分一列太靠左，所以这里改成了，尽量接近设计稿的3等分
+
+```less
+grid-template-columns: 50% 1fr 1fr;
+```
+
+### grid布局里row border的问题
+其次是这里的`border-bottom`，因为grid布局就没有对这里的行border做约束，翻了下[stackoverflow](https://stackoverflow.com/questions/51085555/horizontal-border-across-entire-row-of-css-grid)，一个是用背景渐变`repeating-linear-gradient`+`row-gap`。还有一个方法是用伪类在每行最后一个元素后面加一个大横条。
+
+感觉都属于hack的手段，果断子元素`border-bottom`走起，不过发现
+
+```less
+&:nth-child(3n+3) {
+  justify-self: right;
+}
+```
+
+这里右对齐的效果会打断
+
+![](../images/ppl/X5MvrW.png)
+
+所以修改了属性
+
+```less
+&:nth-child(3n+3) {
+  text-align: right;
+}
+```
+
+### grid布局row height的问题
+如果设置
+```less
+grid-template-rows: 52px;
+```
+只会对第一个元素生效，所以这里对子元素设置`height`+`line-height`实现文字垂直居中对齐和撑大容器高度使其满足间距
+
+## 兼容性
+- IE10+基本PC主流浏览器都支持
+- 微信生态基本支持（包括移动端页面和小程序），偏门的属性等有待支持，具体的可以再去查
+
+## 参考
+[阮一峰-CSS Grid 网格布局教程](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)

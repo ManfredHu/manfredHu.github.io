@@ -1,0 +1,175 @@
+- text: 前端基础
+  children:
+    - text: 浏览器
+      children:
+        - text: 浏览器渲染流水线原理简述
+          link: /broswer/2021-12-31.broswer-render
+        - text: V8中脚本的一生
+          link: /broswer/2022-1-26.script-in-v8
+        - text: 浏览器现状
+          link: /broswer/2022-5-5.broswer-present-situation
+    - text: HTML
+      children:
+        - text: 写HTML5代码要注意的东西
+          link: /html/2-someAboutHTML5
+        - text: 资源预加载preload和数据预取prefetch
+          link: /html/2021-01-17-preload-prefetch
+        - text: SVG
+          link: /html/2022-08-03.svg
+    - text: CSS
+      children:
+        - text: CSS杂技 
+          link: /css/3-CSS-note
+        - text: CSS 的 rem 单位
+          link: /css/26-rem
+        - text: CSS 中的居中思路
+          link: /css/50-centeringInCss
+        - text: 简析grid布局
+          link: /css/55-grid
+        - text: 纯CSS画一个树状图
+          link: /css/61-tree-chart
+    - text: JavaScript
+      children:
+        - text: js奇淫技巧
+          link: /js/2021-10-8.skillful-skill
+        - text: js闭包
+          link: /js/6-javascript-closure
+        - text: Object.defineProperties的实际作用
+          link: /js/5-MEANdevelop-ModelProblem
+        - text: string.Replace用法
+          link: /js/8-stringReplace
+        - text: 'call,apply,bind'
+          link: /js/12-EvalCallApplyBind
+        - text: 15条规则解析JS对象布局（**proto**、prototype、constructor）
+          link: /js/13-proto-prototype-constructor
+        - text: JS中this关键字的使用比较
+          link: /js/14-thisKeyWords
+        - text: JS编程题
+          link: /js/15-veryGoodForUsing
+        - text: ES6快速学习
+          link: /js/16-learn-ES6
+        - text: event.target的亲兄弟event.currentTarget
+          link: /js/17-eventCurrentTarget
+        - text: 对象深复制
+          link: /js/19-extendMethod
+        - text: React classNames模块
+          link: /js/21-classNames
+        - text: 谈谈 url 这东西
+          link: /js/22-url
+        - text: JS 正则终极篇
+          link: /js/25-js-regexp
+        - text: Interesting JavaScript
+          link: /js/20-interestingJavascript
+        - text: 几种常见的ES6改进写法
+          link: /js/30-es6-normal-error
+        - text: promise 的错误处理
+          link: /js/52-promise-errorHandle
+        - text: iOS 下时间初始化错误
+          link: /js/53-ios-newDateBug
+        - text: ES2020 Promise
+          link: /js/56-es2020-promise
+        - text: ArrayBuffer&TypedArray&Buffer
+          link: /js/57-js-buffer
+        - text: 事件循环
+          link: /js/2021-8-30.eventLoop
+        - text: LRU
+          link: /js/2021-10-26.lru
+    - text: 框架
+      children:
+        - text: AngularJS笔记
+          link: /framework/4-angular-note
+        - text: React+Reflux渲染性能优化原理
+          link: /framework/23-reactRenderingPrinciple
+        - text: 对Vue的理解
+          link: /framework/32-vue-notes
+        - text: Chrome76+ vue-cli 执行 nightwatch e2e 测试错误
+          link: /framework/52-vue-cli-e2e-error
+        - text: Vue中的watch
+          link: /framework/2021-01-22.vue-watch
+        - text: echart
+          link: /framework/2021-09-03.echart
+- text: 计算机科学基础
+  children:
+    - text: 微信开发工具使用 vue-devtools
+      link: /framework/48-vuedevtools-wechatDev
+    - text: MySQL使用及在Mac上的区别
+      link: /cs/31-git-flow
+    - text: 1分钟让你拥有规范的gitlog
+      link: /cs/40-git-commitizen
+    - text: Git 合并与撤销合并
+      link: /cs/49-git-revert
+    - text: 如何获取请求方的 ip
+      link: /cs/45-x-forwarded-for
+    - text: DNS 解析和配置
+      link: /cs/35-dns-parse
+    - text: 跨域终结篇
+      link: /cs/42-cross-origin
+    - text: websocket 原理和实践
+      link: /cs/43-websocket
+    - text: 前端集成测试快速入门
+      link: /cs/36-jest-travis-codecov
+    - text: 使用github actions完成CI/CD自动化部署
+      link: /cs/58-github-ci
+    - text: 图片自适应大小、压缩 demo
+      link: /cs/34-picture-fileUpload
+    - text: 安全
+      children:
+        - text: utf7 XSS攻击
+          link: /cs/41-utf7-xss
+    - text: npm
+      children:
+        - text: npm version 升级版本号
+          link: /cs/46-npm-version
+        - text: 'npm 的 dependencies（http,git,ssh）'
+          link: /cs/47-npm-dependencies
+- text: 小程序
+  children:
+    - text: 小程序的“微前端”方案
+      link: /miniprogram/2002-08-06.merge-mp-cli
+    - text: 小程序如何使用全局组件
+      link: /miniprogram/2020-10-21.mp-global-components
+    - text: 小程序生命周期
+      link: /miniprogram/2021-01-13.weapp-component-lifetimes
+    - text: 小程序原理简述
+      link: /miniprogram/2021-01-04.miniprogram
+    - text: 小程序性能优化 - 独立分包的应用
+      link: /miniprogram/54-miniprogram-optimization
+    - text: 微信小游戏之单机游戏的安全
+      link: /miniprogram/38-miniGame-security
+- text: 效率工具
+  children:
+    - text: 最好用的shell-ohmyzsh
+      link: /efficency/oh-my-zsh
+    - text: zen·工作环境搭建
+      link: /efficency/build-env
+    - text: zen·工作环境搭建之调试篇
+      link: /efficency/build-env-debug
+    - text: zen·工作环境搭建之git篇之Lazygit
+      link: /efficency/lazygit
+    - text: zen·工作环境搭建之git篇之tig
+      link: /efficency/tig
+    - text: 如何使用 Github Copilot
+      link: /efficency/github-copilot
+    - text: 外设进化之路
+      link: /efficency/keyboard
+    - text: SublimeText3 常用快捷键和优秀插件（亲测）
+      link: /others/11-SublimeText3Plus
+- text: 其他
+  children: 
+    - text: VSCode在不同设备同步配置
+      link: /others/github-gist
+    - text: 关于实习的一些看法
+      link: /others/18-internship
+    - text: 前端疲劳
+      link: /others/27-front-end-tried
+    - text: 前端行业发展现状分析
+      link: /others/28-font-end-development
+    - text: 腾讯金融产品体验设计之道
+      link: /others/book-design-fit
+    - text: 浪潮之巅个人感想
+      link: /others/book-topOfWave
+    - text: 软实力与个人发展
+      link: /others/soft-skills
+    - text: 2015年阿里巴巴校招题目
+      link: /others/10-AlibabaExamination
+      

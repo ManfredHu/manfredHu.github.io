@@ -1,12 +1,23 @@
 {
   "name": "manfredHu.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "ManfredHu's blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "pnpm i",
+    "readme": "esno ./scripts/build-readme.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "esno": "^0.16.3"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.1.4",
+    "yaml": "^2.2.1"
+  }
 }

@@ -21,19 +21,23 @@ jobs:
     steps:
       # checkout code
       - uses: actions/checkout@v3
+
       # use pnpm and set version
       - uses: pnpm/action-setup@v2
         with:
-          version: 7.1.0
+          version: 7.28.0
+
       # set node versiona and cache
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: pnpm
-      # run scripts
+
+      # pnpm install
       - run: npm run init
-      - run: npm run readme
+
       # update readme
+      - run: npm run readme
       - uses: EndBug/add-and-commit@v9
         with:
           message: "chore: update readme"

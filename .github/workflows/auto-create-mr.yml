@@ -4,6 +4,8 @@ on:
   push:
     branches-ignore:
       - 'master'
+  # allow to run manually
+  workflow_dispatch: {}
 
 jobs:
   create_mr:

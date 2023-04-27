@@ -1,0 +1,27 @@
+name: Auto Create MR
+
+on:
+  push:
+    branches-ignore:
+      - 'master'
+
+jobs:
+  create_mr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Setup Git
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    - name: Create MR
+      env:
+        GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
+      run: |
+        PR_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        echo "Current branch is $PR_BRANCH"
+
+        echo "Create a MR from $PR_BRANCH to master"
+        curl -X POST -H "Authorization: token $CI_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${{ github.repository }}/pulls" -d '{"head":"'$PR_BRANCH'", "base":"master", "title":"Automatically created MR for $PR_BRANCH", "body":"This MR is automatically created by GitHub Actions."}'

@@ -16,19 +16,19 @@ HHKB品牌拥有多个型号，其中包括：
 因为HHKB跟Mac兼容性非常好, 可以说是笔记本外置键盘第一梯队的存在了. 
 
 ```
-						                         上一行 Control+p
-						
-						                               :
-						
-						                               :
+				 上一行 Control+p
 
-行头Control+a     向左移 Control+b .... 目前光标位置 .... 向右移 Control+f  行尾Control+e
+				       :
 
-						                               :
-						
-						                               :
-						
-						                          下一行 Control+n
+				       :
+
+行头Control+a  向左移 Control+b .... 目前光标位置 .... 向右移 Control+f  行尾Control+e
+
+				       :
+
+				       :
+
+				  下一行 Control+n
 ```
 
 ## 匹配

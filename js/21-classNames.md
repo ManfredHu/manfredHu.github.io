@@ -1,6 +1,6 @@
 # React classNames 模块
 
-![classNames](../images/classNames.png)
+![classNames](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/classNames.png)
 
 # classNames
 
@@ -19,7 +19,7 @@ React 官方推荐用它，当然，既然是小工具，那么肯定扩展性�
 
 项目 CSS 代码的规范遵循的是[BEM](http://www.w3cplus.com/css/bem-definitions.html)，所以我们有很多的类名是有状态定义的，比如 `.sidebar__item--active` 。你应该可以一眼看出来，这是一个侧边导航栏的激活状态，在选中的时候显示。但是通常还有一个默认状态 `.sidebar__item` ，那么这个时候，你通常会加多一个判断语句，因为你需要判断是不是激活的。
 
-![侧边栏激活状态](../images/sidebar-active.png)
+![侧边栏激活状态](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sidebar-active.png)
 
 ```javascript
 var SideBar = React.createClass({
@@ -56,7 +56,7 @@ var SideBar = React.createClass({
 假如……好了没那么多假如了，你的类名有多长，你的 `if` 就会有多长。
 所以作为一个有追求的前端，**不能忍!!**
 
-![不能忍](../images/canNotEndure.jpg)
+![不能忍](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/canNotEndure.jpg)
 
 ## 怎么用？
 
@@ -133,7 +133,7 @@ var SideBar = React.createClass({
 
 我们再观察一下原理部分，看有没有什么 bug。知己知彼才能放心**插入**嘛
 
-![](../images/heihei.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/heihei.gif)
 
 一个内部数组`classes`，然后对参数进行判断后将参数添加到内部数组里
 参数类型判断条件

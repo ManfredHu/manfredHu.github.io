@@ -3,7 +3,7 @@
 
 ## 小程序执行流程
 废话不多说先上图
-![](../images/ppl/miniprogram-process.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/miniprogram-process.png)
 
 首先说下整个流程，小程序从用户点击到最后呈现大致可以分为几个步骤
 
@@ -92,7 +92,7 @@
 ```
 
 基于独立分包的理论，其实可以实现工程的混合
-![](../images//clipboard/mp-merge-cli%E5%8E%9F%E7%90%86.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/clipboard/mp-merge-cli%E5%8E%9F%E7%90%86.png)
 
 我们把页面拆分为多个工程，在构建阶段使其合并，同时将代码注入形成最后的提审版本的代码包。各个工程独立开发，在最后发布阶段组装到一个小程序，这样就实现了多个小程序的管理。
 同时代码包互相独立，访问A页面的用户不会下载B页面的代码。在一个大型的小程序下，这种方式可以更大程度的利用好独立分包的特性。单独开发了一个[合包工具](https://github.com/ManfredHu/mp-merge-cli)，可以支持本地或者CI流程的运用，欢迎大家拍砖。

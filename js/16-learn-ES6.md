@@ -1,6 +1,6 @@
 # ES6 快速学习
 
-![ECMAScript](../images/es6.jpeg)
+![ECMAScript](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/es6.jpeg)
 
 ECMAScript6，由 ECMA 组织发布的一个新的 JS 语言标准。现在比较火的是一个叫 babel 的编译器，可以将 ES6 的语法代码转化为 ES5，即现在主流浏览器能支持运行的语言。而 React 这个火到不行的框架在**0.13 版本**之后将 JSX 的编译器由`JSTransform`和`react-tools`转换到`Babel`，也顺手将`Babel`这个支持 ES6 的编译器带火了，**现在`React`编写已支持 ES6 语法了**。
 

@@ -1,6 +1,6 @@
 # 对Vue的理解
 
-![Vue备忘笔记](../images/vue.jpeg)
+![Vue备忘笔记](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/vue.jpeg)
 
 本文主要记录一些比较容易遗忘的知识点，方便后面查阅。如果对你有帮助，那不胜荣幸。
 
@@ -78,11 +78,11 @@ setup(){
 
 下图来源于Vue贡献者对Vue响应式原理简单的描述
 
-![https://www.youtube.com/watch?v=NZfNS4sJ8CI](../images/ppl/image-20211117160806021.png)
+![https://www.youtube.com/watch?v=NZfNS4sJ8CI](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/image-20211117160806021.png)
 
 ### Vue2响应式
 
-![图解 Vue 响应式原理](../images/ppl/1c23f770a47243d7a1d25e9e8a5a6482~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp)
+![图解 Vue 响应式原理](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/1c23f770a47243d7a1d25e9e8a5a6482~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp)
 
 内部通过Dep和Watcher实现响应式监听，包含依赖收集和派发更新两部分。
 

@@ -1,6 +1,6 @@
 # React + Reflux 渲染性能优化原理
 
-![React](../images/react.png)
+![React](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/react.png)
 
 ## React
 
@@ -17,7 +17,7 @@ React 的优点有很多，现在很多应用都接入 React 这个框架。
 雅虎性能优化比较重要的点，老司机自行忽略。
 如下图，HTML 被浏览器解析为 DOM 树，CSS 代码加载进来解析为样式结构体，两者关联组成渲染树，之后浏览器把渲染树绘制出来就是我们看到的网页了。这里如果我们对 DOM 树或者样式结构体做一些操作，如删除某个节点，样式改为隐藏（display:none）等等，会触发重排进而导致重绘。
 
-![重排与重绘](../images/github/repaintAndReflow.JPG)
+![重排与重绘](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/repaintAndReflow.JPG)
 
 ### 触发重排的条件
 
@@ -38,7 +38,7 @@ React 的优点有很多，现在很多应用都接入 React 这个框架。
 上面说了 React 在 MVVM 结构下只起 View 的作用，那么除了 View，MVVM 下还有 Model，ViewModel。
 而纯粹的 View，会让整个逻辑耦合在一层下，数据也需要层层传递，不方便控制和复用。
 
-![组件化遇到的问题](../images/github/componentProblem.JPG)
+![组件化遇到的问题](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/componentProblem.JPG)
 
 故业内也有一堆的分层框架——如最早的 flux，现在部门在用的 Reflux，以及 Redux。
 对比 Redux，Reflux 更容易理解和上手——这也是现状，学习成本越低，接入现有业务就越容易。
@@ -50,7 +50,7 @@ reflux 的架构非常简单，就是三部分
 1. Action 理解为一个命令或者动作，通过它来向组件发出"指令"
 2. Store 为 ViewModel 部分，组件的一些状态属性会存储在这里
 3. View Component 为组件模板
-   ![reflux的架构](../images/github/reflux.JPG)
+   ![reflux的架构](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/reflux.JPG)
 
 所以 Reflux 只是让我们，更好的去操作组件，通过一个 Action 命令，叫组件去干嘛，组件自己通过写好的代码，对命令做出反应(变化为不同的 state 状态)。
 
@@ -96,7 +96,7 @@ shouldComponentUpdate 是在 React 组件更新的生命周期中，用于判断
 - 返回 true，则进入 React 的 Virtual DOM 比较过程
 - 返回 false，则跳过 Virtual DOM 比较与渲染等过程
 
-![shouldComponentUpdate和Virtual DOM Equal compare](../images/github/SCUAndvDOMEqual.JPG)
+![shouldComponentUpdate和Virtual DOM Equal compare](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/SCUAndvDOMEqual.JPG)
 
 如上图，这是一棵 React Virtual DOM 的树。
 
@@ -167,7 +167,7 @@ shouldComponentUpdate 是在 React 组件更新的生命周期中，用于判断
 
 我们知道特别是在移动端，CPU 和内存的资源显得尤为稀缺（大概只能占用正常 CPU 和内存的 10%，微信手 Q 等可能会因为友商系统对应用程序的优先级设计使这个限制略有提高——我说的就是小米哈哈哈），所以这样说来，性能这一块在移动手机 web 显得非常非常重要。
 
-![50ms渲染一次，重复渲染200次的截图](../images/github/1basicDemo.png)
+![50ms渲染一次，重复渲染200次的截图](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/1basicDemo.png)
 
 ## Perl
 
@@ -181,7 +181,7 @@ Perl 是 react-addons 带来的性能分析工具，这里的 perfDemo 是结合
 这里的 wasted time 就是在做属性没变化的重复渲染的过程，可以优化。
 **用法与 Chrome 开发工具的 TimeLine 用法类似，点击 start 开始记录，后点击 stop 结束**
 
-![50ms渲染一次，重复渲染200次的截图](../images/github/2perfDemo.png)
+![50ms渲染一次，重复渲染200次的截图](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/2perfDemo.png)
 
 ## PureRenderMixin
 
@@ -274,7 +274,7 @@ function shallowEqual(objA, objB) {
 所以 PureRenderMixin 这个插件，只能比较 state 和 props 为基本类型的部分。
 如果有更加深层次的 store 数据嵌套，就要借助于 update 插件或者 Immutablejs 来深拷贝 store 的数据另存一份了。
 
-![50ms渲染一次，重复渲染200次的截图，引入pureRenderMixin](../images/github/3pureRenderMixinDemo.png)
+![50ms渲染一次，重复渲染200次的截图，引入pureRenderMixin](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/3pureRenderMixinDemo.png)
 
 ## 用 update 优化（也称 Immutable Helper）
 
@@ -315,7 +315,7 @@ var newData = update(myData, {
 
 但是由 Timeline 的观察来看，复制对象属性的性能远比刷新一个大组件的性能高。
 
-![50ms渲染一次，重复渲染200次的截图，引入了update模块](../images/github/4updateDemo.png)
+![50ms渲染一次，重复渲染200次的截图，引入了update模块](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/4updateDemo.png)
 
 ## Immutablejs
 
@@ -348,11 +348,11 @@ console.log(map2.get('count')) // 2
 
 50ms 渲染一次，重复渲染 200 次的截图，引入了 immutable 用了其 set 方法：
 
-![50ms渲染一次，重复渲染200次的截图，引入了immutable用了其set方法](../images/github/5immutable_set.png)
+![50ms渲染一次，重复渲染200次的截图，引入了immutable用了其set方法](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/5immutable_set.png)
 
 50ms 渲染一次，重复渲染 200 次的截图，引入了 immutable 用了其 update 方法：
 
-![50ms渲染一次，重复渲染200次的截图，引入了immutable用了其update方法](../images/github/5immutableDemo_update.png)
+![50ms渲染一次，重复渲染200次的截图，引入了immutable用了其update方法](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/github/5immutableDemo_update.png)
 
 ## seamless-immutable && Observejs
 

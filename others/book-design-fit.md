@@ -1,6 +1,6 @@
 # 腾讯金融产品体验设计之道
 
-![价值再定义 腾讯金融产品体验设计之道](../images/design-fit.jpg)
+![价值再定义 腾讯金融产品体验设计之道](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/design-fit.jpg)
 这本书最近在看，记一些点吧，毕竟基本上 fit 的产品都是在微信钱包九宫格或者是微信支付里面跑的，用户量级很大，所以对于交互、视觉设计来说还是有一定要求的，可能不一定炫酷，但是却很实用。
 
 # 业务相关

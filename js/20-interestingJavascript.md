@@ -1,6 +1,6 @@
 # Interesting JavaScript
 
-![interesting](../images/laughing/interesting.jpg)
+![interesting](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/laughing/interesting.jpg)
 
 ## 声明提升
 
@@ -184,7 +184,7 @@ console.log(parseInt('3', 2)) //NaN
 
 当`["1", "2", "3"].map(parseInt)`的时候，传入`parseInt`的参数为`currentValue`,`index`
 
-![interesting](../images/laughing/interesting-coffee.gif)
+![interesting](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/laughing/interesting-coffee.gif)
 
 ## Function.prototype.name
 
@@ -288,7 +288,7 @@ var val = 'smtg';
 console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');
 正确答案： 'Something'
 
-![interesting](../images/laughing/interesting2.png)
+![interesting](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/laughing/interesting2.png)
 
 ## 变量作用域
 
@@ -391,7 +391,7 @@ console.log(d === a) //true
 题目这里就是让你混淆普通函数的原型到底是什么？函数还是对象？
 答案是函数，因为普通函数的`_proto_`指向的是`Function.prototype`，所以`Object.getPrototypeOf`拿到的是`function`
 
-![JavaScript Object Layout](../images/JavaScriptObjectLayout.jpg)
+![JavaScript Object Layout](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/JavaScriptObjectLayout.jpg)
 
 你可以狠狠戳[这里](http://www.manfredhu.com/2016/03/27/13-proto-prototype-constructor/)去看我以前写的[15 条规则解析 JavaScript 对象布局](http://www.manfredhu.com/2016/03/27/13-proto-prototype-constructor/)
 
@@ -399,7 +399,7 @@ console.log(d === a) //true
 而`Object.getPrototypeOf`拿的是`_proto_`指向的`Function.prototype`,所以输出的是一个`function`。
 而普通对象，如图的`o1`,`o2`，`_proto_`指向的是`Object.prototype`
 
-![interesting](../images/laughing/interesting3.jpg)
+![interesting](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/laughing/interesting3.jpg)
 
 ## [,]和 join
 

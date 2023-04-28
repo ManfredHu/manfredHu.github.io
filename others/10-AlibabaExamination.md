@@ -1,6 +1,6 @@
 # 2015 年阿里巴巴校招题目
 
-![Alibaba](../images/alibaba.jpg)
+![Alibaba](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/alibaba.jpg)
 
 以下题目是阿里巴巴 2015 校招的题目，纯粹个人恶趣味发作写着玩的。
 有错的地方欢迎联系交流^\_^

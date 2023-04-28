@@ -9,7 +9,7 @@ grid-column-gap: var(--gridmargin);
 ```
 
 ## 画一个树状图
-![](../images/ppl/u3PN9k.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/u3PN9k.png)
 
 画一个如图的树桩图，这个就有点难度了，不过还是能搞定不是
 
@@ -260,14 +260,14 @@ export default {
 
 直接上代码，可以看到我们是用到了比较hack的模拟方式去模拟上下大括号，然后用圆角做的转角，也就是说一个括弧要4个部分组成
 
-![](../images/ppl/5zUuXS.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/5zUuXS.png)
 
 其次是我们用到了组件使用组件自己，达到无限循环多层数据的效果。这里Vue只要写了组件名，就可以直接用了，即`name: 'SubTree',`其次的如果是TS写的，类名就是组件名了。
 
 ## border 1像素的问题
 细心的同学不知道发现了有margin的负边距的问题没有，如下图
 
-![](../images/ppl/jBBUpk.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/jBBUpk.png)
 
 主要是上下两部分的框模型差距，导致的这个1px的像素对不齐，可以看到左边是left: 0,右边是right: 0，这个时候按照框模型，定宽（各自50%）后border部分1px会重叠，但是实际是有1px的偏移
 负边距把右侧的盒子模型缩小1px后对齐了
@@ -275,11 +275,11 @@ export default {
 ## 括号优化
 好了，难题又来了，大家可以对比看下，括号的上下的闭口的地方是顶格的，没有对准中间部分，这里利用到上下括号是用的绝对定位`position: absolute`
 
-![](../images/ppl/BnVfym.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/BnVfym.png)
 
 只要把`{`上面的一半的top值，和底部的bottom值修改一下，就能对齐了。那么这个值取多少合适呢？
 
-![](../images/ppl/c2vYGp.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/c2vYGp.png)
 
 脑筋灵活的同学肯定知道了，第一个子元素DOM高度的一半就好了，那如何获取子元素呢？$ref拉，简单。
 

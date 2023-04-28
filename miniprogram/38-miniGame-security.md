@@ -1,6 +1,6 @@
 # 微信小游戏之单机游戏的安全
 
-![微信小游戏](../images/miniGame.jpeg)
+![微信小游戏](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/miniGame.jpeg)
 
 首先聊一下，微信小程序，想看安全算法之类的请直接跳到[这里](#单机游戏安全怎么做)
 
@@ -9,7 +9,7 @@
 微信跳一跳这个微信官方推出的 DAU 第一,1 点几亿的小游戏相信大家都玩过，微信用跳一跳游戏内植入广告的方式变现也是一个创新。
 但是相信大家看到过很多刷子，有物理硬件辅助作弊的。如机械手+尺子量距离，或者牛逼点的，机械手+图像识别算法加上。
 
-![跳一跳机械手作弊](../images/tiaoyitiao-jixieshou.jpg)
+![跳一跳机械手作弊](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/tiaoyitiao-jixieshou.jpg)
 
 也有基于软件层面的，找到漏洞直接接口刷分数。
 
@@ -26,7 +26,7 @@
 
 言归正传，来说说我们这方面，我们的游戏是一款推冰球的应用，基于 Laya+matterJS，matterJS 可以点[这里](http://brm.io/matter-js/)看下，那个时候 Laya 还没有内置物理引擎，当然现在已经 2.0 了，内置物理引擎，所以冰球这个游戏可能是国内最早基于Laya尝试引入物理引擎实现物理效果相关的微信小游戏了。
 
-![欢乐推冰球](../images/curling.png)
+![欢乐推冰球](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/curling.png)
 
 游戏规则很简单，用户通过将冰球推出到固定得分区域而获得分数，四个关卡下来累计用户的总得分，按照渠道（手Q，微信）分别做排行榜，排名前面的用户获得金钱奖励。
 
@@ -146,7 +146,7 @@ Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用
 打开控制台,websocket 服务，可以看到`Binary Frame (Opcode 2, mask)`
 传递的都是二进制数据，而且是 ws 连接，安全性灰常高的。
 
-![chrome开发工具看protobuf](../images/protobufExample.jpg)
+![chrome开发工具看protobuf](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/protobufExample.jpg)
 
 可以发现都是二进制数据，如果你不知道如何解码，完全不知道是什么意思的。所以其实用上这东西，就可以不用上面说的 RSA 加密解密了。
 

@@ -1,6 +1,6 @@
 # js 闭包
 
-![闭包](../images/closure.jpg)
+![闭包](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/closure.jpg)
 
 ## 词法作用域（Lexical scoping）、声明上下文对象（Declaration context object）
 

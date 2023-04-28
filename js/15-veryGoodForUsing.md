@@ -1,6 +1,6 @@
 # JS 编程题
 
-![传说中的Coding](../images/coding.gif)
+![传说中的Coding](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/coding.gif)
 
 几道觉得挺有意思的编程题，感觉做下来，自己对一些新方法的看法有了新的变化。
 比如`indexOf`,`reduce`,`Array.isArray`,`forEach`这些方法，以前一看到兼容性是 IE9+就有点害怕，项目中不敢用，导致后面越来越陌生，不过现在一想的话。其实只要用 Polyfill 或者提前 fix 掉就可以了。^\_^

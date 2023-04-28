@@ -130,6 +130,6 @@ https://www.manfredhu.com
 然后就报错了。
 
 最后解决了，如下图
-![github OAuth Apps](../images/gitalk.jpg)
+![github OAuth Apps](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/gitalk.jpg)
 
 最后成果如我的博客所示。[www.manfredhu.com](www.manfredhu.com)

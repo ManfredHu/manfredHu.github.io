@@ -1,6 +1,6 @@
 # 跨域终结篇
 
-![crossOrigin](../images/crossOrigin.png)
+![crossOrigin](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/crossOrigin.png)
 
 # 前言
 
@@ -12,7 +12,7 @@ github 代码地址：[https://github.com/ManfredHu/cross-origin](https://github
 
 判断是否跨域看下图：
 
-![是否同源判断](../images/checkCrossOrigin.png)
+![是否同源判断](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/checkCrossOrigin.png)
 
 # CORS
 

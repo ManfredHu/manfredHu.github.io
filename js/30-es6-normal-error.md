@@ -1,6 +1,6 @@
 # 几种常见的 ES6 改进写法
 
-![ES6改进的写法](../images/es6-2.jpeg)
+![ES6改进的写法](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/es6-2.jpeg)
 
 下面是自己总结的 ES6 对 ES5 提升非常大的写法,代码会更加优雅.如果你真的想让自己的代码写的更少,作用更大,那你应该好好研究研究下面出现的情况.
 

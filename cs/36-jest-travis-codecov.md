@@ -1,6 +1,6 @@
 # 前端集成测试快速入门
 
-![集成测试全家桶](../images/test-ci.png)
+![集成测试全家桶](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/test-ci.png)
 
 最近在开发一个工具库 ggtool，可以点[这里](https://github.com/ManfredHu/ggtool)看下。
 因为是开源的项目，所以要引入集成测试，记得早在 Angular 出来的时候就在吹嘘 TDD 开发了，但是在工作的时候看来基本是属于天方夜谭，方法论有了，但是研发人员时间精力和熟练度严重不够，基本没看到有部门在搞得。反倒是开源社区 gayhub 等等基本上开源项目会集成测试用例，CI 测试，代码覆盖率测试等等。一套下来其实内容跟编码一半一半吧。
@@ -114,8 +114,8 @@ script:
 
 然后你准备好了项目，就 OK 了，推送 github，在 Travis-ci 跑项目吧。
 
-![Travis-CI测试运行成功](../images/travis-ggtool.jpg)
-![Travis-CI测试运行成功](../images/travis-shell.jpg)
+![Travis-CI测试运行成功](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/travis-ggtool.jpg)
+![Travis-CI测试运行成功](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/travis-shell.jpg)
 
 跑完了就如上图，成功执行 OK 了之后，我们来看看 log 的一些内容，首先是 woker 的信息，部署环境吧啦吧啦的。
 忽略`npm install -g codecov`，因为跑了后面 codecov 的脚本。
@@ -126,7 +126,7 @@ script:
 
 之后`npm run lint`了下，之后`npm run test`。成功之后生成徽标，经常用于 github 开源项目标识。
 
-![徽标生成选项](../images/travis-ggtool-icon.jpg)
+![徽标生成选项](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/travis-ggtool-icon.jpg)
 
 复制之后可以写在 markdown 之类的。
 
@@ -173,8 +173,8 @@ ShieldsIO 可以根据 github，npm 包等生成徽标，然后写在项目的 r
 
 然后复制 github 项目目录地址进去生成就 OK 了。shieldIO 会自动去读取 travis 和 codecov 的徽标状态
 
-![travis-icon](../images/shield-travis.jpg)
-![codecov-icon](../images/shield-codecov.jpg)
+![travis-icon](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/shield-travis.jpg)
+![codecov-icon](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/shield-codecov.jpg)
 
 当然还有其他的，感兴趣的童鞋自己研究下。
 

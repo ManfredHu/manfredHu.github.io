@@ -1,6 +1,6 @@
 # 1 分钟让你拥有规范的 git log
 
-![change log](../images/keepAChangelog.png)
+![change log](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/keepAChangelog.png)
 
 从规范化提交说起，我们现在用的熟悉的 git，可能刚开始会不知道提交的时候要写点什么，后面写多了之后，干脆啥都不写直接提交。
 我们通常称为无注释的提交。其实有些情况下的注释，不看好过看，你觉得呢？如下图，是无意思的提交，我就是想提交但是我不知道我应该写一些什么说明。或者是说明已经写多了又没什么作用，懒得写了。
@@ -12,7 +12,7 @@
 
 ## vue 的规范化提交
 
-![vue git log](../images/vueGitLog.jpg)
+![vue git log](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/vueGitLog.jpg)
 
 这里可以看到其实别人家的注释写的还是很规范的，那么，我们翻下他们的 package.json 看看他们是怎么做的。
 可以点击[这里](https://github.com/vuejs/vue/blob/dev/package.json)
@@ -86,4 +86,4 @@ npm run commit
 ```
 
 会有东西让你选择，如下图。
-![](../images/gitczDemo.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/gitczDemo.jpg)

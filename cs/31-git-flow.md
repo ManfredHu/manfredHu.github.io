@@ -1,6 +1,6 @@
 # Git Flow 在大型多人合作总的使用
 
-![git-flow](../images/git-flow.jpeg)
+![git-flow](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/git-flow.jpeg)
 
 # SVN 的痛
 

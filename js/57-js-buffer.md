@@ -111,7 +111,7 @@ TypedArray数组只是一层视图，本身不储存数据，它的数据都储�
 - Float32Array：32位浮点数，长度4个字节。
 - Float64Array：64位浮点数，长度8个字节。
 
-![](../images/ppl/QHZGwy.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/QHZGwy.png)
 
 ```bash
 TypedArray(buffer, byteOffset=0, length?)

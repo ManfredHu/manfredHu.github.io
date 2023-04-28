@@ -1,10 +1,10 @@
 # JS 中 this 关键字的使用比较
 
-![this](../images/thisKeyWord.jpg)
+![this](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/thisKeyWord.jpg)
 
 > **这篇是自己在之前的[博客](http://www.cnblogs.com/manfredHu/p/4803993.html)写的，各种转载就不说了。**
 
-![This One,That One](../images/this.jpg)
+![This One,That One](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/this.jpg)
 
 this 关键字在 JavaScript 中，用的不能说比较多，而是非常多。那么熟悉 this 关键字的各种用法则显得非常关键。
 

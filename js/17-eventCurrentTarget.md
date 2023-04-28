@@ -1,6 +1,6 @@
 # event.target 的亲兄弟 event.currentTarget
 
-![Target](../images/target.jpg)
+![Target](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/target.jpg)
 
 做项目的时候遇到的一个挺好玩的属性，就是`event.currentTarget`这个东西，可能我们以前用的比较多的是`event.target`。
 

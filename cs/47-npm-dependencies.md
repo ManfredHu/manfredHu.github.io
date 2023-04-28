@@ -1,6 +1,6 @@
 # npm 的 dependencies（http,git,ssh）
 
-![npm version](../images/npm-dependencies.jpeg)
+![npm version](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/npm-dependencies.jpeg)
 
 # 版本号
 

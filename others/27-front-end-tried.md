@@ -1,6 +1,6 @@
 # 前端疲劳
 
-![肾虚,通常是在过度劳累之后](../images/tried.jpg)
+![肾虚,通常是在过度劳累之后](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/tried.jpg)
 
 前端疲劳这个词最近突然在很多文章出现,这次,我躺在家里的沙发上,深刻的思考了一波.
 

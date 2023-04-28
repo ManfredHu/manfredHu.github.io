@@ -1,6 +1,6 @@
 # 图片自适应大小、压缩 demo
 
-![图片上传](../images/pictureUpload.png)
+![图片上传](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/pictureUpload.png)
 
 # 图片上传 demo 原理
 

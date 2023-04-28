@@ -1,6 +1,6 @@
 # websocket 原理和实践
 
-![websocket](../images/html5-websocket.png)
+![websocket](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html5-websocket.png)
 
 ## 基于现象探索原理
 
@@ -41,11 +41,11 @@ Upgrade: websocket
 
 Socket是应用层与TCP/IP协议簇通信的中间抽象层，是一组接口。在设计模式中其实就是门面模式。Socket将复杂的TCP/IP协议簇隐藏在接口后面，对于用户而言，一组接口即可让Socket去组织数据，以符合指定的协议。**可以理解，编程下的socket就是一个插座的抽象，让应用层更好调用底层接口**
 
-![Socket](../images/ppl/socket.png)
+![Socket](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/socket.png)
 
 操作系统的底层Socket接口, 有connect, bind, listen等等, 下图来自小林coding
 
-![Socket连接的本质](../images/ppl/socket-operation-system.jpeg)
+![Socket连接的本质](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/socket-operation-system.jpeg)
 
 ## 什么是 WS/WSS？
 
@@ -63,7 +63,7 @@ WSS（Web Socket Secure）是 WebSocket 的加密版本。
 - 支持发送文本和二进制数据。
 - 与 HTTP 协议有着良好的兼容性。默认端口也是 80 和 443，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器
 
-![网络模型](../images/ppl/bg2017051503.jpg)
+![网络模型](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/bg2017051503.jpg)
 
 这张图片很棒，很好的说明了协议间的关系。而且要记住，**ws 链接握手阶段是通过 HTTP 协议的**
 
@@ -314,7 +314,7 @@ node server.js 或者 npm run start
 4. 访问
    打开[localhost:8000](localhost:8000)，你会发现一个简单的页面，对应源码的`public/index.html`的例子。
 
-![sc demo 控制台](../images/socketcluster.jpg)
+![sc demo 控制台](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/socketcluster.jpg)
 
 其实 demo 已经是前端页面跟 ws 服务器建立了链接了。socketcluster 的 demo 是结合的 express 的。
 
@@ -328,7 +328,7 @@ app.use(serveStatic(path.resolve(__dirname, 'public')))
 
 前端跟 ws 服务建立链接的过程，前提是要引入一个`socketcluster.js`的文件，封装好了方法了。引入后全局就有一个`window.socketCluster`的变量。
 
-![](../images/socketClusterVar.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/socketClusterVar.jpg)
 
 ```js
 // Initiate the connection to the server
@@ -377,7 +377,7 @@ var interval = setInterval(function() {
 ### 广播和单发
 
 sc 有 publish 广播和 emit 单发两种模式，publish 即广播所有 ws 用户。而 emit 只会发送给一个用户。
-![emit方式对不同的用户都是不同的](../images/sc-emit.jpg)
+![emit方式对不同的用户都是不同的](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sc-emit.jpg)
 
 我们开了另外一个 tab，可以看到不同的 client 收到的 websocket 服务推送的数据 number 是不同的，这就是 emit 的效果。
 
@@ -399,11 +399,11 @@ function btnClick() {
 
 点击按钮，服务器日志如图。
 
-![message from clinet](../images/sc-serverReceiveMsg.jpg)
+![message from clinet](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sc-serverReceiveMsg.jpg)
 
 同时所有客户端会收到服务器广播的消息。如下图。
 
-![publish message](../images/sc-serverPublishReceiveMsg.jpg)
+![publish message](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sc-serverPublishReceiveMsg.jpg)
 
 这里感觉是个彩蛋，前端代码我找不到`sampleClientEvent`方法的调用，但是服务器端是有的，所以自己补充了。
 源代码

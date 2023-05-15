@@ -139,7 +139,7 @@ pkill -f SCIM.app
   * [Set Character Encoding](https://chrome.google.com/webstore/detail/set-character-encoding/bpojelgakakmcfmjfilgdlmhefphglae?hl=zh-CN) 遇到某些乱码，如编码错误的返回，可以右键改编码
   * [捕捉网页截图](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=zh-CN) 可以截图整个网页为图片，跟屏幕截图还不太一样，有需求的同学可以装
   * [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca) Chrome打开新的tab的时候，会有高清大图，而且有todolist之类的应用
-  * [cVim](https://chrome.google.com/webstore/detail/cvim/ihlenndgcmojhcghmfjfneahoeklbjjh?authuser=3&hl=zh-cn) 一个很厉害的Chrome插件，主要是熟悉Vim的话会觉得非常的方便
+  * [Vimium C](https://github.com/gdh1995/vimium-c) 一个很厉害的Chrome插件，主要是熟悉Vim的话会觉得非常的方便
     * [使用教程](https://www.jianshu.com/p/98c95055d5fa)
   * [omni](https://github.com/alyssaxuu/omni) 很强大的Chrome tab/书签 管理工具，通过 [chrome://extensions/shortcuts](chrome://extensions/shortcuts) 设置快捷键，可以搜索书签或者打开的tab等
   * [Tango](https://chrome.google.com/webstore/detail/tango-screenshots-trainin/lggdbpblkekjjbobadliahffoaobaknh) 录制网页操作教程，比如第一步第二步第三步做什么等等

@@ -659,7 +659,9 @@ VsCode的替换很高级的，比如下面这样的数据要去除下划线，�
   + [npm-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 * React
   + [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components) 给Styled-Components提供Highlight
-  + [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+  + [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) React相关Snippets
+    - ![](../images/vscode-plugins/ES7%2B%20React%3ARedux%3AReact-Native%20snippets.png)
+  + [VSCode React Refactor](https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor) 用于优化代码, 比如拆离单独的组件
 * Vue
   + 2.x [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
   + 3.x 
@@ -710,6 +712,9 @@ VsCode的替换很高级的，比如下面这样的数据要去除下划线，�
   + [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) 国际化用
   + [Template String Converter](https://marketplace.visualstudio.com/items?itemName=meganrogge.template-string-converter) 加速模版字符串编写
   + [更好的curl](https://httpie.io/cli)
+  + [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) 图片预览
+  + [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+    - ![](../images/vscode-plugins/better-comments.png)
 * 智能补全
   + ~~[tabnine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode) AI提示插件，比微软的Visual Studio IntelliCode好用~~
   + ~~[Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)~~

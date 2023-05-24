@@ -1,5 +1,5 @@
 {
-  "name": "manfredHu.github.io",
+  "name": "manfredhu.github.io",
   "version": "1.0.0",
   "description": "ManfredHu's blog",
   "main": "index.js",
@@ -15,6 +15,7 @@
     "esno": "^0.16.3"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",
     "globby": "^13.1.4",

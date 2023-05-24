@@ -40,3 +40,13 @@ Github Copilot作为现在最好用的代码提示工具，配合VSCode简直无
 - 上一条建议：`Alt/Option + [`
 
 ![](../images/ppl/Copilot-changeToNextSuggest.gif)
+
+## 代理
+各大公司都有自己的网络, 下面说的是如何绕过公司网络.
+
+[Github discussions](https://github.com/orgs/community/discussions/29127)
+
+其实Github Copilot就是一个HTTP请求, 只不过模型在Github的服务器上. 所以我们可以通过代理的方式来绕过公司网络.
+
+1. 本地开启代理工具, 至于怎么配置自行搜索科学上网吧
+2. 给VSCode设置代理, 比如本地开启了代理工具, 端口1087, 直接配置`http:127.0.0.1:1087`就可以了

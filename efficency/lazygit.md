@@ -262,6 +262,9 @@ fixup和squash区别：fixup是合并相邻两次commit,squash一般是合并一
 
 ![](../images/ppl/LgtyD4.png)
 
+### 分支diff
+
+
 
 ### 解决冲突
 这个工具有个不好的地方就是，没找到文档或者官网，只有github一个渠道。from https://github.com/jesseduffield/lazygit#resolving-merge-conflicts

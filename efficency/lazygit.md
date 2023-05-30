@@ -264,6 +264,12 @@ fixup和squash区别：fixup是合并相邻两次commit,squash一般是合并一
 
 ### 分支diff
 
+比如我有两个分支, master主干和 feat/lazygit_update 特性分支. 
+
+选择分支后按 `ctrl+e` 进入diff 模式
+
+![](../images/ppl/20230530-165321.jpeg)
+![](../images/ppl/Xnip2023-05-30_16-54-51.png)
 
 
 ### 解决冲突

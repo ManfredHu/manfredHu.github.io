@@ -100,7 +100,7 @@
       link: /cs/49-git-revert
     - text: 如何获取请求方的 ip
       link: /cs/45-x-forwarded-for
-    - text: DNS 解析和配置
+    - text: DNS解析和配置(dig nslookup)
       link: /cs/35-dns-parse
     - text: 跨域终结篇
       link: /cs/42-cross-origin

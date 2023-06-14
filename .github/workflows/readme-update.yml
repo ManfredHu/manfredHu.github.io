@@ -38,7 +38,7 @@ jobs:
 
       # update readme
       - run: npm run readme
-      - run: npm run replace-img
+      # - run: npm run replace-img
       - uses: EndBug/add-and-commit@v9
         with:
           message: "chore: update readme"

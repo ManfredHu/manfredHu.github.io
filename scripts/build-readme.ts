@@ -61,12 +61,13 @@ async function insertInfoReadme(filepath: string, replacedText: string) {
   fs.writeFileSync(filepath, text, 'utf-8')
 }
 
-type TOC = {
-  text: string
-  link?: string
-  children?: TOC[]
-}
 
+
+/**
+ * Get File Last Commit Unix Time
+ * @param filePath file path
+ * @returns unix timestamp last commit
+ */
 async function getFileLastCommitUnixTime(filePath: string) {
   try {
     const { stdout } = await execCb(
@@ -80,6 +81,18 @@ async function getFileLastCommitUnixTime(filePath: string) {
 
 let toc = ''
 
+type TOC = {
+  text: string
+  link?: string
+  children?: TOC[]
+}
+
+/**
+ * gen TOC
+ * @param {TOC} tocList TOC List
+ * @param {number} level deep recursion tag
+ * @returns {string} TOC string
+ */
 async function generateTOC(tocList: TOC[], level = 0) {
   for (const obj of tocList) {
     if (obj.text) {

@@ -268,8 +268,8 @@ fixup和squash区别：fixup是合并相邻两次commit,squash一般是合并一
 
 选择分支后按 `ctrl+e` 进入diff 模式
 
-![](../images/ppl/20230530-165321.jpeg)
-![](../images/ppl/Xnip2023-05-30_16-54-51.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/20230530-165321.jpeg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Xnip2023-05-30_16-54-51.png)
 
 
 ### 解决冲突

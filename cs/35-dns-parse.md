@@ -1,6 +1,6 @@
 # DNS解析和配置(dig nslookup)
 
-![DNS](../images/dns.png)
+![DNS](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/dns.png)
 
 # 从面试题说起
 
@@ -11,12 +11,12 @@
 
 # DNS 解析配置
 
-![DNS记录](../images/dns-parse-1.png)
+![DNS记录](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/dns-parse-1.png)
 
 我们可以看到，访问`www.manfredhu.com`和`manfredhu.github.io`最后返回的 IP 都是一样的。
 我们看下我们配置的 DNS 解析配置。
 
-![DNS解析](../images/dns-parse-2.png)
+![DNS解析](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/dns-parse-2.png)
 
 可以看到只有两条记录，这里起作用的是下面那条
 

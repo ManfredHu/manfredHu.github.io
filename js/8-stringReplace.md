@@ -1,6 +1,6 @@
 # string.Replace 用法
 
-![查找替换](../images/replace.png)
+![查找替换](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/replace.png)
 
 > replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
 

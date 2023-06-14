@@ -1,6 +1,6 @@
 # npm version 升级版本号
 
-![npm version](../images/npm-version.png)
+![npm version](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/npm-version.png)
 
 ## 版本号的定义
 

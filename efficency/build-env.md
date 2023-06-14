@@ -22,41 +22,34 @@
 主要是程序员用不到一些功能，F1-F12会多出来12个自定义功能键等
 
 系统偏好设置 -> 键盘
-
-![](../images/ppl/bsapZZ.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/bsapZZ.png)
 
 #### 触摸板
 
 系统偏好设置 -> 触摸板
 全开就好了，跟踪速度最大
-
-![](../images/ppl/Aoekwh.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Aoekwh.png)
 
 #### Dock居左
 
 系统偏好设置 -> 程序坞与菜单栏
-
-![](../images/ppl/gEWJtU.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/gEWJtU.png)
 
 #### Tab切换选项
 
 系统偏好设置 -> 键盘
-
-![](../images/ppl/uGP5Ot.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/uGP5Ot.png)
 
 这样设置后可以用Tab在选项间做切换，如保存文件的时候
-
-![](../images/ppl/48ocDC.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/48ocDC.png)
 
 #### 右下角触发屏幕保护
 
 系统偏好设置 -> 桌面与屏幕保护程序，切换到屏幕保护程序，右下角触发角设置
-
-![](../images/ppl/xH50N2.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/xH50N2.png)
 
 再设置进入屏保后需要密码才能进入，在系统偏好设置 -> 安全性与隐私
-
-![](../images/ppl/XBQpJq.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/XBQpJq.png)
 
 好了现在你有事可以直接鼠标移到右下角进入屏保然后走人，别人再来需要密码才能进入你的电脑
 
@@ -74,11 +67,11 @@
 #### 始终显示滚动条
 系统偏好设置->通用，如下设置，底部“接力”也可以一起开了，如果你用的苹果手机的话复制电脑可以粘贴，前提是wifi蓝牙一起打开
 
-![](../images/ppl/iqThT5.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/iqThT5.png)
 
 #### 自定义工具栏
 
-![](../images/ppl/mfjo93.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/mfjo93.png)
 
 #### 配置启动台显示行数和列数
 
@@ -102,8 +95,8 @@ killall Dock
 
 主要是偶尔每一次敲击如果设置了文本检查则都会比较慢，特别是中文输入的时候
 
-![](../images/ppl/w2Hwj2.png)
-![](../images/ppl/cHKOdQ.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/w2Hwj2.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/cHKOdQ.png)
 
 可以换搜狗输入法，但是我发现杀一下输入法进程重启就好了
 
@@ -209,7 +202,7 @@ ctrl+u up上翻半页
 
 [Moom](https://manytricks.com/moom/)，可以快捷键编排窗口大小和位置，附上个人快捷键设置，在VSCode需要多项目分屏的时候特好用
 
-![](../images/ppl/kfxb3W.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/kfxb3W.png)
 
 也有推荐[Rectangle](https://github.com/rxhanson/Rectangle)的感兴趣的可以试试
 
@@ -219,8 +212,8 @@ ctrl+u up上翻半页
 
 先关闭系统的搜索再用Alfred的快捷键替换系统的搜索，这样相当于升级系统的搜索
 
-![](../images/ppl/Qrstej.png)
-![](../images/ppl/5GUegI.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Qrstej.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/5GUegI.png)
 
 可以配置如下功能
 * 应用搜索
@@ -236,10 +229,10 @@ ctrl+u up上翻半页
 
 1. 移动场景下很多时候要连接代理，这个时候要获取电脑IP，常规的控制打个`ipconfig/ifconfig`。这里直接[一个插件实现GetIp功能](https://github.com/ManfredHu/alfred-workflow-getip)
 2. 发布的时候要写哪天的发布方便后面回归特性等需求，可以用到Snippets功能，如下图，比如正常发布用 `🚀🚀🚀【2022年11月3日 23:00:38】常规发布` 作为标题，与众不同
-  ![](../images/ppl/JbPSk8.png)
+  ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/JbPSk8.png)
 3. 对浏览器书签分类，取个简单名字记忆，然后`bm <bookmark name>`
 4. 配置iTerm2终端执行命令
-  ![](../images/ppl/qRcpQH.png)
+  ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/qRcpQH.png)
 
 #### workflow
 
@@ -308,7 +301,7 @@ cmd+1~9让你有一种打dota改键操作的快感
 ### 屏保
 [fliqlo](https://fliqlo.com/) 很经典的锁屏时钟
 
-![](../images/ppl/IvPJYB.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/IvPJYB.jpg)
 
 ## 开发
 
@@ -648,7 +641,7 @@ VsCode的替换很高级的，比如下面这样的数据要去除下划线，�
 
 直接`cmd+f`调出查找替换窗口
 
-![](../images/ppl/Hklohn.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Hklohn.png)
 
 #### VSCode 扩展插件
 
@@ -705,11 +698,11 @@ VsCode的替换很高级的，比如下面这样的数据要去除下划线，�
   + 路径提示 [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
     - ![](https://i.giphy.com/iaHeUiDeTUZuo.gif)
   + 左下角显示文件大小, Gzip后的大小等 [filesize](https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize)
-    - ![](../images/ppl/W658DL.png)
+    - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/W658DL.png)
   + 空格、括号等对齐匹配插件 [bracket-pair-colorizer-2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-    - ![](../images/ppl/0BlYYW.png)
+    - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/0BlYYW.png)
   + 显示导入的模块大小 [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
-    - ![](../images/ppl/IvhHe6.png)
+    - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/IvhHe6.png)
   + VSCode默认禁止搜素 node_modules下，会影响效率 [Search node_modules](https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules) 插件可以搜索node_moduels, from [zhihu](https://www.zhihu.com/question/309220217/answer/586510407)
   + [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 类似http-server的本地服务器
   + [Quokka](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) 网站是https://quokkajs.com/，写代码过程可以直接运行各类文件得到结果，方便做一些简单测试
@@ -744,7 +737,7 @@ whistle是基于node的代理，有node的地方就可以运行，所以Linux/Ma
 * [whistle安装](https://wproxy.org/whistle/install.html), 这里推荐修改`~/.bashrc`实现开机启动，基本是长驻应用了
 * SwitchyOmega就是Chrome的浏览器插件，新建一个情景模式指向whistle就可以了，同时可以把不需要代理的域名过滤掉
 
-![](../images/ppl/j5i3oN.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/j5i3oN.png)
 
 最后设置完后请求流走向
 
@@ -762,7 +755,7 @@ Chrome发起请求 -> SwitchyOmega匹配转发到whistle -> whislte根据规则�
 
 command+鼠标左键点击 `{c.json}` 位置可以自动创建对应的json文件，再把内容贴上去就好
 
-![](../images/ppl/rkqMtn.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/rkqMtn.png)
 
 #### whistle的手机代理和捕获
 
@@ -773,7 +766,7 @@ command+鼠标左键点击 `{c.json}` 位置可以自动创建对应的json文�
 ### [SwitchHost](https://github.com/oldj/SwitchHosts)代理
 
 其实就是修改的 `/etc/hosts` 文件，不过好在暗黑模式颜值还可以
-![](../images/ppl/NCGcI8.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/NCGcI8.png)
 
 ### [Proxyman](https://proxyman.io/)
 也是挺好用的代理工具，可以自己写脚本定义转发等。

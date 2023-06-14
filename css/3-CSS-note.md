@@ -1,6 +1,6 @@
 # CSS杂技 
 
-![](../images/css.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png)
 
 ## 浏览器默认样式
 [浏览器默认样式](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/html/resources/html.css) Chromium源码的HTML默认样式，默认元素的`margin:8px`就是这里加上去的

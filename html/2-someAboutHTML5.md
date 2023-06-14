@@ -1,6 +1,6 @@
 # 写 HTML5 代码要注意的东西
 
-![html](../images/html.png)
+![html](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html.png)
 
 ## DOCTYPE
 

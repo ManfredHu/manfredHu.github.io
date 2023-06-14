@@ -1,6 +1,6 @@
 # JS 正则终极篇
 
-![郑则仕](../images/zhengzeshi.jpg)
+![郑则仕](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/zhengzeshi.jpg)
 
 香港有一个叫郑则仕的演员，就是上面这个了，每次我打正则式，都是联想的他的名字。
 

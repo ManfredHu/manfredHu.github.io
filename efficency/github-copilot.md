@@ -15,7 +15,7 @@ Github Copilot作为现在最好用的代码提示工具，配合VSCode简直无
 直接装[Copilot VSCode插件](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)就可以了
 
 
-![](../images/ppl/jxOAWR.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/jxOAWR.png)
 
 可以看到具体的配置
 
@@ -24,22 +24,22 @@ Github Copilot作为现在最好用的代码提示工具，配合VSCode简直无
 - 接受建议：Tab
 - 拒绝建议：Esc
 
-![](../images/ppl/ezgif.com-gif-maker.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/ezgif.com-gif-maker.gif)
 
 ### `Ctrl/Control + Enter` 可以调出 10次代码建议
 
-![](../images/ppl/UIFjJp.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/UIFjJp.png)
 
 代码输入时候 `Ctrl/Control + Enter` 可以调出 10次代码建议，选择任意一个点击 **Accept Solution** 即可生效
 
-![](../images/ppl/ezgif.com-gif-maker-showSuggest.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/ezgif.com-gif-maker-showSuggest.gif)
 
 ### 切换前后建议
 
 - 下一条建议：`Alt/Option + ]`
 - 上一条建议：`Alt/Option + [`
 
-![](../images/ppl/Copilot-changeToNextSuggest.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Copilot-changeToNextSuggest.gif)
 
 ## 代理
 各大公司都有自己的网络, 下面说的是如何绕过公司网络.

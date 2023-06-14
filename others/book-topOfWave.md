@@ -1,6 +1,6 @@
 # 浪潮之巅个人感想
 
-![浪潮](../images/topOfWave.png)
+![浪潮](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave.png)
 
 > 作者：ManfredHu
 > 链接：http://www.manfredhu.com/2016/04/20/book-topOfWave/
@@ -8,7 +8,7 @@
 
 ## AT&T
 
-![](../images/topOfWave/att.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/att.jpg)
 
 跟随长途通信兴起的企业，后来被美国**反垄断法**强制分成四个子公司。
 鼎鼎大名的贝尔实验室，C 语言和 Unix 操作系统诞生的地方，后面被拆分也就没了。
@@ -17,14 +17,14 @@
 
 ## IBM
 
-![](../images/topOfWave/ibm.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/ibm.jpg)
 IBM 注重与政府部门，国企和军队的合作，虽然错失了微机和互联网的浪潮，但是却在历次经济危机中存活了下来，并且现在仍然是世界上员工人数最多、营业额和利润最高的技术公司之一。
 
 > 好像 CVTE 也是这种模式，B2B 模式，也就是与政府部门、企事业单位合作，这样不会受到市场太大冲击
 
 ## Apple
 
-![](../images/topOfWave/apple.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/apple.png)
 
 乔老爹的经历，堪称传奇吧？大学半年不到，辍学学自己感兴趣的书法课，其实我略好奇一个原来搞技术的人突然去学书法会是怎么样一种心态，不过不得不说，如果程序员有了一丝艺术气息，绝对是一种与众不同的体验。因为身边就有很多这样的例子，字写的非常好看，然后喜欢小清新的那些东西。
 
@@ -59,7 +59,7 @@ IBM 注重与政府部门，国企和军队的合作，虽然错失了微机和�
 
 ## 英特尔公司
 
-![](../images/topOfWave/intel.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/intel.jpg)
 
 微机芯片帝国，现在我们在组装电脑的时候可能会有这样的选择：到底买英特尔的 CPU 还是 AMD 的？
 
@@ -77,7 +77,7 @@ ARM 的模式也挺独特的，它不生产芯片，它只设计芯片，然后�
 
 ## 微软
 
-![](../images/topOfWave/microsoft.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/microsoft.jpg)
 用着**WindowXP**和**Microsoft Office**十几年了吧。巨硬（微软）肯定知道的啦。基本上垄断了 PC 操作系统级别的市场。
 
 当然它还想进军移动操作系统的市场，但是随着安卓和 iOS 的把控，微软还是没什么戏了感觉。虽然它不止一次想用 WinPhone 去占领市场，不过还是没有太大作用。
@@ -88,7 +88,7 @@ Bill Gate 和 Jobs 的交锋也堪称经典，原来的微软只有 DOS，而乔
 
 ## 甲骨文公司
 
-![](../images/topOfWave/oracle.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/oracle.png)
 甲骨文公司的代表产品——**Oracle 数据库**
 
 不知道大家听过这样的说法没有，IBM 的服务器，EMC 的存储器，Oracle 的数据库。
@@ -100,14 +100,14 @@ Bill Gate 和 Jobs 的交锋也堪称经典，原来的微软只有 DOS，而乔
 
 ## 思科
 
-![](../images/topOfWave/cisco.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/cisco.png)
 在 90 年代靠着互联网的热潮，做着路由器兴起的思科公司。
 
 > 允许自己的员工在公司内部创业，然后收购员工创立的公司。怎么感觉 BAT 现在的收购有点类似的感觉？
 
 ## 雅虎
 
-![](../images/topOfWave/yahoo.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/yahoo.png)
 最早的门户网站，相当于现在的搜索引擎如百度和 Google，用户通过这个去访问别的网站获取资讯。
 
 中国随之诞生的门户网站——搜狐、网易和新浪
@@ -118,7 +118,7 @@ Bill Gate 和 Jobs 的交锋也堪称经典，原来的微软只有 DOS，而乔
 
 ## 惠普
 
-![](../images/topOfWave/hp.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/hp.png)
 惠普公司的创立，联系到斯坦福大学，就是那个乔布斯读了半年的那个大学。
 刚开始没有什么名气，后面学校搞了个工业园，更企业合作，校企合作，学校输送人才，企业消化，这样互相发展才真正是进步。
 
@@ -139,7 +139,7 @@ Bill Gate 和 Jobs 的交锋也堪称经典，原来的微软只有 DOS，而乔
 
 ## Google
 
-![](../images/topOfWave/google.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/google.png)
 Google 从诞生的时候就是个传奇，两位创始人在斯坦福大学的帮助下拿到太阳总裁的 10 万刀的投资，开始了征程。
 
 而且我们或许会听到 Google 的办公环境多好多好，但是我们或许不会发现一个事实——Google 是全世界单位博士聚集数量最多的地方。这是 Google 对员工的另类补偿可以这么说，如果对一些大牛束缚太多真的就不太好了。
@@ -159,7 +159,7 @@ Google 从诞生的时候就是个传奇，两位创始人在斯坦福大学的�
 
 ## facebook
 
-![](../images/topOfWave/facebook.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/facebook.png)
 我们老是叫它脸书，其实真的不是一本书。。。
 facebook 基本垄断了现在全世界的社交网络（除了中国大陆）。说到 facebook 的发家史也是挺好玩的，创始人的意图本来是想着——那个叫约约约？（反正蜀黍我们不约）
 在大学里面首先流行起来了，因为注册是用学生的邮箱注册的，所以真实度很高。后面随着学生离开大学，facebook 就走出了大学校园，开始做社交了。

@@ -1,6 +1,6 @@
 # call,apply,bind
 
-![](../images/js.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/js.jpg)
 
 > JavaScript 是一种**基于面向对象的、函数式的、动态的**编程语言。现在发展到已经可以用在浏览器和服务器端了。
 

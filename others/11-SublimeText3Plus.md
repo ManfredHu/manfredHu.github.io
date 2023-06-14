@@ -1,6 +1,6 @@
 # SublimeText3 常用快捷键和优秀插件（亲测）
 
-![SublimeText](../images/sublimetext3.jpg)
+![SublimeText](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sublimetext3.jpg)
 
 > **这篇是自己在之前的[博客](http://www.cnblogs.com/manfredHu/p/4941307.html)写的，貌似[慕课](http://www.imooc.com/article/2070)拿了 5000+的 Page view，其他各种转载就不说了。**
 
@@ -23,67 +23,67 @@ SublimeText 是前端的一个神器，以其精简和可 DIY 而让广大 fans 
 
 把光标放在一个单词上，按下 ctrl+d，将选择这个单词。一直按住`ctrl`且按`D`多次，将选择当前选中项的下一个匹配项。通过按住 ctrl，再按 D 三次，将选择三个相同的文本。
 
-![](../images/SublimeTextQuickKey/1.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/1.gif)
 
 ### 选择当前文件所有匹配项: `alt+f3`
 
 选择文件中的所有匹配项。小心使用这个，因为它能选择一个文件中的所有匹配项. .
 
-![](../images/SublimeTextQuickKey/2.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/2.gif)
 
 ### 选择文本的包裹标签: `ctrl+shift+’` （ESC 键下面的那个）
 
 这是一个法宝。也许你希望所有属性保持不变，但只是想选择标签。这个快捷键为你这样做，会注意到你可以在一次操作多个标签。ps：需要 Emmet 插件（可以直接到后面看插件的安装）
-![](../images/SublimeTextQuickKey/3.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/3.gif)
 
 ### 向上扩展一层: `ctrl+shift+a`
 
 如果你把光标放在文本间再按下上面的键将选择文本，就像`ctrl+d`。但是再次按下它，将选择父容器，再按，将选择父容器的父容器。ps：需要 Emmet 插件（可以直接到后面看插件的安装）
-![](../images/SublimeTextQuickKey/4.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/4.gif)
 
 ### 选择括号内的内容: `ctrl+shift+m`
 
 这有助于选择括号之间的一切。同样适用于 CSS。
-![](../images/SublimeTextQuickKey/5.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/5.gif)
 
 ### 选择括号内的内容: `ctrl+shift+↑`或 `ctrl+shift+↓`
 
-![](../images/SublimeTextQuickKey/6.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/6.gif)
 
 ### 选择括号内的内容: `ctrl+shift+d`
 
 如果你已经选中了文本，它会复制你的选中项。否则，把光标放在行上，会复制整行。
-![](../images/SublimeTextQuickKey/7.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/7.gif)
 
 ### 增加和减少缩进: `ctrl+[ 或 ]`
 
-![](../images/SublimeTextQuickKey/8.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/8.gif)
 
 ### 单行剪辑或选中项: `ctrl+x`
 
-![](../images/SublimeTextQuickKey/9.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/9.gif)
 
 ### 粘贴并复制格式: `ctrl+shift+v`
 
-![](../images/SublimeTextQuickKey/10.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/10.gif)
 
 ### 用标签包裹行或选中项: `alt+shift+w`
 
-![](../images/SublimeTextQuickKey/11.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/11.gif)
 
 ### 移除未闭合的容器元素: `ctrl+shift+;`
 
 这会移除与你的光标相关的父标签。对清除标记很有帮助。
-![](../images/SublimeTextQuickKey/12.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/12.gif)
 
 ### 大写和小写: 大写`ctrl+k+u`、小写`ctrl+k+l`
 
-![](../images/SublimeTextQuickKey/13.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/13.gif)
 
 ### 注释选中项/行: `ctrl+/`
 
 这个在所有语言下都可用， 对行和选中项都可用。
-![](../images/SublimeTextQuickKey/14.gif)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/SublimeTextQuickKey/14.gif)
 
 ### 删除一行: `ctrl+shift+k`
 

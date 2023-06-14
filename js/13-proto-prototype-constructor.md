@@ -10,7 +10,7 @@
 
 我们来看一张图：
 
-![原型-构造函数-实例三者的关系图](../images/prototypeAndConstructor.png)
+![原型-构造函数-实例三者的关系图](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/prototypeAndConstructor.png)
 
 相信大家对这张图都不陌生了，构造函数有一个 prototype 属性指向其原型。相反原型也有一个 constructor 指向构造函数。与此同时实例也有一个 constructor 指向构造函数，这简直就是互相捆绑生怕找不到啊不是吗？
 
@@ -45,7 +45,7 @@
 
 上面只是基础而已，下面才是真正的重点，为了修改这张图我可是煞费苦心，绞尽脑汁，不知道死了多少脑细胞。
 
-![JS对象布局图](../images/JavaScriptObjectLayout.jpg)
+![JS对象布局图](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/JavaScriptObjectLayout.jpg)
 
 可能大家已经看晕了，没事冲杯咖啡慢慢看。下面是相应的证明代码，友情提示 sublimeText 看更爽：
 
@@ -140,7 +140,7 @@ console.log(new Person().firstName) // nick
 ```
 首先这里对结果进行拆解，类定义的属性，会默认在构造函数开头初始化。
 
-![](../images/ppl/v12CUr.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/v12CUr.png)
 
 如上图，类内部定义的`firstName`属性会在`constructor`构造函数时候被覆盖。其次是这里的`super()`调用了父类构造函数，所以一开始`tom`，执行父类构造函数的时候赋值为`parent_yang`，之后执行子类的赋值`this.firstName = "nick";`，最后就是nick。
 

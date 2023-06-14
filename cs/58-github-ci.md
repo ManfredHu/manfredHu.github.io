@@ -1,7 +1,7 @@
 # 使用github actions完成CI/CD自动化部署
 以前的Travis CI，跟现在的github ci，其实都是差不多的东西。不过可以肯定Github CI出来了后，其他的CI工具要靠边站了。新项目强烈推荐接入Github CI,这是非常简单的步骤，点击顶部的Tab里的Action，自动创建`.github/workflows`和对应的脚本文件，之后就可以自动运行了
 
-![](../images/ppl/rlrNNT.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/rlrNNT.png)
 
 入门的东西不多说，看[ 阮一峰的GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 配置语法不建议过深研究，个人经验工作时候遇到很多CI平台，这个东西很多测试开发、内部系统开发的同学喜欢拿来做KPI，做的又难用又low。无力吐槽，遇到了再去看文档就好。
@@ -103,7 +103,7 @@ npm ERR!     /Users/manfredhu/.npm/_logs/2020-12-04T08_27_44_488Z-debug.log
 ```
 
 这里用`actions/upload-artifact`的v2版本归档产物，传入参数`name`为最后压缩包的名字，path为编译后压缩到压缩包的目录。如上配置最后生成的产物是下图这样的 
-![](../images/ppl/Q9ZW7H.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Q9ZW7H.png)
 
 ### 发布部署
 
@@ -127,7 +127,7 @@ ${{ secrets.SERVER_IP }}
 ```
 的写法，指的是`Settings下的Secrets`，如下图
 
-![](../images/ppl/EHWjoZ.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/EHWjoZ.png)
 
 
 secrets是一个key:value的格式，如上图我声明了`SERVER_IP`和`SSH_PRIVATE_KEY`，则可以通过下面的方式获取。

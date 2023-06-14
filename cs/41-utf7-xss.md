@@ -21,7 +21,7 @@
 
 大家可以复制到一个 html 文件，然后应该会看到下图这样的。
 
-![utf7 xss IE截图](../images/utf7XSSForIE.png)
+![utf7 xss IE截图](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/utf7XSSForIE.png)
 
 ## payload
 

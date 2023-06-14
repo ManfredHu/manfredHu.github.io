@@ -1,4 +1,4 @@
-name: readme update
+name: Update readme and image path
 
 # push master or update readme every day at 00:00
 
@@ -38,6 +38,7 @@ jobs:
 
       # update readme
       - run: npm run readme
+      - run: npm run replace-img
       - uses: EndBug/add-and-commit@v9
         with:
           message: "chore: update readme"

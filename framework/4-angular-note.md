@@ -1,6 +1,6 @@
 # AngularJS 弃疗
 
-![](../images/angular.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/angular.png)
 
 ## AngularJS 兼容性
 

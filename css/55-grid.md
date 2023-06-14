@@ -133,7 +133,7 @@ grid-template-columns: 50% 1fr 1fr;
 
 这里右对齐的效果会打断
 
-![](../images/ppl/X5MvrW.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/X5MvrW.png)
 
 所以修改了属性
 

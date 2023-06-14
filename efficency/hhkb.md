@@ -76,7 +76,7 @@ ctrl + v 将游标移动到最末尾一个字符
 
 ## 当有外置键盘接入时关闭内置键盘
 
-![](../images/keychron/karabiner.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/keychron/karabiner.png)
 
 ## 携带
 

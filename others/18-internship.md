@@ -1,6 +1,6 @@
 # 关于实习的一些看法
 
-![internship](../images/shixi.jpg)
+![internship](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/shixi.jpg)
 
 > 这是一篇自己在腾讯实习一个半月的总结，仅供参考，非喜勿喷。
 

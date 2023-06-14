@@ -5,7 +5,7 @@
 
 ## [node调试](https://nodejs.org/zh-cn/docs/guides/debugging-getting-started/)
 `node inspect`命令使用方式如下
-![](../images/ppl/TbEPag.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/TbEPag.png)
 
 简单说下就是node的debug模式有client跟server两部分，server运行代码并接收client的命令调整运行姿势。client可以是多种方式，如Chrome，VSCode，node默认的命令行CLI debugger
 
@@ -15,8 +15,8 @@
 ```bash
 node inspect main.js # 等价于 node debug main.js
 ```
-![](../images/ppl/image-20210514155354408.png)
-![](../images/ppl/image-20210514155818145.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/image-20210514155354408.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/image-20210514155818145.png)
 
 如上图，创建了两个进程pid分别为44335和44334
 - 44334主进程用于运行CLI debugger调试器
@@ -55,7 +55,7 @@ node inspect main.js # 等价于 node debug main.js
 node --inspect main.js
 ```
 
-![image-20210514161312823](../images/ppl/image-20210514161312823.png)
+![image-20210514161312823](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/image-20210514161312823.png)
 运行引用，浏览器键入`chrome://inspect/#devices`与进程链接，调试工具默认通信端口为9229，ip默认为127.0.0.1(本地用)
 
 -e参数支持传入代码eval执行，如`node --inspect=9229 -e "setTimeout(function() { console.log('yes'); }, 30000)"`
@@ -142,14 +142,14 @@ console.log('listening on port 3000');
 简单理解就是不用管debug，VSCode会自动检测需要作为debug client去attach debug server。
 
 这里VSCode有开关，可以搜索auto attch开关来切换各个模式,`CMD+Shift+P`输入`auto attach`
-![CMD+Shift+P输入auto attach](../images/ppl/VLiFKP.png)
-![auto attach选项](../images/ppl/SY53f9.png)
+![CMD+Shift+P输入auto attach](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/VLiFKP.png)
+![auto attach选项](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/SY53f9.png)
 
-![](../images/ppl/uvPnjW.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/uvPnjW.png)
 
 选择好后重启终端再执行命令就可以了，如上图我打在请求进来的时候，浏览器访问[http://0.0.0.0:3000/](http://0.0.0.0:3000/)就停在那里了
 
-![](../images/ppl/m9Vi09.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/m9Vi09.png)
 
 可以看到这里ctx变量里header有host、user-agent等值
 
@@ -157,7 +157,7 @@ console.log('listening on port 3000');
 
 ### JavaScript Debug Terminal
 很少用，不过也有
-![](../images/ppl/7qRuVZ.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/7qRuVZ.png)
 
 ### launch.json配置
 Auto Attach比较智能，但是只有自己用，怎么给项目内其他人一起用呢？用配置文件，简单`.vscode/launch.json`配置如下，更复杂的看[launch-configuration-attributes](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration-attributes)

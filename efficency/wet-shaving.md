@@ -12,7 +12,7 @@ Wet-Shaving 中文湿剃, 是一种剃须方法. 湿剃是一种传统的剃须�
 
 剃须刀氛围电动剃须刀和手动剃须刀, 电动剃须刀见的很多了不多说.
 
-![](../images/razor/razor-list.jpeg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/razor/razor-list.jpeg)
 
 手动剃须刀分为
 
@@ -38,7 +38,7 @@ Wet-Shaving 中文湿剃, 是一种剃须方法. 湿剃是一种传统的剃须�
 4. 须后水或须后乳液：剃须后使用，用于镇静、消毒皮肤并保持滋润。具有代表性的须后水包括Thayers Witch Hazel Toner和Clubman Pinaud，须后乳液则有Nivea Sensitive Post Shave Balm等。
 
 
-![](../images/razor/wet-shave-tool.jpeg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/razor/wet-shave-tool.jpeg)
 
 ## 湿剃的基本步骤
 
@@ -74,14 +74,14 @@ Wet-Shaving 中文湿剃, 是一种剃须方法. 湿剃是一种传统的剃须�
 
 剃须刀推荐型号
 - Murker 34C. 结构不一样, 只有两件, 通过杆相连. 其他基本是三件结构
-  - ![](../images/razor/merkur-34c.jpeg)
+  - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/razor/merkur-34c.jpeg)
 - Muhle 
   - R89系列, 材料锌合金镀铬. 包括R89,R89TWIST,R89GRANDE. R41GS太激烈了,慎买
   - R94系列, 材料不锈钢. 包括R94,R95,R96,R97
-    - ![](../images/razor/muhler94.jpeg)
+    - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/razor/muhler94.jpeg)
 - Rex
   - 大使
-    - ![](../images/razor/rex_ambassador.jpg)
+    - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/razor/rex_ambassador.jpg)
 
 ## 湿剃相关名词解释
 

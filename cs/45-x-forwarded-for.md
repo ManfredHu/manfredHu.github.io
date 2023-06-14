@@ -2,7 +2,7 @@
 
 我们知道网页请求里面，请求是带 ip 的。比如下图这样的，但是其实 HTTP 协议报文是没有涉及到 IP 的，网络传输到网络层就加入了 ip，传输层加入了端口。
 
-![server ip](../images/x-forwarded-for1.jpg)
+![server ip](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/x-forwarded-for1.jpg)
 
 whistle 可以看到请求的信息，和目的地址。
 

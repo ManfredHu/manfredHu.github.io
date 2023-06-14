@@ -1,6 +1,6 @@
 # Object.defineProperties 的实际作用（MEAN 开发 Model 层的写法）
 
-![MEAN层次开发表示](../images/mean-stack.png)
+![MEAN层次开发表示](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/mean-stack.png)
 
 ## Object.defineProperties 是什么？有什么用？
 

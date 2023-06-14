@@ -33,12 +33,12 @@ alias lg="lazygit"
 
 `x` 快捷键可以调出help面板，一些功能的快捷键也可以快速找到
 
-![](../images/ppl/FWYBZg.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/FWYBZg.png)
 
 ## 使用
 
 ### 区块切换 1-5/tab
-![](../images/ppl/fuvNdT.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/fuvNdT.png)
 
 - 数字`1-5`在区块间切换
 - `tab`区块切换
@@ -49,14 +49,14 @@ alias lg="lazygit"
 
 `[]`(中括号键)可以在Branches面板里切换
 
-![](../images/ppl/9DcKdQ.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/9DcKdQ.png)
 
 ### 新建和切换分支/分支同步远端
-![](../images/ppl/LkMaen.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/LkMaen.png)
 branch区块，**`n`**就可以创建新的分支，输入分支名就好了
 
 
-![](../images/ppl/jVgIyf.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/jVgIyf.png)
 
 - **`P`**可以推送分支,`git push`
 - **`p`**可以拉取分支,`git pull`
@@ -65,7 +65,7 @@ branch区块，**`n`**就可以创建新的分支，输入分支名就好了
 比如我们经常需要rebase主分支（假设是master，那么可以很快操作），选择master后按**`f`**即可完成拉取。再按**`r`**即可进行rebase
 
 ### git add
-![](../images/ppl/131FOv.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/131FOv.png)
 
 - j(▲)/k(▼)在文件树上下切换
 - H/L在文件树左右移动，主要针对窗口显示不下的情况
@@ -77,14 +77,14 @@ branch区块，**`n`**就可以创建新的分支，输入分支名就好了
 
 如果要针对某一行做add，可以回车进入文件，选中某行后空格做**add staged**操作。同理`a`可以选中单文件全部修改，一起操作，跟VSCode里git面板操作一样一样的。
 
-![](../images/ppl/g0ccv8.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/g0ccv8.png)
 
 也可以**tab**切换面板，用 **`d`** 做unstaged操作
-![](../images/ppl/e0HzC3.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/e0HzC3.png)
 
 ### 如何add某一行？
 
-![](../images/ppl/BNoPLY.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/BNoPLY.png)
 
 可以enter进入文件详情后
 - 选择需要的行选中按空格add
@@ -95,42 +95,42 @@ branch区块，**`n`**就可以创建新的分支，输入分支名就好了
 ### 如何放弃某行修改
 文件详情里，Unstaged Changes面板中，选中对应的代码行后`d`删除这一行的修改，回车确认即可，有提醒可以注意下
 
-![](../images/ppl/alB9Z4.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/alB9Z4.png)
 
 选中文件后按 **`d`**，则可以放弃一个文件的全部修改
 
 ### 如何放弃全部修改
 files区块，按 **`d`** 即可
 
-![](../images/ppl/fgZCBd.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/fgZCBd.png)
 
 更加多的功能
 
 `D`会有更多的功能，比如需要删除文件并且清除git记录，如图所示第一个会将本地的文件回退到上一次commit的状态，并且所有的git操作也清空。
 
 如果需要直接清空本地修改，选第一个选项 **nuke working tree**，本地修改都会还原
-![](../images/ppl/srFKF5.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/srFKF5.png)
 
 ### 如何unadd
-![](../images/ppl/Z06YfB.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Z06YfB.png)
 
 tab可以切换到Stage视图，然后**空格**或者**d**取消add操作，同理可以**V**选中多行操作
 
 ### git commit
 block聚焦Files（第二块），直接输入**c**就可以了，会弹出输入框输入commit message后直接提交
 
-![](../images/ppl/nwKWS9.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/nwKWS9.png)
 
 ### Amend Commit
 
 同理，`git commit --amend`可以通过 **`A`** 来实现
 
-![](../images/ppl/cpEH4k.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/cpEH4k.png)
 
-![](../images/ppl/wYRthh.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/wYRthh.png)
 
 ### Revert Commit
-![](../images/ppl/ClEaRf.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/ClEaRf.png)
 
 选中commit后 **t** 可以revert commit，即创建一个新的commit抵消原有的commit，内容完全一致commit保留
 一般是提交公共分支后需要回退修改之类的操作，rebase会让协作的同学很麻烦（比如大家改到了同个地方），而convert不会。主干分支原则上不允许rebase，回退需要保留记录，此时用revert最合适。
@@ -146,28 +146,28 @@ block聚焦Files（第二块），直接输入**c**就可以了，会弹出输�
 ### branch merge
 在源分支(from) -> 目标分支(target)操作过程中，可以通过选择待合并分支后，按 `M` 进行merge操作
 
-![](../images/ppl/0lktrz.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/0lktrz.png)
 
 ### git reset
 移动到4 Commits视图，输入**g**就可以了
 
-![](../images/ppl/rm9z8p.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/rm9z8p.png)
 
 也可以到commit面板的的Reflog检出，比如reset后Commit面板没有的
 
-![](../images/ppl/tsCQKp.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/tsCQKp.png)
 
 按`g`可以检出
 ### cherry pick
 > cherry-pick 基本概念 [ruanyifeng git-cherry-pick](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html) 可以看下
 
-![](../images/ppl/2Ii41U.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/2Ii41U.png)
 
 到Commit区块后，空格就可以应用选择的commit了。注意这里cherry-pick时候本地不能有没有提交的内容
 
 #### 把某个commit应用到其他分支
 
-![](../images/ppl/nMYUM8.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/nMYUM8.png)
 
 比如把上图test分支最新的commit合入master分支，可以这么操作
 
@@ -179,26 +179,26 @@ block聚焦Files（第二块），直接输入**c**就可以了，会弹出输�
 
 #### 把某行修改做修改
 
-![](../images/ppl/tbAT6q.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/tbAT6q.png)
 
 如上，Commit面板选择commit回车选择文件回车，选定范围后`Control+p`调出面板，可以把patch还原，也可以移动到工作区或者新的commit
 ### rebase interactive
 
-![](../images/ppl/JPNJet.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/JPNJet.png)
 
 处理rebase信息后`m`可以选择continue或者skip等继续操作
 
 
 比如下面常见case，需要删除一个commit但是保留内容变更
-![](../images/ppl/rpLBIv.png)
-![](../images/ppl/db35798e-0be6-4628-ad6b-6d6c4b6999ea.jpeg)
-![](../images/ppl/kNfPWe.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/rpLBIv.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/db35798e-0be6-4628-ad6b-6d6c4b6999ea.jpeg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/kNfPWe.png)
 可以发现最后fixup合并的内容都到5这个commit里了, rebase后的内容推送remote需要用`push -f`
 
 ### Rebase
 选择分支后按`r`就可以rebase branch了，如下图等价于`git rebase master`。如果有冲突可以解决冲突后回车continue
 
-![](../images/ppl/RNrXOl.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/RNrXOl.png)
 
 同时，选中commit的时候`control+j/k`可以移动commit的上下位置。rebase的含义如下
 
@@ -216,33 +216,33 @@ block聚焦Files（第二块），直接输入**c**就可以了，会弹出输�
 
 fixup和squash区别：fixup是合并相邻两次commit,squash一般是合并一大片commit
 #### fixup
-![](../images/ppl/aiXHll.png)
-![](../images/ppl/QHUqrG.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/aiXHll.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/QHUqrG.png)
 可以看到跟`git commit --fixup <commitId>`效果是一样的
 
 123
 #### Squash
-![](../images/ppl/l1DDMr.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/l1DDMr.png)
 可以看到跟`git rebase -i --autosquash <commitId>`效果是一样的
 
 ### push/pull
 - p: pull files
 - P: push files
 
-![](../images/ppl/WWZUVG.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/WWZUVG.png)
 
 ### Stash/Pop Stash
 比如像暂存一些东西方便去其他分支做bugfix之类的
 
-![](../images/ppl/LO7AlY.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/LO7AlY.png)
 
-![](../images/ppl/PcPlXu.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/PcPlXu.png)
 
 - 也可以 **`g`** 取出来stash的东西（会删除stash）
 - 如果不希望删除可以按 **空格**，则可以取出stash而不删除
 - 可以直接 **`d`** 删除某个stash
 
-![](../images/ppl/VBc0EV.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/VBc0EV.png)
 
 ### 回滚代码
 通过commit面板找到需要回滚的部分，然后`d`回滚这次的修改
@@ -253,14 +253,14 @@ fixup和squash区别：fixup是合并相邻两次commit,squash一般是合并一
 
 在Commit面板选择文件后`ctrl+s`，会输出对这个文件所有修改的记录
 
-![](../images/ppl/PZh1r1.png)
-![](../images/ppl/P4bIc6.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/PZh1r1.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/P4bIc6.png)
 
 ### 查看两次commit的diff
 
 在commits面板，`W`显示diff选项，选择后commitId变为粉红色
 
-![](../images/ppl/LgtyD4.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/LgtyD4.png)
 
 ### 分支diff
 

@@ -2,7 +2,7 @@
 # 资源预加载preload和数据预取prefetch
 这不是新的概念，在2016年就有了，不过看现在行业内用到的并不多。工作两三年只有在优化的时候会去特意深入，平时可能大家都忽略了。特意整理下方便大家阅读
 
-![pre-* party](../images/html/kb3a1E.png)
+![pre-* party](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/kb3a1E.png)
 
 ## prefetch数据预取是什么？
 prefetch一般翻译为数据预取，数据预取是一种推断浏览器未来可能使用某些资源的方式，比如页面后面可能用到某些静态资源(css,图片,js文件等)，这些资源在当前页面提前下载，再跳转到其他页面的时候这部分资源不需要下载，页面可以直接使用。
@@ -117,7 +117,7 @@ preload 是告诉浏览器页面必定需要的资源，浏览器一定会加载
 所以建议：**对于当前页面很有必要的资源使用 preload，对于可能在将来的页面中使用的资源使用 prefetch**。
 
 ### 优先级区别
-![](../images/html/Ae7BME.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/Ae7BME.jpg)
 
 1. HTML(Main Resource)/CSS 资源/脚本，其优先级是最高的
   - 注意脚本这里比较特殊，如果脚本指定了preload则为High，异步/延迟/插入的脚本（无论在什么位置）网络优先级中是Low
@@ -130,7 +130,7 @@ preload 是告诉浏览器页面必定需要的资源，浏览器一定会加载
 6. prefetch的所有资源为lowest
 
 #### script的async和defer
-![](../images/html/Hw899z.jpg)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/Hw899z.jpg)
 使用 async/defer 属性在加载脚本的时候不阻塞 HTML 的解析，defer 加载脚本执行会在所有元素解析完成，DOMContentLoaded 事件触发之前完成执行。它的用途其实跟 preload 十分相似。你可以使用 defer 加载脚本在 head 末尾，这比将脚本放在 body 底部效果来的更好。
 
 1. 它相比于 preload 加载的优势在于浏览器兼容性好，从 caniuse 上看基本上所有浏览器都支持，

@@ -1,27 +1,27 @@
-# CSS杂技 
+# CSS杂技
 
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png)
+![https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png)
 
 ## 浏览器默认样式
+
 [浏览器默认样式](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/html/resources/html.css) Chromium源码的HTML默认样式，默认元素的`margin:8px`就是这里加上去的
 
 ## CSS的本质
+
 CSS在浏览器解析StyleSheet时会解析为每个DOM对应的**ComputedStyle**，这就是节点最终的样式，也可以通过JS的API`Window.getComputedStyle()`获取到节点的样式信息。隐藏的节点如`display:none`，不在`Layout Tree`里，所以也不需要对应的**ComputedStyle**。
 
 同理伪类伪元素如`p::before{content:"Hi!"}`也不在DOM里而是在`Layout Tree`里
 
-可以参考 [渲染流水线流程](https://developers.google.com/web/updates/2018/09/inside-browser-part3#style_calculation)
-## 清除浮动
+可以参考 [渲染流水线流程](https://developers.google.com/web/updates/2018/09/inside-browser-part3#style_calculation) ## 清除浮动
 
-老生常谈的话题，面试经常问的问题
-解决方法有很多种，这里讲几种
+老生常谈的话题，面试经常问的问题 解决方法有很多种，这里讲几种
 
 ### 子元素加 clear
 
 ```html
 <div class="news">
-  <p>Some Text</p>
-  <br class="clear" />
+	<p>Some Text</p>
+	<br class="clear" />
 </div>
 ```
 
@@ -30,9 +30,11 @@ CSS在浏览器解析StyleSheet时会解析为每个DOM对应的**ComputedStyle*
   background: gray;
   border: solid 1px black;
 }
+
 .news p {
   float: right;
 }
+
 .clear {
   clear: both;
 }
@@ -42,8 +44,7 @@ CSS在浏览器解析StyleSheet时会解析为每个DOM对应的**ComputedStyle*
 
 ### 父元素 BFC 化
 
-HTML 文档流是盒子模型的，BFC 就是组织盒子模型的形式，当元素的类型如标签(p 和 span)不一样的时候，其表现出来的样子是不一样的。
-所以 BFC 就是让这个元素看起来像盒子的一种代称，BFC 全称 _Box Formatting Context_。CSS2.1 还有 IFC,即*Inline Formatting Context*。
+HTML 文档流是盒子模型的，BFC 就是组织盒子模型的形式，当元素的类型如标签(p 和 span)不一样的时候，其表现出来的样子是不一样的。 所以 BFC 就是让这个元素看起来像盒子的一种代称，BFC 全称 *Box Formatting Context*。CSS2.1 还有 IFC,即*Inline Formatting Context*。
 
 **BFC 布局规则：**
 
@@ -65,10 +66,7 @@ HTML 文档流是盒子模型的，BFC 就是组织盒子模型的形式，当�
 如下面的为在父元素加`float`属性使其 BFC 化
 
 ```html
-<div class="news">
-  <p>Some Text</p>
-  <br class="clear" />
-</div>
+<div class="news">  <p>Some Text</p>  <br class="clear" /></div>
 ```
 
 ```css
@@ -76,9 +74,11 @@ HTML 文档流是盒子模型的，BFC 就是组织盒子模型的形式，当�
   background: gray;
   border: solid 1px black;
 }
+
 .news p {
   float: right;
 }
+
 .clear {
   clear: both;
 }
@@ -88,11 +88,12 @@ HTML 文档流是盒子模型的，BFC 就是组织盒子模型的形式，当�
 
 ### opacity
 
-> `opacity`属性是 CSS3 新增的属性，取值为 0.0(完全透明)到 1.0(完全不透明)，后代元素也会一起被影响
+> opacity属性是 CSS3 新增的属性，取值为 0.0(完全透明)到 1.0(完全不透明)，后代元素也会一起被影响
+> 
 
 ```css
 p {
-  filter: alpha(opacity=80); /*IE5-7，注意这里取值80*/
+  filter: alpha(opacity = 80); /*IE5-7，注意这里取值80*/
   opacity: 0.8; /*IE8+*/
   color: #000;
 }
@@ -104,7 +105,7 @@ RGBA 是扩展透明度的一种格式，a 代表 alpha 透明度。IE9+支持 R
 
 ```css
 p {
-  background-color: rgba(0, 0, 0, 0.8); /*取值0-1*/
+  background-color: rgba(0, 0, 0, 0.8); /* 取值0-1 */
   color: #fff;
 }
 ```
@@ -113,8 +114,7 @@ p {
 
 ### PNG 图片的问题
 
-png 图片的最大优势是支持 alpha 透明度，但是 IE6 不直接支持 PNG 透明度，PNG 透明度自 IE7 才支持。
-好的是现在已经逐渐淘汰了 IE6，
+png 图片的最大优势是支持 alpha 透明度，但是 IE6 不直接支持 PNG 透明度，PNG 透明度自 IE7 才支持。 好的是现在已经逐渐淘汰了 IE6，
 
 ## 拥有布局的问题
 
@@ -153,22 +153,21 @@ IE7 中以下属性也触发布局(下面三个属性只有 IE7+才支持)
 
 ```html
 <!-- [if IE 6]>
-    <link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+<link rel="stylesheet" type="text/css" href="/css/ie6.css" />
 <![endif]-->
-
 <!-- [if !IE 6]>
-    <link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+<link rel="stylesheet" type="text/css" href="/css/ie6.css" />
 <![endif]-->
-
 <!-- [if gte IE 6]>
-    <link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+<link rel="stylesheet" type="text/css" href="/css/ie6.css" />
 <![endif]-->
 ```
 
 ## IE 常见的 BUG 及其解决方法
 
-下面这些 BUG 都是很有代表性的，在我做的项目中下面的 bug 基本都遇到了。-\_-!!这运气真不是一般好。
-当然现在说起 IE6 兼容很多人可能会嗤之以鼻，但是我觉得在天朝大国这个连学校都在用着 XP 的地方，身为一名合格的前端，IE6 兼容必须要过关。
+下面这些 BUG 都是很有代表性的，在我做的项目中下面的 bug 基本都遇到了。-_-!!
+
+这运气真不是一般好。 当然现在说起 IE6 兼容很多人可能会嗤之以鼻，但是我觉得在天朝大国这个连学校都在用着 XP 的地方，身为一名合格的前端，IE6 兼容必须要过关。
 
 ### 双外边距浮动 BUG
 
@@ -181,14 +180,13 @@ div.someone {
 }
 ```
 
-**解决方法**
-对`float`的元素设置`display:inline`
+**解决方法** 对`float`的元素设置`display:inline`
 
 ```css
 div.someone {
-  float: left;
-  margin-left: 20px;
-  display: inline;
+	float: left;
+	margin-left: 20px;
+	display: inline;
 }
 ```
 
@@ -198,11 +196,11 @@ div.someone {
 
 ```css
 div.myFloat {
-  float: left;
-  width: 200px;
+	float: left;
+	width: 200px;
 }
 p {
-  margin-left: 200px;
+	margin-left: 200px;
 }
 ```
 
@@ -210,18 +208,17 @@ p {
 
 ```css
 p {
-  height: 1%; /*拥有布局*/
-  margin-left: 0;
+	height: 1%; /*拥有布局*/
+	margin-left: 0;
 }
 .myFloat {
-  margin-left: -3px; /*重要的一句，等于左边的浮动元素的宽度缩小了3px*/
+	margin-left: -3px; /*重要的一句，等于左边的浮动元素的宽度缩小了3px*/
 }
 ```
 
 ### IE6 的重复字符 bug
 
-当一系列浮动元素排列在一排，如果最后的元素重复出现则是这个 bug。
-ps：通常是代码有添加注释的情况
+当一系列浮动元素排列在一排，如果最后的元素重复出现则是这个 bug。 ps：通常是代码有添加注释的情况
 
 **解决方法**
 

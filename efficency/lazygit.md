@@ -53,16 +53,16 @@ alias lg="lazygit"
 
 ### 新建和切换分支/分支同步远端
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/LkMaen.png)
-branch区块，**`n`**就可以创建新的分支，输入分支名就好了
+branch区块，`n`就可以创建新的分支，输入分支名就好了
 
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/jVgIyf.png)
 
-- **`P`**可以推送分支,`git push`
-- **`p`**可以拉取分支,`git pull`
-- 选择分支后 **`f`** 可以同步远端修改,`git fetch`
+- `P`可以推送分支,`git push`
+- `p`可以拉取分支,`git pull`
+- 选择分支后 `f` 可以同步远端修改,`git fetch`
 
-比如我们经常需要rebase主分支（假设是master，那么可以很快操作），选择master后按**`f`**即可完成拉取。再按**`r`**即可进行rebase
+比如我们经常需要rebase主分支（假设是master，那么可以很快操作），选择master后按`f`即可完成拉取。再按`r`即可进行rebase
 
 ### git add
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/131FOv.png)

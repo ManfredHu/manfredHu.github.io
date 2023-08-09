@@ -3,10 +3,8 @@
 与以前的table布局类似，grid更像是flex+table的方式
 
 ## display: inline-grid vs display: grid
-跟块级元素和内联元素类似
-
+跟块级元素和内联元素类似, `display: grid`对应下图1, `display: inline-grid` 对应下图2
 ![](https://www.wangbase.com/blogimg/asset/201903/bg2019032504.png)
-
 ![](https://www.wangbase.com/blogimg/asset/201903/bg2019032505.png)
 
 ## grid-template-columns 和 grid-template-rows
@@ -19,18 +17,21 @@
 - `grid-template-columns: 1fr 1fr;`
 - `grid-template-columns: 1fr 1fr minmax(100px, 1fr);`
 - `grid-template-columns: 100px auto 100px;`
+- …
 
-其中既有固定宽度的、也有百分比、等比分配fr，自动计算等等。可谓是非常灵活多变，常见的三列等分，可以用下面的布局方式，其中column-gap还可以支持按照间距分配。
+其中既有固定宽度的、也有百分比、等比分配fr，自动计算等等, 非常灵活多变. 常见的三列等分，可以用下面的布局方式，其中column-gap还可以支持按照间距分配。
 
 ### 多等分布局
 ```css
-/* 三等分,且间距为20px */
-.box{
+/* box空间三等分,列间距为20px */
+.boxs {
+  width: 100%;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
 }
 ```
-其中repeat的3可以换成n，就是多等分布局了
+其中repeat的3可以换成n(n>0)，就是多等分布局了. 你可以点击 [multi-col](https://codesandbox.io/s/multi-col-lkdtx5) 体验
 
 ### 圣杯布局
 类似左右边栏为200px,中间部分满屏，间距为10px，代码如下
@@ -42,39 +43,50 @@
 }
 ```
 
+```BASH
+---------------------------------------------------
+|                 |               |               |
+|   Left Sidebar  |   Main Content|  Right Sidebar|
+|                 |               |               |
+|                 |               |               |
+|                 |               |               |
+---------------------------------------------------
+```
+
+
 ### 实战
 一个表格的例子，这里需求是三分表格，之后最后一列文字右对齐。还有row对应的`border-bottom`。本来想用flex或者是table，转念一想还是上`grid`,毕竟多用才能熟，遇到了不少问题。
 
+你可以[戳这里](https://codesandbox.io/s/grid-table-k27dcd?file=/index.css)
 ```html
-<template>
-  <div class="score-detail">
-    <div class="score-detail__title">
-      当前周期数据
-    </div>
-    <div class="score-detail__main">
-      <div class="bold">
-        指标名称
-      </div>
-      <div class="bold">
-        得分
-      </div>
-      <div class="bold">
-        较上一周期
-      </div>
-      <div>1</div>
-      <div>3</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-    </div>
+<div class="score-detail">
+  <div class="score-detail__title">
+    当前周期数据
   </div>
-</template>
+  <div class="score-detail__main">
+    <div class="bold">
+      指标名称
+    </div>
+    <div class="bold">
+      得分
+    </div>
+    <div class="bold">
+      较上一周期
+    </div>
+    <div>1</div>
+    <div>3</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+</div>
+```
 
-<style lang="less" scoped>
+```css
 .score-detail{
   padding: 32px 48px;
   border-radius: 8px;
@@ -102,11 +114,7 @@
     }
   }
 }
-</style>
 ```
-
-运行结果如下
-<!-- <Grid></Grid> -->
 
 ### 三等分并不能完全满足我的需求
 
@@ -133,7 +141,7 @@ grid-template-columns: 50% 1fr 1fr;
 
 这里右对齐的效果会打断
 
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/X5MvrW.png)
+![](https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/X5MvrW.png)
 
 所以修改了属性
 
@@ -149,6 +157,41 @@ grid-template-columns: 50% 1fr 1fr;
 grid-template-rows: 52px;
 ```
 只会对第一个元素生效，所以这里对子元素设置`height`+`line-height`实现文字垂直居中对齐和撑大容器高度使其满足间距
+
+## `auto-fill` vs `auto-fit`
+考虑如下的case
+```css
+.grid {
+   display: grid;
+
+  /* define the number of grid columns */
+  grid-template-columns: repeat(12, 1fr);
+}
+```
+
+这种方式的写法不管元素大小, 总会均分为12份. 在小屏幕手机上宽度会被压缩到很小, 不适合实际场景. 为了解决最小宽度问题会改用`minmax`
+
+```css
+grid-template-columns: repeat( 12, minmax(250px, 1fr) );
+```
+
+这又会导致超出的问题, 如果屏幕宽度小于12*250px, 则水平方向行内将溢出.
+
+为了让其换行, 我们会添加`auto-fill` 或者`auto-fit`属性, 但是你知道两个属性对最后布局有什么影响吗? 
+```css
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+```
+
+**结论: **
+在小屏幕上面两者表现一致, 但是如果容器超出限定的范围了. 两者对余量空间处理不一致
+![](../images/grid/normal.png)
+
+1. `auto-fill`倾向于补充更多的列数量, 而原列宽度保持不变
+2. `auto-fit`倾向于扩展原列宽度适应余量空间
+
+![](../images/grid/overflow.png)
+你可以[点击查看这个例子](https://codepen.io/SaraSoueidan/pen/JrLdBQ)
 
 ## 兼容性
 - IE10+基本PC主流浏览器都支持

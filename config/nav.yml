@@ -160,6 +160,8 @@
       link: /efficency/wet-shaving
 - text: 其他
   children: 
+    - text: 时间管理-作为负责人需要控制打断频率
+      link: /others/control-interrupt
     - text: VSCode在不同设备同步配置
       link: /others/github-gist
     - text: 关于实习的一些看法

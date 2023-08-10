@@ -186,12 +186,12 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 **结论: **
 在小屏幕上面两者表现一致, 但是如果容器超出限定的范围了. 两者对余量空间处理不一致
 
-![](../images/grid/normal.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/grid/normal.png)
 
 1. `auto-fill`倾向于补充更多的列数量, 而原列宽度保持不变
 2. `auto-fit`倾向于扩展原列宽度适应余量空间
 
-![](../images/grid/overflow.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/grid/overflow.png)
 
 你可以[点击查看这个例子](https://codepen.io/SaraSoueidan/pen/JrLdBQ)
 

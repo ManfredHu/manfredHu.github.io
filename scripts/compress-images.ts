@@ -47,5 +47,6 @@ const handleFileExtArr = [
     await execSync(`ffmpeg -i ${fromPath} -q ${compressLevel} ${toPath} -y`)
     _debug('compress image finished', fromPath, toPath)
   }
-  await execSync(`git commit -am ${fileList.join(' ')} –no-edit`)
+  await execSync(`git add ${fileList.join(' ')}`)
+  await execSync(`git commit --amend -–no-edit`)
 })()

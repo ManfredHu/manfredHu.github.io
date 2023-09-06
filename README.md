@@ -92,3 +92,10 @@
   - [2015年阿里巴巴校招题目](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/10-AlibabaExamination.md) ⌚️updated a month ago
 
 <!-- Here with topic and answer list end -->
+
+## feature
+- [x] replace local path image to github online image path when commit
+- [ ] optimize picture when commit picture and markdown
+    - [ ] auto replace markdown and picture when has HEIC picture
+- [ ] auto deployment with Serverless
+- [ ] count vv when user visit

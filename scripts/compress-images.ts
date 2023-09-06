@@ -36,6 +36,7 @@ const handleFileExtArr = [
     const ext = path.extname(j).toLowerCase()
     return handleFileExtArr.includes(ext)
   })
+  if (fileList.length <= 0) return
   _debug("fileList", fileList)
   for (const file of fileList) {
     const fromPath = path.resolve(basePath, file)

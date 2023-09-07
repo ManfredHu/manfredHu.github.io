@@ -1,6 +1,6 @@
 # 浪潮之巅个人感想
 
-![浪潮](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave_new.png)
+![浪潮](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave.png)
 
 > 作者：ManfredHu
 > 链接：http://www.manfredhu.com/2016/04/20/book-topOfWave/

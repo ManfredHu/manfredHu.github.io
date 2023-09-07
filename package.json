@@ -16,7 +16,8 @@
   "devDependencies": {
     "@types/node": "^18.15.13",
     "esno": "^0.16.3",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "image-size": "^1.0.2"
   },
   "dependencies": {
     "dayjs": "^1.11.7",

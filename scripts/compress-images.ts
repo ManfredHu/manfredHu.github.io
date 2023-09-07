@@ -64,8 +64,8 @@ async function filterImg(filePaths: string[]) {
 }
 
 ;(async () => {
-  // get files that will commit
-  const res = await execSync(`git status --short | awk '$1 != "D" {print $2}'`)
+  // get new files that will commit, ignore D(delete) R(redirect) files
+  const res = await execSync(`git status --short | awk '$1 == "A" || $1 == "M" {print $2}'`)
   const fileList = await filterImg(res.stdout.split('\n'))
   if (fileList.length <= 0) return
   _debug('need compress image fileList:', fileList)

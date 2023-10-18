@@ -3,7 +3,7 @@
 
 比如常见的1080, 2k, 4k分辨率的显示器
 
-![](../images/check-4k/video-resolution-measurements-pixels.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/check-4k/video-resolution-measurements-pixels.png)
 
 480p即标清SD, 720p即高清HD. 4k以上就是超清了
 
@@ -11,13 +11,13 @@
 
 1080测试: 如果以下图片可以看到红黄蓝三种颜色则显示器为1080以上, 如果看到是混在一条线上则不支持
 
-![](../images/check-4k/1920X1080-check.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/check-4k/1920X1080-check.png)
 
 ## 如何测试显示器是否是4K分辨率
 
 4k测试: 如果以下图片可以看到红黄蓝三种颜色则显示器为4k以上, 如果看到是混在一条线上则不支持
 
-![](../images/check-4k/3840X2160-check.png)
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/check-4k/3840X2160-check.png)
 
 
 

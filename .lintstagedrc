@@ -1,0 +1,5 @@
+{
+  "lint-staged": {
+    "*.heic": "npm run heic-transfrom"
+  }
+}

@@ -99,3 +99,4 @@
     - [ ] auto replace markdown and picture when has HEIC picture
 - [ ] auto deployment with Serverless
 - [ ] count vv when user visit
+- [ ] upload article to github gist

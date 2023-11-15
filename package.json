@@ -8,7 +8,8 @@
     "readme": "esno ./scripts/build-readme.ts",
     "replace-img": "esno ./scripts/replace-relative-img-path.ts",
     "prepare": "husky install",
-    "compress-images": "esno ./scripts/compress-images.ts"
+    "compress-images": "esno ./scripts/compress-images.ts",
+    "heic-transform": "esno ./scripts/heic-transform.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,8 @@
     "@types/node": "^18.15.13",
     "esno": "^0.16.3",
     "husky": "^8.0.0",
-    "image-size": "^1.0.2"
+    "image-size": "^1.0.2",
+    "lint-staged": "^14.0.1"
   },
   "dependencies": {
     "dayjs": "^1.11.7",

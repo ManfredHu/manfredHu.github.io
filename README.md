@@ -96,7 +96,7 @@
 ## feature
 - [x] replace local path image to github online image path when commit
 - [x] optimize picture when commit picture and markdown
-    - [ ] auto replace markdown and picture when has HEIC picture
+    - [x] auto replace markdown and picture when has HEIC picture, at 2023.11.15
 - [ ] auto deployment with Serverless
 - [ ] count vv when user visit
 - [ ] upload article to github gist

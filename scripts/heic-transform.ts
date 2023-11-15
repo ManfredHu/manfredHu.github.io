@@ -1,12 +1,12 @@
 import { exec } from 'child_process'
-import debug from 'debug'
+// import debug from 'debug'
 import fs from 'fs'
 import convert from 'heic-convert'
 import path from 'path'
 import { promisify } from 'util'
 
 const execSync = promisify(exec)
-const _debug = debug(`log:${path.basename(__filename)}`)
+// const _debug = debug(`log:${path.basename(__filename)}`)
 
 // const getStagedFiles = async () => {
 //   const { stdout } = await execSync(
@@ -31,7 +31,7 @@ const replaceImgFile = async (filePath: string) => {
     const fileName = path.basename(filePath, path.extname(filePath));
     const basePath = path.resolve(path.dirname(filePath), fileName + '.jpg')
     await promisify(fs.writeFile)(basePath, outputBuffer)
-    // execSync(`rm -f ${filePath}`)
+    execSync(`rm -f ${filePath}`)
   } catch(err) {
     throw new Error(err)
   }

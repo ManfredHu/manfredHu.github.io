@@ -1,9 +1,9 @@
 import { exec } from 'child_process'
 import debug from 'debug'
+import fs from 'fs'
 import _sizeOf from 'image-size'
 import path from 'path'
 import { promisify } from 'util'
-import fs from 'fs'
 
 const execSync = promisify(exec)
 const sizeOf = promisify(_sizeOf)

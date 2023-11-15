@@ -6,8 +6,8 @@
   "scripts": {
     "init": "pnpm i",
     "readme": "esno ./scripts/build-readme.ts",
-    "replace-img": "esno ./scripts/replace-relative-img-path.ts",
     "prepare": "husky install",
+    "replace-img": "esno ./scripts/replace-relative-img-path.ts",
     "compress-images": "esno ./scripts/compress-images.ts",
     "heic-transform": "esno ./scripts/heic-transform.ts"
   },
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^18.15.13",
     "esno": "^0.16.3",
+    "heic-convert": "^2.0.0",
     "husky": "^8.0.0",
     "image-size": "^1.0.2",
     "lint-staged": "^14.0.1"

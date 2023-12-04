@@ -715,6 +715,7 @@ VsCode的替换很高级的，比如下面这样的数据要去除下划线，�
   + [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) 图片预览
   + [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
     - ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/vscode-plugins/better-comments.png)
+  + [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex) 正则测试
 * 智能补全
   + ~~[tabnine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode) AI提示插件，比微软的Visual Studio IntelliCode好用~~
   + ~~[Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)~~

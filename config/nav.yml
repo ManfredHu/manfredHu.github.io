@@ -74,6 +74,8 @@
           link: /js/2021-8-30.eventLoop
         - text: LRU
           link: /js/2021-10-26.lru
+        - text: 前端全球化处理指北
+          link: /js/2024-1-9.intl.md
     - text: 框架
       children:
         - text: AngularJS笔记

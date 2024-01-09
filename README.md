@@ -3,93 +3,97 @@
 <!-- Here with topic and answer list start -->
 - 前端基础
   - 浏览器
-    - [浏览器渲染流水线原理简述](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2021-12-31.broswer-render.md) ⌚️updated a month ago
-    - [V8中脚本的一生](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2022-1-26.script-in-v8.md) ⌚️updated a month ago
-    - [浏览器现状](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2022-5-5.broswer-present-situation.md) ⌚️updated a month ago
+    - [浏览器渲染流水线原理简述](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2021-12-31.broswer-render.md) ⌚️updated 7 months ago
+    - [V8中脚本的一生](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2022-1-26.script-in-v8.md) ⌚️updated 7 months ago
+    - [浏览器现状](https://github.com/ManfredHu/manfredHu.github.io/blob/master/broswer/2022-5-5.broswer-present-situation.md) ⌚️updated 7 months ago
   - HTML
-    - [写HTML5代码要注意的东西](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2-someAboutHTML5.md) ⌚️updated a month ago
-    - [资源预加载preload和数据预取prefetch](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2021-01-17-preload-prefetch.md) ⌚️updated a month ago
-    - [SVG](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2022-08-03.svg.md) ⌚️updated a month ago
+    - [写HTML5代码要注意的东西](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2-someAboutHTML5.md) ⌚️updated 8 months ago
+    - [资源预加载preload和数据预取prefetch](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2021-01-17-preload-prefetch.md) ⌚️updated 8 months ago
+    - [SVG](https://github.com/ManfredHu/manfredHu.github.io/blob/master/html/2022-08-03.svg.md) ⌚️updated 9 months ago
   - CSS
-    - [CSS杂技](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/3-CSS-note.md) ⌚️updated a month ago
-    - [CSS 的 rem 单位](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/26-rem.md) ⌚️updated a month ago
-    - [CSS 中的居中思路](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/50-centeringInCss.md) ⌚️updated a month ago
-    - [简析grid布局](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/55-grid.md) ⌚️updated a month ago
-    - [纯CSS画一个树状图](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/61-tree-chart.md) ⌚️updated a month ago
+    - [CSS杂技](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/3-CSS-note.md) ⌚️updated 6 months ago
+    - [CSS 的 rem 单位](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/26-rem.md) ⌚️updated 8 months ago
+    - [CSS 中的居中思路](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/50-centeringInCss.md) ⌚️updated 9 months ago
+    - [简析grid布局](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/55-grid.md) ⌚️updated 5 months ago
+    - [纯CSS画一个树状图](https://github.com/ManfredHu/manfredHu.github.io/blob/master/css/61-tree-chart.md) ⌚️updated 8 months ago
   - JavaScript
-    - [js奇淫技巧](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-10-8.skillful-skill.md) ⌚️updated 2 days ago
-    - [js闭包](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/6-javascript-closure.md) ⌚️updated a month ago
-    - [Object.defineProperties的实际作用](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/5-MEANdevelop-ModelProblem.md) ⌚️updated a month ago
-    - [string.Replace用法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/8-stringReplace.md) ⌚️updated a month ago
-    - [call,apply,bind](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/12-EvalCallApplyBind.md) ⌚️updated a month ago
-    - [15条规则解析JS对象布局（**proto**、prototype、constructor）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/13-proto-prototype-constructor.md) ⌚️updated a month ago
-    - [JS中this关键字的使用比较](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/14-thisKeyWords.md) ⌚️updated a month ago
-    - [JS编程题](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/15-veryGoodForUsing.md) ⌚️updated a month ago
-    - [ES6快速学习](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/16-learn-ES6.md) ⌚️updated a month ago
-    - [event.target的亲兄弟event.currentTarget](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/17-eventCurrentTarget.md) ⌚️updated a month ago
-    - [对象深复制](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/19-extendMethod.md) ⌚️updated a month ago
-    - [React classNames模块](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/21-classNames.md) ⌚️updated a month ago
-    - [谈谈 url 这东西](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/22-url.md) ⌚️updated a month ago
-    - [JS 正则终极篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/25-js-regexp.md) ⌚️updated a month ago
-    - [Interesting JavaScript](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/20-interestingJavascript.md) ⌚️updated a month ago
-    - [几种常见的ES6改进写法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/30-es6-normal-error.md) ⌚️updated a month ago
-    - [promise 的错误处理](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/52-promise-errorHandle.md) ⌚️updated a month ago
-    - [iOS 下时间初始化错误](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/53-ios-newDateBug.md) ⌚️updated a month ago
-    - [ES2020 Promise](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/56-es2020-promise.md) ⌚️updated a month ago
-    - [ArrayBuffer&TypedArray&Buffer](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/57-js-buffer.md) ⌚️updated a month ago
-    - [事件循环](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-8-30.eventLoop.md) ⌚️updated a month ago
-    - [LRU](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-10-26.lru.md) ⌚️updated a month ago
+    - [js奇淫技巧](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-10-8.skillful-skill.md) ⌚️updated 2 months ago
+    - [js闭包](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/6-javascript-closure.md) ⌚️updated 8 months ago
+    - [Object.defineProperties的实际作用](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/5-MEANdevelop-ModelProblem.md) ⌚️updated 8 months ago
+    - [string.Replace用法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/8-stringReplace.md) ⌚️updated 8 months ago
+    - [call,apply,bind](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/12-EvalCallApplyBind.md) ⌚️updated 8 months ago
+    - [15条规则解析JS对象布局（**proto**、prototype、constructor）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/13-proto-prototype-constructor.md) ⌚️updated 8 months ago
+    - [JS中this关键字的使用比较](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/14-thisKeyWords.md) ⌚️updated 8 months ago
+    - [JS编程题](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/15-veryGoodForUsing.md) ⌚️updated 8 months ago
+    - [ES6快速学习](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/16-learn-ES6.md) ⌚️updated 8 months ago
+    - [event.target的亲兄弟event.currentTarget](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/17-eventCurrentTarget.md) ⌚️updated 8 months ago
+    - [对象深复制](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/19-extendMethod.md) ⌚️updated 8 months ago
+    - [React classNames模块](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/21-classNames.md) ⌚️updated 8 months ago
+    - [谈谈 url 这东西](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/22-url.md) ⌚️updated 8 months ago
+    - [JS 正则终极篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/25-js-regexp.md) ⌚️updated 2 months ago
+    - [Interesting JavaScript](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/20-interestingJavascript.md) ⌚️updated 8 months ago
+    - [几种常见的ES6改进写法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/30-es6-normal-error.md) ⌚️updated 8 months ago
+    - [promise 的错误处理](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/52-promise-errorHandle.md) ⌚️updated 9 months ago
+    - [iOS 下时间初始化错误](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/53-ios-newDateBug.md) ⌚️updated 9 months ago
+    - [ES2020 Promise](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/56-es2020-promise.md) ⌚️updated 9 months ago
+    - [ArrayBuffer&TypedArray&Buffer](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/57-js-buffer.md) ⌚️updated 8 months ago
+    - [事件循环](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-8-30.eventLoop.md) ⌚️updated 9 months ago
+    - [LRU](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2021-10-26.lru.md) ⌚️updated 9 months ago
+    - [前端全球化处理指北](https://github.com/ManfredHu/manfredHu.github.io/blob/master/js/2024-1-9.intl.md) ⌚️updated 3 hours ago
   - 框架
-    - [AngularJS笔记](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/4-angular-note.md) ⌚️updated a month ago
-    - [React+Reflux渲染性能优化原理](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/23-reactRenderingPrinciple.md) ⌚️updated a month ago
-    - [对Vue的理解](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/32-vue-notes.md) ⌚️updated a month ago
-    - [Chrome76+ vue-cli 执行 nightwatch e2e 测试错误](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/52-vue-cli-e2e-error.md) ⌚️updated a month ago
-    - [Vue中的watch](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/2021-01-22.vue-watch.md) ⌚️updated a month ago
-    - [echart](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/2021-09-03.echart.md) ⌚️updated a month ago
+    - [AngularJS笔记](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/4-angular-note.md) ⌚️updated 8 months ago
+    - [React+Reflux渲染性能优化原理](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/23-reactRenderingPrinciple.md) ⌚️updated 8 months ago
+    - [对Vue的理解](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/32-vue-notes.md) ⌚️updated 8 months ago
+    - [Chrome76+ vue-cli 执行 nightwatch e2e 测试错误](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/52-vue-cli-e2e-error.md) ⌚️updated 9 months ago
+    - [Vue中的watch](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/2021-01-22.vue-watch.md) ⌚️updated 9 months ago
+    - [echart](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/2021-09-03.echart.md) ⌚️updated 5 months ago
 - 计算机科学基础
-  - [微信开发工具使用 vue-devtools](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/48-vuedevtools-wechatDev.md) ⌚️updated a month ago
-  - [MySQL使用及在Mac上的区别](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/31-git-flow.md) ⌚️updated a month ago
-  - [1分钟让你拥有规范的gitlog](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/40-git-commitizen.md) ⌚️updated a month ago
-  - [Git 合并与撤销合并](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/49-git-revert.md) ⌚️updated a month ago
-  - [如何获取请求方的 ip](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/45-x-forwarded-for.md) ⌚️updated a month ago
-  - [DNS 解析和配置](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/35-dns-parse.md) ⌚️updated a month ago
-  - [跨域终结篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/42-cross-origin.md) ⌚️updated a month ago
-  - [websocket 原理和实践](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/43-websocket.md) ⌚️updated a month ago
-  - [前端集成测试快速入门](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/36-jest-travis-codecov.md) ⌚️updated a month ago
-  - [使用github actions完成CI/CD自动化部署](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/58-github-ci.md) ⌚️updated a month ago
-  - [图片自适应大小、压缩 demo](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/34-picture-fileUpload.md) ⌚️updated a month ago
+  - [微信开发工具使用 vue-devtools](https://github.com/ManfredHu/manfredHu.github.io/blob/master/framework/48-vuedevtools-wechatDev.md) ⌚️updated 9 months ago
+  - [MySQL使用及在Mac上的区别](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/31-git-flow.md) ⌚️updated 8 months ago
+  - [1分钟让你拥有规范的gitlog](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/40-git-commitizen.md) ⌚️updated 8 months ago
+  - [Git 合并与撤销合并](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/49-git-revert.md) ⌚️updated 9 months ago
+  - [如何获取请求方的 ip](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/45-x-forwarded-for.md) ⌚️updated 8 months ago
+  - [DNS解析和配置(dig nslookup)](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/35-dns-parse.md) ⌚️updated 7 months ago
+  - [跨域终结篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/42-cross-origin.md) ⌚️updated 8 months ago
+  - [websocket 原理和实践](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/43-websocket.md) ⌚️updated 8 months ago
+  - [前端集成测试快速入门](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/36-jest-travis-codecov.md) ⌚️updated 8 months ago
+  - [使用github actions完成CI/CD自动化部署](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/58-github-ci.md) ⌚️updated 8 months ago
+  - [图片自适应大小、压缩 demo](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/34-picture-fileUpload.md) ⌚️updated 8 months ago
   - 安全
-    - [utf7 XSS攻击](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/41-utf7-xss.md) ⌚️updated a month ago
+    - [utf7 XSS攻击](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/41-utf7-xss.md) ⌚️updated 8 months ago
   - npm
-    - [npm version 升级版本号](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/46-npm-version.md) ⌚️updated a month ago
-    - [npm 的 dependencies（http,git,ssh）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/47-npm-dependencies.md) ⌚️updated a month ago
+    - [npm version 升级版本号](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/46-npm-version.md) ⌚️updated 8 months ago
+    - [npm 的 dependencies（http,git,ssh）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/cs/47-npm-dependencies.md) ⌚️updated 8 months ago
 - 小程序
-  - [小程序的“微前端”方案](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2002-08-06.merge-mp-cli.md) ⌚️updated a month ago
-  - [小程序如何使用全局组件](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2020-10-21.mp-global-components.md) ⌚️updated a month ago
-  - [小程序生命周期](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2021-01-13.weapp-component-lifetimes.md) ⌚️updated a month ago
-  - [小程序原理简述](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2021-01-04.miniprogram.md) ⌚️updated a month ago
-  - [小程序性能优化 - 独立分包的应用](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/54-miniprogram-optimization.md) ⌚️updated a month ago
-  - [微信小游戏之单机游戏的安全](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/38-miniGame-security.md) ⌚️updated a month ago
+  - [小程序的“微前端”方案](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2002-08-06.merge-mp-cli.md) ⌚️updated 8 months ago
+  - [小程序如何使用全局组件](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2020-10-21.mp-global-components.md) ⌚️updated 8 months ago
+  - [小程序生命周期](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2021-01-13.weapp-component-lifetimes.md) ⌚️updated 8 months ago
+  - [小程序原理简述](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/2021-01-04.miniprogram.md) ⌚️updated 8 months ago
+  - [小程序性能优化 - 独立分包的应用](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/54-miniprogram-optimization.md) ⌚️updated 8 months ago
+  - [微信小游戏之单机游戏的安全](https://github.com/ManfredHu/manfredHu.github.io/blob/master/miniprogram/38-miniGame-security.md) ⌚️updated 8 months ago
 - 效率工具
-  - [最好用的shell-ohmyzsh](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/oh-my-zsh.md) ⌚️updated a month ago
-  - [zen·工作环境搭建](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/build-env.md) ⌚️updated 2 days ago
-  - [zen·工作环境搭建之调试篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/build-env-debug.md) ⌚️updated a month ago
-  - [zen·工作环境搭建之git篇之Lazygit](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/lazygit.md) ⌚️updated a month ago
-  - [zen·工作环境搭建之git篇之tig](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/tig.md) ⌚️updated a month ago
-  - [如何使用 Github Copilot](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/github-copilot.md) ⌚️updated a month ago
-  - [外设进化之路](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/keyboard.md) ⌚️updated a month ago
-  - [HHKB](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/hhkb.md) ⌚️updated a month ago
-  - [SublimeText3 常用快捷键和优秀插件（亲测）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/11-SublimeText3Plus.md) ⌚️updated a month ago
-  - [湿剃的艺术 - 回归传统的剃须体验](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/wet-shaving.md) ⌚️updated 5 days ago
+  - [最好用的shell-ohmyzsh](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/oh-my-zsh.md) ⌚️updated 9 months ago
+  - [zen·工作环境搭建](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/build-env.md) ⌚️updated a month ago
+  - [zen·工作环境搭建之调试篇](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/build-env-debug.md) ⌚️updated 8 months ago
+  - [zen·工作环境搭建之git篇之Lazygit](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/lazygit.md) ⌚️updated 6 months ago
+  - [zen·工作环境搭建之git篇之tig](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/tig.md) ⌚️updated 8 months ago
+  - [如何使用 Github Copilot](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/github-copilot.md) ⌚️updated 7 months ago
+  - [外设进化之路](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/keyboard.md) ⌚️updated 8 months ago
+  - [HHKB](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/hhkb.md) ⌚️updated 7 months ago
+  - [SublimeText3 常用快捷键和优秀插件（亲测）](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/11-SublimeText3Plus.md) ⌚️updated 8 months ago
+  - [湿剃的艺术 - 回归传统的剃须体验](https://github.com/ManfredHu/manfredHu.github.io/blob/master/efficency/wet-shaving.md) ⌚️updated 7 months ago
+  - [升级硬件](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/2023-9-6-upgrade-hardware.md) ⌚️updated 4 months ago
 - 其他
-  - [VSCode在不同设备同步配置](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/github-gist.md) ⌚️updated a month ago
-  - [关于实习的一些看法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/18-internship.md) ⌚️updated a month ago
-  - [前端疲劳](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/27-front-end-tried.md) ⌚️updated a month ago
-  - [前端行业发展现状分析](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/28-font-end-development.md) ⌚️updated a month ago
-  - [腾讯金融产品体验设计之道](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/book-design-fit.md) ⌚️updated a month ago
-  - [浪潮之巅个人感想](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/book-topOfWave.md) ⌚️updated a month ago
-  - [软实力与个人发展](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/soft-skills.md) ⌚️updated a month ago
-  - [2015年阿里巴巴校招题目](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/10-AlibabaExamination.md) ⌚️updated a month ago
+  - [时间管理-作为负责人需要控制打断频率](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/control-interrupt.md) ⌚️updated 5 months ago
+  - [VSCode在不同设备同步配置](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/github-gist.md) ⌚️updated 8 months ago
+  - [关于实习的一些看法](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/18-internship.md) ⌚️updated 8 months ago
+  - [前端疲劳](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/27-front-end-tried.md) ⌚️updated 8 months ago
+  - [前端行业发展现状分析](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/28-font-end-development.md) ⌚️updated 9 months ago
+  - [腾讯金融产品体验设计之道](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/book-design-fit.md) ⌚️updated 8 months ago
+  - [浪潮之巅个人感想](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/book-topOfWave.md) ⌚️updated 4 months ago
+  - [软实力与个人发展](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/soft-skills.md) ⌚️updated 9 months ago
+  - [2015年阿里巴巴校招题目](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/10-AlibabaExamination.md) ⌚️updated 8 months ago
+  - [如何测试显示器支持什么分辨率](https://github.com/ManfredHu/manfredHu.github.io/blob/master/others/check-4k.md) ⌚️updated 3 months ago
 
 <!-- Here with topic and answer list end -->
 

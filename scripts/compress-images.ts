@@ -4,6 +4,10 @@ import fs from 'fs'
 import _sizeOf from 'image-size'
 import path from 'path'
 import { promisify } from 'util'
+import os from 'os'
+
+// 获取系统临时文件夹的路径
+const tempDir = os.tmpdir();
 
 const execSync = promisify(exec)
 const sizeOf = promisify(_sizeOf)
@@ -73,14 +77,18 @@ async function filterImg(filePaths: string[]) {
     const file = item.path
     const fromPath = path.resolve(basePath, file)
     const toPath = fromPath
+    // 创建目标文件的路径
+    const targetPath = path.join(tempDir, path.basename(fromPath));
+    fs.copyFileSync(fromPath, targetPath);
     _debug('fromPath', fromPath)
     // -i input file path
     // -q quality of picture
     // -y override file without confirm
     // -vf use Video Filter to crop pictures
-    await execSync(`ffmpeg -i ${fromPath} -q ${compressLevel} -vf scale=${widthLimit}:-1 ${toPath} -y`)
+    await execSync(`ffmpeg -i ${targetPath} -q ${compressLevel} -vf scale=${widthLimit}:-1 ${toPath} -y`)
+    fs.unlinkSync(targetPath)
     _debug('compress image finished', fromPath, toPath)
   }
-  await execSync(`git add ${fileList.join(' ')}`)
+  await execSync(`git add ${fileList.map(j => j.path).join(' ')}`)
   await execSync(`git commit --amend -–no-edit`)
 })()

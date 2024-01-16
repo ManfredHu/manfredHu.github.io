@@ -132,3 +132,50 @@
 `&#10;` 也可以看 https://stackoverflow.com/questions/55707629/what-s-the-difference-between-10-and-newline
 
 同时`&#8288;`可以实现强制不换行的效果
+
+
+## 移动端Mobile
+
+### format-detection
+
+在HTML中，<meta> 标签的 format-detection 属性主要用于控制如何显示或处理在页面上遇到的格式化内容，例如电话号码、电子邮件地址或日期。这个属性通常在移动端网站开发中使用，以控制设备如何识别和处理这些信息。
+
+例如，在默认情况下，许多移动浏览器会自动检测页面上的电话号码，并将其转换成可以点击的链接，允许用户直接拨打电话。如果你不希望这种自动转换发生，可以使用 format-detection 属性来禁用这一功能。
+
+这里有一些常见的用法示例：
+
+1. **禁用电话号码自动检测和链接化：**
+
+```html
+<meta name="format-detection" content="telephone=no">
+```
+
+这会告诉浏览器不要自动将数字转换为电话链接。
+
+2. 开启或关闭其他自动检测功能：入地址, email等
+```html
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+```
+
+
+可以通过这些代码来测试
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>示例页面</title>
+  </head>
+  <body>
+    <h1>欢迎来到我的网页</h1>
+    <p>这是一个基本的HTML页面，展示了如何使用format-detection元标签。</p>
+    <p>下面的数字不会被自动转换为电话链接：</p>
+    <p>123-456-7890</p>
+  </body>
+</html>
+```
+
+结果展示如下, 数字部分会被检测为号码, 点击可以拉起手机的拨打电话. 通过format-detection可以阻止这种行为
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/format-detection.jpg)

@@ -163,6 +163,23 @@ console.log(patt1.test('The best things in life are free')) //false
 | \S     | 查找非空白字符。                 |
 | \b     | 匹配单词边界。                   |
 | \B     | 匹配非单词边界。                 |
+| \n     | 匹配换行键。                 |
+| \r     | 匹配回车键。 |
+| \t     | 匹配制表符 tab（U+0009）。 |
+| \v     | 匹配垂直制表符（U+000B）。 |
+| \f     | 匹配换页符（U+000C）。 |
+| \0     | 匹配null字符（U+0000）。 |
+| \xhh   | 匹配一个以两位十六进制数（\x00-\xFF）表示的字符。 |
+| \uhhhh | 匹配一个以四位十六进制数（\u0000-\uFFFF）表示的 Unicode 字符。 |
+| \需要转义的符号 | 正则表达式中，需要反斜杠转义的，一共有12个字符：^、.、[、$、(、)、|、*、+、?、{和\
+。需要特别注意的是，如果使用RegExp方法生成正则对象，转义需要使用两个斜杠，因为字符串内部会先转义一次。 |
+
+```js
+(new RegExp('1\+1')).test('1+1')
+// false
+(new RegExp('1\\+1')).test('1+1')
+// true
+```
 
 ## 量词
 
@@ -183,6 +200,7 @@ console.log(patt1.test('The best things in life are free')) //false
 | ?!n    | 匹配任何其后没有紧接指定字符串 n 的字符串。                                       |
 
 这里的量词还是比较重要的，最后两个估计有的同学没见过。
+
 ## 贪婪匹配与懒惰匹配
 贪婪匹配就是尽可能多的匹配，懒惰匹配就是尽可能少的匹配. 
 
@@ -398,6 +416,26 @@ var str = 'Visit Microsoft!'
 console.log(str.replace(/Microsoft/, 'W3School')) //Visit W3School!
 ```
 
+#### 特殊标识
+
+replace方法的第二个参数可以使用美元符号$，用来指代所替换的内容。
+
+- $&：匹配的子字符串
+- $`：匹配结果前面的文本
+- $'：匹配结果后面的文本
+- $n：匹配成功的第n组内容，n是从1开始的自然数
+- $$：指代美元符号$(转义)
+
+```js
+// $n：匹配成功的第n组内容，n是从1开始的自然数
+"Hello, World!".replace(/o/, "21($&)12") // 'Hell21(o)12, World!'
+"Hello, World!".replace(/o/, "21($`)12") // 'Hell21(Hell)12, World!'
+"Hello, World!".replace(/o/, "21($')12") // 'Hell21(, World!)12, World!'
+'hello world'.replace(/(\w+)\s(\w+)/, '$2 $1') // "world hello"
+"Hello, World!".replace(/o/, "$$") // 'Hell$, World!'
+"Hello, World!".replace(/o/, "$¥") // 'Hell$¥, World!'
+```
+
 ### 参数为正则表达式、函数
 
 ```js
@@ -540,3 +578,81 @@ console.log("bobcat".match(regex)); // null
 - `(?=.*[$@,_.])`, 包含特殊字符
 
 而 `[\da-zA-Z$@,_.]{6,12}` 是最后实际匹配的过程, 要求符合要求的字符里6到12位长
+
+# 新特性
+## [u修饰符 && RegExp.prototype.unicode 属性](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
+引入用来正确的处理大于\uFFFF的 Unicode 字符。也就是说，会正确处理四个字节的 UTF-16 编码。
+
+```js
+const r1 = /^\uD83D/u;
+const r2 = /^\uD83D/;
+
+r1.test('\uD83D\uDC2A') // false
+r2.test('\uD83D\uDC2A') // true
+
+r1.unicode // false
+r2.unicode // true
+```
+
+## [y修饰符 && RegExp.prototype.sticky 属性](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
+
+除了u修饰符，ES6 还为正则表达式添加了y修饰符，叫做“粘连”（sticky）修饰符
+y修饰符的作用与g修饰符类似，也是全局匹配，后一次匹配都从上一次匹配成功的下一个位置开始。不同之处在于，g修饰符只要剩余位置中存在匹配就可，而y修饰符确保匹配必须从剩余的第一个位置开始，这也就是“粘连”的涵义。
+
+```js
+var s = 'aaa_aa_a';
+var r1 = /a+/g;
+var r2 = /a+/y;
+
+r1.exec(s) // ["aaa"]
+r2.exec(s) // ["aaa"]
+
+r1.exec(s) // ["aa"]
+r2.exec(s) // null
+
+r2. sticky // true
+```
+
+## s 修饰符：dotAll 模式
+```js
+/foo.bar/.test('foo\nbar')
+// false
+```
+
+上面代码中，因为.不匹配\n，所以正则表达式返回false。
+但是，很多时候我们希望匹配的是任意单个字符，这时有一种变通的写法。[^] 是一个字符类，它匹配除了空字符串之外的任何单个字符。这是因为在字符类 [] 内，^ 的否定作用不生效，而是表示匹配字符类中的任何字符。
+
+```js
+/foo[^]bar/.test('foo\nbar')
+// true
+```
+
+这种解决方案毕竟不太符合直觉，ES2018 引入s修饰符，使得.可以匹配任意单个字符。
+```js
+/foo.bar/s.test('foo\nbar') // true
+```
+
+## 引用某个“具名组匹配”
+如果要在正则表达式内部引用某个“具名组匹配”，可以使用\k<组名>的写法。
+
+```js
+const reg = /^(?<word>[a-z]+)!\k<word>$/;
+reg.test('abc!abc') // true
+reg.test('abc!ab') // false
+```
+
+数字引用（\1）依然有效。
+
+```js
+const RE_TWICE = /^(?<word>[a-z]+)!\1$/;
+RE_TWICE.test('abc!abc') // true
+RE_TWICE.test('abc!ab') // false
+```
+
+这两种引用语法还可以同时使用。
+
+```js
+const RE_TWICE = /^(?<word>[a-z]+)!\k<word>!\1$/;
+RE_TWICE.test('abc!abc!abc') // true
+RE_TWICE.test('abc!abc!ab') // false
+```

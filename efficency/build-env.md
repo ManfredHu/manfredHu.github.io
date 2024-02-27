@@ -30,6 +30,9 @@
 全开就好了，跟踪速度最大
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/Aoekwh.png)
 
+2024.1.1更新: 触摸板已经废弃, 因为发现HHKB架电脑上配合电脑本身的触摸板更好用, 而且移动办公和外接显示器都可以兼容. 切换屏幕用MX Master3鼠标的
+![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/build-env/master-mx-settings.jpeg)
+
 #### Dock居左
 
 系统偏好设置 -> 程序坞与菜单栏
@@ -340,7 +343,7 @@ trailingComma: 'none' // 行尾,号
 arrowParens: 'avoid' // 单参数可以不用括号，如 x => x，如果是always则会变成 (x) => x
 ```
 
-::: details .prettierignore 内容 
+details .prettierignore 内容 
 
 ```
 # Ignore artifacts
@@ -354,9 +357,8 @@ coverage
 node_modules/*
 ```
 
-:::
 
-3. 加个script测试一下
+1. 加个script测试一下
 
 ```json
 {

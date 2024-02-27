@@ -32,6 +32,17 @@ plugins=(
 )
 ```
 
+## [git](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git)
+
+```bash
+alias gst='git status'
+alias gaa='git add --all'
+alias gc='git commit --verbose'
+alias gca='git commit --verbose --all'
+alias gcam='git commit --all --message'
+alias gco='git checkout'
+```
+
 ## [copypath](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copypath)
 内置插件，直接输入`copypath`就可以拷贝当前路径，而不用`pwd`输出再去复制
 

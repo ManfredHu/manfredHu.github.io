@@ -1,24 +1,94 @@
-# 写 HTML5 代码要注意的东西
+# 重学HTML
 
-![html](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html.png)
+## 文档结构
+![新文档结构](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/html-new-architecture.png)
 
-## DOCTYPE
+正如html下有head,body一样. 文档结构被重新定义, 现代文档结构一般拥有
+
+```html
+<body>
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>
+    <article>First post</article>
+    <article>Second post</article>
+  </main>
+  <aside>Aside</aside>
+  <footer>Footer</footer>
+</body>
+```
+
+## <!DOCTYPE html>
 
 这是一个写在 HTML 头部的东西，浏览器会根据不同的`DOCTYPE`来识别不同的模式，后面的渲染和优化也会不一样，作为一个前端我们会严格要求自己。所以通常会 copy 一下的是不是^\_^。
 但是`在Eclipse中默认的不是HTML5的DOCTYPE`,切记切记改过来噢亲。
 
 ### 常见的 DOCTYPE 有
 
-- 1.HTML 4.01 Strict
-
+- 1. HTML 4.01 Strict
+请直接忽略这种写法
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
-- 2.XHTML 1.0 Strict
+- 2. XHTML 1.0 Strict
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+
+- 3. **推荐最简洁的写法**
+```html
+<!DOCTYPE html>
+```
+
+## Content language
+类似下面的ISO+地区表达, 作为标识文档为美式英文. lang属性不只是用在HTML, 也可以用在body或者其他标签上. 
+```html
+<html lang="en-US">
+</html>
+```
+
+同理也可以用在标签上配合CSS属性选择器实现一些特殊效果
+
+```html
+<span lang="fr-fr">Ceci n'est pas une pipe.</span>
+```
+
+```CSS
+[lang|="fr"] // 表示带有以 lang 命名的属性的元素，属性值为“fr”或是以“fr-”为前缀（- 为连字符，Unicode 编码为 U+002D）开头。典型的应用场景是用来匹配语言简写代码（如 zh-CN、zh-TW 可以用 zh 作为 value）。
+:lang(fr) // 可以看 https://developer.mozilla.org/zh-CN/docs/Web/CSS/:lang 这个例子
+```
+
+## charset
+绝大多数浏览器默认的编码是windows-1252而不是UTF-8, 所以一般都需要申明文档编码
+
+```html
+<meta charset="utf-8" />
+```
+
+而不用像下面这样复杂
+
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+```
+
+## viewport
+告诉浏览器响应式处理, 规定默认内容在默认视口的渲染形式. 虽然从2007年6月第一款iPhone问世以来，viewport meta标签就一直存在，但直到最近才在规范中记录下来。由于它可以控制视区的大小和比例，并防止站点内容被缩小到适合960px站点的320px屏幕，因此绝对推荐使用它。
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+```
+
+width=device-width: 设置视口宽度等于设备宽度，确保页面不会因为过大的初始缩放而在小屏设备上显示不全。
+initial-scale=1: 设置初始缩放级别为1，确保页面首次加载时以正常的缩放级别呈现。
+user-scalable=1: 允许用户手动缩放页面。
+
+## Favicon
+打开网站Tab会有一个小图标, 通常会是一个16倍数的小icon. 
+
+```html
+<link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="/images/mlwicon.png" />
 ```
 
 ## 标签不再自闭合
@@ -37,22 +107,7 @@
 
 自己有时候也没意识过来，在 XHTML 时代这种叫自闭合标签，但是在 HTML5 时代，不需要了。
 
-## 标签写法
-
-### 字符编码不用写那么长了
-还有的，如 charset 也不用像下面这样写了。
-
-```html
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-```
-
-取而代之的是下面这样简便的写法
-
-```html
-<meta charset="utf-8" />
-```
-
-### script 标签不用添加 type="text/javascirpt"
+## script 标签不用添加 type="text/javascirpt"
 
 以前是这么写的，但是现在如果里面的是 js，可以省略`type="text/javascirpt`了。
 
@@ -117,7 +172,6 @@
 - **line-height**属性属性被`<div>`内的所有元素继承，**line-height**可以用数字表示相对值(倍数)
 - font是字体的属性缩写，如`font : font-style font-variant font-weight font-size/line-height font-family`
 
-
 ## 换行符
 
 可以借助"&NewLine;" 实现换行效果，需要对元素设置 `white-space: pre-wrap`
@@ -133,6 +187,24 @@
 
 同时`&#8288;`可以实现强制不换行的效果
 
+
+## 自定义数据
+
+```html
+<blockquote data-machine-learning="workshop"
+  data-first-name="Blendan" data-last-name="Smooth"
+  data-formerly="Margarita Maker" data-aspiring="Load Balancer"
+  data-year-graduated="2022">
+  HAL and EVE could teach a fan to blow hot air.
+</blockquote>
+```
+
+如何获取这里的属性你? 如dat-machine-learning里的workshop. 有下面的方式
+
+```js
+el.dataset[machineLearning]; // workshop
+e.dataset.machineLearning; // workshop
+```
 
 ## 移动端Mobile
 

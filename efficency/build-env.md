@@ -255,6 +255,19 @@ ctrl+u up上翻半页
     email = 你的邮箱@gmail.com
 [includeIf "gitdir:~/work/"] # 注意这里要放在最后，因为工作的邮箱要覆盖全局的
     path = .gitconfig-work
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[pull]
+    rebase = true
+    ff = only
+[push]
+    default = current # upstream 默认为当前分支
+    autoSetupRemote = true # 自动设置远端
+[core]
+    excludesfile = /Users/[your_name]/.gitignore_global # glob排除每次忽略的文件
 ```
 
 `~/.gitconfig-work`按照如下配置

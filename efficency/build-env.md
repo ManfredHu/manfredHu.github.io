@@ -294,6 +294,8 @@ alias work="cd /Users/xxx/work"
 
 * `HEIC Converter`，主要是iphone高版本手机图片格式是HEIC，隔空投送到电脑格式不变，需要批量转化。App Store搜下就有了
 
+vscode插件 [Luna Paint](https://marketplace.visualstudio.com/items?itemName=Tyriar.luna-paint)，因为PhotoShop需要版权且对电脑来说太重，推荐一个VSCode轻量的小软件处理图片，比如裁剪之类的很方便
+
 ### [Thor](https://github.com/gbammc/Thor)
 雷神索尔，快捷键控制窗口切换，真的是像闪电⚡️一样快的切换，跟`cmd+tab`不一样，Thor是支持DIY快捷键的，你可以给每一个应用程序定义自己的快捷键。
 
@@ -307,6 +309,11 @@ cmd+1~9让你有一种打dota改键操作的快感
 [fliqlo](https://fliqlo.com/) 很经典的锁屏时钟
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/IvPJYB.jpg)
+
+
+### 投屏设备
+- 安卓 scrcpy：https://github.com/Genymobile/scrcpy/blob/master/doc/macos.md
+- iOS iOS15以上使用iPhone镜像 https://support.apple.com/zh-cn/120421
 
 ## 开发
 

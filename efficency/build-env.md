@@ -312,6 +312,9 @@ cmd+1~9让你有一种打dota改键操作的快感
 
 
 ### 投屏设备
+
+工作涉及跨端开发，经常需要投手机演示功能之类的。按照系统推荐如下软件，都很好用
+
 - 安卓 scrcpy：https://github.com/Genymobile/scrcpy/blob/master/doc/macos.md
 - iOS iOS15以上使用iPhone镜像 https://support.apple.com/zh-cn/120421
 

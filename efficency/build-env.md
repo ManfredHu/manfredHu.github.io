@@ -205,11 +205,14 @@ ctrl+u up上翻半页
 
 ### 窗口管理软件
 
+2026.02.28更新: Mac更新了系统自带了窗口管理功能，感觉已经够用了。系统偏好设置 -> 键盘 -> 键盘快捷键 -> 窗口
+
 [Moom](https://manytricks.com/moom/)，可以快捷键编排窗口大小和位置，附上个人快捷键设置，在VSCode需要多项目分屏的时候特好用
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/kfxb3W.png)
 
 也有推荐[Rectangle](https://github.com/rxhanson/Rectangle)的感兴趣的可以试试
+
 
 ### Alfred
 

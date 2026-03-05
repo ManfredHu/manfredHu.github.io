@@ -164,6 +164,8 @@
       link: /efficency/wet-shaving
     - text: 升级硬件
       link: /others/2023-9-6-upgrade-hardware
+    - text: Ghostty
+      link: /efficency/2026-02-28.ghosttty
 - text: 其他
   children: 
     - text: 小米造车的逻辑

@@ -81,13 +81,13 @@
     - text: 框架
       children:
         - text: AngularJS笔记
-          link: /framework/4-angular-note
+          link: /deprecated/4-angular-note
         - text: React+Reflux渲染性能优化原理
           link: /framework/23-reactRenderingPrinciple
         - text: 对Vue的理解
           link: /framework/32-vue-notes
         - text: Chrome76+ vue-cli 执行 nightwatch e2e 测试错误
-          link: /framework/52-vue-cli-e2e-error
+          link: /deprecated/52-vue-cli-e2e-error
         - text: Vue中的watch
           link: /framework/2021-01-22.vue-watch
         - text: echart
@@ -151,7 +151,7 @@
     - text: zen·工作环境搭建之git篇之Lazygit
       link: /efficency/lazygit
     - text: zen·工作环境搭建之git篇之tig
-      link: /efficency/tig
+      link: /deprecated/tig
     - text: 如何使用 Github Copilot
       link: /efficency/github-copilot
     - text: 外设进化之路
@@ -159,7 +159,7 @@
     - text: HHKB
       link: /efficency/hhkb
     - text: SublimeText3 常用快捷键和优秀插件（亲测）
-      link: /others/11-SublimeText3Plus
+      link: /deprecated/11-SublimeText3Plus
     - text: 湿剃的艺术 - 回归传统的剃须体验
       link: /efficency/wet-shaving
     - text: 升级硬件
@@ -177,13 +177,13 @@
     - text: 时间管理-作为负责人需要控制打断频率
       link: /others/control-interrupt
     - text: VSCode在不同设备同步配置
-      link: /others/github-gist
+      link: /deprecated/github-gist
     - text: 关于实习的一些看法
       link: /others/18-internship
     - text: 前端疲劳
       link: /others/27-front-end-tried
     - text: 前端行业发展现状分析
-      link: /others/28-font-end-development
+      link: /deprecated/28-font-end-development
     - text: 腾讯金融产品体验设计之道
       link: /others/book-design-fit
     - text: 浪潮之巅个人感想

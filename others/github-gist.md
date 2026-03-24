@@ -1,5 +1,7 @@
 # VSCode在不同设备同步配置
 
+**⚠️ 本地内容在2026年3月24号判定已经是过期内容，后续内容不再更新，仅保留阅读。**
+
 > 2022.12.26更新：VSCode可以绑定Github账号了，以后可以统一配置不需要此插件了
 
 最常遇到在不同设备需要同步VSCode的配置，这个时候可以使用[code-settings-sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)插件，可以自动同步plugin/settings/theme等

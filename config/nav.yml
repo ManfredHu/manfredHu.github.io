@@ -166,6 +166,10 @@
       link: /others/2023-9-6-upgrade-hardware
     - text: Ghostty
       link: /efficency/2026-02-28.ghosttty
+- text: AI
+  children:
+    - text: AI的终局
+      link: /AI/2026-03-19.AI-ending
 - text: 其他
   children: 
     - text: 小米造车的逻辑
@@ -190,5 +194,3 @@
       link: /others/10-AlibabaExamination
     - text: 如何测试显示器支持什么分辨率
       link: /others/check-4k
-    - text: AI的终局
-      link: /others/2026-03-19.AI-ending

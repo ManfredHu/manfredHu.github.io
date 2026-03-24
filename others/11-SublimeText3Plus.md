@@ -1,5 +1,7 @@
 # SublimeText3 常用快捷键和优秀插件（亲测）
 
+**⚠️ 本地内容在2026年3月24号判定已经是过期内容，后续内容不再更新，仅保留阅读。**
+
 ![SublimeText](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/sublimetext3.jpg)
 
 > **这篇是自己在之前的[博客](http://www.cnblogs.com/manfredHu/p/4941307.html)写的，貌似[慕课](http://www.imooc.com/article/2070)拿了 5000+的 Page view，其他各种转载就不说了。**

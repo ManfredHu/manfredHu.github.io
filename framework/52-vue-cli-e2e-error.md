@@ -1,5 +1,7 @@
 # Chrome76+ vue-cli 执行 nightwatch e2e 测试错误
 
+**⚠️ 本地内容在2026年3月24号判定已经是过期内容，后续内容不再更新，仅保留阅读。**
+
 ## 错误原因
 
 创建项目如果选了 nightwatch 去执行 e2e 测试的话，应该是跑不起来的，原因是 Chrome 自动升级到 76 版本了，而 selenium server 版本只能支持 Chrome71-75 版本的。

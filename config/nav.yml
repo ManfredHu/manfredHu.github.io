@@ -166,6 +166,8 @@
       link: /others/2023-9-6-upgrade-hardware
     - text: Ghostty
       link: /efficency/2026-02-28.ghosttty
+    - text: Yazi
+      link: /efficency/2026-03-27.yazi
 - text: AI
   children:
     - text: AI的终局

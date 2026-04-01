@@ -1,5 +1,5 @@
 # 最好用的shell-ohmyzsh
-至今用的macOS里最好的 shell，没有之一。首先你要安装iterm2，然后再安装这个，iterm2安装自行google
+至今用的macOS里最好的 shell，没有之一。首先你要安装Ghostty ~~iterm2~~，然后再安装这个，iterm2安装自行google
 
 安装直接跑[这里](https://github.com/ohmyzsh/ohmyzsh#basic-installation)的命令
 

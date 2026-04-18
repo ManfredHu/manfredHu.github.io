@@ -323,6 +323,10 @@ cmd+1~9让你有一种打dota改键操作的快感
 - ~~[nvm](https://github.com/nvm-sh/nvm) 用于切换不同的node版本~~
 - **[fnm](https://github.com/Schniz/fnm) 更快的nvm**
 - **[bat](https://github.com/sharkdp/bat) 替代cat的工具，有代码高亮**
+  - 空格翻页/
+  - g到开头
+  - G到结尾
+  - /关键词，可以做搜索。n跳到下一个，N跳到前一个
 - **[fd](https://github.com/sharkdp/fd) 一个非常快速的模糊查找工具，很强很快
 
 ### AI相关

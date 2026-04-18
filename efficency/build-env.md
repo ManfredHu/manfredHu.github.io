@@ -155,9 +155,11 @@ pkill -f SCIM.app
 
 ### 终端
 
-iterm2+zsh基本没争议
+2026.4.18更新：请使用Ghostty, 比iterm2更快更轻量
 
-* [iterm2](https://github.com/gnachman/iTerm2)
+~~iterm2+zsh基本没争议~~
+
+~~* [iterm2](https://github.com/gnachman/iTerm2)~~
 * [zsh](https://ohmyz.sh/#install)
 
 #### iterm2配置
@@ -180,7 +182,9 @@ zsh的插件可以去看[最好用的shell-ohmyzsh](./oh-my-zsh)
 iterm2一般会跟服务器进行上传下载操作，此时需要更好的插件，比如有显示进度条的
 [trzsz](https://trzsz.github.io/)
 
-#### [tig](https://devhints.io/tig)
+#### ~~[tig](https://devhints.io/tig)~~
+
+2026.4.18更新：已不再推荐，lazygit更好用
 
 一个git图形化命令行工具，主要是因为git的命令行工具比较薄弱，交互太烂。而VSCode的git管理工具遇到过失灵的情况，且只能看到最后的总文件变更，如果你要去找到某一行代码是谁改的，会非常难用。
 主要是几个命令， `Ctrl+C` 可以退出交互
@@ -203,11 +207,21 @@ ctrl+u up上翻半页
 ```
 很强大，感觉可以单独开篇写了。写完了，点击[这里](./tig)查看
 
+#### [starship](https://starship.rs/zh-CN/config/)
+
+一个主配置配置，配合 [张司机在路上的starship配置感觉更好用](https://gist.githubusercontent.com/zhangchitc/62f5dca64c599084f936fda9963f1100/raw/35f26f947341f1fb1cf077a32dabd6ddb0d67b2b/starship.toml)
+
+1. 信息简洁
+2. 能知道Node/Python等的版本信息
+3. 分支信息，以及当前分支状态一目了然
+
+配置文件位置为 `~/.config/starship.toml`, 参考文档为 https://starship.rs/zh-CN/config/
+
 ### 窗口管理软件
 
 2026.02.28更新: Mac更新了系统自带了窗口管理功能，感觉已经够用了。系统偏好设置 -> 键盘 -> 键盘快捷键 -> 窗口
 
-[Moom](https://manytricks.com/moom/)，可以快捷键编排窗口大小和位置，附上个人快捷键设置，在VSCode需要多项目分屏的时候特好用
+~~[Moom](https://manytricks.com/moom/)，可以快捷键编排窗口大小和位置，附上个人快捷键设置，在VSCode需要多项目分屏的时候特好用~~
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/kfxb3W.png)
 
@@ -306,13 +320,19 @@ cmd+1~9让你有一种打dota改键操作的快感
 
 ### 常用cli 
 - [npkill](https://www.npmjs.com/package/npkill) 用于管理整个电脑的node_modules
-- [nvm](https://github.com/nvm-sh/nvm) 用于切换不同的node版本
+- ~~[nvm](https://github.com/nvm-sh/nvm) 用于切换不同的node版本~~
+- **[fnm](https://github.com/Schniz/fnm) 更快的nvm**
+- **[bat](https://github.com/sharkdp/bat) 替代cat的工具，有代码高亮**
+- **[fd](https://github.com/sharkdp/fd) 一个非常快速的模糊查找工具，很强很快
+
+### AI相关
+- [Open Island](https://github.com/Octane0411/open-vibe-island) Mac刘海位置的Agent状态提醒工具，多Agent运行很推荐
+
 
 ### 屏保
 [fliqlo](https://fliqlo.com/) 很经典的锁屏时钟
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/IvPJYB.jpg)
-
 
 ### 投屏设备
 

@@ -1,0 +1,53 @@
+.article-page {
+  max-width: 800px;
+  padding-bottom: 4rem;
+}
+
+.article-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: 1rem;
+  color: var(--ctp-subtext0);
+  text-align: center;
+}
+
+.article-state h2 {
+  color: var(--ctp-text);
+  font-size: 1.25rem;
+}
+
+.article-state p {
+  color: var(--ctp-subtext0);
+  font-size: 0.9rem;
+}
+
+.article-state code {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-peach);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.article-state--error .article-state-icon {
+  font-size: 2rem;
+  color: var(--ctp-red);
+}
+
+.article-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--ctp-surface1);
+  border-top-color: var(--ctp-mauve);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

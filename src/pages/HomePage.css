@@ -1,0 +1,129 @@
+.home-page {
+  max-width: 860px;
+}
+
+.home-hero {
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--ctp-surface0);
+  margin-bottom: 2.5rem;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    var(--ctp-mauve),
+    var(--ctp-blue),
+    var(--ctp-sapphire)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.home-desc {
+  color: var(--ctp-subtext0);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.home-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ctp-lavender);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.category-card {
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  border-color: var(--ctp-mauve);
+  box-shadow: 0 4px 20px rgba(203, 166, 247, 0.08);
+}
+
+.category-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+}
+
+.category-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ctp-text);
+}
+
+.category-count {
+  font-size: 0.75rem;
+  color: var(--ctp-overlay1);
+  background-color: var(--ctp-surface1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+
+.category-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.category-topic-link {
+  display: block;
+  color: var(--ctp-subtext0);
+  font-size: 0.85rem;
+  padding: 0.2rem 0;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.category-topic-link:hover {
+  color: var(--ctp-blue);
+  text-decoration: none;
+}
+
+.category-topic-group {
+  display: block;
+  color: var(--ctp-subtext1);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.2rem 0;
+}
+
+.category-more {
+  font-size: 0.8rem;
+  color: var(--ctp-overlay0);
+  font-style: italic;
+  padding-top: 0.15rem;
+}

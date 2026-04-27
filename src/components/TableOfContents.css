@@ -1,0 +1,278 @@
+/* TOC widget — always visible, compact by default, expands on hover */
+
+.toc-widget {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  width: 160px;
+  max-height: 70vh;
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface1);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Collapsed: narrow + slightly transparent */
+  opacity: 0.75;
+  transition:
+    width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.toc-widget:hover {
+  width: 280px;
+  opacity: 1;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Header ── */
+.toc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--ctp-surface0);
+  flex-shrink: 0;
+  color: var(--ctp-overlay1);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.toc-header-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--ctp-mauve);
+}
+
+.toc-header-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── List ── */
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.toc-list::-webkit-scrollbar {
+  width: 3px;
+}
+.toc-list::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border-radius: 2px;
+}
+
+.toc-item {
+  display: flex;
+}
+
+/* ── Links — default: tiny + ellipsis ── */
+.toc-link {
+  display: block;
+  width: 100%;
+  padding: 0.18rem 10px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.72rem;
+  color: var(--ctp-overlay1);
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 3px;
+  transition: color 0.15s, background-color 0.15s, font-size 0.28s;
+}
+
+/* ── Links — hover expanded: bigger + readable ── */
+.toc-widget:hover .toc-link {
+  font-size: 0.8rem;
+  color: var(--ctp-subtext0);
+}
+
+.toc-link:hover {
+  color: var(--ctp-blue) !important;
+  background-color: var(--ctp-surface0);
+}
+
+.toc-link--active {
+  color: var(--ctp-mauve) !important;
+  font-weight: 600;
+}
+
+/* Level-specific colours in expanded state */
+.toc-widget:hover .toc-link--h1 { color: var(--ctp-subtext1); font-size: 0.84rem; }
+.toc-widget:hover .toc-link--h2 { color: var(--ctp-subtext0); }
+.toc-widget:hover .toc-link--h3 { color: var(--ctp-overlay2); font-size: 0.77rem; }
+.toc-widget:hover .toc-link--h4,
+.toc-widget:hover .toc-link--h5,
+.toc-widget:hover .toc-link--h6 { color: var(--ctp-overlay1); font-size: 0.73rem; }
+
+/* Hide on narrow screens */
+@media (max-width: 960px) {
+  .toc-widget {
+    display: none;
+  }
+}
+
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  min-height: 80px;
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  cursor: default;
+  color: var(--ctp-overlay1);
+  flex-shrink: 0;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  user-select: none;
+}
+
+.toc-trigger-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.toc-trigger-label {
+  font-size: 0.6rem;
+  writing-mode: vertical-rl;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+/* ── Expanded panel ── */
+.toc-panel {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface0);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  /* expand order: first fade in opacity, then reveal width */
+  transition:
+    max-width 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease;
+}
+
+/* Hover state — expand */
+.toc-widget:hover .toc-trigger {
+  background-color: var(--ctp-surface1);
+  color: var(--ctp-mauve);
+  border-radius: 0;
+}
+
+.toc-widget:hover .toc-panel {
+  max-width: 280px;
+  opacity: 1;
+}
+
+/* ── Panel internals ── */
+.toc-panel-title {
+  padding: 0.7rem 1rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--ctp-overlay1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--ctp-surface0);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  overflow-y: auto;
+  max-height: calc(70vh - 40px);
+  min-width: 230px;
+}
+
+.toc-list::-webkit-scrollbar {
+  width: 4px;
+}
+.toc-list::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border-radius: 2px;
+}
+
+.toc-item {
+  display: flex;
+}
+
+.toc-link {
+  display: block;
+  width: 100%;
+  padding: 0.22rem 12px;
+  background: none;
+  border: none;
+  color: var(--ctp-subtext0);
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+  font-family: inherit;
+}
+
+.toc-link:hover {
+  color: var(--ctp-blue);
+  background-color: var(--ctp-surface0);
+}
+
+.toc-link--active {
+  color: var(--ctp-mauve) !important;
+  font-weight: 500;
+}
+
+/* Indent levels give visual hierarchy */
+.toc-link--h1 {
+  font-size: 0.85rem;
+  color: var(--ctp-subtext1);
+}
+.toc-link--h2 {
+  font-size: 0.82rem;
+}
+.toc-link--h3 {
+  font-size: 0.78rem;
+  color: var(--ctp-overlay2);
+}
+.toc-link--h4,
+.toc-link--h5,
+.toc-link--h6 {
+  font-size: 0.75rem;
+  color: var(--ctp-overlay1);
+}
+
+/* Hide on narrow screens */
+@media (max-width: 960px) {
+  .toc-widget {
+    display: none;
+  }
+}

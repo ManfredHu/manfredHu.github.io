@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "init": "pnpm i",
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview",
     "readme": "esno ./scripts/build-readme.ts",
     "prepare": "husky install",
     "replace-img": "esno ./scripts/replace-relative-img-path.ts",
@@ -15,18 +18,36 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^18.15.13",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
     "esno": "^0.16.3",
     "heic-convert": "^2.0.0",
     "husky": "^8.0.0",
     "image-size": "^1.0.2",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^14.0.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",
     "globby": "^13.1.4",
+    "highlight.js": "^11.11.1",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.16.22",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.3",
+    "react-router-dom": "^6.30.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
     "yaml": "^2.2.1"
   }
 }

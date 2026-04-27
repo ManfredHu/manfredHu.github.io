@@ -2,5 +2,8 @@
   "editor.formatOnSave": true,
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "github.copilot.enable": {
+    "*": true
   }
 }

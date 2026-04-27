@@ -2,10 +2,6 @@
 
 ![浪潮](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave.png)
 
-> 作者：ManfredHu
-> 链接：http://www.manfredhu.com/2016/04/20/book-topOfWave/
-> 声明：版权所有，转载请保留本段信息，否则请不要转载
-
 ## AT&T
 
 ![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/topOfWave/att.jpg)
@@ -129,9 +125,9 @@ Bill Gate 和 Jobs 的交锋也堪称经典，原来的微软只有 DOS，而乔
 
 注册资本比例
 
-| 风险投资 | 众筹 | 创业团队 | 无形资产 |
-| :------: | :--: | :------: | :------: |
-|   25%    | 10%  |   45%    |   25%    |
+| 风险投资 | 众筹  | 创业团队 | 无形资产 |
+| :------: | :---: | :------: | :------: |
+|   25%    |  10%  |   45%    |   25%    |
 
 > 风投：全称风险投资（Venture Capital），简称 VC。大部分是以投资高新技术为主，由职业金融家投入到新兴的、迅速发展的、具有巨大竞争潜力的企业中的一种权益资本。
 

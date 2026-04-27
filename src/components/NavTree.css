@@ -1,0 +1,83 @@
+.nav-tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-leaf {
+  display: block;
+  padding: 0.3rem 0.75rem;
+  color: var(--ctp-subtext0);
+  font-size: 0.875rem;
+  border-radius: 0 6px 6px 0;
+  margin-right: 8px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-leaf:hover {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+  text-decoration: none;
+}
+
+.nav-leaf--active {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-mauve);
+  font-weight: 500;
+}
+
+.nav-leaf--active:hover {
+  color: var(--ctp-mauve);
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: none;
+  border: none;
+  color: var(--ctp-subtext1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: 0 6px 6px 0;
+  margin-right: 8px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.nav-group-header:hover {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+.nav-group-header--open {
+  color: var(--ctp-lavender);
+}
+
+.nav-group-arrow {
+  font-size: 0.7rem;
+  width: 10px;
+  flex-shrink: 0;
+  color: var(--ctp-overlay1);
+}
+
+.nav-group-children {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,116 @@
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: var(--ctp-mantle);
+  border-right: 1px solid var(--ctp-surface0);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.1rem 1rem 0.9rem;
+  border-bottom: 1px solid var(--ctp-surface0);
+  flex-shrink: 0;
+}
+
+/* Right column: name + subtitle stacked */
+.sidebar-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+/* Name row: text + social icons side by side */
+.sidebar-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sidebar-social {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.sidebar-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--ctp-overlay1);
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.sidebar-social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar-social-link:hover {
+  color: var(--ctp-mauve);
+  background-color: var(--ctp-surface0);
+  text-decoration: none;
+}
+
+/* Logo image — standalone link on the left */
+.sidebar-logo-img-link {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo-img-link:hover .sidebar-logo-img {
+  border-color: var(--ctp-mauve);
+}
+
+.sidebar-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ctp-surface1);
+  flex-shrink: 0;
+  transition: border-color 0.15s ease;
+}
+
+/* Name text link */
+.sidebar-logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--ctp-mauve), var(--ctp-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-logo-text:hover {
+  text-decoration: none;
+}
+
+.sidebar-subtitle {
+  color: var(--ctp-overlay0);
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 0.75rem 0;
+  overflow-y: auto;
+}

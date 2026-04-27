@@ -6,7 +6,7 @@
   "scripts": {
     "init": "pnpm i",
     "dev": "vite",
-    "build": "tsc -p tsconfig.json && vite build",
+    "build": "esno scripts/gen-sitemap.ts && tsc -p tsconfig.json && vite build",
     "preview": "vite preview",
     "readme": "esno ./scripts/build-readme.ts",
     "prepare": "husky install",

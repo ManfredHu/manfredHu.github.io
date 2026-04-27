@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import MarkdownRenderer from '@/components/MarkdownRenderer'
+import MarkdownRenderer, {
+  parseFrontmatter,
+} from '@/components/MarkdownRenderer'
 import TableOfContents from '@/components/TableOfContents'
 import { loadMarkdown } from '@/utils/mdLoader'
+import { useSEO, extractExcerpt } from '@/hooks/useSEO'
 import './ArticlePage.css'
 
 type LoadState = 'idle' | 'loading' | 'success' | 'not-found' | 'error'
@@ -15,18 +18,27 @@ export default function ArticlePage() {
 
   const [content, setContent] = useState<string>('')
   const [state, setState] = useState<LoadState>('idle')
+  const [seoTitle, setSeoTitle] = useState<string | undefined>(undefined)
+  const [seoDesc, setSeoDesc] = useState<string | undefined>(undefined)
+
+  useSEO({ title: seoTitle, description: seoDesc, path: link, type: 'article' })
 
   useEffect(() => {
     if (!link || link === '/') return
 
     setState('loading')
     setContent('')
+    setSeoTitle(undefined)
+    setSeoDesc(undefined)
 
     loadMarkdown(link)
       .then((md) => {
         if (md === null) {
           setState('not-found')
         } else {
+          const { frontmatter, body } = parseFrontmatter(md)
+          setSeoTitle(frontmatter.title as string | undefined)
+          setSeoDesc(extractExcerpt(body))
           setContent(md)
           setState('success')
         }

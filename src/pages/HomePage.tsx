@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { load } from 'js-yaml'
 import type { NavNode } from '@/types/nav'
 import navRaw from '/config/nav.yml?raw'
+import { useSEO } from '@/hooks/useSEO'
 import './HomePage.css'
 
 function getCategoryIcon(text: string): string {
@@ -23,6 +24,7 @@ function countLeaves(node: NavNode): number {
 }
 
 export default function HomePage() {
+  useSEO({})
   const navNodes = useMemo<NavNode[]>(() => {
     try {
       const data = load(navRaw)

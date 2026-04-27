@@ -22,7 +22,7 @@ interface Frontmatter {
  * Strip YAML frontmatter from markdown and extract fields.
  * Returns { frontmatter, body } where body has the --- block removed.
  */
-function parseFrontmatter(raw: string): {
+export function parseFrontmatter(raw: string): {
   frontmatter: Frontmatter
   body: string
 } {

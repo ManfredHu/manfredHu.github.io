@@ -12,32 +12,42 @@
 }
 
 .sidebar-header {
-  padding: 1.25rem 1rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.1rem 1rem 0.9rem;
   border-bottom: 1px solid var(--ctp-surface0);
   flex-shrink: 0;
 }
 
-.sidebar-header-top {
+/* Right column: name + subtitle stacked */
+.sidebar-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+/* Name row: text + social icons side by side */
+.sidebar-header-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  gap: 0.4rem;
 }
 
 .sidebar-social {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.15rem;
 }
 
 .sidebar-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   color: var(--ctp-overlay1);
   transition:
     color 0.15s ease,
@@ -46,8 +56,8 @@
 }
 
 .sidebar-social-link svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .sidebar-social-link:hover {
@@ -56,25 +66,20 @@
   text-decoration: none;
 }
 
-.sidebar-logo {
+/* Logo image — standalone link on the left */
+.sidebar-logo-img-link {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: var(--ctp-text);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
-.sidebar-logo:hover {
-  color: var(--ctp-mauve);
-  text-decoration: none;
+.sidebar-logo-img-link:hover .sidebar-logo-img {
+  border-color: var(--ctp-mauve);
 }
 
 .sidebar-logo-img {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--ctp-surface1);
@@ -82,27 +87,26 @@
   transition: border-color 0.15s ease;
 }
 
-.sidebar-logo:hover .sidebar-logo-img {
-  border-color: var(--ctp-mauve);
-}
-
-.sidebar-logo-icon {
-  color: var(--ctp-mauve);
-  font-size: 1.2rem;
-}
-
+/* Name text link */
 .sidebar-logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
   background: linear-gradient(135deg, var(--ctp-mauve), var(--ctp-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.sidebar-logo-text:hover {
+  text-decoration: none;
+}
+
 .sidebar-subtitle {
   color: var(--ctp-overlay0);
   font-size: 0.75rem;
-  margin-top: 0.3rem;
-  padding-left: 1.7rem;
+  margin-top: 0;
 }
 
 .sidebar-nav {

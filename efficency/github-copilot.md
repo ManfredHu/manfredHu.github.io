@@ -1,5 +1,7 @@
 # Github Copilot
 
+**⚠️ 本地内容在2026年4月28号判定已经是过期内容，后续内容不再更新，仅保留阅读。**
+
 Github Copilot作为现在最好用的代码提示工具，配合VSCode简直无敌
 
 个人感觉VSCode下比微软的[IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)和[Tabnice](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)的都好用

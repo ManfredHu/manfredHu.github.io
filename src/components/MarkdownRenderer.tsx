@@ -10,6 +10,7 @@ import type { Components } from 'react-markdown'
 
 interface MarkdownRendererProps {
   content: string
+  lastModified?: number
 }
 
 interface Frontmatter {
@@ -157,10 +158,17 @@ function makeComponents(suppressFirstH1: boolean): Components {
   }
 }
 
-export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export default function MarkdownRenderer({
+  content,
+  lastModified,
+}: MarkdownRendererProps) {
   const { frontmatter, body } = parseFrontmatter(content)
   const tags = frontmatter.tags as string[] | undefined
   const hasFrontmatterTitle = Boolean(frontmatter.title)
+
+  const lastModifiedStr = lastModified
+    ? new Date(lastModified * 1000).toISOString().slice(0, 10)
+    : undefined
 
   return (
     <div className="markdown-body">
@@ -169,15 +177,22 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           <h1 className="article-header-title">
             {frontmatter.title as string}
           </h1>
-          {tags && tags.length > 0 && (
-            <div className="article-header-tags">
-              {tags.map((tag) => (
-                <span key={tag} className="article-tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
+          <div className="article-header-meta">
+            {tags && tags.length > 0 && (
+              <div className="article-header-tags">
+                {tags.map((tag) => (
+                  <span key={tag} className="article-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+            {lastModifiedStr && (
+              <span className="article-last-modified">
+                最后更新：{lastModifiedStr}
+              </span>
+            )}
+          </div>
           <hr className="article-header-divider" />
         </div>
       )}

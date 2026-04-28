@@ -10,6 +10,17 @@ import './ArticlePage.css'
 
 type LoadState = 'idle' | 'loading' | 'success' | 'not-found' | 'error'
 
+// Module-level cache so timestamps are only fetched once per session
+let timestampsCache: Promise<Record<string, number>> | null = null
+function loadTimestamps(): Promise<Record<string, number>> {
+  if (!timestampsCache) {
+    timestampsCache = fetch('/timestamps.json')
+      .then((r) => (r.ok ? r.json() : {}))
+      .catch(() => ({}))
+  }
+  return timestampsCache
+}
+
 export default function ArticlePage() {
   const location = useLocation()
   // Hash router: location.pathname is the path after #
@@ -20,6 +31,9 @@ export default function ArticlePage() {
   const [state, setState] = useState<LoadState>('idle')
   const [seoTitle, setSeoTitle] = useState<string | undefined>(undefined)
   const [seoDesc, setSeoDesc] = useState<string | undefined>(undefined)
+  const [lastModified, setLastModified] = useState<number | undefined>(
+    undefined,
+  )
 
   useSEO({ title: seoTitle, description: seoDesc, path: link, type: 'article' })
 
@@ -30,6 +44,7 @@ export default function ArticlePage() {
     setContent('')
     setSeoTitle(undefined)
     setSeoDesc(undefined)
+    setLastModified(undefined)
 
     loadMarkdown(link)
       .then((md) => {
@@ -41,6 +56,7 @@ export default function ArticlePage() {
           setSeoDesc(extractExcerpt(body))
           setContent(md)
           setState('success')
+          loadTimestamps().then((ts) => setLastModified(ts[link]))
         }
       })
       .catch((err) => {
@@ -84,7 +100,7 @@ export default function ArticlePage() {
     <>
       <TableOfContents content={content} skipFirstH1 />
       <article className="article-page">
-        <MarkdownRenderer content={content} />
+        <MarkdownRenderer content={content} lastModified={lastModified} />
       </article>
     </>
   )

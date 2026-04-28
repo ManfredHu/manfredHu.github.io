@@ -23,6 +23,13 @@ function countLeaves(node: NavNode): number {
   return node.children.reduce((sum, child) => sum + countLeaves(child), 0)
 }
 
+/** Collect all leaf nodes (articles) from a subtree */
+function collectLeaves(node: NavNode): NavNode[] {
+  if (node.link) return [node]
+  if (node.children) return node.children.flatMap(collectLeaves)
+  return []
+}
+
 export default function HomePage() {
   useSEO({})
   const navNodes = useMemo<NavNode[]>(() => {
@@ -55,28 +62,20 @@ export default function HomePage() {
                   {countLeaves(category)} 篇
                 </span>
               </div>
-              {category.children && (
-                <ul className="category-topics">
-                  {category.children.slice(0, 5).map((child) => (
-                    <li key={child.text}>
-                      {child.link ? (
-                        <Link to={child.link} className="category-topic-link">
-                          {child.text}
+              {(() => {
+                const leaves = collectLeaves(category)
+                return leaves.length > 0 ? (
+                  <ul className="category-topics">
+                    {leaves.map((leaf) => (
+                      <li key={leaf.link}>
+                        <Link to={leaf.link!} className="category-topic-link">
+                          {leaf.text}
                         </Link>
-                      ) : (
-                        <span className="category-topic-group">
-                          {child.text}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                  {category.children.length > 5 && (
-                    <li className="category-more">
-                      还有 {category.children.length - 5} 个子分类...
-                    </li>
-                  )}
-                </ul>
-              )}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null
+              })()}
             </div>
           ))}
         </div>

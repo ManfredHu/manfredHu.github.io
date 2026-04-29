@@ -4,7 +4,7 @@ const SITE_NAME = "ManfredHu's Blog"
 const SITE_URL = 'https://manfredhu.github.io'
 const DEFAULT_DESC =
   'ManfredHu 的个人博客，分享前端技术、计算机科学、效率工具与生活随笔。'
-const DEFAULT_IMAGE = `${SITE_URL}/images/myself/manfredhu128.png`
+const DEFAULT_IMAGE = `${SITE_URL}/images/myself/manfredhu.svg`
 
 interface SEOOptions {
   title?: string

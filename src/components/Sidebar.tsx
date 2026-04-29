@@ -4,7 +4,7 @@ import { load } from 'js-yaml'
 import NavTree from './NavTree'
 import type { NavNode } from '@/types/nav'
 import './Sidebar.css'
-import logoImg from '/images/myself/manfredhu128.png'
+import logoImg from '/images/myself/manfredhu.svg'
 
 // Import nav.yml as raw text — Vite handles ?raw imports
 import navRaw from '/config/nav.yml?raw'

@@ -172,6 +172,8 @@
   children:
     - text: AI的终局
       link: /AI/2026-03-19.AI-ending
+    - text: AI历史
+      link: /AI/2026-05-03.AI-history
 - text: 其他
   children: 
     - text: 小米造车的逻辑

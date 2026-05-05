@@ -324,6 +324,8 @@ cmd+1~9让你有一种打dota改键操作的快感
 - **[fnm](https://github.com/Schniz/fnm) 更快的nvm**
 - **[bat](https://github.com/sharkdp/bat) 替代cat的工具，有代码高亮**
 - **[fd](https://github.com/sharkdp/fd) 一个非常快速的模糊查找工具，很强很快
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) 用于下载youtube视频音频
+- [whisper](https://github.com/openai/whisper) 用于语音识别和转录
 
 #### fd 常用命令简明版
 

@@ -16,6 +16,8 @@
           link: /html/2021-01-17-preload-prefetch
         - text: SVG
           link: /html/2022-08-03.svg
+        - text: HTML meta 元素整理与实战
+          link: /html/2026-05-10.meta-element
     - text: CSS
       children:
         - text: CSS杂技 
@@ -116,6 +118,8 @@
       link: /cs/58-github-ci
     - text: 图片自适应大小、压缩 demo
       link: /cs/34-picture-fileUpload
+    - text: crontab
+      link: /cs/2026-05-10.crontab
     - text: 安全
       children:
         - text: utf7 XSS攻击

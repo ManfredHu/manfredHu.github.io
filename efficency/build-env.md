@@ -327,6 +327,10 @@ cmd+1~9让你有一种打dota改键操作的快感
 - **[fd](https://github.com/sharkdp/fd) 一个非常快速的模糊查找工具，很强很快
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) 用于下载youtube视频音频
 - [whisper](https://github.com/openai/whisper) 用于语音识别和转录
+- [yazi](https://yazi-rs.github.io/) cli版本的finder
+
+待定
+- [eza](https://github.com/eza-community/eza) 看着不错，但是不确定是否好用。有Yazi了是否必要
 
 #### fd 常用命令简明版
 

@@ -194,6 +194,8 @@
       link: /AI/Codex
 - text: 其他
   children: 
+    - text: 咖啡豆全指南
+      link: /others/coffee-beans
     - text: 小米造车的逻辑
       link: /others/2025-4-27.xiaomi-car-logic
     - text: 时间管理-作为负责人需要控制打断频率

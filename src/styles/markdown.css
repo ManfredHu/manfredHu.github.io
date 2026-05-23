@@ -233,7 +233,40 @@
   text-align: center;
 }
 
-/* highlight.js theme overrides for Catppuccin Mocha */
+/* Responsive table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.table-wrapper > .markdown-body table {
+  margin-bottom: 0;
+}
+
+/* Mobile typography (≤767px) */
+@media (max-width: 767px) {
+  .article-header-title {
+    font-size: 1.4rem;
+  }
+
+  .markdown-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .markdown-body h2 {
+    font-size: 1.25rem;
+  }
+
+  .markdown-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .markdown-body pre code {
+    font-size: 0.8rem;
+  }
+}
 .hljs {
   background: transparent !important;
   color: var(--ctp-text) !important;

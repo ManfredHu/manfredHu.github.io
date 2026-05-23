@@ -122,28 +122,11 @@
 .toc-widget:hover .toc-link--h5,
 .toc-widget:hover .toc-link--h6 { color: var(--ctp-overlay1); font-size: 0.73rem; }
 
-/* Hide on narrow screens */
-@media (max-width: 960px) {
+/* Hide on narrow screens (mobile only — iPad shows TOC) */
+@media (max-width: 767px) {
   .toc-widget {
     display: none;
   }
-}
-
-  justify-content: center;
-  gap: 6px;
-  width: 32px;
-  min-height: 80px;
-  background-color: var(--ctp-surface0);
-  border: 1px solid var(--ctp-surface1);
-  border-right: none;
-  border-radius: 8px 0 0 8px;
-  cursor: default;
-  color: var(--ctp-overlay1);
-  flex-shrink: 0;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-  user-select: none;
 }
 
 .toc-trigger-icon {
@@ -270,8 +253,8 @@
   color: var(--ctp-overlay1);
 }
 
-/* Hide on narrow screens */
-@media (max-width: 960px) {
+/* Hide on narrow screens (mobile only — iPad shows TOC) */
+@media (max-width: 767px) {
   .toc-widget {
     display: none;
   }

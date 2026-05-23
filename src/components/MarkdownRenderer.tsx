@@ -102,6 +102,13 @@ const baseComponents: Components = {
       </a>
     )
   },
+  table({ children, ...props }) {
+    return (
+      <div className="table-wrapper">
+        <table {...props}>{children}</table>
+      </div>
+    )
+  },
 }
 
 function makeComponents(suppressFirstH1: boolean): Components {

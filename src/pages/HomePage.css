@@ -127,3 +127,31 @@
   font-style: italic;
   padding-top: 0.15rem;
 }
+
+/* iPad (768px – 1024px) */
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  .home-hero {
+    padding: 1.25rem 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 1.6rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

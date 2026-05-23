@@ -65,6 +65,12 @@ a:hover {
   background: var(--ctp-surface2);
 }
 
+/* Touch: remove tap highlight on interactive elements */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Layout */
 .layout {
   display: flex;

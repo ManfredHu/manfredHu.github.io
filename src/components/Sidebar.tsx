@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { load } from 'js-yaml'
 import NavTree from './NavTree'
 import type { NavNode } from '@/types/nav'
+import { useLayout } from '@/context/LayoutContext'
 import './Sidebar.css'
 import logoImg from '/images/myself/manfredhu128.png'
 
@@ -10,6 +11,8 @@ import logoImg from '/images/myself/manfredhu128.png'
 import navRaw from '/config/nav.yml?raw'
 
 export default function Sidebar() {
+  const { sidebarOpen, closeSidebar } = useLayout()
+
   const navNodes = useMemo<NavNode[]>(() => {
     try {
       const data = load(navRaw)
@@ -21,7 +24,7 @@ export default function Sidebar() {
   }, [])
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar${sidebarOpen ? ' sidebar--open' : ''}`}>
       <div className="sidebar-header">
         <Link to="/" className="sidebar-logo-img-link">
           <img src={logoImg} alt="ManfredHu" className="sidebar-logo-img" />
@@ -58,6 +61,21 @@ export default function Sidebar() {
           </div>
           <p className="sidebar-subtitle">技术与生活</p>
         </div>
+        <button
+          className="sidebar-close-btn"
+          onClick={closeSidebar}
+          aria-label="关闭菜单"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
       </div>
       <div className="sidebar-nav">
         <NavTree nodes={navNodes} depth={0} />

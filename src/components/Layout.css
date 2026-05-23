@@ -10,12 +10,34 @@
   max-width: 900px;
 }
 
-@media (max-width: 768px) {
+/* Sidebar overlay — only rendered/visible on mobile */
+.sidebar-overlay {
+  display: none;
+}
+
+/* iPad (768px – 1024px): narrow content padding */
+@media (max-width: 1024px) {
+  .layout-content {
+    padding: 2rem;
+  }
+}
+
+/* Mobile (≤767px): content stacks, overlay enabled */
+@media (max-width: 767px) {
   .layout {
     flex-direction: column;
   }
 
   .layout-content {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 299;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
   }
 }

@@ -6,10 +6,18 @@ interface LayoutContextType {
   closeSidebar: () => void
 }
 
-export const LayoutContext = createContext<LayoutContextType>({
+const defaultContext: LayoutContextType = {
   sidebarOpen: false,
   toggleSidebar: () => {},
   closeSidebar: () => {},
-})
+}
 
-export const useLayout = () => useContext(LayoutContext)
+export const LayoutContext = createContext<LayoutContextType>(defaultContext)
+
+export const useLayout = () => {
+  const ctx = useContext(LayoutContext)
+  if (process.env.NODE_ENV !== 'production' && ctx === defaultContext) {
+    console.error('useLayout must be used within a LayoutContext.Provider')
+  }
+  return ctx
+}

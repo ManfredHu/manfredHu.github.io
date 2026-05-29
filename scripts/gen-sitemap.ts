@@ -42,10 +42,10 @@ const urlEntries = [
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>`,
-  // Articles (hash URLs)
+  // Articles (real URLs — BrowserRouter)
   ...links.map(
     (link) => `  <url>
-    <loc>${SITE_URL}/#${link}</loc>
+    <loc>${SITE_URL}${link}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

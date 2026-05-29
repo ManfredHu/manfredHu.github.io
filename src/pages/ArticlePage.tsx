@@ -36,7 +36,13 @@ export default function ArticlePage() {
     undefined,
   )
 
-  useSEO({ title: seoTitle, description: seoDesc, path: link, type: 'article' })
+  useSEO({
+    title: seoTitle,
+    description: seoDesc,
+    path: link,
+    type: 'article',
+    lastModified,
+  })
 
   useEffect(() => {
     if (!link || link === '/') return

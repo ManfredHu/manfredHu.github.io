@@ -199,7 +199,7 @@ export default function MarkdownRenderer({
             {frontmatter.title as string}
           </h1>
           <div className="article-header-meta">
-            {tags && tags.length > 0 ? (
+            {tags && tags.length > 0 && (
               <div className="article-header-tags">
                 {tags.map((tag) => (
                   <span key={tag} className="article-tag">
@@ -207,8 +207,6 @@ export default function MarkdownRenderer({
                   </span>
                 ))}
               </div>
-            ) : (
-              <span />
             )}
             {stats}
           </div>
@@ -216,10 +214,7 @@ export default function MarkdownRenderer({
         </div>
       ) : (
         <div className="article-header article-header--bare">
-          <div className="article-header-meta">
-            <span />
-            {stats}
-          </div>
+          <div className="article-header-meta">{stats}</div>
         </div>
       )}
       <ReactMarkdown

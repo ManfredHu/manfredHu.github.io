@@ -53,6 +53,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
+  margin-left: auto;
   font-size: 0.78rem;
   color: var(--ctp-subtext0);
 }

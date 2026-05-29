@@ -58,7 +58,7 @@ export function calcReadingTime(body: string): ReadingTimeResult {
 
   // Remove CJK characters, then count remaining whitespace-delimited words.
   const nonCjkText = text.replace(CJK_REGEX, ' ')
-  const wordMatches = nonCjkText.match(/[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*/g)
+  const wordMatches = nonCjkText.match(/[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*/g)
   const wordCount = wordMatches ? wordMatches.length : 0
 
   const minutesRaw =

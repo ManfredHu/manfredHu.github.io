@@ -114,3 +114,46 @@
   padding: 0.75rem 0;
   overflow-y: auto;
 }
+
+/* Mobile drawer */
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    height: calc(100vh - 52px);
+    height: calc(100dvh - 52px);
+    width: min(84vw, 320px);
+    border-right: 1px solid var(--ctp-surface0);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.35);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 300;
+  }
+
+  .sidebar.sidebar--open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 290;
+    animation: sidebar-backdrop-in 0.2s ease;
+  }
+
+  @keyframes sidebar-backdrop-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -247,6 +247,67 @@
   text-align: center;
 }
 
+/* Mobile tweaks: prevent wide content from breaking layout */
+@media (max-width: 768px) {
+  .markdown-body {
+    font-size: 0.95rem;
+  }
+
+  .markdown-body pre {
+    padding: 0.85rem;
+    border-radius: 6px;
+  }
+
+  .markdown-body pre code {
+    font-size: 0.78rem;
+  }
+
+  .markdown-body :not(pre) > code {
+    font-size: 0.82em;
+    word-break: break-all;
+  }
+
+  .markdown-body table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.82rem;
+  }
+
+  .markdown-body th,
+  .markdown-body td {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .markdown-body img {
+    height: auto;
+  }
+
+  .article-header-title {
+    font-size: 1.5rem;
+  }
+
+  .article-header-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .article-last-modified {
+    align-self: flex-end;
+  }
+
+  .markdown-body h1 {
+    font-size: 1.6rem;
+  }
+  .markdown-body h2 {
+    font-size: 1.3rem;
+  }
+  .markdown-body h3 {
+    font-size: 1.1rem;
+  }
+}
+
 /* highlight.js theme overrides for Catppuccin Mocha */
 .hljs {
   background: transparent !important;

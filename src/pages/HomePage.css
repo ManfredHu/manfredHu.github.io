@@ -55,6 +55,15 @@
   .category-grid {
     column-count: 1;
   }
+
+  .home-title {
+    font-size: 1.75rem;
+  }
+
+  .home-hero {
+    padding: 1.25rem 0 2rem;
+    margin-bottom: 1.75rem;
+  }
 }
 
 .category-card {

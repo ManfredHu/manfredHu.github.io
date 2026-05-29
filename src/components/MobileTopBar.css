@@ -1,0 +1,101 @@
+.mobile-topbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-topbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    padding: 0 0.75rem;
+    background-color: var(--ctp-mantle);
+    border-bottom: 1px solid var(--ctp-surface0);
+    z-index: 310;
+  }
+}
+
+.mobile-topbar-hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  color: var(--ctp-text);
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-topbar-hamburger:hover,
+.mobile-topbar-hamburger:focus-visible {
+  background-color: var(--ctp-surface0);
+  outline: none;
+}
+
+.hamburger-icon {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+}
+
+.hamburger-icon span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+.hamburger-icon span:nth-child(2) {
+  top: 6px;
+}
+.hamburger-icon span:nth-child(3) {
+  top: 12px;
+}
+
+.hamburger-icon.is-open span:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.hamburger-icon.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.is-open span:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+.mobile-topbar-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--ctp-mauve), var(--ctp-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mobile-topbar-brand:hover {
+  text-decoration: none;
+}
+
+.mobile-topbar-spacer {
+  flex: 1;
+}

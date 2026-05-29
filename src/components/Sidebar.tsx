@@ -9,7 +9,12 @@ import logoImg from '/images/myself/manfredhu.svg'
 // Import nav.yml as raw text — Vite handles ?raw imports
 import navRaw from '/config/nav.yml?raw'
 
-export default function Sidebar() {
+interface SidebarProps {
+  open?: boolean
+  onClose?: () => void
+}
+
+export default function Sidebar({ open = false, onClose }: SidebarProps) {
   const navNodes = useMemo<NavNode[]>(() => {
     try {
       const data = load(navRaw)
@@ -21,7 +26,15 @@ export default function Sidebar() {
   }, [])
 
   return (
-    <aside className="sidebar">
+    <aside
+      id="site-sidebar"
+      className={`sidebar${open ? ' sidebar--open' : ''}`}
+      onClick={(e) => {
+        // Close drawer when clicking a nav link (mobile)
+        const target = e.target as HTMLElement
+        if (target.closest('a')) onClose?.()
+      }}
+    >
       <div className="sidebar-header">
         <Link to="/" className="sidebar-logo-img-link">
           <img src={logoImg} alt="ManfredHu" className="sidebar-logo-img" />

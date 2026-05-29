@@ -192,6 +192,8 @@
       link: /AI/2026-05-03.AI-history
     - text: Codex
       link: /AI/Codex
+    - text: AI工具推荐
+      link: /AI/2026-05-26.AI-recommend
 - text: 其他
   children: 
     - text: 咖啡豆全指南

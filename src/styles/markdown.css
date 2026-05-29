@@ -43,6 +43,30 @@
   flex-shrink: 0;
 }
 
+/* Header for articles without frontmatter title: only the meta/stats row. */
+.article-header--bare {
+  margin-bottom: 1.5rem;
+}
+
+.article-stats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: var(--ctp-subtext0);
+}
+
+.article-reading-time,
+.article-views {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.article-views {
+  color: var(--ctp-teal);
+}
+
 .article-tag {
   display: inline-block;
   background-color: var(--ctp-surface0);

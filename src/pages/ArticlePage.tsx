@@ -101,7 +101,11 @@ export default function ArticlePage() {
     <>
       <TableOfContents content={content} skipFirstH1 />
       <article className="article-page">
-        <MarkdownRenderer content={content} lastModified={lastModified} />
+        <MarkdownRenderer
+          content={content}
+          lastModified={lastModified}
+          slug={link}
+        />
         <Comments term={link} />
       </article>
     </>

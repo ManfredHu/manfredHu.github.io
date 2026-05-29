@@ -7,10 +7,14 @@ import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 import '@/styles/markdown.css'
 import type { Components } from 'react-markdown'
+import { calcReadingTime } from '@/utils/readingTime'
+import ViewCounter from '@/components/ViewCounter'
 
 interface MarkdownRendererProps {
   content: string
   lastModified?: number
+  /** Article path used as the key for the view counter, e.g. "/js/foo". */
+  slug?: string
 }
 
 interface Frontmatter {
@@ -161,6 +165,7 @@ function makeComponents(suppressFirstH1: boolean): Components {
 export default function MarkdownRenderer({
   content,
   lastModified,
+  slug,
 }: MarkdownRendererProps) {
   const { frontmatter, body } = parseFrontmatter(content)
   const tags = frontmatter.tags as string[] | undefined
@@ -170,15 +175,31 @@ export default function MarkdownRenderer({
     ? new Date(lastModified * 1000).toISOString().slice(0, 10)
     : undefined
 
+  const readingTime = calcReadingTime(body)
+
+  const stats = (
+    <span className="article-stats">
+      <span className="article-reading-time" title={`${readingTime.words} 字`}>
+        📖 约 {readingTime.minutes} 分钟阅读 · {readingTime.words} 字
+      </span>
+      <ViewCounter slug={slug} />
+      {lastModifiedStr && (
+        <span className="article-last-modified">
+          最后更新：{lastModifiedStr}
+        </span>
+      )}
+    </span>
+  )
+
   return (
     <div className="markdown-body">
-      {hasFrontmatterTitle && (
+      {hasFrontmatterTitle ? (
         <div className="article-header">
           <h1 className="article-header-title">
             {frontmatter.title as string}
           </h1>
           <div className="article-header-meta">
-            {tags && tags.length > 0 && (
+            {tags && tags.length > 0 ? (
               <div className="article-header-tags">
                 {tags.map((tag) => (
                   <span key={tag} className="article-tag">
@@ -186,14 +207,19 @@ export default function MarkdownRenderer({
                   </span>
                 ))}
               </div>
+            ) : (
+              <span />
             )}
-            {lastModifiedStr && (
-              <span className="article-last-modified">
-                最后更新：{lastModifiedStr}
-              </span>
-            )}
+            {stats}
           </div>
           <hr className="article-header-divider" />
+        </div>
+      ) : (
+        <div className="article-header article-header--bare">
+          <div className="article-header-meta">
+            <span />
+            {stats}
+          </div>
         </div>
       )}
       <ReactMarkdown

@@ -15,6 +15,10 @@ export default function Layout() {
   useEffect(() => {
     setSidebarOpen(false)
     window.scrollTo(0, 0)
+    // Remember current article hash so we can restore after giscus OAuth callback.
+    if (location.pathname && location.pathname !== '/') {
+      sessionStorage.setItem('lastArticleHash', '#' + location.pathname)
+    }
   }, [location.pathname])
 
   // Close on Escape

@@ -4,6 +4,7 @@ import MarkdownRenderer, {
   parseFrontmatter,
 } from '@/components/MarkdownRenderer'
 import TableOfContents from '@/components/TableOfContents'
+import Comments from '@/components/Comments'
 import { loadMarkdown } from '@/utils/mdLoader'
 import { useSEO, extractExcerpt } from '@/hooks/useSEO'
 import './ArticlePage.css'
@@ -101,6 +102,7 @@ export default function ArticlePage() {
       <TableOfContents content={content} skipFirstH1 />
       <article className="article-page">
         <MarkdownRenderer content={content} lastModified={lastModified} />
+        <Comments term={link} />
       </article>
     </>
   )

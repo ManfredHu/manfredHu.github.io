@@ -1,0 +1,36 @@
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ctp-surface1);
+}
+
+.comments-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ctp-lavender);
+  margin: 0 0 1rem;
+}
+
+.comments--unconfigured {
+  background-color: var(--ctp-surface0);
+  border: 1px dashed var(--ctp-surface2);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  color: var(--ctp-subtext0);
+  font-size: 0.9rem;
+}
+
+.comments--unconfigured code {
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-peach);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+  .comments {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+}

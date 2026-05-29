@@ -33,6 +33,7 @@
     "vite-plugin-static-copy": "^4.1.0"
   },
   "dependencies": {
+    "@giscus/react": "^3.1.0",
     "dayjs": "^1.11.7",
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",

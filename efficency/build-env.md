@@ -320,6 +320,18 @@ vscode插件 [Luna Paint](https://marketplace.visualstudio.com/items?itemName=Ty
 cmd+1~9让你有一种打dota改键操作的快感
 
 ### 常用cli 
+cli配置是十分复杂的, 下面这些文件都可能会遇到
+```
+~/.config/shell/env.sh：# 唯一公共环境入口，放 PATH、brew、fnm、pyenv、export 变量，给 zsh/bash/Codex/git hooks 共用；不要放 alias、prompt、completion、theme、交互式 UI 初始化
+~/.config/shell/env.zsh：# zsh 兼容入口，只负责 source ~/.config/shell/env.sh；保留给旧配置或旧工具引用，新公共环境配置不要继续写在这里
+~/.zshenv：# 每次 zsh 启动都会加载，包括 Codex / git hook / 非交互 zsh；只 source ~/.config/shell/env.sh，不要 source ~/.zshrc
+~/.zprofile：# zsh login shell 专属配置；放只想在登录 shell 执行的一次性配置；共享 PATH/运行时放 env.sh，交互式终端配置放 ~/.zshrc
+~/.zshrc：# zsh 交互式终端配置，给 Ghostty 等交互式 zsh 使用；放 oh-my-zsh、theme、plugins、completion、starship、zoxide、zsh 专属函数；不要放共享 PATH/运行时，不要 source ~/.bashrc 或 ~/.bash_profile
+~/.bash_profile：# bash login shell 入口；先 source ~/.config/shell/env.sh，再 source ~/.bashrc；不要直接放 zsh 专属配置、prompt、alias
+~/.bashrc：# bash 交互式终端配置；放 bash 专属函数、completion、bash 版 zoxide；共享 alias 放 aliases.sh，共享 PATH/运行时放 env.sh；不要放 oh-my-zsh、ZSH_THEME、zsh plugins
+~/.config/shell/aliases.sh：# zsh/bash 共享 alias；只放两个 shell 都能工作的通用 alias；不要放 shell 专属函数、completion、prompt、eval 初始化代码
+```
+
 - [npkill](https://www.npmjs.com/package/npkill) 用于管理整个电脑的node_modules
 - ~~[nvm](https://github.com/nvm-sh/nvm) 用于切换不同的node版本~~
 - **[fnm](https://github.com/Schniz/fnm) 更快的nvm**

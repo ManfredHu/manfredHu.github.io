@@ -1,6 +1,6 @@
 # CSS杂技
 
-![https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png)
+![https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/css.png](/images/css.png)
 
 ## 浏览器默认样式
 

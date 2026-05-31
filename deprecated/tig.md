@@ -34,10 +34,10 @@ sudo apt-get install tig
 有这么几种视图模式
 
 ### m mainView(默认视图)
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/mdm0UQ.png)
+![](/images/ppl/mdm0UQ.png)
 
 ### s statusView
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/ppl/n6MiDI.png)
+![](/images/ppl/n6MiDI.png)
 
 自上而下分别是
 - 需要提交的文件，可以按`C`提交

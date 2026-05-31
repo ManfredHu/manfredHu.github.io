@@ -2,7 +2,7 @@
 
 **⚠️ 本地内容在2026年3月24号判定已经是过期内容，后续内容不再更新，仅保留阅读。**
 
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/angular.png)
+![](/images/angular.png)
 
 ## AngularJS 兼容性
 

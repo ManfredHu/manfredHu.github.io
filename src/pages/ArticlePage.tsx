@@ -5,6 +5,7 @@ import MarkdownRenderer, {
 } from '@/components/MarkdownRenderer'
 import TableOfContents from '@/components/TableOfContents'
 import Comments from '@/components/Comments'
+import ArticleSkeleton from '@/components/ArticleSkeleton'
 import { loadMarkdown } from '@/utils/mdLoader'
 import { useSEO, extractExcerpt } from '@/hooks/useSEO'
 import './ArticlePage.css'
@@ -73,12 +74,7 @@ export default function ArticlePage() {
   }, [link])
 
   if (state === 'loading' || state === 'idle') {
-    return (
-      <div className="article-state">
-        <div className="article-spinner" aria-label="加载中..." />
-        <p>加载中...</p>
-      </div>
-    )
+    return <ArticleSkeleton />
   }
 
   if (state === 'not-found') {

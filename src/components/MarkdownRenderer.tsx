@@ -9,6 +9,8 @@ import '@/styles/markdown.css'
 import type { Components } from 'react-markdown'
 import { calcReadingTime } from '@/utils/readingTime'
 import ViewCounter from '@/components/ViewCounter'
+import MdImage from '@/components/MdImage'
+import CodeBlock from '@/components/CodeBlock'
 
 interface MarkdownRendererProps {
   content: string
@@ -92,7 +94,10 @@ export function slugify(text: string): string {
 
 const baseComponents: Components = {
   img({ src, alt, ...props }) {
-    return <img src={src} alt={alt ?? ''} loading="lazy" {...props} />
+    return <MdImage src={src} alt={alt ?? ''} {...props} />
+  },
+  pre({ children, ...props }) {
+    return <CodeBlock {...props}>{children}</CodeBlock>
   },
   a({ href, children, ...props }) {
     const isExternal = href?.startsWith('http')

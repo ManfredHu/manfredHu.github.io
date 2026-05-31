@@ -1,5 +1,5 @@
 import { Component, type ReactNode } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from '@/components/Layout'
 import HomePage from '@/pages/HomePage'
 import ArticlePage from '@/pages/ArticlePage'
@@ -57,7 +57,7 @@ class ErrorBoundary extends Component<
 export default function App() {
   return (
     <ErrorBoundary>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -65,7 +65,7 @@ export default function App() {
             <Route path="*" element={<ArticlePage />} />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ErrorBoundary>
   )
 }

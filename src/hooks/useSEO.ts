@@ -9,10 +9,12 @@ const DEFAULT_IMAGE = `${SITE_URL}/images/myself/manfredhu.svg`
 interface SEOOptions {
   title?: string
   description?: string
-  /** Path portion, e.g. "/js/foo". Will be appended as hash URL. */
+  /** Path portion, e.g. "/js/foo". Appended to the site origin as a real URL. */
   path?: string
   image?: string
   type?: 'website' | 'article'
+  /** Article last-modified time (unix seconds) — used for JSON-LD dateModified. */
+  lastModified?: number
 }
 
 function setMeta(
@@ -38,23 +40,55 @@ function setPropertyMeta(property: string, content: string) {
   setMeta(`meta[property="${property}"]`, property, content, 'property')
 }
 
+function setCanonical(url: string) {
+  let el = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+  if (!el) {
+    el = document.createElement('link')
+    el.setAttribute('rel', 'canonical')
+    document.head.appendChild(el)
+  }
+  el.setAttribute('href', url)
+}
+
+const ARTICLE_LD_ID = 'ld-article'
+
+/** Inject (or remove) Article structured data for the current article. */
+function setArticleJsonLd(data: Record<string, unknown> | null) {
+  let el = document.getElementById(ARTICLE_LD_ID) as HTMLScriptElement | null
+  if (!data) {
+    if (el) el.remove()
+    return
+  }
+  if (!el) {
+    el = document.createElement('script')
+    el.type = 'application/ld+json'
+    el.id = ARTICLE_LD_ID
+    document.head.appendChild(el)
+  }
+  el.textContent = JSON.stringify(data)
+}
+
 export function useSEO({
   title,
   description,
   path,
   image,
   type = 'website',
+  lastModified,
 }: SEOOptions) {
   useEffect(() => {
     const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME
     const pageDesc = description || DEFAULT_DESC
-    const pageUrl = path ? `${SITE_URL}/#${path}` : SITE_URL
+    const pageUrl = path ? `${SITE_URL}${path}` : SITE_URL
     const pageImage = image || DEFAULT_IMAGE
 
     document.title = pageTitle
 
     // Standard meta
     setNameMeta('description', pageDesc)
+
+    // Canonical
+    setCanonical(pageUrl)
 
     // Open Graph
     setPropertyMeta('og:title', pageTitle)
@@ -68,9 +102,38 @@ export function useSEO({
     setNameMeta('twitter:description', pageDesc)
     setNameMeta('twitter:image', pageImage)
 
+    // Article structured data
+    if (type === 'article' && title) {
+      const ld: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description: pageDesc,
+        url: pageUrl,
+        image: pageImage,
+        author: {
+          '@type': 'Person',
+          name: 'ManfredHu',
+          url: 'https://github.com/ManfredHu',
+        },
+        publisher: {
+          '@type': 'Person',
+          name: 'ManfredHu',
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      }
+      if (lastModified) {
+        ld.dateModified = new Date(lastModified * 1000).toISOString()
+      }
+      setArticleJsonLd(ld)
+    } else {
+      setArticleJsonLd(null)
+    }
+
     return () => {
       document.title = SITE_NAME
       setNameMeta('description', DEFAULT_DESC)
+      setCanonical(SITE_URL)
       setPropertyMeta('og:title', SITE_NAME)
       setPropertyMeta('og:description', DEFAULT_DESC)
       setPropertyMeta('og:url', SITE_URL)
@@ -79,8 +142,9 @@ export function useSEO({
       setNameMeta('twitter:title', SITE_NAME)
       setNameMeta('twitter:description', DEFAULT_DESC)
       setNameMeta('twitter:image', DEFAULT_IMAGE)
+      setArticleJsonLd(null)
     }
-  }, [title, description, path, image, type])
+  }, [title, description, path, image, type, lastModified])
 }
 
 /** Strip markdown formatting and return first ~155 chars as excerpt. */

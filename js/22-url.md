@@ -1,6 +1,6 @@
 # 谈谈 url 这东西
 
-![URL](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/urlPic/main.jpg)
+![URL](/images/urlPic/main.jpg)
 
 # URL
 

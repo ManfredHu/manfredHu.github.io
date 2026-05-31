@@ -105,5 +105,5 @@
 - [x] optimize picture when commit picture and markdown
     - [x] auto replace markdown and picture when has HEIC picture, at 2023.11.15
 - [x] auto deployment with Serverless
-- [ ] count vv when user visit
+- [x] count vv when user visit (前端可插拔浏览量组件，配置 `src/config/viewCounter.ts` 的 serverless 计数端点后生效)
 - [ ] upload article to github gist

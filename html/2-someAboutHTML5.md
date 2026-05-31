@@ -1,7 +1,7 @@
 # 重学HTML
 
 ## 文档结构
-![新文档结构](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/html-new-architecture.png)
+![新文档结构](/images/html/html-new-architecture.png)
 
 正如html下有head,body一样. 文档结构被重新定义, 现代文档结构一般拥有
 
@@ -250,4 +250,4 @@ e.dataset.machineLearning; // workshop
 ```
 
 结果展示如下, 数字部分会被检测为号码, 点击可以拉起手机的拨打电话. 通过format-detection可以阻止这种行为
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/html/format-detection.jpg)
+![](/images/html/format-detection.jpg)

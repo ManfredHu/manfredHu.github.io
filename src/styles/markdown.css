@@ -43,6 +43,31 @@
   flex-shrink: 0;
 }
 
+/* Header for articles without frontmatter title: only the meta/stats row. */
+.article-header--bare {
+  margin-bottom: 1.5rem;
+}
+
+.article-stats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--ctp-subtext0);
+}
+
+.article-reading-time,
+.article-views {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.article-views {
+  color: var(--ctp-teal);
+}
+
 .article-tag {
   display: inline-block;
   background-color: var(--ctp-surface0);
@@ -226,6 +251,198 @@
   display: block;
   margin: 1rem auto;
   border: 1px solid var(--ctp-surface1);
+}
+
+/* Image with loading skeleton */
+.md-img-wrap {
+  display: block;
+  position: relative;
+  margin: 1rem auto;
+  border-radius: 8px;
+  min-height: 60px;
+}
+
+.md-img-wrap.skeleton {
+  min-height: 180px;
+  border: 1px solid var(--ctp-surface1);
+}
+
+/* Image renders progressively over the skeleton — never hidden while
+   downloading, so partially-loaded images are visible to the user. */
+.md-img {
+  position: relative;
+  z-index: 1;
+}
+
+.md-img-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 120px;
+  margin: 1rem auto;
+  padding: 1.25rem 1rem;
+  color: var(--ctp-subtext0);
+  font-size: 0.9rem;
+  background-color: var(--ctp-surface0);
+  border: 1px dashed var(--ctp-surface2);
+  border-radius: 8px;
+}
+
+.md-img-retry {
+  cursor: pointer;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  color: var(--ctp-base);
+  background-color: var(--ctp-mauve);
+  border: none;
+  border-radius: 6px;
+  transition: opacity 0.15s ease;
+}
+
+.md-img-retry:hover {
+  opacity: 0.85;
+}
+
+.md-img-error-url {
+  max-width: 100%;
+  font-size: 0.8rem;
+  color: var(--ctp-blue);
+  word-break: break-all;
+  text-align: center;
+}
+
+.md-img-error-url:hover {
+  color: var(--ctp-lavender);
+}
+
+/* Code block with copy button */
+.code-block {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.code-block > pre {
+  margin-bottom: 0;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--ctp-subtext1);
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.code-block:hover .code-copy-btn,
+.code-copy-btn:focus-visible {
+  opacity: 1;
+}
+
+.code-copy-btn:hover {
+  color: var(--ctp-text);
+  background-color: var(--ctp-surface1);
+}
+
+.code-copy-btn--copied {
+  opacity: 1;
+  color: var(--ctp-green);
+  border-color: var(--ctp-green);
+}
+
+@media (max-width: 768px) {
+  /* Touch devices have no hover — keep the button visible. */
+  .code-copy-btn {
+    opacity: 0.85;
+  }
+}
+
+/* Image lightbox / preview overlay */
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overscroll-behavior: contain;
+}
+
+.img-lightbox-mask {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.img-lightbox-img {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.1s ease-out;
+  user-select: none;
+  touch-action: none;
+}
+
+.img-lightbox-toolbar {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(30, 30, 46, 0.9);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.img-lightbox-toolbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ctp-text);
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.img-lightbox-toolbar button:hover {
+  background-color: var(--ctp-surface1);
+}
+
+.img-lightbox-scale {
+  min-width: 3.2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ctp-subtext1);
+  user-select: none;
 }
 
 /* Links */

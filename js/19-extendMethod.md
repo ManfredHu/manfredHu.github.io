@@ -1,6 +1,6 @@
 # 对象深复制
 
-![extend](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/extend.png)
+![extend](/images/extend.png)
 
 ## 对象引用
 

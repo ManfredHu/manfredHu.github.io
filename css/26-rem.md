@@ -1,6 +1,6 @@
 # CSS 的 rem 单位
 
-![](https://raw.githubusercontent.com/ManfredHu/manfredHu.github.io/master/images/niu.jpg)
+![](/images/niu.jpg)
 
 ## 原理：改变 font-size 来进行自适应
 

@@ -28,6 +28,31 @@
   font-size: 0.85em;
 }
 
+/* Loading skeleton */
+.comments-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comments-skeleton-box {
+  height: 80px;
+  border-radius: 8px;
+}
+
+.comments-skeleton-line {
+  height: 14px;
+  border-radius: 4px;
+}
+
+.comments-skeleton-line--short {
+  width: 60%;
+}
+
+.comments-frame--hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .comments {
     margin-top: 2rem;
